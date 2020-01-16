@@ -1,0 +1,1449 @@
+<!DOCTYPE html>
+<html lang="en-US"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="shortcut icon" href="favicon.ico" sizes="16x16" type="image/x-icon"><title>Omnibar – Tyler Forge</title><link rel="dns-prefetch" href="//fonts.googleapis.com"><link rel="dns-prefetch" href="//s.w.org"><link rel="stylesheet" id="cf7md_roboto-css" href="//fonts.googleapis.com/css?family=Roboto:400,500" type="text/css" media="all"><link rel="stylesheet" id="cf7-material-design-css" href="https://static-forge.netlify.com/wp-content/plugins/material-design-for-contact-form-7/assets/css/cf7-material-design.css" type="text/css" media="all"><link rel="stylesheet" id="contact-form-7-css" href="https://static-forge.netlify.com/wp-content/plugins/contact-form-7/includes/css/styles.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-icons-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-animations-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/animations/animations.min.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-frontend-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/css/frontend.min.css" type="text/css" media="all"><link rel="stylesheet" id="lae-animate-styles-css" href="https://static-forge.netlify.com/wp-content/plugins/addons-for-elementor/assets/css/animate.css" type="text/css" media="all"><link rel="stylesheet" id="lae-sliders-styles-css" href="https://static-forge.netlify.com/wp-content/plugins/addons-for-elementor/assets/css/sliders.css" type="text/css" media="all"><link rel="stylesheet" id="lae-icomoon-styles-css" href="https://static-forge.netlify.com/wp-content/plugins/addons-for-elementor/assets/css/icomoon.css" type="text/css" media="all"><link rel="stylesheet" id="lae-frontend-styles-css" href="https://static-forge.netlify.com/wp-content/plugins/addons-for-elementor/assets/css/lae-frontend.css" type="text/css" media="all"><link rel="stylesheet" id="lae-widgets-styles-css" href="https://static-forge.netlify.com/wp-content/plugins/addons-for-elementor/assets/css/lae-widgets.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-pro-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor-pro/assets/css/frontend.min.css" type="text/css" media="all"><link rel="stylesheet" id="font-awesome-5-all-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/all.min.css" type="text/css" media="all"><link rel="stylesheet" id="font-awesome-4-shim-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/v4-shims.min.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-global-css" href="https://static-forge.netlify.com/wp-content/uploads/elementor/css/global.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-post-1726-css" href="https://static-forge.netlify.com/wp-content/uploads/elementor/css/post-1726.css" type="text/css" media="all"><link rel="stylesheet" id="custom-frontend-style-css" href="https://static-forge.netlify.com/wp-content/plugins/ideapush/inc/css/frontendstyle.css" type="text/css" media="all"><style id="custom-frontend-style-inline-css" type="text/css">
+.ideapush-idea-filter{display: none;}
+</style><script type="text/javascript" src="https://static-forge.netlify.com/wp-includes/js/jquery/jquery.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-includes/js/jquery/jquery-migrate.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min.js"></script><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NB3CZPX');</script><script type="text/javascript">
+            (function () {
+                window.lae_fs = {can_use_premium_code: false};
+            })();
+        </script><style type="text/css" id="wp-custom-css">
+			.hljs {
+	background: none;
+}		</style><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono"><link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700"><link href="https://cdn.forge.tylertech.com/v1/libs/tcw/latest/tcw-material-design.css" rel="stylesheet"><link rel="stylesheet" href="styles/tyler-forge.css"><link rel="stylesheet" href="styles/hljs-theme.css"><link rel="stylesheet" href="styles/component.css"></head><body class="tyl-typography">
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NB3CZPX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+
+
+    <tcw-scaffold class="tyl-docs"><tcw-omnibar id="tyl-forge-omnibar" title-text="Tyler Forge" slot="header"><div slot="logo" style="width: 24px; height: 20px; margin-left: 8px;">
+    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 480.5 423.03"><title>forge-icon-only</title><g id="logo"><path d="M463.68,39H283.49A26,26,0,0,0,261,52l-39.38,68.2a26,26,0,0,0,22.55,39.05H424.3a26,26,0,0,0,22.55-13L486.22,78A26,26,0,0,0,463.68,39Z" transform="translate(-9.25 -38.98)" fill="#fff"></path><path d="M377,189.18H196.77a26,26,0,0,0-22.54,13l-37.37,64.72a26,26,0,0,0,0,26L227,449A26,26,0,0,0,272,449L399.51,228.23A26,26,0,0,0,377,189.18Z" transform="translate(-9.25 -38.98)" fill="#fff"></path><path d="M211.35,78A26,26,0,0,0,188.81,39H35.32A26,26,0,0,0,12.78,78L77,189.18,89.52,211a26,26,0,0,0,45.09,0Z" transform="translate(-9.25 -38.98)" fill="#fff"></path></g></svg></div>
+  <tcw-omnibar-search slot="center"><input type="text" placeholder="Search..."></tcw-omnibar-search><tcw-omnibar-menu-button slot="menu" id="tyl-forge-omnibar-menu"></tcw-omnibar-menu-button><div slot="action" style="display: flex; justify-content: space-around;">
+    <ul class="header-nav"><li class="header__nav-item" id="design-nav-indicator">
+        <a href="/getting-started-with-forge/" class="header__nav-link">
+          Design <span class="header__nav-indicator" id="design-link-indicator"></span>
+        </a>
+      </li>
+      <li class="header__nav-item" id="development-nav-indicator">
+        <a href="/development/" class="header__nav-link">
+          Development <span class="header__nav-indicator" id="development-link-indicator"></span>
+        </a>
+      </li>
+      <li class="header__nav-item" id="development-nav-indicator">
+        <a href="/give-feedback/" class="header__nav-link">
+          Feedback <span class="header__nav-indicator" id="feedback-link-indicator"></span>
+        </a>
+      </li>
+    </ul></div>
+</tcw-omnibar><div slot="body-left">
+  <tcw-drawer id="tyl-forge-sidenav" type="dismissible" open="true" style="--tyl-drawer-width: 320px;"><tcw-list class="nav navbar-nav"><a href="https://static-forge.netlify.com/" id="home-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">home</i>Home</tcw-list-item></a><tcw-expansion-panel id="get started-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">forward</i>
+			  Get started
+			  <tcw-open-icon slot="trailing" style="line-height: 0.5;"></tcw-open-icon></tcw-list-item><tcw-list><a href="https://static-forge.netlify.com/getting-started-as-a-designer/"><tcw-list-item slot="header" class="nav_subitem">As a designer</tcw-list-item></a><a href="https://static-forge.netlify.com/design-to-dev-handoff/"><tcw-list-item slot="header" class="nav_subitem">Design to Dev Handoff</tcw-list-item></a></tcw-list></tcw-expansion-panel><tcw-expansion-panel id="foundation-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">border_outer</i>
+			  Foundation
+			  <tcw-open-icon slot="trailing" style="line-height: 0.5;"></tcw-open-icon></tcw-list-item><tcw-list><a href="https://static-forge.netlify.com/foundation/overview/"><tcw-list-item slot="header" class="nav_subitem">Overview</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/intro-to-accessibility/"><tcw-list-item slot="header" class="nav_subitem">Accessibility</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/tyler-branding/"><tcw-list-item slot="header" class="nav_subitem">Branding</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/color/"><tcw-list-item slot="header" class="nav_subitem">Color</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/data-formats/"><tcw-list-item slot="header" class="nav_subitem">Data formats</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/tyler-icons-full/"><tcw-list-item slot="header" class="nav_subitem">Iconography</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/illustrations-usage/"><tcw-list-item slot="header" class="nav_subitem">Illustration: Usage</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/illustration-library/"><tcw-list-item slot="header" class="nav_subitem">Illustration: Library</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/theming/"><tcw-list-item slot="header" class="nav_subitem">Theming</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/layout-intro/"><tcw-list-item slot="header" class="nav_subitem">Layout: Intro</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/layout-grid/"><tcw-list-item slot="header" class="nav_subitem">Layout: Grid</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/layout-spacing/"><tcw-list-item slot="header" class="nav_subitem">Layout: Spacing</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/layout-page-layouts/"><tcw-list-item slot="header" class="nav_subitem">Layout: Page layouts</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/typography/"><tcw-list-item slot="header" class="nav_subitem">Typography</tcw-list-item></a><a href="https://static-forge.netlify.com/product-analytics/"><tcw-list-item slot="header" class="nav_subitem">Product analytics - coming soon</tcw-list-item></a></tcw-list></tcw-expansion-panel><tcw-expansion-panel id="patterns-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">ac_unit</i>
+			  Patterns
+			  <tcw-open-icon slot="trailing" style="line-height: 0.5;"></tcw-open-icon></tcw-list-item><tcw-list><a href="https://static-forge.netlify.com/patterns/data-visualization/"><tcw-list-item slot="header" class="nav_subitem">Data visualization: Intro</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/data-visualization-2/"><tcw-list-item slot="header" class="nav_subitem">Data visualization: Charts</tcw-list-item></a><a href="https://static-forge.netlify.com/colors-data-visualization/"><tcw-list-item slot="header" class="nav_subitem">Data visualization: Colors</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/drag-and-drop/"><tcw-list-item slot="header" class="nav_subitem">Drag and drop</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/empty-state/"><tcw-list-item slot="header" class="nav_subitem">Empty state</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/errors/"><tcw-list-item slot="header" class="nav_subitem">Errors</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/faceted-search/"><tcw-list-item slot="header" class="nav_subitem">Faceted filtering</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/forms/"><tcw-list-item slot="header" class="nav_subitem">Forms</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/login/"><tcw-list-item slot="header" class="nav_subitem">Login</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/mapping-gis/"><tcw-list-item slot="header" class="nav_subitem">Mapping & GIS</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/navigation/"><tcw-list-item slot="header" class="nav_subitem">Navigation</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/onboarding/"><tcw-list-item slot="header" class="nav_subitem">Onboarding - in progress</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/profile/"><tcw-list-item slot="header" class="nav_subitem">Profile - in progress</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/progress-loading/"><tcw-list-item slot="header" class="nav_subitem">Progress & loading</tcw-list-item></a></tcw-list></tcw-expansion-panel><tcw-expansion-panel id="components-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">settings_input_component</i>
+			  Components
+			  <tcw-open-icon slot="trailing" style="line-height: 0.5;"></tcw-open-icon></tcw-list-item><tcw-list><a href="https://static-forge.netlify.com/components/accordion/"><tcw-list-item slot="header" class="nav_subitem">Accordion</tcw-list-item></a><a href="https://static-forge.netlify.com/components/app-launcher/"><tcw-list-item slot="header" class="nav_subitem">App launcher</tcw-list-item></a><a href="https://static-forge.netlify.com/components/avatar/"><tcw-list-item slot="header" class="nav_subitem">Avatar</tcw-list-item></a><a href="https://static-forge.netlify.com/components/badge/"><tcw-list-item slot="header" class="nav_subitem">Badge - Coming soon</tcw-list-item></a><a href="https://static-forge.netlify.com/components/buttons/"><tcw-list-item slot="header" class="nav_subitem">Buttons</tcw-list-item></a><a href="https://static-forge.netlify.com/components/card/"><tcw-list-item slot="header" class="nav_subitem">Card</tcw-list-item></a><a href="https://static-forge.netlify.com/components/chips/"><tcw-list-item slot="header" class="nav_subitem">Chips</tcw-list-item></a><a href="https://static-forge.netlify.com/components/date-picker/"><tcw-list-item slot="header" class="nav_subitem">Date picker - coming soon</tcw-list-item></a><a href="https://static-forge.netlify.com/components/dialog/"><tcw-list-item slot="header" class="nav_subitem">Dialog</tcw-list-item></a><a href="https://static-forge.netlify.com/components/expansion-panel/"><tcw-list-item slot="header" class="nav_subitem">Expansion panel</tcw-list-item></a><a href="https://static-forge.netlify.com/components/floating-action-button/"><tcw-list-item slot="header" class="nav_subitem">Floating Action Button</tcw-list-item></a><a href="https://static-forge.netlify.com/components/list/"><tcw-list-item slot="header" class="nav_subitem">List</tcw-list-item></a><a href="https://static-forge.netlify.com/components/navigation-drawer/"><tcw-list-item slot="header" class="nav_subitem">Navigation drawer</tcw-list-item></a><a href="https://static-forge.netlify.com/components/omnibar/"><tcw-list-item slot="header" class="nav_subitem">Omnibar</tcw-list-item></a><a href="https://static-forge.netlify.com/components/progress-indicators/"><tcw-list-item slot="header" class="nav_subitem">Progress indicators</tcw-list-item></a><a href="https://static-forge.netlify.com/components/selection-controls/"><tcw-list-item slot="header" class="nav_subitem">Selection controls</tcw-list-item></a><a href="https://static-forge.netlify.com/components/sliders/"><tcw-list-item slot="header" class="nav_subitem">Sliders</tcw-list-item></a><a href="https://static-forge.netlify.com/components/stepper/"><tcw-list-item slot="header" class="nav_subitem">Stepper - coming soon</tcw-list-item></a><a href="https://static-forge.netlify.com/components/table/"><tcw-list-item slot="header" class="nav_subitem">Table</tcw-list-item></a><a href="https://static-forge.netlify.com/components/tabs/"><tcw-list-item slot="header" class="nav_subitem">Tabs</tcw-list-item></a><a href="https://static-forge.netlify.com/components/toast/"><tcw-list-item slot="header" class="nav_subitem">Toast</tcw-list-item></a><a href="https://static-forge.netlify.com/components/toolbar/"><tcw-list-item slot="header" class="nav_subitem">Toolbar - coming soon</tcw-list-item></a><a href="https://static-forge.netlify.com/components/tooltip/"><tcw-list-item slot="header" class="nav_subitem">Tooltip</tcw-list-item></a></tcw-list></tcw-expansion-panel><tcw-expansion-panel id="native mobile-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">phone_iphone</i>
+			  Native mobile
+			  <tcw-open-icon slot="trailing" style="line-height: 0.5;"></tcw-open-icon></tcw-list-item><tcw-list><a href="https://static-forge.netlify.com/native-mobile/basic-requirements/"><tcw-list-item slot="header" class="nav_subitem">Basic requirements</tcw-list-item></a><a href="https://static-forge.netlify.com/native-mobile/frameworks/"><tcw-list-item slot="header" class="nav_subitem">Frameworks</tcw-list-item></a><a href="https://static-forge.netlify.com/native-mobile/design-patterns/"><tcw-list-item slot="header" class="nav_subitem">Design patterns</tcw-list-item></a></tcw-list></tcw-expansion-panel><a href="https://static-forge.netlify.com/feedback-support/" id="feedback & support-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">pan_tool</i>Feedback & support</tcw-list-item></a><a href="https://static-forge.netlify.com/status/" id="status-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">trending_up</i>Status</tcw-list-item></a><a href="https://static-forge.netlify.com/faqs/" id="faqs-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">help</i>FAQs</tcw-list-item></a>    </tcw-list></tcw-drawer></div>
+      <div class="tyl-docs-content" slot="body" style="position: relative;" id="top-of-page">
+        <div id="tyl-docs-content" class="tyl-docs-content__container" style="padding: 16px; max-width: 1264px;">
+        <div class="flex-container" style="display: flex;">
+        <div class="left-content" style="max-width: 956px; width: 100%;">
+          <tcw-card has-padding="false"><div data-elementor-type="wp-page" data-elementor-id="1726" class="elementor elementor-1726" data-elementor-settings="[]">
+			<div class="elementor-inner">
+				<div class="elementor-section-wrap">
+							<section class="elementor-element elementor-element-66947662 elementor-section-content-middle elementor-section-height-min-height elementor-section-full_width elementor-section-height-default elementor-section-items-middle elementor-section elementor-top-section" data-id="66947662" data-element_type="section" id="overview" data-settings='{"background_background":"classic"}'><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-71ad3a84 elementor-column elementor-col-50 elementor-top-column" data-id="71ad3a84" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-1991d08b elementor-widget elementor-widget-divider" data-id="1991d08b" data-element_type="widget" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-7f755737 elementor-widget elementor-widget-heading" data-id="7f755737" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Omnibar
+</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-48ea9d22 elementor-widget elementor-widget-text-editor" data-id="48ea9d22" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>The omnibar is a user’s personal navigation kit. It holds everything a user needs to navigate the app they’re currently in, apps they typically go to, and apps they might need, as well tools to customize their navigation experience through notifications, language options, and help resources.</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-4c4948ed elementor-column elementor-col-50 elementor-top-column" data-id="4c4948ed" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-4351591 elementor-widget elementor-widget-html" data-id="4351591" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="display: flex; justify-content: flex-end;">
+    <a href="/development/components/omnibar/">
+<tcw-button><button type="button">
+      <i class="material-icons">code</i>
+      <span>Developer Guidelines</span>
+    </button>
+</tcw-button></a>
+</div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-29db1dd3 elementor-widget elementor-widget-image" data-id="29db1dd3" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img src="https://static-forge.netlify.com/wp-content/uploads/2019/07/overview-spot-hero.svg" title="overview-spot hero" alt="overview-spot hero"></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-3fd35f27 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="3fd35f27" data-element_type="section" id="guidance"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-8bdbd7c elementor-column elementor-col-100 elementor-top-column" data-id="8bdbd7c" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-5793a732 elementor-widget elementor-widget-spacer" data-id="5793a732" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-6dc98768 elementor-widget elementor-widget-heading" data-id="6dc98768" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Client-facing terminology</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-357dab4f elementor-widget elementor-widget-text-editor" data-id="357dab4f" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix">Note: Do not capitalize omnibar in written documentation.</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-3eb9501b elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="3eb9501b" data-element_type="section" id="guidance"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-532d1797 elementor-column elementor-col-100 elementor-top-column" data-id="532d1797" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-39f690e7 elementor-widget elementor-widget-spacer" data-id="39f690e7" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-171f21ce elementor-widget elementor-widget-heading" data-id="171f21ce" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Guidance</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-49b874d3 elementor-widget elementor-widget-text-editor" data-id="49b874d3" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>The omnibar spans the top of an app and is a user’s personal navigation kit. It holds everything a user needs to navigate the app they’re currently in, apps they typically go to, and apps they might need, as well tools to customize their navigation experience through notifications, language options, and help resources.</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-43d4d80 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="43d4d80" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-d3375dc elementor-column elementor-col-100 elementor-top-column" data-id="d3375dc" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-69d33df elementor-widget elementor-widget-spacer" data-id="69d33df" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-4a5c15e elementor-widget elementor-widget-heading" data-id="4a5c15e" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Anatomy</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-3862d23 elementor-widget elementor-widget-text-editor" data-id="3862d23" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>The omnibar is comprised of five key sections:</p><ol><li>Internal navigation (Optional). See <a href="https://static-forge.netlify.com/components/navigation-drawer/">Navigation Drawer</a> for more detail.</li><li>Branding and app title (Required)</li><li>Search (Optional)</li><li>Action items (Optional)</li><li>Persistent user info (Required)</li></ol></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-2046c2e elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="2046c2e" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-6bebfc4 elementor-column elementor-col-100 elementor-top-column" data-id="6bebfc4" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-6dec9c4 elementor-widget elementor-widget-spacer" data-id="6dec9c4" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-e6c1ffc elementor-widget elementor-widget-heading" data-id="e6c1ffc" data-element_type="widget" toc-subitem="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h5 class="elementor-heading-title elementor-size-default">Desktop</h5>		</div>
+				</div>
+				<div class="elementor-element elementor-element-da5c4aa elementor-widget elementor-widget-text-editor" data-id="da5c4aa" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>On desktop, all five sections are visible in the omnibar. </p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-75429ae elementor-widget elementor-widget-html" data-id="75429ae" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<a href="wp-content/uploads/image-exports/omni-parts-diagram.png" data-elementor-open-lightbox="yes">
+	<img src="wp-content/uploads/image-exports/omni-parts-diagram.png" class="attachment-full size-full" alt=""></a>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-026dc32 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="026dc32" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-0995af9 elementor-column elementor-col-100 elementor-top-column" data-id="0995af9" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-a2e2df5 elementor-widget elementor-widget-spacer" data-id="a2e2df5" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-470a97d elementor-widget elementor-widget-heading" data-id="470a97d" data-element_type="widget" toc-subitem="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h5 class="elementor-heading-title elementor-size-default">Mobile</h5>		</div>
+				</div>
+				<div class="elementor-element elementor-element-034377c elementor-widget elementor-widget-text-editor" data-id="034377c" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Hold tight! Guidance is coming soon, following some user testing.</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-3a0be6f elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="3a0be6f" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-27d84a7 elementor-column elementor-col-100 elementor-top-column" data-id="27d84a7" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-32645ff elementor-widget elementor-widget-spacer" data-id="32645ff" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-7d2fa0d elementor-widget elementor-widget-heading" data-id="7d2fa0d" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Omnibar sections</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-b76675f elementor-widget elementor-widget-text-editor" data-id="b76675f" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Let’s take a look at those five key sections: Internal navigation, branding and app title, search, action items and user info.</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-9aa2e20 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="9aa2e20" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-795f6ae elementor-column elementor-col-100 elementor-top-column" data-id="795f6ae" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-e7bbea0 elementor-widget elementor-widget-spacer" data-id="e7bbea0" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-ca3002a elementor-widget elementor-widget-heading" data-id="ca3002a" data-element_type="widget" toc-subitem="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h5 class="elementor-heading-title elementor-size-default">1. Internal navigation</h5>		</div>
+				</div>
+				<div class="elementor-element elementor-element-e5d7359 elementor-widget elementor-widget-text-editor" data-id="e5d7359" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>The menu or hamburger icon controls an app’s primary level of navigation. Apps using a navigation drawer should use a permanent drawer by default, unless a specific business need requires otherwise (ie, kiosk app or similar). On mobile, use a dismissible drawer that is closed by default. See <a href="https://static-forge.netlify.com/components/navigation-drawer/">Navigation Drawer</a> for more information.</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-c8c5db0 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="c8c5db0" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-92613f4 elementor-column elementor-col-100 elementor-top-column" data-id="92613f4" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-1a0f948 elementor-widget elementor-widget-spacer" data-id="1a0f948" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-661167d elementor-widget elementor-widget-heading" data-id="661167d" data-element_type="widget" toc-subitem="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h5 class="elementor-heading-title elementor-size-default">2.  Branding and app title</h5>		</div>
+				</div>
+				<div class="elementor-element elementor-element-bba97df elementor-widget elementor-widget-heading" data-id="bba97df" data-element_type="widget" toc-item="false" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h6 class="elementor-heading-title elementor-size-default">Backoffice apps</h6>		</div>
+				</div>
+				<div class="elementor-element elementor-element-07f226f elementor-widget elementor-widget-text-editor" data-id="07f226f" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Backoffice apps use the standard Indigo 800 as a background for the omnibar. The backoffice omnibar features the Tyler Talking T’s logo and the app name, in title case (“General Ledger,” not “General ledger”).</p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-1b64b9e elementor-widget elementor-widget-html" data-id="1b64b9e" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<a href="wp-content/uploads/image-exports/omni-one-search-field.png" data-elementor-open-lightbox="yes">
+	<img src="wp-content/uploads/image-exports/omni-one-search-field.png" class="attachment-full size-full" alt=""></a>		</div>
+				</div>
+				<div class="elementor-element elementor-element-4139dff elementor-widget elementor-widget-spacer" data-id="4139dff" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-3a082a8 elementor-widget elementor-widget-heading" data-id="3a082a8" data-element_type="widget" toc-item="false" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h6 class="elementor-heading-title elementor-size-default">Public facing apps</h6>		</div>
+				</div>
+				<div class="elementor-element elementor-element-c294bd4 elementor-widget elementor-widget-text-editor" data-id="c294bd4" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>For citizen-facing applications, clients may choose to theme their omnibar using a preset selection of Material colors. Text, search inputs, and icon color are adjusted to meet appropriate ADA color contrast levels.</p><p><span style="color: var(--tyl-theme-text-primary-on-background,rgba(0,0,0,0.87)); letter-spacing: 0.05px;">The public-facing omnibar features the client logo (32px by 32px) and municipality / app name appear just to the right; separated by a divider. Both are title case (“Buena Vista | My Utilities”). </span><span style="color: var(--tyl-theme-text-primary-on-background,rgba(0,0,0,0.87)); letter-spacing: 0.05px;"> </span></p><p>On mobile, the public-facing omnibar uses the <code>prominent</code> attribute to accommodate the municipality name and app title.</p><p><span style="color: var(--tyl-theme-text-primary-on-background,rgba(0,0,0,0.87)); letter-spacing: 0.05px;"><b>Tenant branding palettes:</b></span><br>Tenants may select from standard Tyler Indigo, or Red, Blue, Light Green, Teal, Blue Grey, or Orange.</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-fa641fe elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="fa641fe" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-7c20956 elementor-column elementor-col-14 elementor-top-column" data-id="7c20956" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-fc486c0 elementor-widget elementor-widget-html" data-id="fc486c0" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="height: 100px; background-color: #283593"></div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-b11278e elementor-widget elementor-widget-html" data-id="b11278e" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="height: 25px; background-color: #303F9F"></div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-393bdf1 elementor-widget elementor-widget-html" data-id="393bdf1" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<p>Indigo 800
+<br><span style="color: rgba(0,0,0,0.54)">Indigo 700</span></p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-ea0b44a elementor-column elementor-col-14 elementor-top-column" data-id="ea0b44a" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-070e038 elementor-widget elementor-widget-html" data-id="070e038" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="height: 100px; background-color: #00897B"></div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-11d4163 elementor-widget elementor-widget-html" data-id="11d4163" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="height: 25px; background-color: #009688"></div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-7230334 elementor-widget elementor-widget-html" data-id="7230334" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<p>Teal 600
+<br><span style="color: rgba(0,0,0,0.54)">Teal 500</span></p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-af79da7 elementor-column elementor-col-14 elementor-top-column" data-id="af79da7" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-914079c elementor-widget elementor-widget-html" data-id="914079c" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="height: 100px; background-color: #448AFF"></div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-ceb1365 elementor-widget elementor-widget-html" data-id="ceb1365" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="height: 25px; background-color: #82B1FF"></div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-6b05e18 elementor-widget elementor-widget-html" data-id="6b05e18" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<p>Blue A200
+<br><span style="color: rgba(0,0,0,0.54)">Blue A100</span></p><p style="color: rgba(0,0,0,0.54)">Search border<br>#fffff</p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-471d260 elementor-column elementor-col-14 elementor-top-column" data-id="471d260" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-9fa66e2 elementor-widget elementor-widget-html" data-id="9fa66e2" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="height: 100px; background-color: #9CCC65"></div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-23cfa5e elementor-widget elementor-widget-html" data-id="23cfa5e" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="height: 25px; background-color: #AED581"></div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-2c7cde0 elementor-widget elementor-widget-html" data-id="2c7cde0" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<p>Light green 400
+<br><span style="color: rgba(0,0,0,0.54)">Light green 300</span></p>
+<p style="color: rgba(0,0,0,0.54)">Search border<br>#566A4</p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-748ce33 elementor-column elementor-col-14 elementor-top-column" data-id="748ce33" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-aa2f96f elementor-widget elementor-widget-html" data-id="aa2f96f" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="height: 100px; background-color: #E65100"></div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-3d29fd6 elementor-widget elementor-widget-html" data-id="3d29fd6" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="height: 25px; background-color: #EF6C00"></div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-85f82f9 elementor-widget elementor-widget-html" data-id="85f82f9" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<p>Orange 900
+<br><span style="color: rgba(0,0,0,0.54)">Orange 800</span></p>
+<p style="color: rgba(0,0,0,0.54)">Search border<br>#fffff</p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-fcee8b9 elementor-column elementor-col-14 elementor-top-column" data-id="fcee8b9" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-e6cb518 elementor-widget elementor-widget-html" data-id="e6cb518" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="height: 100px; background-color: #C62828"></div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-29e0553 elementor-widget elementor-widget-html" data-id="29e0553" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="height: 25px; background-color: #C62828"></div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-286ec39 elementor-widget elementor-widget-html" data-id="286ec39" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<p>Red 900
+<br><span style="color: rgba(0,0,0,0.54)">Red 800</span></p>
+<p style="color: rgba(0,0,0,0.54)">Search border<br>#fffff</p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-9b455de elementor-column elementor-col-14 elementor-top-column" data-id="9b455de" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-6a05b78 elementor-widget elementor-widget-html" data-id="6a05b78" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="height: 100px; background-color: #607D8B"></div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-0b9333c elementor-widget elementor-widget-html" data-id="0b9333c" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="height: 25px; background-color: #607D8B"></div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-27ae0bf elementor-widget elementor-widget-html" data-id="27ae0bf" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<p>Blue grey 600
+<br><span style="color: rgba(0,0,0,0.54)">Blue grey 600</span></p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-aeaca74 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="aeaca74" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-a965fae elementor-column elementor-col-100 elementor-top-column" data-id="a965fae" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-78562c0 elementor-widget elementor-widget-text-editor" data-id="78562c0" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><b>Desktop</b></p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-76c00b2 elementor-widget elementor-widget-html" data-id="76c00b2" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<a href="wp-content/uploads/image-exports/omni-citizen-themes.png" data-elementor-open-lightbox="yes">
+	<img src="wp-content/uploads/image-exports/omni-citizen-themes.png" class="attachment-full size-full" alt=""></a>		</div>
+				</div>
+				<div class="elementor-element elementor-element-a8b0bc6 elementor-widget elementor-widget-text-editor" data-id="a8b0bc6" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><b>Mobile</b></p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-032d078 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="032d078" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-4db3b9f elementor-column elementor-col-100 elementor-top-column" data-id="4db3b9f" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-a03943b elementor-widget elementor-widget-image" data-id="a03943b" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="1024" height="385" src="https://static-forge.netlify.com/wp-content/uploads/2019/07/tenant-app-bars-mobile-1024x385.png" class="attachment-large size-large" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/07/tenant-app-bars-mobile-1024x385.png 1024w,https://static-forge.netlify.com/wp-content/uploads/2019/07/tenant-app-bars-mobile-300x113.png 300w,https://static-forge.netlify.com/wp-content/uploads/2019/07/tenant-app-bars-mobile-768x289.png 768w,https://static-forge.netlify.com/wp-content/uploads/2019/07/tenant-app-bars-mobile.png 1228w" sizes="(max-width: 1024px) 100vw, 1024px"></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-e4f9015 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="e4f9015" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-184eaff elementor-column elementor-col-100 elementor-top-column" data-id="184eaff" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-c5b07c7 elementor-widget elementor-widget-spacer" data-id="c5b07c7" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-32857dd elementor-widget elementor-widget-heading" data-id="32857dd" data-element_type="widget" toc-subitem="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h5 class="elementor-heading-title elementor-size-default">3.  Search</h5>		</div>
+				</div>
+				<div class="elementor-element elementor-element-bd460c9 elementor-widget elementor-widget-spacer" data-id="bd460c9" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-60d7f72 elementor-widget elementor-widget-heading" data-id="60d7f72" data-element_type="widget" toc-item="false" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h6 class="elementor-heading-title elementor-size-default">Search scope</h6>		</div>
+				</div>
+				<div class="elementor-element elementor-element-0d33e0b elementor-widget elementor-widget-text-editor" data-id="0d33e0b" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><b>No search</b></p><p>Use when an app doesn’t have a use case to search for data and global search doesn’t need to be supported.</p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-56003fb elementor-widget elementor-widget-html" data-id="56003fb" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<a href="wp-content/uploads/image-exports/omni-no-search.png" data-elementor-open-lightbox="yes">
+	<img src="wp-content/uploads/image-exports/omni-no-search.png" class="attachment-full size-full" alt=""></a>		</div>
+				</div>
+				<div class="elementor-element elementor-element-299c7b2 elementor-widget elementor-widget-text-editor" data-id="299c7b2" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><strong>Global search</strong></p><p>Use when there’s no use case to search for data within the app, but users may need to search for something within the Tyler ecosystem. Include the “global icon” at the end of the search.</p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-42af6cd elementor-widget elementor-widget-html" data-id="42af6cd" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<a href="wp-content/uploads/image-exports/omni-global-search-1.png" data-elementor-open-lightbox="yes">
+	<img src="wp-content/uploads/image-exports/omni-global-search-1.png" class="attachment-full size-full" alt=""></a>		</div>
+				</div>
+				<div class="elementor-element elementor-element-6368168 elementor-widget elementor-widget-text-editor" data-id="6368168" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><span style="color: var(--tyl-theme-text-primary-on-background,rgba(0,0,0,0.87)); letter-spacing: 0.05px;"><b>Internal app search </b></span></p><p>Use when searches within a page, app or product suite are needed. Common examples include: searching for a user, record, incident, case, or setting. Use placeholder text to indicate that the search is contextual within the app.</p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-f9c6ce1 elementor-widget elementor-widget-html" data-id="f9c6ce1" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<a href="wp-content/uploads/image-exports/omni-contextual-search.png" data-elementor-open-lightbox="yes">
+	<img src="wp-content/uploads/image-exports/omni-contextual-search.png" class="attachment-full size-full" alt=""></a>		</div>
+				</div>
+				<div class="elementor-element elementor-element-7085cdd elementor-widget elementor-widget-text-editor" data-id="7085cdd" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><span style="color: var(--tyl-theme-text-primary-on-background,rgba(0,0,0,0.87)); letter-spacing: 0.05px;"><b>Combined search </b></span></p><p>Use this to allow searches at multiple levels – within a page, app, product suite, OR within the Tyler Ecosystem. Use placeholder text to indicate where the search will occur.</p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-66fc90f elementor-widget elementor-widget-html" data-id="66fc90f" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<a href="wp-content/uploads/image-exports/omni-global-search.png" data-elementor-open-lightbox="yes">
+	<img src="wp-content/uploads/image-exports/omni-global-search.png" class="attachment-full size-full" alt=""></a>		</div>
+				</div>
+				<div class="elementor-element elementor-element-a476251 elementor-widget elementor-widget-spacer" data-id="a476251" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-1238e81 elementor-widget elementor-widget-heading" data-id="1238e81" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h6 class="elementor-heading-title elementor-size-default">Search input type</h6>		</div>
+				</div>
+				<div class="elementor-element elementor-element-7a5bc0e elementor-widget elementor-widget-text-editor" data-id="7a5bc0e" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><span style="color: var(--tyl-theme-text-primary-on-background,rgba(0,0,0,0.87)); letter-spacing: 0.05px;"><b>One search input </b></span></p><p><span style="color: var(--tyl-theme-text-primary-on-background,rgba(0,0,0,0.87)); letter-spacing: 0.05px;">Default search state for the omnibar. Use in most cases.</span></p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-7669778 elementor-widget elementor-widget-html" data-id="7669778" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<a href="wp-content/uploads/image-exports/omni-one-search-field.png" data-elementor-open-lightbox="yes">
+	<img src="wp-content/uploads/image-exports/omni-one-search-field.png" class="attachment-full size-full" alt=""></a>		</div>
+				</div>
+				<div class="elementor-element elementor-element-60e22a3 elementor-widget elementor-widget-text-editor" data-id="60e22a3" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><span style="color: var(--tyl-theme-text-primary-on-background,rgba(0,0,0,0.87)); letter-spacing: 0.05px;"><b>Multi-search input</b></span></p><p>Use where multiple fields are required to run a single search.</p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-1e308e0 elementor-widget elementor-widget-html" data-id="1e308e0" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<a href="wp-content/uploads/image-exports/omni-multi-search-field.png" data-elementor-open-lightbox="yes">
+	<img src="wp-content/uploads/image-exports/omni-multi-search-field.png" class="attachment-full size-full" alt=""></a>		</div>
+				</div>
+				<div class="elementor-element elementor-element-018006b elementor-widget elementor-widget-text-editor" data-id="018006b" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><b>Advanced search</b></p><p>Use when a more advanced search is required for more than 30% of searches.</p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-c8433ed elementor-widget elementor-widget-html" data-id="c8433ed" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<a href="wp-content/uploads/image-exports/omni-advanced-search.png" data-elementor-open-lightbox="yes">
+	<img src="wp-content/uploads/image-exports/omni-advanced-search.png" class="attachment-full size-full" alt=""></a>		</div>
+				</div>
+				<div class="elementor-element elementor-element-4102ecb elementor-widget elementor-widget-spacer" data-id="4102ecb" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-97522e3 elementor-widget elementor-widget-heading" data-id="97522e3" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h6 class="elementor-heading-title elementor-size-default">Pre-filtering and autocomplete</h6>		</div>
+				</div>
+				<div class="elementor-element elementor-element-1bf89f8 elementor-widget elementor-widget-text-editor" data-id="1bf89f8" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><b>Autocomplete</b></p><p><span style="color: var(--mdc-theme-text-primary-on-background,rgba(0,0,0,0.87)); letter-spacing: 0.05px;">Use to suggest exact results or suggested search queries.</span></p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-da2bea8 elementor-widget elementor-widget-html" data-id="da2bea8" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<a href="wp-content/uploads/image-exports/omni-autocomplete.png" data-elementor-open-lightbox="yes">
+	<img src="wp-content/uploads/image-exports/omni-autocomplete.png" class="attachment-full size-full" alt=""></a>		</div>
+				</div>
+				<div class="elementor-element elementor-element-45b5624 elementor-widget elementor-widget-text-editor" data-id="45b5624" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><span style="color: var(--tyl-theme-text-primary-on-background,rgba(0,0,0,0.87)); letter-spacing: 0.05px;"><b>Prefilter</b></span></p><p>Use to help users search on specific categories or to improve performance time for global searches.</p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-0fc76fd elementor-widget elementor-widget-html" data-id="0fc76fd" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<a href="wp-content/uploads/image-exports/omni-prefilter.png" data-elementor-open-lightbox="yes">
+	<img src="wp-content/uploads/image-exports/omni-prefilter.png" class="attachment-full size-full" alt=""></a>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-7eed342 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="7eed342" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-4500b78 elementor-column elementor-col-100 elementor-top-column" data-id="4500b78" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-4dc7cee elementor-widget elementor-widget-spacer" data-id="4dc7cee" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-22ba985 elementor-widget elementor-widget-heading" data-id="22ba985" data-element_type="widget" toc-subitem="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h5 class="elementor-heading-title elementor-size-default">4.  Action items</h5>		</div>
+				</div>
+				<div class="elementor-element elementor-element-5a4832e elementor-widget elementor-widget-text-editor" data-id="5a4832e" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Up to three global actions maybe be placed in the “Action items” section. Actions belong to the app omnibar if they affect the application or record as a whole. Actions that affect a single item or a piece of the application should be placed in context, close to the part they affect. </p><p>Select from the following common actions such as “Shopping cart” and “Export all.” Additionally teams can create custom actions to meet specific business needs such as “Print package,” etc.</p><p>If your applications has more than three action items, place the two primary actions in the omnibar and the additional actions in an overflow menu. </p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-61114ca elementor-widget elementor-widget-html" data-id="61114ca" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="background: #fafafa; text-align: center"><a href="wp-content/uploads/image-exports/omnibar%20app%20actions.png" data-elementor-open-lightbox="yes">
+	<img src="wp-content/uploads/image-exports/omnibar%20app%20actions.png" class="attachment-full size-full" alt=""></a>
+</div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-ed5fcd0 elementor-widget elementor-widget-spacer" data-id="ed5fcd0" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-8063cd5 elementor-widget elementor-widget-heading" data-id="8063cd5" data-element_type="widget" toc-item="false" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h6 class="elementor-heading-title elementor-size-default">Shopping cart</h6>		</div>
+				</div>
+				<div class="elementor-element elementor-element-dc6c084 elementor-widget elementor-widget-text-editor" data-id="dc6c084" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Coming soon</p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-970f359 elementor-widget elementor-widget-heading" data-id="970f359" data-element_type="widget" toc-item="false" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h6 class="elementor-heading-title elementor-size-default">Export all</h6>		</div>
+				</div>
+				<div class="elementor-element elementor-element-894f1f8 elementor-widget elementor-widget-text-editor" data-id="894f1f8" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Coming soon</p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-d0771b9 elementor-widget elementor-widget-heading" data-id="d0771b9" data-element_type="widget" toc-item="false" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h6 class="elementor-heading-title elementor-size-default">Print all</h6>		</div>
+				</div>
+				<div class="elementor-element elementor-element-1fba9e8 elementor-widget elementor-widget-text-editor" data-id="1fba9e8" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Coming soon</p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-0918058 elementor-widget elementor-widget-heading" data-id="0918058" data-element_type="widget" toc-item="false" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h6 class="elementor-heading-title elementor-size-default">Language switcher</h6>		</div>
+				</div>
+				<div class="elementor-element elementor-element-b3cbd54 elementor-widget elementor-widget-text-editor" data-id="b3cbd54" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>For most apps, the language switcher lives in a user’s profile. For kiosk apps and apps geared toward an unauthenticated experience, the language switcher may appear as an action item. </p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-aae490f elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="aae490f" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-b202b76 elementor-column elementor-col-100 elementor-top-column" data-id="b202b76" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<section class="elementor-element elementor-element-2f87d153 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="2f87d153" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-3e9752c3 elementor-column elementor-col-50 elementor-inner-column" data-id="3e9752c3" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-52973dc elementor-widget elementor-widget-html" data-id="52973dc" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			
+     <a href="wp-content/uploads/image-exports/omni-actions-overflow-do.png" data-elementor-open-lightbox="yes" style="margin: 0">
+	<img src="wp-content/uploads/image-exports/omni-actions-overflow-do.png" class="attachment-full size-full" alt=""></a>
+		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-b52c4ba elementor-column elementor-col-50 elementor-inner-column" data-id="b52c4ba" data-element_type="column">
+			<div class="elementor-column-wrap">
+					<div class="elementor-widget-wrap">
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-6ea7d25d elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="6ea7d25d" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-33a034b9 elementor-column elementor-col-50 elementor-inner-column" data-id="33a034b9" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-3f2b5a3b tyl-background-success elementor-widget elementor-widget-spacer" data-id="3f2b5a3b" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-4156a6fb elementor-column elementor-col-50 elementor-inner-column" data-id="4156a6fb" data-element_type="column">
+			<div class="elementor-column-wrap">
+					<div class="elementor-widget-wrap">
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-701e153 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="701e153" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-66410d96 elementor-column elementor-col-50 elementor-inner-column" data-id="66410d96" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-7c587406 elementor-widget elementor-widget-text-editor" data-id="7c587406" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><span class="tyl-color-success"><strong>Do.</strong></span></p><p>For apps with more than three action items, place the two primary actions in the omnibar and the additional items in an overflow menu.</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-5aaa5e07 elementor-column elementor-col-50 elementor-inner-column" data-id="5aaa5e07" data-element_type="column">
+			<div class="elementor-column-wrap">
+					<div class="elementor-widget-wrap">
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section></div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-4c60649 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="4c60649" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-972927f elementor-column elementor-col-100 elementor-top-column" data-id="972927f" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-b8cd482 elementor-widget elementor-widget-spacer" data-id="b8cd482" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-84392ab elementor-widget elementor-widget-heading" data-id="84392ab" data-element_type="widget" toc-subitem="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h5 class="elementor-heading-title elementor-size-default">5. User info</h5>		</div>
+				</div>
+				<div class="elementor-element elementor-element-e1e387b elementor-widget elementor-widget-text-editor" data-id="e1e387b" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>The final section of the omnibar contains information and actions pertinent to a specific user. User information consists of four areas. </p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-b113b09 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="b113b09" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-ffbf358 elementor-column elementor-col-50 elementor-top-column" data-id="ffbf358" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-0236919 elementor-widget elementor-widget-html" data-id="0236919" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<a href="wp-content/uploads/image-exports/omnibar-user-info.png" data-elementor-open-lightbox="yes">
+	<img src="wp-content/uploads/image-exports/omnibar-user-info.png" class="attachment-full size-full" alt=""></a>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-06d0e91 elementor-column elementor-col-50 elementor-top-column" data-id="06d0e91" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-dd72837 elementor-widget elementor-widget-text-editor" data-id="dd72837" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><ol><li>Help</li><li>Notifications</li><li>App launcher </li><li>Avatar / Profile card</li></ol></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-c7f1869 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="c7f1869" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-498fc50 elementor-column elementor-col-100 elementor-top-column" data-id="498fc50" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-95bed74 elementor-widget elementor-widget-heading" data-id="95bed74" data-element_type="widget" toc-item="false" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h6 class="elementor-heading-title elementor-size-default">Help</h6>		</div>
+				</div>
+				<div class="elementor-element elementor-element-9dc309b elementor-widget elementor-widget-text-editor" data-id="9dc309b" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>The help menu is standard across apps and consists of a variety of resources, ranging from help specific to the user’s current app to the broad range of resources available on Tyler Community. </p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-a3cd053 elementor-widget elementor-widget-html" data-id="a3cd053" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<a href="wp-content/uploads/image-exports/omni-desktop-help.png" data-elementor-open-lightbox="yes">
+	<img src="wp-content/uploads/image-exports/omni-desktop-help.png" class="attachment-full size-full" alt=""></a>		</div>
+				</div>
+				<div class="elementor-element elementor-element-9c25cf0 elementor-widget elementor-widget-spacer" data-id="9c25cf0" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-c6c1379 elementor-widget elementor-widget-heading" data-id="c6c1379" data-element_type="widget" toc-item="false" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h6 class="elementor-heading-title elementor-size-default">Notifications</h6>		</div>
+				</div>
+				<div class="elementor-element elementor-element-419ecc3 elementor-widget elementor-widget-text-editor" data-id="419ecc3" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Notifications are standard across apps, and use tabs to display notifications from the current app as well as a summary of notifications from all apps. </p><p>Example notifications include:</p><ul><li>“New time off request to approve”</li><li>“New package rejected”</li><li>“Time off request approved.”</li><li>“Your bill is due in 5 days.”</li></ul></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-3792494 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="3792494" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-1d1cc3e elementor-column elementor-col-50 elementor-top-column" data-id="1d1cc3e" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-9eccfba elementor-widget elementor-widget-html" data-id="9eccfba" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<a href="wp-content/uploads/image-exports/desktop-omni-notifications-this-app.png" data-elementor-open-lightbox="yes">
+	<img src="wp-content/uploads/image-exports/desktop-omni-notifications-this-app.png" class="attachment-full size-full" alt=""></a>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-28104ab elementor-column elementor-col-50 elementor-top-column" data-id="28104ab" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-55b46dd elementor-widget elementor-widget-html" data-id="55b46dd" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<a href="wp-content/uploads/image-exports/desktop-omni-notifications-mine.png" data-elementor-open-lightbox="yes">
+	<img src="wp-content/uploads/image-exports/desktop-omni-notifications-mine.png" class="attachment-full size-full" alt=""></a>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-cdc9fc1 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="cdc9fc1" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-6322605 elementor-column elementor-col-100 elementor-top-column" data-id="6322605" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-3daff38 elementor-widget elementor-widget-text-editor" data-id="3daff38" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>A badge displays the total number of unread notifications individual to the user. Notifications are considered “read” when they have been clicked.  </p><p><span style="color: var(--mdc-theme-text-primary-on-background,rgba(0,0,0,0.87)); letter-spacing: 0.05px;">Notifications may be clickable. Clickable notifications may deep link within an app or may link to an external resource such as a Tyler Community article. Read notifications should persist only for 14 days unless otherwise specified by a business requirement. </span></p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-a88f89f elementor-widget elementor-widget-image" data-id="a88f89f" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+											<a data-elementor-open-lightbox="yes" href="https://static-forge.netlify.com/wp-content/uploads/2019/08/desktop-notification-anatomy-1.png">
+							<img width="768" height="426" src="https://static-forge.netlify.com/wp-content/uploads/2019/08/desktop-notification-anatomy-1-768x426.png" class="attachment-medium_large size-medium_large" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/08/desktop-notification-anatomy-1-768x426.png 768w,https://static-forge.netlify.com/wp-content/uploads/2019/08/desktop-notification-anatomy-1-300x166.png 300w,https://static-forge.netlify.com/wp-content/uploads/2019/08/desktop-notification-anatomy-1.png 922w" sizes="(max-width: 768px) 100vw, 768px"></a>
+											</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-489e6ca elementor-widget elementor-widget-spacer" data-id="489e6ca" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-0c443f4 elementor-widget elementor-widget-heading" data-id="0c443f4" data-element_type="widget" toc-item="false" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h6 class="elementor-heading-title elementor-size-default">App launcher</h6>		</div>
+				</div>
+				<div class="elementor-element elementor-element-10b5220 elementor-widget elementor-widget-text-editor" data-id="10b5220" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>The app launcher serves as a user’s local map to their Tyler ecosystem. For more information, read about the app launcher <a href="https://static-forge.netlify.com/patterns/app-launcher/">here</a>.</p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-dd662ad elementor-widget elementor-widget-html" data-id="dd662ad" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<a style="text-align: center" href="wp-content/uploads/image-exports/omnibar%20app%20launcher.png" data-elementor-open-lightbox="yes">
+	<img src="wp-content/uploads/image-exports/omnibar%20app%20launcher.png" class="attachment-full aligncenter size-full" alt=""></a>		</div>
+				</div>
+				<div class="elementor-element elementor-element-dc6688a elementor-widget elementor-widget-spacer" data-id="dc6688a" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-017c9f4 elementor-widget elementor-widget-heading" data-id="017c9f4" data-element_type="widget" toc-item="false" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h6 class="elementor-heading-title elementor-size-default">Avatar and profile card</h6>		</div>
+				</div>
+				<div class="elementor-element elementor-element-624fd29 elementor-widget elementor-widget-text-editor" data-id="624fd29" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><span style="letter-spacing: 0.05px;">The profile card features a user’s personalized avatar if they’ve set one, their full name, and the email used to sign up with the app. Additionally, the card features a “Sign out” option as well as a link to their profile.</span></p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-34261eb elementor-widget elementor-widget-html" data-id="34261eb" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<a style="text-align: center" href="wp-content/uploads/image-exports/desktop%20omni%20profile%20card.png" data-elementor-open-lightbox="yes">
+	<img src="wp-content/uploads/image-exports/desktop%20omni%20profile%20card.png" class="attachment-full size-full" alt=""></a>		</div>
+				</div>
+				<div class="elementor-element elementor-element-d2c4df7 elementor-widget elementor-widget-text-editor" data-id="d2c4df7" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><strong>Backoffice apps</strong></p><p>Backoffice apps support a user profile dialog, which features the following editable information:</p><ul><li>First and last name</li><li><span style="color: var(--mdc-theme-text-primary-on-background,rgba(0,0,0,0.87)); letter-spacing: 0.05px;">Language preference</span></li><li>Avatar photo</li></ul><p><b>Language preference</b></p><p>By default, the language selector should detect the native browser language if possible. Otherwise, users can select from supported languages in from their profile. </p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-8ccf2ae elementor-widget elementor-widget-image" data-id="8ccf2ae" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="803" height="486" src="https://static-forge.netlify.com/wp-content/uploads/2019/08/Group-13.png" class="attachment-large size-large" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/08/Group-13.png 803w,https://static-forge.netlify.com/wp-content/uploads/2019/08/Group-13-300x182.png 300w,https://static-forge.netlify.com/wp-content/uploads/2019/08/Group-13-768x465.png 768w" sizes="(max-width: 803px) 100vw, 803px"></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-bde21c8 elementor-widget elementor-widget-text-editor" data-id="bde21c8" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><strong>Public facing apps</strong></p><p>Public facing apps support a user profile. In public facing apps, u<span style="color: var(--mdc-theme-text-primary-on-background,rgba(0,0,0,0.87)); letter-spacing: 0.05px;">sers can access their global preferences from their profile page, including:</span></p><ul><li>Language preferences</li><li>Contact info</li><li>Payment methods</li></ul><p>For more information, see the Profile guidance (Coming soon).</p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-617851e elementor-widget elementor-widget-spacer" data-id="617851e" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-aabdcb8 elementor-widget elementor-widget-heading" data-id="aabdcb8" data-element_type="widget" toc-item="false" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h6 class="elementor-heading-title elementor-size-default">Unauthenticated users</h6>		</div>
+				</div>
+				<div class="elementor-element elementor-element-fe46bf5 elementor-widget elementor-widget-text-editor" data-id="fe46bf5" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>For unauthenticated users, the avatar is replaced by a “sign in” button. Notifications are hidden; the help menu and app launcher remain.</p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-2922324 elementor-widget elementor-widget-image" data-id="2922324" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="399" height="128" src="https://static-forge.netlify.com/wp-content/uploads/2019/08/desktop-unauthenticated.png" class="attachment-large size-large" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/08/desktop-unauthenticated.png 399w,https://static-forge.netlify.com/wp-content/uploads/2019/08/desktop-unauthenticated-300x96.png 300w" sizes="(max-width: 399px) 100vw, 399px"></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-509e5407 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="509e5407" data-element_type="section" id="guidance"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-61f235b0 elementor-column elementor-col-100 elementor-top-column" data-id="61f235b0" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-4254bca9 elementor-widget elementor-widget-spacer" data-id="4254bca9" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-745f09de elementor-widget elementor-widget-heading" data-id="745f09de" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Contextual states</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-6d73b768 elementor-widget elementor-widget-text-editor" data-id="6d73b768" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>The omnibar can transform into a contextual action bar to provide contextual actions to selected items. For example, when records are selected in a list, the omnibar transforms to a contextual app bar with actions related to the selected records.</p><p>When the omnibar transforms into a contextual action bar, the following changes occur:</p><ul><li>The bar color changes</li><li>The navigation icon is replaced with a close icon</li><li>The omnibar title text converts to contextual action bar text</li><li>All omnibar actions are replaced with contextual actions</li></ul><p>Upon closing, the contextual action bar transforms back into the omnibar.</p><p><code>Check back soon for an interactive example!</code></p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-cedd44f elementor-widget elementor-widget-heading" data-id="cedd44f" data-element_type="widget" toc-subitem="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h5 class="elementor-heading-title elementor-size-default">Select</h5>		</div>
+				</div>
+				<div class="elementor-element elementor-element-069ab61 elementor-widget elementor-widget-text-editor" data-id="069ab61" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><b>Desktop </b></p><p>Apps that primarily consist of a list or table of records may use the omnibar for selection. <span style="color: var(--mdc-theme-text-primary-on-background,rgba(0,0,0,0.87)); letter-spacing: 0.05px;">Don’t use</span><span style="color: var(--mdc-theme-text-primary-on-background,rgba(0,0,0,0.87)); letter-spacing: 0.05px;"> the omnibar for selection when a page has more content than just a list or when the omnibar is far from the selected content.</span></p><p>The selection state includes a checkbox to select or unselect all records, and a sum of total records selected. By default, “select all” includes all records currently visible on the page. When pagination or infinite scroll is used, provide users with an option to select all available records. </p><p>Actions that can be taken on selected records are placed at the end of the omnibar’s selection state. Use icons and a tooltip for familiar actions (Edit, Delete, Mark complete, Print, Download). Use outline buttons for less familiar actions (Assign to, Add role, Add to group). </p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-7fe519d elementor-widget elementor-widget-html" data-id="7fe519d" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<a href="wp-content/uploads/image-exports/omnibar%20contextual%20state%20select.png" data-elementor-open-lightbox="yes">
+	<img src="wp-content/uploads/image-exports/omnibar%20contextual%20state%20select.png" class="attachment-full size-full" alt=""></a>		</div>
+				</div>
+				<div class="elementor-element elementor-element-3801df3 elementor-widget elementor-widget-html" data-id="3801df3" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<a href="wp-content/uploads/image-exports/omnibar%20contextual%20state%20select%20text%20actions.png" data-elementor-open-lightbox="yes">
+	<img src="wp-content/uploads/image-exports/omnibar%20contextual%20state%20select%20text%20actions.png" class="attachment-full size-full" alt=""></a>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-a98a232 elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="a98a232" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-580318a elementor-column elementor-col-100 elementor-top-column" data-id="580318a" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<section class="elementor-element elementor-element-4689116 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="4689116" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-916b371 elementor-column elementor-col-50 elementor-inner-column" data-id="916b371" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-634c14c elementor-widget elementor-widget-html" data-id="634c14c" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<a href="wp-content/uploads/image-exports/omnibar%20contextual%20state%20dont.png" data-elementor-open-lightbox="yes">
+	<img src="wp-content/uploads/image-exports/omnibar%20contextual%20state%20dont.png" class="attachment-full size-full" alt=""></a>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-a648781 elementor-column elementor-col-50 elementor-inner-column" data-id="a648781" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-9df0174 elementor-widget elementor-widget-html" data-id="9df0174" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<a href="wp-content/uploads/image-exports/omnibar%20selection%20state%20page%20example%20.png" data-elementor-open-lightbox="yes">
+	<img src="wp-content/uploads/image-exports/omnibar%20selection%20state%20page%20example%20.png" class="attachment-full size-full" alt=""></a>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-671d957 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="671d957" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-466758b elementor-column elementor-col-50 elementor-inner-column" data-id="466758b" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-8d73ad5 tyl-background-danger elementor-widget elementor-widget-spacer" data-id="8d73ad5" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-938e9eb elementor-column elementor-col-50 elementor-inner-column" data-id="938e9eb" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-a5a2fd7 tyl-background-danger elementor-widget elementor-widget-spacer" data-id="a5a2fd7" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-1ced165 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="1ced165" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-d21e9ad elementor-column elementor-col-50 elementor-inner-column" data-id="d21e9ad" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-b2f948f elementor-widget elementor-widget-text-editor" data-id="b2f948f" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><span class="tyl-color-danger"><strong>Don’t.</strong></span></p><p><span style="letter-spacing: 0.05px;">Don’t combine text buttons and icons.  </span></p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-d908597 elementor-column elementor-col-50 elementor-inner-column" data-id="d908597" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-6731261 elementor-widget elementor-widget-text-editor" data-id="6731261" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><span class="tyl-color-danger"><strong>Don’t.</strong></span></p><p><span style="color: var(--mdc-theme-text-primary-on-background,rgba(0,0,0,0.87)); letter-spacing: 0.05px;">Don’t use</span><span style="color: var(--mdc-theme-text-primary-on-background,rgba(0,0,0,0.87)); letter-spacing: 0.05px;"> the omnibar for selection when a page has more content than just a list or when the omnibar is far away from the selected content.</span></p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section></div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-11d3789 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="11d3789" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-499389e elementor-column elementor-col-100 elementor-top-column" data-id="499389e" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-6da3767 elementor-widget elementor-widget-text-editor" data-id="6da3767" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><b>Mobile</b> </p><p>On mobile, the contextual select state consists of:</p><ul><li>An option to close the selection state </li><li>A count of select records </li><li>Contextual actions represented by icon buttons</li></ul></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-2058fdd elementor-widget elementor-widget-image" data-id="2058fdd" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img src="https://static-forge.netlify.com/wp-content/uploads/elementor/thumbs/omni-mobile-selected--obw4jkgzfebvrpqcqb3yyyf8ht08otn3hunwfve8zk.png" title="omni mobile selected" alt="omni mobile selected"></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-fd3409f elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="fd3409f" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-db63b8e elementor-column elementor-col-100 elementor-top-column" data-id="db63b8e" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-a841a31 elementor-widget elementor-widget-spacer" data-id="a841a31" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-24ebd46 elementor-widget elementor-widget-heading" data-id="24ebd46" data-element_type="widget" toc-subitem="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h5 class="elementor-heading-title elementor-size-default">Focused search</h5>		</div>
+				</div>
+				<div class="elementor-element elementor-element-5e9d978 elementor-widget elementor-widget-text-editor" data-id="5e9d978" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><style type="text/css">
+p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Roboto; color: #000000; color: rgba(0, 0, 0, 0.87)}<br />span.s1 {letter-spacing: -0.2px}<br /></style></p><p><b>Desktop</b></p><p>For search-oriented apps, teams may implement a focused search state. Focused search can draw additional attention to a search mode and can be useful for search-driven applications, but is not required. Focused search state may be combined with any of the search variations highlighted above. </p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-47e6779 elementor-widget elementor-widget-image" data-id="47e6779" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="1024" height="53" src="https://static-forge.netlify.com/wp-content/uploads/2019/08/omni-search-1-1024x53.png" class="attachment-large size-large" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/08/omni-search-1-1024x53.png 1024w,https://static-forge.netlify.com/wp-content/uploads/2019/08/omni-search-1-300x16.png 300w,https://static-forge.netlify.com/wp-content/uploads/2019/08/omni-search-1-768x40.png 768w,https://static-forge.netlify.com/wp-content/uploads/2019/08/omni-search-1.png 1460w" sizes="(max-width: 1024px) 100vw, 1024px"></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-778b276 elementor-widget elementor-widget-text-editor" data-id="778b276" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><style type="text/css">
+p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Roboto; color: #000000; color: rgba(0, 0, 0, 0.87)}<br />span.s1 {letter-spacing: -0.2px}<br /></style></p><p><b>Mobile</b></p><p>On mobile, the Search icon expands into a full search input on tap. Users can tap the Close icon to return to the default omni state.</p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-b2d6a8f elementor-widget elementor-widget-html" data-id="b2d6a8f" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<a href="wp-content/uploads/image-exports/mobile%20search%20interaction.png" data-elementor-open-lightbox="yes">
+	<img src="wp-content/uploads/image-exports/mobile%20search%20interaction.png" class="attachment-full size-full" alt=""></a>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-344566d2 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="344566d2" data-element_type="section" id="guidance"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-4e5f949e elementor-column elementor-col-100 elementor-top-column" data-id="4e5f949e" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-7e2a3ab1 elementor-widget elementor-widget-spacer" data-id="7e2a3ab1" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-112fcb71 elementor-widget elementor-widget-heading" data-id="112fcb71" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Omnibar variants</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-0e075cf elementor-widget elementor-widget-heading" data-id="0e075cf" data-element_type="widget" toc-subitem="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h5 class="elementor-heading-title elementor-size-default">Tabs</h5>		</div>
+				</div>
+				<div class="elementor-element elementor-element-5269bbe elementor-widget elementor-widget-text-editor" data-id="5269bbe" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix">Top tabs can be placed within the omnibar as primary navigation when the navigation drawer is not being used. Use 128px height app bar, with tabs placed along the bottom edge.</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-930e352 elementor-widget elementor-widget-html" data-id="930e352" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<a href="wp-content/uploads/image-exports/omnibar%20tabs.png" data-elementor-open-lightbox="yes">
+	<img src="wp-content/uploads/image-exports/omnibar%20tabs.png" class="attachment-full size-full" alt=""></a>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-db3e954 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="db3e954" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-c42174b elementor-column elementor-col-100 elementor-top-column" data-id="c42174b" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-bd346b4 elementor-widget elementor-widget-global elementor-global-3270 elementor-widget-html" data-id="bd346b4" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<tcw-divider></tcw-divider></div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-5464e755 elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="5464e755" data-element_type="section" id="best-practices"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-629d57c7 elementor-column elementor-col-100 elementor-top-column" data-id="629d57c7" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-10a4ffef elementor-widget elementor-widget-heading" data-id="10a4ffef" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Best practices</h4>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-244c940 elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="244c940" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-663dc1d elementor-column elementor-col-100 elementor-top-column" data-id="663dc1d" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<section class="elementor-element elementor-element-fe0ce77 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="fe0ce77" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-a45d7e7 elementor-column elementor-col-50 elementor-inner-column" data-id="a45d7e7" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-38c81cc elementor-widget elementor-widget-image" data-id="38c81cc" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="1024" height="566" src="https://static-forge.netlify.com/wp-content/uploads/2019/08/omni-dont-1024x566.png" class="attachment-large size-large" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/08/omni-dont-1024x566.png 1024w,https://static-forge.netlify.com/wp-content/uploads/2019/08/omni-dont-300x166.png 300w,https://static-forge.netlify.com/wp-content/uploads/2019/08/omni-dont-768x425.png 768w,https://static-forge.netlify.com/wp-content/uploads/2019/08/omni-dont.png 1440w" sizes="(max-width: 1024px) 100vw, 1024px"></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-1f326d0 elementor-column elementor-col-50 elementor-inner-column" data-id="1f326d0" data-element_type="column">
+			<div class="elementor-column-wrap">
+					<div class="elementor-widget-wrap">
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-f29b2f1 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="f29b2f1" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-d1e8788 elementor-column elementor-col-50 elementor-inner-column" data-id="d1e8788" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-10f1ae6 tyl-background-danger elementor-widget elementor-widget-spacer" data-id="10f1ae6" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-3963e7f elementor-column elementor-col-50 elementor-inner-column" data-id="3963e7f" data-element_type="column">
+			<div class="elementor-column-wrap">
+					<div class="elementor-widget-wrap">
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-527098e elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="527098e" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-98c901a elementor-column elementor-col-50 elementor-inner-column" data-id="98c901a" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-1f9e81a elementor-widget elementor-widget-text-editor" data-id="1f9e81a" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><span class="tyl-color-danger"><strong>Don’t.</strong></span></p><p><span style="letter-spacing: 0.05px;">Don’t place links in the omnibar. Use the tabs navigation, if necessary.</span></p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-e4a236c elementor-column elementor-col-50 elementor-inner-column" data-id="e4a236c" data-element_type="column">
+			<div class="elementor-column-wrap">
+					<div class="elementor-widget-wrap">
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section></div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-b0857d3 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="b0857d3" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-5615a7c elementor-column elementor-col-100 elementor-top-column" data-id="5615a7c" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-bcaa8cb elementor-widget elementor-widget-spacer" data-id="bcaa8cb" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section></div>
+			</div>
+		</div>
+		 
+                        </tcw-card><div class="tyl-typography--caption" style="margin-bottom: 8px;">Last modified on December 9, 2019 by: Nick Andrews</div>
+          </div>
+
+            <div class="right-content" id="toc-right-container" style="position: relative; width: 300px;"> 
+                                <div><div class="textwidget custom-html-widget"><div class="toc" style="position: fixed;">
+                    <div class="toc-container">
+                      <div class="left-line" id="toc-left-line"></div>
+                      <div class="toc-items-container" id="toc-items">
+                        <h6 style="margin-top: 0px; margin-bottom: 16px;">Table of contents</h6>
+                      </div>
+                    </div>
+                  </div>
+
+<div id="back-to-top-button" class="tyl-back-to-top">
+            <tcw-fab extended="true"><button aria-label="Extended FAB with just text" onclick="scrollTo()">
+                <i class="material-icons" aria-hidden="true">arrow_upward</i>
+                <span>Back to top</span>
+              </button>
+            </tcw-fab></div></div></div>                            </div>
+
+        </div>
+       </div>
+      </div>
+    </tcw-scaffold><script type="text/javascript" src="scripts/custom-elements-es5-adapter.js"></script><script type="text/javascript" src="scripts/webcomponents-bundle.js"></script><script type="text/javascript" src="scripts/tyler-components-web-lib.min.js"></script><script type="text/javascript" src="scripts/tyler-components-web-forge-lib.min.js"></script><script>
+  window.addEventListener('WebComponentsReady', function() {
+    window.TylerComponentsWeb.lib.defineComponents();
+    window.TylerComponentsWeb.Forge.lib.defineComponents();
+  });
+</script><script type="text/javascript" src="scripts/menu-expander.js"></script><script type="text/javascript" src="scripts/drawer.js"></script><script type="text/javascript" src="scripts/navHeader.js"></script><script type="text/javascript" src="scripts/search.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-136930168-1"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-136930168-1');
+</script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/material-design-for-contact-form-7/assets/js/lib/autosize.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/material-design-for-contact-form-7/assets/js/cf7-material-design-bundle.js"></script><script type="text/javascript">
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"https:\/\/static-forge.netlify.com\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"}};
+/* ]]> */
+</script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/contact-form-7/includes/js/scripts.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/js/frontend-modules.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor-pro/assets/lib/sticky/jquery.sticky.min.js"></script><script type="text/javascript">
+var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/static-forge.netlify.com\/wp-admin\/admin-ajax.php","nonce":"a52c73ecd1","shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"google":{"title":"Google+","has_counter":true},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"delicious":{"title":"Delicious"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"}},"facebook_sdk":{"lang":"en_US","app_id":""}};
+</script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor-pro/assets/js/frontend.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-includes/js/jquery/ui/position.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/swiper/swiper.min.js"></script><script type="text/javascript">
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"version":"2.8.3","urls":{"assets":"https:\/\/static-forge.netlify.com\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"general":{"elementor_global_image_lightbox":"yes"},"editorPreferences":[]},"post":{"id":1726,"title":"Omnibar","excerpt":""}};
+</script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/js/frontend.min.js"></script><script type="text/javascript" src="scripts/table-of-contents.js?x-version=1"></script></body></html>

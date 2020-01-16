@@ -1,0 +1,47 @@
+.elementor-3805 .elementor-element.elementor-element-19712f1 > .elementor-container {min-height: 400px;}
+.elementor-3805 .elementor-element.elementor-element-19712f1 > .elementor-container:after {content: "";min-height: inherit;}
+.elementor-3805 .elementor-element.elementor-element-19712f1:not(.elementor-motion-effects-element-type-background), .elementor-3805 .elementor-element.elementor-element-19712f1 > .elementor-motion-effects-container > .elementor-motion-effects-layer {background-image: url("https://static-forge.netlify.com/wp-content/uploads/2019/11/forge-dev-hero.jpg");background-repeat: no-repeat;background-size: cover;}
+.elementor-3805 .elementor-element.elementor-element-19712f1 {transition: background .3s,border .3s,border-radius .3s,box-shadow .3s;margin-top: 0px;margin-bottom: 0px;padding: 56px 0px 56px 0px;}
+.elementor-3805 .elementor-element.elementor-element-19712f1 > .elementor-background-overlay {transition: background .3s,border-radius .3s,opacity .3s;}
+.elementor-3805 .elementor-element.elementor-element-aed2586:not(.elementor-motion-effects-element-type-background) > .elementor-element-populated, .elementor-3805 .elementor-element.elementor-element-aed2586 > .elementor-column-wrap > .elementor-motion-effects-container > .elementor-motion-effects-layer {background-color: rgba(255,255,255,.9);}
+.elementor-3805 .elementor-element.elementor-element-aed2586 > .elementor-element-populated {border-style: solid;border-color: rgba(255,255,255,0);transition: background .3s,border .3s,border-radius .3s,box-shadow .3s;margin: 20px 0px 20px 0px;padding: 32px 32px 32px 32px;}
+.elementor-3805 .elementor-element.elementor-element-aed2586 > .elementor-element-populated, .elementor-3805 .elementor-element.elementor-element-aed2586 > .elementor-element-populated > .elementor-background-overlay, .elementor-3805 .elementor-element.elementor-element-aed2586 > .elementor-background-slideshow {border-radius: 4px 4px 4px 4px;}
+.elementor-3805 .elementor-element.elementor-element-aed2586 > .elementor-element-populated > .elementor-background-overlay {transition: background .3s,border-radius .3s,opacity .3s;}
+.elementor-3805 .elementor-element.elementor-element-19260523:not(.elementor-motion-effects-element-type-background), .elementor-3805 .elementor-element.elementor-element-19260523 > .elementor-motion-effects-container > .elementor-motion-effects-layer {background-color: #f4f7fd;}
+.elementor-3805 .elementor-element.elementor-element-19260523 {transition: background .3s,border .3s,border-radius .3s,box-shadow .3s;margin-top: 0px;margin-bottom: 0px;padding: 56px 56px 56px 56px;}
+.elementor-3805 .elementor-element.elementor-element-19260523 > .elementor-background-overlay {transition: background .3s,border-radius .3s,opacity .3s;}
+.elementor-3805 .elementor-element.elementor-element-2cf9cab2 {text-align: center;}
+.elementor-3805 .elementor-element.elementor-element-2cf9cab2.elementor-widget-heading .elementor-heading-title {color: #000;}
+.elementor-3805 .elementor-element.elementor-element-796908a5 .elementor-text-editor {text-align: center;}
+.elementor-3805 .elementor-element.elementor-element-796908a5 {font-size: 18px;font-weight: 400;}
+.elementor-3805 .elementor-element.elementor-element-796908a5 > .elementor-widget-container {padding: 0px 200px 0px 200px;}
+.elementor-3805 .elementor-element.elementor-element-5c1b577e:not(.elementor-motion-effects-element-type-background), .elementor-3805 .elementor-element.elementor-element-5c1b577e > .elementor-motion-effects-container > .elementor-motion-effects-layer {background-color: #f4f7fd;}
+.elementor-3805 .elementor-element.elementor-element-5c1b577e {transition: background .3s,border .3s,border-radius .3s,box-shadow .3s;margin-top: 0px;margin-bottom: 0px;padding: 0px 16px 0px 16px;}
+.elementor-3805 .elementor-element.elementor-element-5c1b577e > .elementor-background-overlay {transition: background .3s,border-radius .3s,opacity .3s;}
+.elementor-3805 .elementor-element.elementor-element-691897a6:not(.elementor-motion-effects-element-type-background) > .elementor-element-populated, .elementor-3805 .elementor-element.elementor-element-691897a6 > .elementor-column-wrap > .elementor-motion-effects-container > .elementor-motion-effects-layer {background-color: #fff;}
+.elementor-3805 .elementor-element.elementor-element-691897a6 > .elementor-element-populated {transition: background .3s,border .3s,border-radius .3s,box-shadow .3s;margin: 24px 16px 0px 0px;padding: 16px 16px 16px 16px;}
+.elementor-3805 .elementor-element.elementor-element-691897a6 > .elementor-element-populated > .elementor-background-overlay {transition: background .3s,border-radius .3s,opacity .3s;}
+.elementor-3805 .elementor-element.elementor-element-68e0ce70 {color: #000;}
+.elementor-3805 .elementor-element.elementor-element-68e0ce70 > .elementor-widget-container {padding: 0px 0px 0px 0px;background-color: #fff;}
+.elementor-3805 .elementor-element.elementor-element-1934b724:not(.elementor-motion-effects-element-type-background) > .elementor-element-populated, .elementor-3805 .elementor-element.elementor-element-1934b724 > .elementor-column-wrap > .elementor-motion-effects-container > .elementor-motion-effects-layer {background-color: #fff;}
+.elementor-3805 .elementor-element.elementor-element-1934b724 > .elementor-element-populated {transition: background .3s,border .3s,border-radius .3s,box-shadow .3s;margin: 24px 16px 0px 0px;padding: 16px 16px 16px 16px;}
+.elementor-3805 .elementor-element.elementor-element-1934b724 > .elementor-element-populated > .elementor-background-overlay {transition: background .3s,border-radius .3s,opacity .3s;}
+.elementor-3805 .elementor-element.elementor-element-37739d6e {color: #000;}
+.elementor-3805 .elementor-element.elementor-element-37739d6e > .elementor-widget-container {padding: 0px 0px 0px 0px;background-color: #fff;}
+.elementor-3805 .elementor-element.elementor-element-13a283db:not(.elementor-motion-effects-element-type-background), .elementor-3805 .elementor-element.elementor-element-13a283db > .elementor-motion-effects-container > .elementor-motion-effects-layer {background-color: #f4f7fd;}
+.elementor-3805 .elementor-element.elementor-element-13a283db {transition: background .3s,border .3s,border-radius .3s,box-shadow .3s;margin-top: 0px;margin-bottom: 0px;padding: 0px 16px 56px 16px;}
+.elementor-3805 .elementor-element.elementor-element-13a283db > .elementor-background-overlay {transition: background .3s,border-radius .3s,opacity .3s;}
+.elementor-3805 .elementor-element.elementor-element-604819bd:not(.elementor-motion-effects-element-type-background) > .elementor-element-populated, .elementor-3805 .elementor-element.elementor-element-604819bd > .elementor-column-wrap > .elementor-motion-effects-container > .elementor-motion-effects-layer {background-color: #fff;}
+.elementor-3805 .elementor-element.elementor-element-604819bd > .elementor-element-populated {transition: background .3s,border .3s,border-radius .3s,box-shadow .3s;margin: 24px 16px 0px 0px;padding: 16px 16px 16px 16px;}
+.elementor-3805 .elementor-element.elementor-element-604819bd > .elementor-element-populated > .elementor-background-overlay {transition: background .3s,border-radius .3s,opacity .3s;}
+.elementor-3805 .elementor-element.elementor-element-115085a2 {color: #000;}
+.elementor-3805 .elementor-element.elementor-element-115085a2 > .elementor-widget-container {padding: 0px 0px 0px 0px;background-color: #fff;}
+.elementor-3805 .elementor-element.elementor-element-7db38c0a:not(.elementor-motion-effects-element-type-background) > .elementor-element-populated, .elementor-3805 .elementor-element.elementor-element-7db38c0a > .elementor-column-wrap > .elementor-motion-effects-container > .elementor-motion-effects-layer {background-color: #fff;}
+.elementor-3805 .elementor-element.elementor-element-7db38c0a > .elementor-element-populated {transition: background .3s,border .3s,border-radius .3s,box-shadow .3s;margin: 24px 16px 0px 0px;padding: 16px 16px 16px 16px;}
+.elementor-3805 .elementor-element.elementor-element-7db38c0a > .elementor-element-populated > .elementor-background-overlay {transition: background .3s,border-radius .3s,opacity .3s;}
+.elementor-3805 .elementor-element.elementor-element-3e725a30 {color: #000;}
+.elementor-3805 .elementor-element.elementor-element-3e725a30 > .elementor-widget-container {padding: 0px 0px 0px 0px;background-color: #fff;}
+@media (min-width:768px) {.elementor-3805 .elementor-element.elementor-element-8246a7b {width: 20.627%;}
+	.elementor-3805 .elementor-element.elementor-element-aed2586 {width: 59.03%;}
+	.elementor-3805 .elementor-element.elementor-element-fb1c11d {width: 20.339%;}}
+.tyl-docs-content__container {margin: 0 !important;}

@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en-US"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="shortcut icon" href="favicon.ico" sizes="16x16" type="image/x-icon"><title>Data formats – Tyler Forge</title><link rel="dns-prefetch" href="//fonts.googleapis.com"><link rel="dns-prefetch" href="//s.w.org"><link rel="stylesheet" id="cf7md_roboto-css" href="//fonts.googleapis.com/css?family=Roboto:400,500" type="text/css" media="all"><link rel="stylesheet" id="cf7-material-design-css" href="https://static-forge.netlify.com/wp-content/plugins/material-design-for-contact-form-7/assets/css/cf7-material-design.css" type="text/css" media="all"><link rel="stylesheet" id="contact-form-7-css" href="https://static-forge.netlify.com/wp-content/plugins/contact-form-7/includes/css/styles.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-icons-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-animations-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/animations/animations.min.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-frontend-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/css/frontend.min.css" type="text/css" media="all"><link rel="stylesheet" id="lae-animate-styles-css" href="https://static-forge.netlify.com/wp-content/plugins/addons-for-elementor/assets/css/animate.css" type="text/css" media="all"><link rel="stylesheet" id="lae-sliders-styles-css" href="https://static-forge.netlify.com/wp-content/plugins/addons-for-elementor/assets/css/sliders.css" type="text/css" media="all"><link rel="stylesheet" id="lae-icomoon-styles-css" href="https://static-forge.netlify.com/wp-content/plugins/addons-for-elementor/assets/css/icomoon.css" type="text/css" media="all"><link rel="stylesheet" id="lae-frontend-styles-css" href="https://static-forge.netlify.com/wp-content/plugins/addons-for-elementor/assets/css/lae-frontend.css" type="text/css" media="all"><link rel="stylesheet" id="lae-widgets-styles-css" href="https://static-forge.netlify.com/wp-content/plugins/addons-for-elementor/assets/css/lae-widgets.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-pro-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor-pro/assets/css/frontend.min.css" type="text/css" media="all"><link rel="stylesheet" id="font-awesome-5-all-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/all.min.css" type="text/css" media="all"><link rel="stylesheet" id="font-awesome-4-shim-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/v4-shims.min.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-global-css" href="https://static-forge.netlify.com/wp-content/uploads/elementor/css/global.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-post-40540-css" href="https://static-forge.netlify.com/wp-content/uploads/elementor/css/post-40540.css" type="text/css" media="all"><link rel="stylesheet" id="custom-frontend-style-css" href="https://static-forge.netlify.com/wp-content/plugins/ideapush/inc/css/frontendstyle.css" type="text/css" media="all"><style id="custom-frontend-style-inline-css" type="text/css">
+.ideapush-idea-filter{display: none;}
+</style><script type="text/javascript" src="https://static-forge.netlify.com/wp-includes/js/jquery/jquery.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-includes/js/jquery/jquery-migrate.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min.js"></script><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NB3CZPX');</script><script type="text/javascript">
+            (function () {
+                window.lae_fs = {can_use_premium_code: false};
+            })();
+        </script><style type="text/css" id="wp-custom-css">
+			.hljs {
+	background: none;
+}		</style><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono"><link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700"><link href="https://cdn.forge.tylertech.com/v1/libs/tcw/latest/tcw-material-design.css" rel="stylesheet"><link rel="stylesheet" href="styles/tyler-forge.css"><link rel="stylesheet" href="styles/hljs-theme.css"><link rel="stylesheet" href="styles/component.css"></head><body class="tyl-typography">
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NB3CZPX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+
+
+    <tcw-scaffold class="tyl-docs"><tcw-omnibar id="tyl-forge-omnibar" title-text="Tyler Forge" slot="header"><div slot="logo" style="width: 24px; height: 20px; margin-left: 8px;">
+    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 480.5 423.03"><title>forge-icon-only</title><g id="logo"><path d="M463.68,39H283.49A26,26,0,0,0,261,52l-39.38,68.2a26,26,0,0,0,22.55,39.05H424.3a26,26,0,0,0,22.55-13L486.22,78A26,26,0,0,0,463.68,39Z" transform="translate(-9.25 -38.98)" fill="#fff"></path><path d="M377,189.18H196.77a26,26,0,0,0-22.54,13l-37.37,64.72a26,26,0,0,0,0,26L227,449A26,26,0,0,0,272,449L399.51,228.23A26,26,0,0,0,377,189.18Z" transform="translate(-9.25 -38.98)" fill="#fff"></path><path d="M211.35,78A26,26,0,0,0,188.81,39H35.32A26,26,0,0,0,12.78,78L77,189.18,89.52,211a26,26,0,0,0,45.09,0Z" transform="translate(-9.25 -38.98)" fill="#fff"></path></g></svg></div>
+  <tcw-omnibar-search slot="center"><input type="text" placeholder="Search..."></tcw-omnibar-search><tcw-omnibar-menu-button slot="menu" id="tyl-forge-omnibar-menu"></tcw-omnibar-menu-button><div slot="action" style="display: flex; justify-content: space-around;">
+    <ul class="header-nav"><li class="header__nav-item" id="design-nav-indicator">
+        <a href="/getting-started-with-forge/" class="header__nav-link">
+          Design <span class="header__nav-indicator" id="design-link-indicator"></span>
+        </a>
+      </li>
+      <li class="header__nav-item" id="development-nav-indicator">
+        <a href="/development/" class="header__nav-link">
+          Development <span class="header__nav-indicator" id="development-link-indicator"></span>
+        </a>
+      </li>
+      <li class="header__nav-item" id="development-nav-indicator">
+        <a href="/give-feedback/" class="header__nav-link">
+          Feedback <span class="header__nav-indicator" id="feedback-link-indicator"></span>
+        </a>
+      </li>
+    </ul></div>
+</tcw-omnibar><div slot="body-left">
+  <tcw-drawer id="tyl-forge-sidenav" type="dismissible" open="true" style="--tyl-drawer-width: 320px;"><tcw-list class="nav navbar-nav"><a href="https://static-forge.netlify.com/" id="home-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">home</i>Home</tcw-list-item></a><tcw-expansion-panel id="get started-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">forward</i>
+			  Get started
+			  <tcw-open-icon slot="trailing" style="line-height: 0.5;"></tcw-open-icon></tcw-list-item><tcw-list><a href="https://static-forge.netlify.com/getting-started-as-a-designer/"><tcw-list-item slot="header" class="nav_subitem">As a designer</tcw-list-item></a><a href="https://static-forge.netlify.com/design-to-dev-handoff/"><tcw-list-item slot="header" class="nav_subitem">Design to Dev Handoff</tcw-list-item></a></tcw-list></tcw-expansion-panel><tcw-expansion-panel id="foundation-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">border_outer</i>
+			  Foundation
+			  <tcw-open-icon slot="trailing" style="line-height: 0.5;"></tcw-open-icon></tcw-list-item><tcw-list><a href="https://static-forge.netlify.com/foundation/overview/"><tcw-list-item slot="header" class="nav_subitem">Overview</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/intro-to-accessibility/"><tcw-list-item slot="header" class="nav_subitem">Accessibility</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/tyler-branding/"><tcw-list-item slot="header" class="nav_subitem">Branding</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/color/"><tcw-list-item slot="header" class="nav_subitem">Color</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/data-formats/"><tcw-list-item slot="header" class="nav_subitem">Data formats</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/tyler-icons-full/"><tcw-list-item slot="header" class="nav_subitem">Iconography</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/illustrations-usage/"><tcw-list-item slot="header" class="nav_subitem">Illustration: Usage</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/illustration-library/"><tcw-list-item slot="header" class="nav_subitem">Illustration: Library</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/theming/"><tcw-list-item slot="header" class="nav_subitem">Theming</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/layout-intro/"><tcw-list-item slot="header" class="nav_subitem">Layout: Intro</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/layout-grid/"><tcw-list-item slot="header" class="nav_subitem">Layout: Grid</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/layout-spacing/"><tcw-list-item slot="header" class="nav_subitem">Layout: Spacing</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/layout-page-layouts/"><tcw-list-item slot="header" class="nav_subitem">Layout: Page layouts</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/typography/"><tcw-list-item slot="header" class="nav_subitem">Typography</tcw-list-item></a><a href="https://static-forge.netlify.com/product-analytics/"><tcw-list-item slot="header" class="nav_subitem">Product analytics - coming soon</tcw-list-item></a></tcw-list></tcw-expansion-panel><tcw-expansion-panel id="patterns-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">ac_unit</i>
+			  Patterns
+			  <tcw-open-icon slot="trailing" style="line-height: 0.5;"></tcw-open-icon></tcw-list-item><tcw-list><a href="https://static-forge.netlify.com/patterns/data-visualization/"><tcw-list-item slot="header" class="nav_subitem">Data visualization: Intro</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/data-visualization-2/"><tcw-list-item slot="header" class="nav_subitem">Data visualization: Charts</tcw-list-item></a><a href="https://static-forge.netlify.com/colors-data-visualization/"><tcw-list-item slot="header" class="nav_subitem">Data visualization: Colors</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/drag-and-drop/"><tcw-list-item slot="header" class="nav_subitem">Drag and drop</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/empty-state/"><tcw-list-item slot="header" class="nav_subitem">Empty state</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/errors/"><tcw-list-item slot="header" class="nav_subitem">Errors</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/faceted-search/"><tcw-list-item slot="header" class="nav_subitem">Faceted filtering</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/forms/"><tcw-list-item slot="header" class="nav_subitem">Forms</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/login/"><tcw-list-item slot="header" class="nav_subitem">Login</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/mapping-gis/"><tcw-list-item slot="header" class="nav_subitem">Mapping & GIS</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/navigation/"><tcw-list-item slot="header" class="nav_subitem">Navigation</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/onboarding/"><tcw-list-item slot="header" class="nav_subitem">Onboarding - in progress</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/profile/"><tcw-list-item slot="header" class="nav_subitem">Profile - in progress</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/progress-loading/"><tcw-list-item slot="header" class="nav_subitem">Progress & loading</tcw-list-item></a></tcw-list></tcw-expansion-panel><tcw-expansion-panel id="components-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">settings_input_component</i>
+			  Components
+			  <tcw-open-icon slot="trailing" style="line-height: 0.5;"></tcw-open-icon></tcw-list-item><tcw-list><a href="https://static-forge.netlify.com/components/accordion/"><tcw-list-item slot="header" class="nav_subitem">Accordion</tcw-list-item></a><a href="https://static-forge.netlify.com/components/app-launcher/"><tcw-list-item slot="header" class="nav_subitem">App launcher</tcw-list-item></a><a href="https://static-forge.netlify.com/components/avatar/"><tcw-list-item slot="header" class="nav_subitem">Avatar</tcw-list-item></a><a href="https://static-forge.netlify.com/components/badge/"><tcw-list-item slot="header" class="nav_subitem">Badge - Coming soon</tcw-list-item></a><a href="https://static-forge.netlify.com/components/buttons/"><tcw-list-item slot="header" class="nav_subitem">Buttons</tcw-list-item></a><a href="https://static-forge.netlify.com/components/card/"><tcw-list-item slot="header" class="nav_subitem">Card</tcw-list-item></a><a href="https://static-forge.netlify.com/components/chips/"><tcw-list-item slot="header" class="nav_subitem">Chips</tcw-list-item></a><a href="https://static-forge.netlify.com/components/date-picker/"><tcw-list-item slot="header" class="nav_subitem">Date picker - coming soon</tcw-list-item></a><a href="https://static-forge.netlify.com/components/dialog/"><tcw-list-item slot="header" class="nav_subitem">Dialog</tcw-list-item></a><a href="https://static-forge.netlify.com/components/expansion-panel/"><tcw-list-item slot="header" class="nav_subitem">Expansion panel</tcw-list-item></a><a href="https://static-forge.netlify.com/components/floating-action-button/"><tcw-list-item slot="header" class="nav_subitem">Floating Action Button</tcw-list-item></a><a href="https://static-forge.netlify.com/components/list/"><tcw-list-item slot="header" class="nav_subitem">List</tcw-list-item></a><a href="https://static-forge.netlify.com/components/navigation-drawer/"><tcw-list-item slot="header" class="nav_subitem">Navigation drawer</tcw-list-item></a><a href="https://static-forge.netlify.com/components/omnibar/"><tcw-list-item slot="header" class="nav_subitem">Omnibar</tcw-list-item></a><a href="https://static-forge.netlify.com/components/progress-indicators/"><tcw-list-item slot="header" class="nav_subitem">Progress indicators</tcw-list-item></a><a href="https://static-forge.netlify.com/components/selection-controls/"><tcw-list-item slot="header" class="nav_subitem">Selection controls</tcw-list-item></a><a href="https://static-forge.netlify.com/components/sliders/"><tcw-list-item slot="header" class="nav_subitem">Sliders</tcw-list-item></a><a href="https://static-forge.netlify.com/components/stepper/"><tcw-list-item slot="header" class="nav_subitem">Stepper - coming soon</tcw-list-item></a><a href="https://static-forge.netlify.com/components/table/"><tcw-list-item slot="header" class="nav_subitem">Table</tcw-list-item></a><a href="https://static-forge.netlify.com/components/tabs/"><tcw-list-item slot="header" class="nav_subitem">Tabs</tcw-list-item></a><a href="https://static-forge.netlify.com/components/toast/"><tcw-list-item slot="header" class="nav_subitem">Toast</tcw-list-item></a><a href="https://static-forge.netlify.com/components/toolbar/"><tcw-list-item slot="header" class="nav_subitem">Toolbar - coming soon</tcw-list-item></a><a href="https://static-forge.netlify.com/components/tooltip/"><tcw-list-item slot="header" class="nav_subitem">Tooltip</tcw-list-item></a></tcw-list></tcw-expansion-panel><tcw-expansion-panel id="native mobile-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">phone_iphone</i>
+			  Native mobile
+			  <tcw-open-icon slot="trailing" style="line-height: 0.5;"></tcw-open-icon></tcw-list-item><tcw-list><a href="https://static-forge.netlify.com/native-mobile/basic-requirements/"><tcw-list-item slot="header" class="nav_subitem">Basic requirements</tcw-list-item></a><a href="https://static-forge.netlify.com/native-mobile/frameworks/"><tcw-list-item slot="header" class="nav_subitem">Frameworks</tcw-list-item></a><a href="https://static-forge.netlify.com/native-mobile/design-patterns/"><tcw-list-item slot="header" class="nav_subitem">Design patterns</tcw-list-item></a></tcw-list></tcw-expansion-panel><a href="https://static-forge.netlify.com/feedback-support/" id="feedback & support-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">pan_tool</i>Feedback & support</tcw-list-item></a><a href="https://static-forge.netlify.com/status/" id="status-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">trending_up</i>Status</tcw-list-item></a><a href="https://static-forge.netlify.com/faqs/" id="faqs-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">help</i>FAQs</tcw-list-item></a>    </tcw-list></tcw-drawer></div>
+      <div class="tyl-docs-content" slot="body" style="position: relative;" id="top-of-page">
+        <div id="tyl-docs-content" class="tyl-docs-content__container" style="padding: 16px; max-width: 1264px;">
+        <div class="flex-container" style="display: flex;">
+        <div class="left-content" style="max-width: 956px; width: 100%;">
+          <tcw-card has-padding="false"><div data-elementor-type="wp-page" data-elementor-id="40540" class="elementor elementor-40540" data-elementor-settings="[]">
+			<div class="elementor-inner">
+				<div class="elementor-section-wrap">
+							<section class="elementor-element elementor-element-6451e9b9 elementor-section-height-min-height elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-items-middle elementor-section elementor-top-section" data-id="6451e9b9" data-element_type="section" id="overview" data-settings='{"background_background":"classic"}'><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-7539d235 elementor-column elementor-col-50 elementor-top-column" data-id="7539d235" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-1a750936 elementor-widget elementor-widget-divider" data-id="1a750936" data-element_type="widget" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-22c7730f elementor-widget elementor-widget-heading" data-id="22c7730f" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Data formats</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-3fbace51 elementor-widget elementor-widget-text-editor" data-id="3fbace51" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Data formats depict different types of numeric and linguistic data.</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-1eaa9a01 elementor-column elementor-col-50 elementor-top-column" data-id="1eaa9a01" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-24e6bdf5 elementor-widget elementor-widget-html" data-id="24e6bdf5" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="display: flex; justify-content: flex-end;">
+    <a href="/development/components/button/">
+<tcw-button><button type="button">
+      <i class="material-icons">code</i>
+      <span>Developer Guidelines</span>
+    </button>
+</tcw-button></a>
+</div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-4ce9430f elementor-widget elementor-widget-image" data-id="4ce9430f" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img src="https://static-forge.netlify.com/wp-content/uploads/elementor/thumbs/data-colors-spot-hero-o9631i8e8msjqaqso9z1a35rn7b52ummoayn0u7r54.png" title="data colors-spot hero" alt="data colors-spot hero"></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-ad089dc elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="ad089dc" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-062ee88 elementor-column elementor-col-100 elementor-top-column" data-id="062ee88" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-9aa3ce6 elementor-widget elementor-widget-spacer" data-id="9aa3ce6" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-8c9a922 elementor-widget elementor-widget-heading" data-id="8c9a922" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Dates & times</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-16684e0 elementor-widget elementor-widget-text-editor" data-id="16684e0" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Forge recommends writing out dates whenever possible. Not only are written dates more clear, but they also translate better into other languages. For example, Feb 10, 2019 in Spanish is written as 10 de febrero (10/02/2019); portraying 02/10/2019 can be ambiguous depending on language of the user. </p><p>Only use numeric formats for dates if there is a compelling reason (such as a lack of space in a table). </p><p> </p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-0ede8af elementor-widget elementor-widget-heading" data-id="0ede8af" data-element_type="widget" toc-subitem="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Dates & times</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-b3d1ac5 elementor-widget elementor-widget-html" data-id="b3d1ac5" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<table class="s-tag-table"><tbody><tr><td colspan="1" rowspan="1"><strong>Type</strong></td>
+<td colspan="1" rowspan="1"><strong>Non-numeric</strong></td>
+<td colspan="1" rowspan="1"><strong>Numeric </strong></td>
+
+</tr><tr><td colspan="1" rowspan="1">Time</td>
+<td colspan="1" rowspan="1">n/a</td>
+<td colspan="1" rowspan="1">04:15 PM
+</td>
+</tr><tr><td colspan="1" rowspan="1">24-hour time</td>
+<td colspan="1" rowspan="1">n/a</td>
+<td colspan="1" rowspan="1">14:00
+</td>
+</tr><tr><td colspan="1" rowspan="1">Time range</td>
+<td colspan="1" rowspan="1">n/a</td>
+<td colspan="1" rowspan="1"> 9:00 AM–3:00 PM<br>10:00–11:30 AM
+</td>
+</tr><tr><td colspan="1" rowspan="1">Date, month, and year</td>
+<td colspan="1" rowspan="1">Mar 3, 2019<br>December 15, 2019</td>
+<td colspan="1" rowspan="1"> 03/03/2019
+</td>
+</tr><tr><td colspan="1" rowspan="1">Day of week, date, month, and year</td>
+<td colspan="1" rowspan="1">Tue, Nov 7, 2019<br>Tuesday, January 6, 2019
+</td>
+<td colspan="1" rowspan="1">Tuesday, 11/07/2019<br>Tues, 01/06/2019
+</td>
+</tr><tr><td colspan="1" rowspan="1">With time
+(12 hour)</td>
+<td colspan="1" rowspan="1">Mar 3, 2019 3:35 PM<br>March 3, 2019 3:35 PM
+</td>
+<td colspan="1" rowspan="1">03/03/2019 3:35 PM
+</td>
+</tr><tr><td colspan="1" rowspan="1">With time
+(24 hour)</td>
+<td colspan="1" rowspan="1">Mar 3, 2019 13:35 PM<br>March 3, 2019 13:35 PM
+</td>
+<td colspan="1" rowspan="1">03/03/2019 13:35 PM
+</td>
+</tr><tr><td colspan="1" rowspan="1">Approximate time</td>
+<td colspan="1" rowspan="1">In 5 minutes<br>3 days ago
+</td>
+<td colspan="1" rowspan="1">n/a
+</td>
+</tr><tr><td colspan="1" rowspan="1">Absolute time</td>
+<td colspan="1" rowspan="1">Today, 10:00 AM
+</td>
+<td colspan="1" rowspan="1">n/a
+</td>
+</tr></tbody></table><style>
+.s-tag-table tr:first-child {
+    background-color: #fafafa;
+    font-weight: 500;
+}
+.s-tag-table tr td:first-child {
+    border-left: 1px solid #e5e5e5;
+}
+.s-tag-table td {
+    border: 1px solid #eee;
+    color: #000;
+    padding: .75em;
+    vertical-align: middle;
+}
+
+.s-tag-table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    table-layout: auto;
+}
+    
+</style></div>
+				</div>
+				<div class="elementor-element elementor-element-ad642de elementor-widget elementor-widget-spacer" data-id="ad642de" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-cc50b8b elementor-widget elementor-widget-heading" data-id="cc50b8b" data-element_type="widget" toc-subitem="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Date ranges</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-2b0a5e5 elementor-widget elementor-widget-text-editor" data-id="2b0a5e5" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><ul><li>Include only the minimum necessary information in order to keep date and time ranges short and clear.</li><li>If the date range is in the same year (month), don’t repeat the year (month).</li><li>Use a single AM or PM at the end of the range, if both times have the same AM/PM.</li><li>To connect ranges use an en dash <code>–</code> with no spaces on either side.</li></ul></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-96d89f9 elementor-widget elementor-widget-html" data-id="96d89f9" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<table class="s-tag-table"><tbody><tr><td colspan="1" rowspan="1"><strong>Type</strong></td>
+<td colspan="1" rowspan="1"><strong>Non-numeric</strong></td>
+<td colspan="1" rowspan="1"><strong>Numeric </strong></td>
+
+</tr><tr><td colspan="1" rowspan="1">Same month</td>
+<td colspan="1" rowspan="1">Apr 3–24, 2019
+</td>
+<td colspan="1" rowspan="1">4/3–24/2019
+</td>
+</tr><tr><td colspan="1" rowspan="1">Same year</td>
+<td colspan="1" rowspan="1">Apr 3–Aug 17, 2019
+</td>
+<td colspan="1" rowspan="1">04/23–8/17/2018	
+</td>
+</tr><tr><td colspan="1" rowspan="1">Different years</td>
+<td colspan="1" rowspan="1">Apr 23, 2018–Jun 24, 2019</td>
+<td colspan="1" rowspan="1">04/23/2018–06/24/2019
+</td>
+</tr><tr><td colspan="1" rowspan="1">With time (12 hour)</td>
+<td colspan="1" rowspan="1">Jun 23, 2018 10:30 AM–Jun 24, 2019 01:15 PM</td>
+<td colspan="1" rowspan="1">06/23/2018 10:30 AM–06/24/2018 01:15 PM
+</td>
+</tr><tr><td colspan="1" rowspan="1">With time (24 hour)</td>
+<td colspan="1" rowspan="1">Jun 23, 2018 10:30–Jun 24, 2019 13:15
+</td>
+<td colspan="1" rowspan="1">06/23/2018 10:30–06/24/2018 13:15
+</td>
+</tr><tr><td colspan="1" rowspan="1">With day of the week</td>
+<td colspan="1" rowspan="1">Tue, Jun 23, 2018 10:30 AM–Thu, Jun 24, 2018 01:15 PM
+</td>
+<td colspan="1" rowspan="1">Tue, 06/23/2018 10:30 AM–Thu, 06/24/2018 01:15 PM
+</td>
+</tr></tbody></table><style>
+.s-tag-table tr:first-child {
+    background-color: #fafafa;
+    font-weight: 500;
+}
+.s-tag-table tr td:first-child {
+    border-left: 1px solid #e5e5e5;
+}
+.s-tag-table td {
+    border: 1px solid #eee;
+    color: #000;
+    padding: .75em;
+    vertical-align: middle;
+}
+
+.s-tag-table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    table-layout: auto;
+}
+    
+</style></div>
+				</div>
+				<div class="elementor-element elementor-element-4df4170 elementor-widget elementor-widget-spacer" data-id="4df4170" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-c7d97b5 elementor-widget elementor-widget-heading" data-id="c7d97b5" data-element_type="widget" toc-subitem="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Month and day abbreviations</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-9b66d42 elementor-widget elementor-widget-text-editor" data-id="9b66d42" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Use the following abbreviations when writing out durations of time. Don’t use a period after the abbreviation.</p><p><strong>Time durations </strong>Hrs, min, sec</p><p><b>Time zones </b><span style="letter-spacing: 0.05px; color: var(--mdc-theme-text-primary-on-background,rgba(0,0,0,0.87));">EST (Eastern Time), </span><span style="letter-spacing: 0.05px; color: var(--mdc-theme-text-primary-on-background,rgba(0,0,0,0.87));">CST (Central Time), </span><span style="letter-spacing: 0.05px; color: var(--mdc-theme-text-primary-on-background,rgba(0,0,0,0.87));">MST (Mountain Time), </span><span style="letter-spacing: 0.05px; color: var(--mdc-theme-text-primary-on-background,rgba(0,0,0,0.87));">PST (Pacific Time), </span><span style="letter-spacing: 0.05px; color: var(--mdc-theme-text-primary-on-background,rgba(0,0,0,0.87));">AKST (Alaska Time), </span><span style="color: var(--mdc-theme-text-primary-on-background,rgba(0,0,0,0.87)); letter-spacing: 0.05px;"> </span><span style="color: var(--mdc-theme-text-primary-on-background,rgba(0,0,0,0.87)); letter-spacing: 0.05px;">HST (Hawaii Time)</span></p><p><strong>Days of the week  </strong>Mon, Tue, Wed, Thu, Fri, Sat, Sun</p><p><strong>Month </strong>Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec</p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-69f5867 elementor-widget elementor-widget-spacer" data-id="69f5867" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-7e8d5cc elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="7e8d5cc" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-2d61f30 elementor-column elementor-col-50 elementor-top-column" data-id="2d61f30" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-4e1b4b4 elementor-widget elementor-widget-heading" data-id="4e1b4b4" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Date picker inputs</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-2f3e94c elementor-widget elementor-widget-text-editor" data-id="2f3e94c" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Use a numeric format for date picker inputs. Allow users to select a date from dropdown OR type in their own date. If possible, use masking to ensure a numeric date format. </p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-33774ca elementor-column elementor-col-50 elementor-top-column" data-id="33774ca" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-6a43bcc elementor-widget elementor-widget-html" data-id="6a43bcc" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="padding: 24px 24px 0px 24px; background:#E5E5E5; text-align: center "><a href="wp-content/uploads/image-exports/date-picker-formatting.png" data-elementor-open-lightbox="yes">
+	<img src="wp-content/uploads/image-exports/date-picker-formatting.png" class="attachment-full size-full" alt="" style="max-height: 200px;"></a>
+</div>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-61c5a3e1 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="61c5a3e1" data-element_type="section" id="guidance"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-3acc69a3 elementor-column elementor-col-100 elementor-top-column" data-id="3acc69a3" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-4141635f elementor-widget elementor-widget-spacer" data-id="4141635f" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-83ed932 elementor-widget elementor-widget-heading" data-id="83ed932" data-element_type="widget" toc-subitem="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Best practices</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-e9f5fdd elementor-widget elementor-widget-html" data-id="e9f5fdd" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<span class="tyl-color-success"><b>Do.</b></span>
+<ul class="best-practices-list"><li>Whenever possible, display date and time information as people normally speak to each other, when space is available. This helps users understand what the date or time is for, such as: <b>“Store open 9:00 AM–Midnight”</b> or <b>“Reminder for tomorrow afternoon.”</b></li>
+ 	<li>Refer to <b>“yesterday”</b> or <b>“tomorrow”</b> in those terms.</li>
+ 	<li>If the day is in the upcoming week, include the day of the week (such as Tuesday).</li>
+ 	<li>For times that have occurred today, use <b>Today, 10:00 AM </b>instead of <b>10/03/2019 AM.</b></li>
+ 	<li>For times that have occurred in the past week or will occur in the next week, round to the approximate day: <b>3 days ago, in 5 days.</b></li>
+    <li>For times that have occurred (will occur) more than a week ago (in the future), use the formal date: <b>Jan 12, 2019, 01/12/2019. </b>Omit the time, unless necessary</li>
+    <li>Use a numeric format for date picker inputs: <b>10/03/2019.</b></li>
+    <li>Capitalize <b>AM</b> and <b>PM.</b></li>
+ 	
+</ul><style>
+.best-practices-list {
+    list-style-type: none; 
+    text-indent: -2.7em;
+    margin-left: 24px;
+}
+
+.best-practices-list li {
+    padding-bottom: 24px;
+}
+
+.best-practices-list li:before {
+  content: "\e5ca";
+  font-family: 'Material Icons';
+  margin-right: 16px;
+  display: inline;
+  vertical-align: middle;
+  font-size: 1.6em;
+  font-weight: normal;
+  color: var(--mdc-theme-success);
+  line-height: 1;
+}
+</style></div>
+				</div>
+				<div class="elementor-element elementor-element-d400f7f elementor-widget elementor-widget-html" data-id="d400f7f" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<span class="tyl-color-danger"><b>Don't.</b></span>
+<ul class="avoid-list"><li>Don't combine numeric and non numeric data formats: <b>Wed January 09/19.</b></li>
+ 	<li>Don't use atypical abbreviations: <b> Weds Jan 09.</b></li>
+ 	 <li>Don't use hyphens in dates: <b> 1-5-19.</b></li>
+ 	 <li>Try to avoid long or busy date ranges: <b>Tue, 06/23/2018 10:30 AM–Thu, 06/24/2018 01:15 PM PST.</b></li>
+ 	
+</ul><style>
+.avoid-list {
+    list-style-type: none; 
+    text-indent: -2.7em;
+    margin-left: 24px;
+}
+
+.avoid-list li {
+    padding-bottom: 24px;
+}
+
+.avoid-list li:before {
+  content: "\e5cd";
+  font-family: 'Material Icons';
+  margin-right: 16px;
+  display: inline;
+  vertical-align: middle;
+  font-size: 1.6em;
+  font-weight: normal;
+  color: var(--mdc-theme-error);
+  line-height: 1;
+}
+</style></div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-fb788b1 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="fb788b1" data-element_type="section" id="guidance"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-779578b0 elementor-column elementor-col-100 elementor-top-column" data-id="779578b0" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-b778f15 elementor-widget elementor-widget-spacer" data-id="b778f15" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-48e4186a elementor-widget elementor-widget-heading" data-id="48e4186a" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Contact info</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-8adee05 elementor-widget elementor-widget-heading" data-id="8adee05" data-element_type="widget" toc-subitem="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Addresses</h4>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-4be58d0 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="4be58d0" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-801f199 elementor-column elementor-col-50 elementor-top-column" data-id="801f199" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-6f5b7a6a elementor-widget elementor-widget-text-editor" data-id="6f5b7a6a" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>When a state name is used alone, without a city, spell out the name of the state.</p><p>Use <b>ZIP code</b> instead of the more informal Zip Code.</p><p>Use two-letter Postal Service abbreviations in tables, lists, mailing addresses, and displayed quote attributions.</p><p> </p><p>Format <b>full addresses </b>as follows:</p><p>Mike Johnson<br>6230 Sackett Ave<br>Portland, ME 04102</p><p>If the town & city is implied, format <b>street addresses </b>as follows:</p><p><span style="letter-spacing: 0.05px;">Mike Johnson</span><br style="letter-spacing: 0.05px;"><span style="letter-spacing: 0.05px;">6230 Sackett Ave</span></p><p> </p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-4b09115 elementor-column elementor-col-50 elementor-top-column" data-id="4b09115" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-ed6f6ee elementor-widget elementor-widget-html" data-id="ed6f6ee" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="padding: 24px; background:#E5E5E5 "><a href="wp-content/uploads/image-exports/input%20example.png" data-elementor-open-lightbox="yes">
+	<img src="wp-content/uploads/image-exports/input%20example.png" class="attachment-full size-full" alt=""></a>
+</div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-d4b591d tyl-color-info elementor-widget elementor-widget-text-editor" data-id="d4b591d" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Format address inputs as shown above.</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-066a3d7 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="066a3d7" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-7f1ff92 elementor-column elementor-col-100 elementor-top-column" data-id="7f1ff92" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-8b8da8c elementor-widget elementor-widget-heading" data-id="8b8da8c" data-element_type="widget" toc-subitem="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Phone numbers</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-8582b28 elementor-widget elementor-widget-text-editor" data-id="8582b28" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Format US phone numbers as follows:</p><p>(207) 123-4567</p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-c6063c0 elementor-widget elementor-widget-spacer" data-id="c6063c0" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-620d130 elementor-widget elementor-widget-heading" data-id="620d130" data-element_type="widget" toc-subitem="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Email addresses</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-1b7f765 elementor-widget elementor-widget-text-editor" data-id="1b7f765" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Format standard email addresses as follows:</p><p><a style="text-decoration: underline;" href="mailto:firstname.lastname@tylertech.com">firstname.lastname@tylertech.com</a></p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-b4ab214 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="b4ab214" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-dc000b6 elementor-column elementor-col-100 elementor-top-column" data-id="dc000b6" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-16ddd2f elementor-widget elementor-widget-spacer" data-id="16ddd2f" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-817ce09 elementor-widget elementor-widget-heading" data-id="817ce09" data-element_type="widget" toc-subitem="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Redaction</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-c863903 elementor-widget elementor-widget-text-editor" data-id="c863903" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><div class="col-list"><section class="module col-1"><div class="module"><p>Midline ellipses [• • •] are bulleted characters that partially hide sensitive data. They indicate when a number, such as a credit card or Social Security number, is not entirely visible.</p></div></section></div><div class="col-list"><section class="module-module col-2 h3-spacing"><div class="module"> </div></section></div></div>
+				</div>
+				</div>
+				<section class="elementor-element elementor-element-742aeaeb elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="742aeaeb" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-1f44f685 elementor-column elementor-col-50 elementor-inner-column" data-id="1f44f685" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-bd18b25 elementor-widget elementor-widget-heading" data-id="bd18b25" data-element_type="widget" toc-subitem="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">When to use 3 ellipses</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-67fb4bc elementor-widget elementor-widget-text-editor" data-id="67fb4bc" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><div style="overflow-wrap: break-word;"><p>To redact most numbers, like Social Security numbers, use three midline ellipses [• • •].You can use this format across typefaces and platforms:<br>1. Place two regular spaces before the first midline ellipse.<br>2. Then add a thin space between each midline ellipse and after the final one.</p><p>Or, use the Unicode string instead: U0020,U0020,U2022,U2006,U2022,U2006,U2022,U2006</p></div></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-227b0132 elementor-column elementor-col-50 elementor-inner-column" data-id="227b0132" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-7c3b449 elementor-widget elementor-widget-text-editor" data-id="7c3b449" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p> </p><h3 style="background-repeat: no-repeat; box-sizing: border-box; font-family: Roboto, sans-serif; font-weight: 400; color: #212121; line-height: 1.333; margin: 0px; font-size: 18px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff; text-decoration-style: initial; text-decoration-color: initial;">SSN • • • 5678</h3></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-35536ef tyl-background-success elementor-widget elementor-widget-spacer" data-id="35536ef" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-46bc4baa tyl-color-info elementor-widget elementor-widget-text-editor" data-id="46bc4baa" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><span class="tyl-color-success"><strong>Do.</strong></span></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section></div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-129760a7 elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="129760a7" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-3ff7e832 elementor-column elementor-col-100 elementor-top-column" data-id="3ff7e832" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<section class="elementor-element elementor-element-3ae6a16 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="3ae6a16" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-886bdf4 elementor-column elementor-col-50 elementor-inner-column" data-id="886bdf4" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-a341282 elementor-widget elementor-widget-heading" data-id="a341282" data-element_type="widget" toc-subitem="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">When to use 4 ellipses</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-76b49cb elementor-widget elementor-widget-text-editor" data-id="76b49cb" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><div style="overflow-wrap: break-word;">Credit and debit card data must be redacted using four midline ellipses [• • • •].
+
+Written in Unicode: U0020,U0020,U2022,U2006,U2022,U2006,U2022,U2006, U2022,U2006</div></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-5802631 elementor-column elementor-col-50 elementor-inner-column" data-id="5802631" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-582f5ce elementor-widget elementor-widget-text-editor" data-id="582f5ce" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p> </p><h3 style="background-repeat: no-repeat; box-sizing: border-box; font-family: Roboto, sans-serif; font-weight: 400; color: #212121; line-height: 1.333; margin: 0px; font-size: 18px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: #ffffff; text-decoration-style: initial; text-decoration-color: initial;">Visa • • • • 1234</h3></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-4e93209 tyl-background-success elementor-widget elementor-widget-spacer" data-id="4e93209" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-8e53b73 tyl-color-info elementor-widget elementor-widget-text-editor" data-id="8e53b73" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><span class="tyl-color-success"><strong>Do.</strong></span></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><div class="elementor-element elementor-element-712464a elementor-widget elementor-widget-spacer" data-id="712464a" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section></div>
+			</div>
+		</div>
+		 
+                        </tcw-card><div class="tyl-typography--caption" style="margin-bottom: 8px;">Last modified on December 20, 2019 by: emily.roller</div>
+          </div>
+
+            <div class="right-content" id="toc-right-container" style="position: relative; width: 300px;"> 
+                                <div><div class="textwidget custom-html-widget"><div class="toc" style="position: fixed;">
+                    <div class="toc-container">
+                      <div class="left-line" id="toc-left-line"></div>
+                      <div class="toc-items-container" id="toc-items">
+                        <h6 style="margin-top: 0px; margin-bottom: 16px;">Table of contents</h6>
+                      </div>
+                    </div>
+                  </div>
+
+<div id="back-to-top-button" class="tyl-back-to-top">
+            <tcw-fab extended="true"><button aria-label="Extended FAB with just text" onclick="scrollTo()">
+                <i class="material-icons" aria-hidden="true">arrow_upward</i>
+                <span>Back to top</span>
+              </button>
+            </tcw-fab></div></div></div>                            </div>
+
+        </div>
+       </div>
+      </div>
+    </tcw-scaffold><script type="text/javascript" src="scripts/custom-elements-es5-adapter.js"></script><script type="text/javascript" src="scripts/webcomponents-bundle.js"></script><script type="text/javascript" src="scripts/tyler-components-web-lib.min.js"></script><script type="text/javascript" src="scripts/tyler-components-web-forge-lib.min.js"></script><script>
+  window.addEventListener('WebComponentsReady', function() {
+    window.TylerComponentsWeb.lib.defineComponents();
+    window.TylerComponentsWeb.Forge.lib.defineComponents();
+  });
+</script><script type="text/javascript" src="scripts/menu-expander.js"></script><script type="text/javascript" src="scripts/drawer.js"></script><script type="text/javascript" src="scripts/navHeader.js"></script><script type="text/javascript" src="scripts/search.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-136930168-1"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-136930168-1');
+</script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/material-design-for-contact-form-7/assets/js/lib/autosize.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/material-design-for-contact-form-7/assets/js/cf7-material-design-bundle.js"></script><script type="text/javascript">
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"https:\/\/static-forge.netlify.com\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"}};
+/* ]]> */
+</script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/contact-form-7/includes/js/scripts.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/js/frontend-modules.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor-pro/assets/lib/sticky/jquery.sticky.min.js"></script><script type="text/javascript">
+var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/static-forge.netlify.com\/wp-admin\/admin-ajax.php","nonce":"a52c73ecd1","shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"google":{"title":"Google+","has_counter":true},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"delicious":{"title":"Delicious"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"}},"facebook_sdk":{"lang":"en_US","app_id":""}};
+</script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor-pro/assets/js/frontend.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-includes/js/jquery/ui/position.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/swiper/swiper.min.js"></script><script type="text/javascript">
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"version":"2.8.3","urls":{"assets":"https:\/\/static-forge.netlify.com\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"general":{"elementor_global_image_lightbox":"yes"},"editorPreferences":[]},"post":{"id":40540,"title":"Data formats","excerpt":""}};
+</script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/js/frontend.min.js"></script><script type="text/javascript" src="scripts/table-of-contents.js?x-version=1"></script></body></html>

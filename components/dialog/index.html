@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en-US"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="shortcut icon" href="favicon.ico" sizes="16x16" type="image/x-icon"><title>Dialog – Tyler Forge</title><link rel="dns-prefetch" href="//fonts.googleapis.com"><link rel="dns-prefetch" href="//s.w.org"><link rel="stylesheet" id="cf7md_roboto-css" href="//fonts.googleapis.com/css?family=Roboto:400,500" type="text/css" media="all"><link rel="stylesheet" id="cf7-material-design-css" href="https://static-forge.netlify.com/wp-content/plugins/material-design-for-contact-form-7/assets/css/cf7-material-design.css" type="text/css" media="all"><link rel="stylesheet" id="contact-form-7-css" href="https://static-forge.netlify.com/wp-content/plugins/contact-form-7/includes/css/styles.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-icons-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-animations-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/animations/animations.min.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-frontend-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/css/frontend.min.css" type="text/css" media="all"><link rel="stylesheet" id="lae-animate-styles-css" href="https://static-forge.netlify.com/wp-content/plugins/addons-for-elementor/assets/css/animate.css" type="text/css" media="all"><link rel="stylesheet" id="lae-sliders-styles-css" href="https://static-forge.netlify.com/wp-content/plugins/addons-for-elementor/assets/css/sliders.css" type="text/css" media="all"><link rel="stylesheet" id="lae-icomoon-styles-css" href="https://static-forge.netlify.com/wp-content/plugins/addons-for-elementor/assets/css/icomoon.css" type="text/css" media="all"><link rel="stylesheet" id="lae-frontend-styles-css" href="https://static-forge.netlify.com/wp-content/plugins/addons-for-elementor/assets/css/lae-frontend.css" type="text/css" media="all"><link rel="stylesheet" id="lae-widgets-styles-css" href="https://static-forge.netlify.com/wp-content/plugins/addons-for-elementor/assets/css/lae-widgets.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-pro-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor-pro/assets/css/frontend.min.css" type="text/css" media="all"><link rel="stylesheet" id="font-awesome-5-all-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/all.min.css" type="text/css" media="all"><link rel="stylesheet" id="font-awesome-4-shim-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/v4-shims.min.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-global-css" href="https://static-forge.netlify.com/wp-content/uploads/elementor/css/global.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-post-4225-css" href="https://static-forge.netlify.com/wp-content/uploads/elementor/css/post-4225.css" type="text/css" media="all"><link rel="stylesheet" id="custom-frontend-style-css" href="https://static-forge.netlify.com/wp-content/plugins/ideapush/inc/css/frontendstyle.css" type="text/css" media="all"><style id="custom-frontend-style-inline-css" type="text/css">
+.ideapush-idea-filter{display: none;}
+</style><script type="text/javascript" src="https://static-forge.netlify.com/wp-includes/js/jquery/jquery.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-includes/js/jquery/jquery-migrate.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min.js"></script><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NB3CZPX');</script><script type="text/javascript">
+            (function () {
+                window.lae_fs = {can_use_premium_code: false};
+            })();
+        </script><style type="text/css" id="wp-custom-css">
+			.hljs {
+	background: none;
+}		</style><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono"><link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700"><link href="https://cdn.forge.tylertech.com/v1/libs/tcw/latest/tcw-material-design.css" rel="stylesheet"><link rel="stylesheet" href="styles/tyler-forge.css"><link rel="stylesheet" href="styles/hljs-theme.css"><link rel="stylesheet" href="styles/component.css"></head><body class="tyl-typography">
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NB3CZPX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+
+
+    <tcw-scaffold class="tyl-docs"><tcw-omnibar id="tyl-forge-omnibar" title-text="Tyler Forge" slot="header"><div slot="logo" style="width: 24px; height: 20px; margin-left: 8px;">
+    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 480.5 423.03"><title>forge-icon-only</title><g id="logo"><path d="M463.68,39H283.49A26,26,0,0,0,261,52l-39.38,68.2a26,26,0,0,0,22.55,39.05H424.3a26,26,0,0,0,22.55-13L486.22,78A26,26,0,0,0,463.68,39Z" transform="translate(-9.25 -38.98)" fill="#fff"></path><path d="M377,189.18H196.77a26,26,0,0,0-22.54,13l-37.37,64.72a26,26,0,0,0,0,26L227,449A26,26,0,0,0,272,449L399.51,228.23A26,26,0,0,0,377,189.18Z" transform="translate(-9.25 -38.98)" fill="#fff"></path><path d="M211.35,78A26,26,0,0,0,188.81,39H35.32A26,26,0,0,0,12.78,78L77,189.18,89.52,211a26,26,0,0,0,45.09,0Z" transform="translate(-9.25 -38.98)" fill="#fff"></path></g></svg></div>
+  <tcw-omnibar-search slot="center"><input type="text" placeholder="Search..."></tcw-omnibar-search><tcw-omnibar-menu-button slot="menu" id="tyl-forge-omnibar-menu"></tcw-omnibar-menu-button><div slot="action" style="display: flex; justify-content: space-around;">
+    <ul class="header-nav"><li class="header__nav-item" id="design-nav-indicator">
+        <a href="/getting-started-with-forge/" class="header__nav-link">
+          Design <span class="header__nav-indicator" id="design-link-indicator"></span>
+        </a>
+      </li>
+      <li class="header__nav-item" id="development-nav-indicator">
+        <a href="/development/" class="header__nav-link">
+          Development <span class="header__nav-indicator" id="development-link-indicator"></span>
+        </a>
+      </li>
+      <li class="header__nav-item" id="development-nav-indicator">
+        <a href="/give-feedback/" class="header__nav-link">
+          Feedback <span class="header__nav-indicator" id="feedback-link-indicator"></span>
+        </a>
+      </li>
+    </ul></div>
+</tcw-omnibar><div slot="body-left">
+  <tcw-drawer id="tyl-forge-sidenav" type="dismissible" open="true" style="--tyl-drawer-width: 320px;"><tcw-list class="nav navbar-nav"><a href="https://static-forge.netlify.com/" id="home-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">home</i>Home</tcw-list-item></a><tcw-expansion-panel id="get started-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">forward</i>
+			  Get started
+			  <tcw-open-icon slot="trailing" style="line-height: 0.5;"></tcw-open-icon></tcw-list-item><tcw-list><a href="https://static-forge.netlify.com/getting-started-as-a-designer/"><tcw-list-item slot="header" class="nav_subitem">As a designer</tcw-list-item></a><a href="https://static-forge.netlify.com/design-to-dev-handoff/"><tcw-list-item slot="header" class="nav_subitem">Design to Dev Handoff</tcw-list-item></a></tcw-list></tcw-expansion-panel><tcw-expansion-panel id="foundation-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">border_outer</i>
+			  Foundation
+			  <tcw-open-icon slot="trailing" style="line-height: 0.5;"></tcw-open-icon></tcw-list-item><tcw-list><a href="https://static-forge.netlify.com/foundation/overview/"><tcw-list-item slot="header" class="nav_subitem">Overview</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/intro-to-accessibility/"><tcw-list-item slot="header" class="nav_subitem">Accessibility</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/tyler-branding/"><tcw-list-item slot="header" class="nav_subitem">Branding</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/color/"><tcw-list-item slot="header" class="nav_subitem">Color</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/data-formats/"><tcw-list-item slot="header" class="nav_subitem">Data formats</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/tyler-icons-full/"><tcw-list-item slot="header" class="nav_subitem">Iconography</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/illustrations-usage/"><tcw-list-item slot="header" class="nav_subitem">Illustration: Usage</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/illustration-library/"><tcw-list-item slot="header" class="nav_subitem">Illustration: Library</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/theming/"><tcw-list-item slot="header" class="nav_subitem">Theming</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/layout-intro/"><tcw-list-item slot="header" class="nav_subitem">Layout: Intro</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/layout-grid/"><tcw-list-item slot="header" class="nav_subitem">Layout: Grid</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/layout-spacing/"><tcw-list-item slot="header" class="nav_subitem">Layout: Spacing</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/layout-page-layouts/"><tcw-list-item slot="header" class="nav_subitem">Layout: Page layouts</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/typography/"><tcw-list-item slot="header" class="nav_subitem">Typography</tcw-list-item></a><a href="https://static-forge.netlify.com/product-analytics/"><tcw-list-item slot="header" class="nav_subitem">Product analytics - coming soon</tcw-list-item></a></tcw-list></tcw-expansion-panel><tcw-expansion-panel id="patterns-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">ac_unit</i>
+			  Patterns
+			  <tcw-open-icon slot="trailing" style="line-height: 0.5;"></tcw-open-icon></tcw-list-item><tcw-list><a href="https://static-forge.netlify.com/patterns/data-visualization/"><tcw-list-item slot="header" class="nav_subitem">Data visualization: Intro</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/data-visualization-2/"><tcw-list-item slot="header" class="nav_subitem">Data visualization: Charts</tcw-list-item></a><a href="https://static-forge.netlify.com/colors-data-visualization/"><tcw-list-item slot="header" class="nav_subitem">Data visualization: Colors</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/drag-and-drop/"><tcw-list-item slot="header" class="nav_subitem">Drag and drop</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/empty-state/"><tcw-list-item slot="header" class="nav_subitem">Empty state</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/errors/"><tcw-list-item slot="header" class="nav_subitem">Errors</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/faceted-search/"><tcw-list-item slot="header" class="nav_subitem">Faceted filtering</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/forms/"><tcw-list-item slot="header" class="nav_subitem">Forms</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/login/"><tcw-list-item slot="header" class="nav_subitem">Login</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/mapping-gis/"><tcw-list-item slot="header" class="nav_subitem">Mapping & GIS</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/navigation/"><tcw-list-item slot="header" class="nav_subitem">Navigation</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/onboarding/"><tcw-list-item slot="header" class="nav_subitem">Onboarding - in progress</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/profile/"><tcw-list-item slot="header" class="nav_subitem">Profile - in progress</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/progress-loading/"><tcw-list-item slot="header" class="nav_subitem">Progress & loading</tcw-list-item></a></tcw-list></tcw-expansion-panel><tcw-expansion-panel id="components-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">settings_input_component</i>
+			  Components
+			  <tcw-open-icon slot="trailing" style="line-height: 0.5;"></tcw-open-icon></tcw-list-item><tcw-list><a href="https://static-forge.netlify.com/components/accordion/"><tcw-list-item slot="header" class="nav_subitem">Accordion</tcw-list-item></a><a href="https://static-forge.netlify.com/components/app-launcher/"><tcw-list-item slot="header" class="nav_subitem">App launcher</tcw-list-item></a><a href="https://static-forge.netlify.com/components/avatar/"><tcw-list-item slot="header" class="nav_subitem">Avatar</tcw-list-item></a><a href="https://static-forge.netlify.com/components/badge/"><tcw-list-item slot="header" class="nav_subitem">Badge - Coming soon</tcw-list-item></a><a href="https://static-forge.netlify.com/components/buttons/"><tcw-list-item slot="header" class="nav_subitem">Buttons</tcw-list-item></a><a href="https://static-forge.netlify.com/components/card/"><tcw-list-item slot="header" class="nav_subitem">Card</tcw-list-item></a><a href="https://static-forge.netlify.com/components/chips/"><tcw-list-item slot="header" class="nav_subitem">Chips</tcw-list-item></a><a href="https://static-forge.netlify.com/components/date-picker/"><tcw-list-item slot="header" class="nav_subitem">Date picker - coming soon</tcw-list-item></a><a href="https://static-forge.netlify.com/components/dialog/"><tcw-list-item slot="header" class="nav_subitem">Dialog</tcw-list-item></a><a href="https://static-forge.netlify.com/components/expansion-panel/"><tcw-list-item slot="header" class="nav_subitem">Expansion panel</tcw-list-item></a><a href="https://static-forge.netlify.com/components/floating-action-button/"><tcw-list-item slot="header" class="nav_subitem">Floating Action Button</tcw-list-item></a><a href="https://static-forge.netlify.com/components/list/"><tcw-list-item slot="header" class="nav_subitem">List</tcw-list-item></a><a href="https://static-forge.netlify.com/components/navigation-drawer/"><tcw-list-item slot="header" class="nav_subitem">Navigation drawer</tcw-list-item></a><a href="https://static-forge.netlify.com/components/omnibar/"><tcw-list-item slot="header" class="nav_subitem">Omnibar</tcw-list-item></a><a href="https://static-forge.netlify.com/components/progress-indicators/"><tcw-list-item slot="header" class="nav_subitem">Progress indicators</tcw-list-item></a><a href="https://static-forge.netlify.com/components/selection-controls/"><tcw-list-item slot="header" class="nav_subitem">Selection controls</tcw-list-item></a><a href="https://static-forge.netlify.com/components/sliders/"><tcw-list-item slot="header" class="nav_subitem">Sliders</tcw-list-item></a><a href="https://static-forge.netlify.com/components/stepper/"><tcw-list-item slot="header" class="nav_subitem">Stepper - coming soon</tcw-list-item></a><a href="https://static-forge.netlify.com/components/table/"><tcw-list-item slot="header" class="nav_subitem">Table</tcw-list-item></a><a href="https://static-forge.netlify.com/components/tabs/"><tcw-list-item slot="header" class="nav_subitem">Tabs</tcw-list-item></a><a href="https://static-forge.netlify.com/components/toast/"><tcw-list-item slot="header" class="nav_subitem">Toast</tcw-list-item></a><a href="https://static-forge.netlify.com/components/toolbar/"><tcw-list-item slot="header" class="nav_subitem">Toolbar - coming soon</tcw-list-item></a><a href="https://static-forge.netlify.com/components/tooltip/"><tcw-list-item slot="header" class="nav_subitem">Tooltip</tcw-list-item></a></tcw-list></tcw-expansion-panel><tcw-expansion-panel id="native mobile-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">phone_iphone</i>
+			  Native mobile
+			  <tcw-open-icon slot="trailing" style="line-height: 0.5;"></tcw-open-icon></tcw-list-item><tcw-list><a href="https://static-forge.netlify.com/native-mobile/basic-requirements/"><tcw-list-item slot="header" class="nav_subitem">Basic requirements</tcw-list-item></a><a href="https://static-forge.netlify.com/native-mobile/frameworks/"><tcw-list-item slot="header" class="nav_subitem">Frameworks</tcw-list-item></a><a href="https://static-forge.netlify.com/native-mobile/design-patterns/"><tcw-list-item slot="header" class="nav_subitem">Design patterns</tcw-list-item></a></tcw-list></tcw-expansion-panel><a href="https://static-forge.netlify.com/feedback-support/" id="feedback & support-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">pan_tool</i>Feedback & support</tcw-list-item></a><a href="https://static-forge.netlify.com/status/" id="status-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">trending_up</i>Status</tcw-list-item></a><a href="https://static-forge.netlify.com/faqs/" id="faqs-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">help</i>FAQs</tcw-list-item></a>    </tcw-list></tcw-drawer></div>
+      <div class="tyl-docs-content" slot="body" style="position: relative;" id="top-of-page">
+        <div id="tyl-docs-content" class="tyl-docs-content__container" style="padding: 16px; max-width: 1264px;">
+        <div class="flex-container" style="display: flex;">
+        <div class="left-content" style="max-width: 956px; width: 100%;">
+          <tcw-card has-padding="false"><div data-elementor-type="wp-page" data-elementor-id="4225" class="elementor elementor-4225" data-elementor-settings="[]">
+			<div class="elementor-inner">
+				<div class="elementor-section-wrap">
+							<section class="elementor-element elementor-element-52cc4c09 elementor-section-height-min-height elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-items-middle elementor-section elementor-top-section" data-id="52cc4c09" data-element_type="section" id="overview" data-settings='{"background_background":"classic"}'><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-1507d378 elementor-column elementor-col-50 elementor-top-column" data-id="1507d378" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-21364e92 elementor-widget elementor-widget-divider" data-id="21364e92" data-element_type="widget" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-368816b8 elementor-widget elementor-widget-heading" data-id="368816b8" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Dialog</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-3859afbc elementor-widget elementor-widget-text-editor" data-id="3859afbc" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Dialogs inform users about a task and can contain critical information, require decisions, or involve multiple tasks.</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-43d46708 elementor-column elementor-col-50 elementor-top-column" data-id="43d46708" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-5f6ed8c3 elementor-widget elementor-widget-html" data-id="5f6ed8c3" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="display: flex; justify-content: flex-end;">
+    <a href="/development/components/dialog/">
+<tcw-button><button type="button">
+      <i class="material-icons">code</i>
+      <span>Developer Guidelines</span>
+    </button>
+</tcw-button></a>
+</div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-746dcf8f elementor-widget elementor-widget-image" data-id="746dcf8f" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img src="https://static-forge.netlify.com/wp-content/uploads/2019/07/overview-spot-hero.svg" title="overview-spot hero" alt="overview-spot hero"></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-3e915486 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="3e915486" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-2dd43102 elementor-column elementor-col-100 elementor-top-column" data-id="2dd43102" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-7eacafb3 elementor-widget elementor-widget-heading" data-id="7eacafb3" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Interactive demo</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-4c43e697 elementor-widget elementor-widget-html" data-id="4c43e697" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<iframe src="interactive-demos/dialog/dialog.html" style="height: 350px;" class="interactive-demo-iframe"></iframe>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-7efccd57 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="7efccd57" data-element_type="section" id="guidance"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-430ce735 elementor-column elementor-col-100 elementor-top-column" data-id="430ce735" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-75af8ba4 elementor-widget elementor-widget-spacer" data-id="75af8ba4" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-7dac8b1 elementor-widget elementor-widget-text-editor" data-id="7dac8b1" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><i class="material-icons" style="vertical-align: middle; margin-right: 16px">
+face
+</i>Heads up, this page is still in progress! Check back soon to see the final product 🙂</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-6a4012dc elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="6a4012dc" data-element_type="section" id="guidance"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-7bbf9e99 elementor-column elementor-col-100 elementor-top-column" data-id="7bbf9e99" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-5cad5897 elementor-widget elementor-widget-spacer" data-id="5cad5897" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-d9ad0ec elementor-widget elementor-widget-heading" data-id="d9ad0ec" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Guidance</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-3f32b457 elementor-widget elementor-widget-text-editor" data-id="3f32b457" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>A <strong>dialog</strong> is a type of modal window that appears in front of app content to provide critical information or ask for a decision. Dialogs disable all app functionality when they appear, and remain on screen until confirmed, dismissed, or a required action has been taken. To express that the rest of the app is inaccessible, and to focus attention on the dialog, surfaces behind the dialog are scrimmed. A <b>scrim</b> is a temporary treatment that can be applied to Material surfaces for the purpose of making content on the surface less prominent.</p><p>Dialogs are purposefully interruptive, so they should be used sparingly.</p><p> </p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-45b7571c elementor-widget elementor-widget-heading" data-id="45b7571c" data-element_type="widget" toc-subitem="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Client-facing terminology</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-12663649 elementor-widget elementor-widget-text-editor" data-id="12663649" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>In client-facing documentation, use dialog when a user interaction is required to proceed.</p><p>An example of a dialog is the Output window in Munis report programs.</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-32a6cbc elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="32a6cbc" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-141475f elementor-column elementor-col-100 elementor-top-column" data-id="141475f" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-ee75db9 elementor-widget elementor-widget-spacer" data-id="ee75db9" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-5113a95 elementor-widget elementor-widget-heading" data-id="5113a95" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">When to use</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-fe254c8 elementor-widget elementor-widget-text-editor" data-id="fe254c8" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Dialogs should be used for:</p><ul class="lst-kix_36sx301u5cnj-0 start"><li>Errors that block an app’s normal operation.</li><li>Critical information that requires a specific user task, decision, or acknowledgement.</li></ul></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-73948cb elementor-widget elementor-widget-html" data-id="73948cb" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<table class="s-tag-table"><tbody><tr><td colspan="1" rowspan="1"><strong>Component</strong></td>
+<td colspan="1" rowspan="1"><strong>Priority</strong></td>
+<td colspan="1" rowspan="1"><strong>User action</strong></td>
+
+</tr><tr><td colspan="1" rowspan="1">Toast</td>
+<td colspan="1" rowspan="1">Low priority</td>
+<td colspan="1" rowspan="1">Optional: Snackbars disappear automatically.</td>
+</tr><tr><td colspan="1" rowspan="1">Banner</td>
+<td colspan="1" rowspan="1">Prominent, medium priority</td>
+<td colspan="1" rowspan="1">Optional: Banners remain until dismissed by the user, or if the state that caused the banner is resolved.
+</td>
+</tr><tr><td colspan="1" rowspan="1">Dialog
+
+</td>
+<td colspan="1" rowspan="1">Highest priority
+
+</td>
+<td colspan="1" rowspan="1">Required: Dialogs block app usage until the user takes a dialog action or exits the dialog (if available).</td>
+</tr></tbody></table><style>
+.s-tag-table tr:first-child {
+    background-color: #fafafa;
+    font-weight: 500;
+}
+.s-tag-table tr td:first-child {
+    border-left: 1px solid #e5e5e5;
+}
+.s-tag-table td {
+    border: 1px solid #eee;
+    color: #000;
+    padding: .75em;
+    vertical-align: top;
+}
+
+.s-tag-table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    table-layout: auto;
+}
+    
+</style></div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-90da410 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="90da410" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-cdfd9cf elementor-column elementor-col-100 elementor-top-column" data-id="cdfd9cf" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-780c924 elementor-widget elementor-widget-spacer" data-id="780c924" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-5c0bb3d elementor-widget elementor-widget-heading" data-id="5c0bb3d" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Types</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-349fa02 elementor-widget elementor-widget-text-editor" data-id="349fa02" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Dialogs should be used for:</p><ul class="lst-kix_36sx301u5cnj-0 start"><li>Errors that block an app’s normal operation</li><li>Critical information that requires a specific user task, decision, or acknowledgement</li></ul></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-2bc6871 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="2bc6871" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-f5c2ffb elementor-column elementor-col-50 elementor-top-column" data-id="f5c2ffb" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-1a962d6 elementor-widget elementor-widget-html" data-id="1a962d6" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<a href="wp-content/uploads/image-exports/simple-dialog.png" data-elementor-open-lightbox="yes">
+	<img src="wp-content/uploads/image-exports/simple-dialog.png" class="attachment-full size-full" alt=""></a>		</div>
+				</div>
+				<div class="elementor-element elementor-element-c8e1111 elementor-widget elementor-widget-heading" data-id="c8e1111" data-element_type="widget" toc-subitem="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Simple</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-fd21308 elementor-widget elementor-widget-text-editor" data-id="fd21308" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Simple dialogs convey a brief message or alert. For alerts that are one sentence or less, the dialog header is excluded.</p><p>Simple dialogs may be closed by clicking outside of the dialog, or by clicking a dismissive action.  </p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-56ab877 elementor-column elementor-col-50 elementor-top-column" data-id="56ab877" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-b32586d elementor-widget elementor-widget-html" data-id="b32586d" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<a href="wp-content/uploads/image-exports/complex-dialog.png" data-elementor-open-lightbox="yes">
+	<img src="wp-content/uploads/image-exports/complex-dialog.png" class="attachment-full size-full" alt=""></a>		</div>
+				</div>
+				<div class="elementor-element elementor-element-878e94d elementor-widget elementor-widget-heading" data-id="878e94d" data-element_type="widget" toc-subitem="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Complex</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-46e0a54 elementor-widget elementor-widget-text-editor" data-id="46e0a54" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Complex dialogs display content that includes: more than three text fields, lists with more than three options, long messages, or multimedia messages. Use dividers to visually separate title and actions from the content itself. Long dialogs should use a max height and allow for scrolling. </p><p>Complex dialogs include a close icon in the top right. They may also be closed by clicking outside the dialog or by clicking the dismissive action. </p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-1027c5c elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="1027c5c" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-4a8583a elementor-column elementor-col-50 elementor-top-column" data-id="4a8583a" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-73d8a17 elementor-widget elementor-widget-html" data-id="73d8a17" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="text-align: center; background: #e5e5e5; padding: 8px"><a href="wp-content/uploads/image-exports/full-screen-dialog.png" data-elementor-open-lightbox="yes">
+	<img src="wp-content/uploads/image-exports/full-screen-dialog.png" class="attachment-full size-full" alt="" style="max-height: 400px"></a>
+</div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-d39ff4c elementor-widget elementor-widget-heading" data-id="d39ff4c" data-element_type="widget" toc-subitem="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Full-screen dialog</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-da60868 elementor-widget elementor-widget-text-editor" data-id="da60868" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Full-screen dialogs fill the entire screen, containing actions that require a series of tasks to complete. They may be used for content or tasks that meet any of these criteria:</p><ul><li>Dialogs that include components which require keyboard input, such as form fields</li><li>When changes aren’t saved instantly</li><li>When components within the dialog open additional dialogs</li></ul><p>They should be used on mobile only.</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-49e92c8 elementor-column elementor-col-50 elementor-top-column" data-id="49e92c8" data-element_type="column">
+			<div class="elementor-column-wrap">
+					<div class="elementor-widget-wrap">
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-15fcae0 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="15fcae0" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-d5d6b3a elementor-column elementor-col-100 elementor-top-column" data-id="d5d6b3a" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-e44d824 elementor-widget elementor-widget-spacer" data-id="e44d824" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-b267db0 elementor-widget elementor-widget-heading" data-id="b267db0" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Behavior</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-155d116 elementor-widget elementor-widget-spacer" data-id="155d116" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-a18755a elementor-widget elementor-widget-heading" data-id="a18755a" data-element_type="widget" toc-subitem="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Scrolling</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-e615d96 elementor-widget elementor-widget-text-editor" data-id="e615d96" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix">Most dialog content should avoid scrolling. When scrolling is required, the dialog title is pinned at the top, with buttons pinned at the bottom. This ensures selected content remains visible alongside the title and buttons, even upon scroll.
+
+Dialogs don’t scroll with elements outside of the dialog, such as the background.</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-08b0cd4 elementor-aspect-ratio-169 elementor-widget elementor-widget-video" data-id="08b0cd4" data-element_type="widget" data-settings='{"aspect_ratio":"169"}' data-widget_type="video.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-wrapper elementor-fit-aspect-ratio elementor-open-inline">
+					<video class="elementor-video" src="https://static-forge.netlify.com/wp-content/uploads/2019/12/dialog-scroll.mp4" autoplay="" loop="" muted="muted" controlslist="nodownload"></video></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-e1218a0 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="e1218a0" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-c457df7 elementor-column elementor-col-100 elementor-top-column" data-id="c457df7" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-7a52f4b elementor-widget elementor-widget-spacer" data-id="7a52f4b" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-699530b elementor-widget elementor-widget-heading" data-id="699530b" data-element_type="widget" toc-subitem="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Dismissing</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-7d38d3a elementor-widget elementor-widget-text-editor" data-id="7d38d3a" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Dialogs may be dismissed by:</p><ul><li>Tapping outside of the dialog</li><li>Tapping the “Cancel” button</li><li>Tapping the close icons (complex dialogs only)</li><li>Tapping the system back button (Android only)</li></ul><p>If the user’s ability to dismiss a dialog is disabled, the user must choose a dialog action to proceed.</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-5576200 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="5576200" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-1293b62 elementor-column elementor-col-100 elementor-top-column" data-id="1293b62" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-f9320b7 elementor-widget elementor-widget-spacer" data-id="f9320b7" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-ea1d980 elementor-widget elementor-widget-heading" data-id="ea1d980" data-element_type="widget" toc-subitem="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Editing & saving</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-8539332 elementor-widget elementor-widget-text-editor" data-id="8539332" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>To save a selection in a full-screen dialog, the user taps “Save.” To discard all changes and exit, the user taps the X icon or Back button.</p><p><strong>Confirmation</strong><br>The confirmation action is disabled until all mandatory fields are filled. Use descriptive verbs such as “Save,” “Send,” “Share,” “Update,” or “Create.” Don’t use vague terms such as “Done,” “OK” or “Close.”</p><ul><li>If no changes have been made, the dialog closes and no discard confirmation is required.</li><li>If the user has made changes, the user is prompted to confirm the discard action.</li></ul></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-1a8e9595 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="1a8e9595" data-element_type="section" id="guidance"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-74155012 elementor-column elementor-col-100 elementor-top-column" data-id="74155012" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-de8dda2 elementor-widget elementor-widget-spacer" data-id="de8dda2" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-4bb7ab52 elementor-widget elementor-widget-heading" data-id="4bb7ab52" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Best practices</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-23f9a734 elementor-widget elementor-widget-text-editor" data-id="23f9a734" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><strong>Dialog titles</strong></p><ul class="lst-kix_lxb759v6xoso-0 start"><li>Should contain a brief, clear statement or question.</li><li>Avoid apologies (“Sorry for the interruption”), alarm (“Warning!”), or ambiguity (“Are you sure?”).</li></ul></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-15c40253 elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="15c40253" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-289789a elementor-column elementor-col-100 elementor-top-column" data-id="289789a" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<section class="elementor-element elementor-element-2bec010a elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="2bec010a" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-69e8928f elementor-column elementor-col-50 elementor-inner-column" data-id="69e8928f" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-bd4d1da elementor-widget elementor-widget-html" data-id="bd4d1da" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<a href="wp-content/uploads/image-exports/dialog-title-do.png" data-elementor-open-lightbox="yes">
+	<img src="wp-content/uploads/image-exports/dialog-title-do.png" class="attachment-full size-full" alt=""></a>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-7acffe6 elementor-column elementor-col-50 elementor-inner-column" data-id="7acffe6" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-ecca7d3 elementor-widget elementor-widget-html" data-id="ecca7d3" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<a href="wp-content/uploads/image-exports/dialog-title-dont.png" data-elementor-open-lightbox="yes">
+	<img src="wp-content/uploads/image-exports/dialog-title-dont.png" class="attachment-full size-full" alt=""></a>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-7c3734d6 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="7c3734d6" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-36873dff elementor-column elementor-col-50 elementor-inner-column" data-id="36873dff" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-ea92082 tyl-background-success elementor-widget elementor-widget-spacer" data-id="ea92082" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-1ce72bfe elementor-column elementor-col-50 elementor-inner-column" data-id="1ce72bfe" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-424fa578 tyl-background-danger elementor-widget elementor-widget-spacer" data-id="424fa578" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-f998bc7 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="f998bc7" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-19cd8310 elementor-column elementor-col-50 elementor-inner-column" data-id="19cd8310" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-46917f29 elementor-widget elementor-widget-text-editor" data-id="46917f29" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><span class="tyl-color-success"><strong>Do.</strong></span></p><p>This dialog title poses a specific question, concisely explains what’s involved in the request, and provides clear actions.</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-689a282d elementor-column elementor-col-50 elementor-inner-column" data-id="689a282d" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-7ed552c6 tyl-color-info elementor-widget elementor-widget-text-editor" data-id="7ed552c6" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><span class="tyl-color-danger"><strong>Don’t.</strong></span></p><p>Don’t use dialog titles that pose an ambiguous question.</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section></div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-2c7d8a1 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="2c7d8a1" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-ba4f343 elementor-column elementor-col-100 elementor-top-column" data-id="ba4f343" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-9082c40 elementor-widget elementor-widget-text-editor" data-id="9082c40" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><strong>Dialog buttons</strong>:</p><ul class="lst-kix_lxb759v6xoso-0 start"><li>Display buttons side by side if space allows.</li><li>Use a raised button to indicate the confirming action. A <b>confirming</b> action resolves what triggered the dialog by confirming a proposed action. They can be either positive – such as “Save,” “Add,” “Confirm” – or negative – such as “Delete” or “Remove.”</li><li>In general, confirming actions should be placed on the right, unless a business case dictates otherwise.</li><li>Use an outlined button to indicate the dismissive action. <b>Dismissive</b> actions dismiss a proposed action, and return the user to the originating screen or step. They are placed directly to the left of a confirming action. (If both actions are equally important, use two outlined buttons.)</li><li>A single action may be provided only if it’s an acknowledgement.</li></ul></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-2838552 elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="2838552" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-eb42540 elementor-column elementor-col-100 elementor-top-column" data-id="eb42540" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<section class="elementor-element elementor-element-98407ab elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="98407ab" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-cfd9c37 elementor-column elementor-col-50 elementor-inner-column" data-id="cfd9c37" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-5f7b681 elementor-widget elementor-widget-html" data-id="5f7b681" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<a href="wp-content/uploads/image-exports/simple-dialog-buttons.png" data-elementor-open-lightbox="yes">
+	<img src="wp-content/uploads/image-exports/simple-dialog-buttons.png" class="attachment-full size-full" alt=""></a>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-7b38abd elementor-column elementor-col-50 elementor-inner-column" data-id="7b38abd" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-0e74401 elementor-widget elementor-widget-html" data-id="0e74401" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<a href="wp-content/uploads/image-exports/simple-dialog-buttons-stacked.png" data-elementor-open-lightbox="yes">
+	<img src="wp-content/uploads/image-exports/simple-dialog-buttons-stacked.png" class="attachment-full size-full" alt=""></a>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-d9638d2 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="d9638d2" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-95c158f elementor-column elementor-col-50 elementor-inner-column" data-id="95c158f" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-371f10f tyl-background-success elementor-widget elementor-widget-spacer" data-id="371f10f" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-93452a6 elementor-column elementor-col-50 elementor-inner-column" data-id="93452a6" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-d24dfae tyl-background-info elementor-widget elementor-widget-spacer" data-id="d24dfae" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-b21021e elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="b21021e" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-23ca2e8 elementor-column elementor-col-50 elementor-inner-column" data-id="23ca2e8" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-0962b73 elementor-widget elementor-widget-text-editor" data-id="0962b73" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><span class="tyl-color-success"><strong>Do.</strong></span></p><p>Side-by-side buttons display two text buttons next to one another.</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-bcf6172 elementor-column elementor-col-50 elementor-inner-column" data-id="bcf6172" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-163d6d4 tyl-color-info elementor-widget elementor-widget-text-editor" data-id="163d6d4" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><span class="tyl-color-info"><strong>Caution.</strong></span></p><p>If necessary, stacked buttons can accommodate longer button text. Confirming actions appear above dismissive actions.</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section></div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-7346120d elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="7346120d" data-element_type="section" id="guidance"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-7c06e6a0 elementor-column elementor-col-100 elementor-top-column" data-id="7c06e6a0" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-33e77c32 elementor-widget elementor-widget-text-editor" data-id="33e77c32" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><b>Number of actions</b></p><p>Dialogs should contain a maximum of two actions.</p><ul><li>If a single action is provided, it must be an acknowledgement action.</li><li>If two actions are provided, one must be a confirming action, and the other a dismissing action.</li><li>Providing a third action such as “Learn more” is not recommended as it navigates the user away from the dialog, leaving the dialog task unfinished.</li></ul></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-dc9526e elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="dc9526e" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-cd4e22d elementor-column elementor-col-100 elementor-top-column" data-id="cd4e22d" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-6851f4f elementor-widget elementor-widget-spacer" data-id="6851f4f" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section></div>
+			</div>
+		</div>
+		 
+                        </tcw-card><div class="tyl-typography--caption" style="margin-bottom: 8px;">Last modified on January 2, 2020 by: </div>
+          </div>
+
+            <div class="right-content" id="toc-right-container" style="position: relative; width: 300px;"> 
+                                <div><div class="textwidget custom-html-widget"><div class="toc" style="position: fixed;">
+                    <div class="toc-container">
+                      <div class="left-line" id="toc-left-line"></div>
+                      <div class="toc-items-container" id="toc-items">
+                        <h6 style="margin-top: 0px; margin-bottom: 16px;">Table of contents</h6>
+                      </div>
+                    </div>
+                  </div>
+
+<div id="back-to-top-button" class="tyl-back-to-top">
+            <tcw-fab extended="true"><button aria-label="Extended FAB with just text" onclick="scrollTo()">
+                <i class="material-icons" aria-hidden="true">arrow_upward</i>
+                <span>Back to top</span>
+              </button>
+            </tcw-fab></div></div></div>                            </div>
+
+        </div>
+       </div>
+      </div>
+    </tcw-scaffold><script type="text/javascript" src="scripts/custom-elements-es5-adapter.js"></script><script type="text/javascript" src="scripts/webcomponents-bundle.js"></script><script type="text/javascript" src="scripts/tyler-components-web-lib.min.js"></script><script type="text/javascript" src="scripts/tyler-components-web-forge-lib.min.js"></script><script>
+  window.addEventListener('WebComponentsReady', function() {
+    window.TylerComponentsWeb.lib.defineComponents();
+    window.TylerComponentsWeb.Forge.lib.defineComponents();
+  });
+</script><script type="text/javascript" src="scripts/menu-expander.js"></script><script type="text/javascript" src="scripts/drawer.js"></script><script type="text/javascript" src="scripts/navHeader.js"></script><script type="text/javascript" src="scripts/search.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-136930168-1"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-136930168-1');
+</script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/material-design-for-contact-form-7/assets/js/lib/autosize.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/material-design-for-contact-form-7/assets/js/cf7-material-design-bundle.js"></script><script type="text/javascript">
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"https:\/\/static-forge.netlify.com\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"}};
+/* ]]> */
+</script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/contact-form-7/includes/js/scripts.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/js/frontend-modules.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor-pro/assets/lib/sticky/jquery.sticky.min.js"></script><script type="text/javascript">
+var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/static-forge.netlify.com\/wp-admin\/admin-ajax.php","nonce":"a52c73ecd1","shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"google":{"title":"Google+","has_counter":true},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"delicious":{"title":"Delicious"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"}},"facebook_sdk":{"lang":"en_US","app_id":""}};
+</script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor-pro/assets/js/frontend.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-includes/js/jquery/ui/position.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/swiper/swiper.min.js"></script><script type="text/javascript">
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"version":"2.8.3","urls":{"assets":"https:\/\/static-forge.netlify.com\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"general":{"elementor_global_image_lightbox":"yes"},"editorPreferences":[]},"post":{"id":4225,"title":"Dialog","excerpt":""}};
+</script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/js/frontend.min.js"></script><script type="text/javascript" src="scripts/table-of-contents.js?x-version=1"></script></body></html>

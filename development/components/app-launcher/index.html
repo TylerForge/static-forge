@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en-US"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="shortcut icon" href="favicon.ico" sizes="16x16" type="image/x-icon"><title>App launcher – Tyler Forge</title><link rel="dns-prefetch" href="//fonts.googleapis.com"><link rel="dns-prefetch" href="//s.w.org"><link rel="stylesheet" id="cf7md_roboto-css" href="//fonts.googleapis.com/css?family=Roboto:400,500" type="text/css" media="all"><link rel="stylesheet" id="cf7-material-design-css" href="https://static-forge.netlify.com/wp-content/plugins/material-design-for-contact-form-7/assets/css/cf7-material-design.css" type="text/css" media="all"><link rel="stylesheet" id="contact-form-7-css" href="https://static-forge.netlify.com/wp-content/plugins/contact-form-7/includes/css/styles.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-icons-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-animations-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/animations/animations.min.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-frontend-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/css/frontend.min.css" type="text/css" media="all"><link rel="stylesheet" id="lae-animate-styles-css" href="https://static-forge.netlify.com/wp-content/plugins/addons-for-elementor/assets/css/animate.css" type="text/css" media="all"><link rel="stylesheet" id="lae-sliders-styles-css" href="https://static-forge.netlify.com/wp-content/plugins/addons-for-elementor/assets/css/sliders.css" type="text/css" media="all"><link rel="stylesheet" id="lae-icomoon-styles-css" href="https://static-forge.netlify.com/wp-content/plugins/addons-for-elementor/assets/css/icomoon.css" type="text/css" media="all"><link rel="stylesheet" id="lae-frontend-styles-css" href="https://static-forge.netlify.com/wp-content/plugins/addons-for-elementor/assets/css/lae-frontend.css" type="text/css" media="all"><link rel="stylesheet" id="lae-widgets-styles-css" href="https://static-forge.netlify.com/wp-content/plugins/addons-for-elementor/assets/css/lae-widgets.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-pro-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor-pro/assets/css/frontend.min.css" type="text/css" media="all"><link rel="stylesheet" id="font-awesome-5-all-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/all.min.css" type="text/css" media="all"><link rel="stylesheet" id="font-awesome-4-shim-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/v4-shims.min.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-global-css" href="https://static-forge.netlify.com/wp-content/uploads/elementor/css/global.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-post-43738-css" href="https://static-forge.netlify.com/wp-content/uploads/elementor/css/post-43738.css" type="text/css" media="all"><link rel="stylesheet" id="custom-frontend-style-css" href="https://static-forge.netlify.com/wp-content/plugins/ideapush/inc/css/frontendstyle.css" type="text/css" media="all"><style id="custom-frontend-style-inline-css" type="text/css">
+.ideapush-idea-filter{display: none;}
+</style><script type="text/javascript" src="https://static-forge.netlify.com/wp-includes/js/jquery/jquery.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-includes/js/jquery/jquery-migrate.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min.js"></script><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NB3CZPX');</script><script type="text/javascript" src="scripts/omnibar-example.js?x-forge-version=1"></script><script type="text/javascript">
+            (function () {
+                window.lae_fs = {can_use_premium_code: false};
+            })();
+        </script><style type="text/css" id="wp-custom-css">
+			.hljs {
+	background: none;
+}		</style><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono"><link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700"><link href="https://cdn.forge.tylertech.com/v1/libs/tcw/latest/tcw-material-design.css" rel="stylesheet"><link rel="stylesheet" href="styles/tyler-forge.css"><link rel="stylesheet" href="styles/hljs-theme.css"><link rel="stylesheet" href="styles/component.css"></head><body class="tyl-typography">
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NB3CZPX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+
+
+    <tcw-scaffold class="tyl-docs"><tcw-omnibar id="tyl-forge-omnibar" title-text="Tyler Forge" slot="header"><div slot="logo" style="width: 24px; height: 20px; margin-left: 8px;">
+    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 480.5 423.03"><title>forge-icon-only</title><g id="logo"><path d="M463.68,39H283.49A26,26,0,0,0,261,52l-39.38,68.2a26,26,0,0,0,22.55,39.05H424.3a26,26,0,0,0,22.55-13L486.22,78A26,26,0,0,0,463.68,39Z" transform="translate(-9.25 -38.98)" fill="#fff"></path><path d="M377,189.18H196.77a26,26,0,0,0-22.54,13l-37.37,64.72a26,26,0,0,0,0,26L227,449A26,26,0,0,0,272,449L399.51,228.23A26,26,0,0,0,377,189.18Z" transform="translate(-9.25 -38.98)" fill="#fff"></path><path d="M211.35,78A26,26,0,0,0,188.81,39H35.32A26,26,0,0,0,12.78,78L77,189.18,89.52,211a26,26,0,0,0,45.09,0Z" transform="translate(-9.25 -38.98)" fill="#fff"></path></g></svg></div>
+  <tcw-omnibar-search slot="center"><input type="text" placeholder="Search..."></tcw-omnibar-search><tcw-omnibar-menu-button slot="menu" id="tyl-forge-omnibar-menu"></tcw-omnibar-menu-button><div slot="action" style="display: flex; justify-content: space-around;">
+    <ul class="header-nav"><li class="header__nav-item" id="design-nav-indicator">
+        <a href="/getting-started-with-forge/" class="header__nav-link">
+          Design <span class="header__nav-indicator" id="design-link-indicator"></span>
+        </a>
+      </li>
+      <li class="header__nav-item" id="development-nav-indicator">
+        <a href="/development/" class="header__nav-link">
+          Development <span class="header__nav-indicator" id="development-link-indicator"></span>
+        </a>
+      </li>
+      <li class="header__nav-item" id="development-nav-indicator">
+        <a href="/give-feedback/" class="header__nav-link">
+          Feedback <span class="header__nav-indicator" id="feedback-link-indicator"></span>
+        </a>
+      </li>
+    </ul></div>
+</tcw-omnibar><div slot="body-left">
+  <tcw-drawer id="tyl-forge-sidenav" type="dismissible" open="true" style="--tyl-drawer-width: 320px;"><tcw-list class="nav navbar-nav"><a href="/" id="back to design-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">arrow_back</i>Back to design</tcw-list-item></a><tcw-expansion-panel id="guides-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">description</i>
+			  Guides
+			  <tcw-open-icon slot="trailing" style="line-height: 0.5;"></tcw-open-icon></tcw-list-item><tcw-list><a href="https://static-forge.netlify.com/development/guides/introduction/"><tcw-list-item slot="header" class="nav_subitem">Introduction</tcw-list-item></a><a href="https://static-forge.netlify.com/development/guides/prerequisites/"><tcw-list-item slot="header" class="nav_subitem">Prerequisites</tcw-list-item></a><a href="https://static-forge.netlify.com/development/guides/getting-started-2/"><tcw-list-item slot="header" class="nav_subitem">Getting started</tcw-list-item></a><a href="https://static-forge.netlify.com/development/guides/getting-started-angular/"><tcw-list-item slot="header" class="nav_subitem">Getting started – Angular</tcw-list-item></a><a href="https://static-forge.netlify.com/development/guides/omnibar-implementation/"><tcw-list-item slot="header" class="nav_subitem">Omnibar implementation</tcw-list-item></a><a href="https://static-forge.netlify.com/development/guides/table-implementation/"><tcw-list-item slot="header" class="nav_subitem">Table implementation</tcw-list-item></a><a href="https://static-forge.netlify.com/development/guides/theming/"><tcw-list-item slot="header" class="nav_subitem">Theming</tcw-list-item></a><a href="https://static-forge.netlify.com/development/guides/development/"><tcw-list-item slot="header" class="nav_subitem">Development</tcw-list-item></a><a href="https://static-forge.netlify.com/development/guides/component-tutorial/"><tcw-list-item slot="header" class="nav_subitem">Component tutorial</tcw-list-item></a><a href="https://static-forge.netlify.com/development/guides/testing-a-package-locally/"><tcw-list-item slot="header" class="nav_subitem">Testing a package locally</tcw-list-item></a></tcw-list></tcw-expansion-panel><tcw-expansion-panel id="components-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">settings_input_component</i>
+			  Components
+			  <tcw-open-icon slot="trailing" style="line-height: 0.5;"></tcw-open-icon></tcw-list-item><tcw-list><a href="https://static-forge.netlify.com/development/components/accordion/"><tcw-list-item slot="header" class="nav_subitem">Accordion</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/app-launcher/"><tcw-list-item slot="header" class="nav_subitem">App launcher</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/autocomplete/"><tcw-list-item slot="header" class="nav_subitem">Autocomplete</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/avatar/"><tcw-list-item slot="header" class="nav_subitem">Avatar</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/backdrop/"><tcw-list-item slot="header" class="nav_subitem">Backdrop</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/badge/"><tcw-list-item slot="header" class="nav_subitem">Badge</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/busy-indicator/"><tcw-list-item slot="header" class="nav_subitem">Busy indicator</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/button/"><tcw-list-item slot="header" class="nav_subitem">Button</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/button-toggle/"><tcw-list-item slot="header" class="nav_subitem">Button toggle</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/card/"><tcw-list-item slot="header" class="nav_subitem">Card</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/checkbox/"><tcw-list-item slot="header" class="nav_subitem">Checkbox</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/chips/"><tcw-list-item slot="header" class="nav_subitem">Chip</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/color-picker/"><tcw-list-item slot="header" class="nav_subitem">Color picker</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/datepicker/"><tcw-list-item slot="header" class="nav_subitem">Date picker</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/dialog/"><tcw-list-item slot="header" class="nav_subitem">Dialog</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/divider/"><tcw-list-item slot="header" class="nav_subitem">Divider</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/drawer/"><tcw-list-item slot="header" class="nav_subitem">Drawer</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/expansion-panel/"><tcw-list-item slot="header" class="nav_subitem">Expansion panel</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/floating-action-button/"><tcw-list-item slot="header" class="nav_subitem">Floating action button</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/icon-button/"><tcw-list-item slot="header" class="nav_subitem">Icon button</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/label-value/"><tcw-list-item slot="header" class="nav_subitem">Label value</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/linear-progress/"><tcw-list-item slot="header" class="nav_subitem">Linear progress</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/list/"><tcw-list-item slot="header" class="nav_subitem">List</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/menu/"><tcw-list-item slot="header" class="nav_subitem">Menu</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/omnibar/"><tcw-list-item slot="header" class="nav_subitem">Omnibar</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/omnibar-search/"><tcw-list-item slot="header" class="nav_subitem">Omnibar search</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/omnibar-profile/"><tcw-list-item slot="header" class="nav_subitem">Omnibar profile</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/omnibar-help-button/"><tcw-list-item slot="header" class="nav_subitem">Omnibar help button</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/omnibar-notification-button/"><tcw-list-item slot="header" class="nav_subitem">Omnibar notification button</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/open-icon/"><tcw-list-item slot="header" class="nav_subitem">Open icon</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/page-state/"><tcw-list-item slot="header" class="nav_subitem">Page state</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/paginator/"><tcw-list-item slot="header" class="nav_subitem">Paginator</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/popup/"><tcw-list-item slot="header" class="nav_subitem">Popup</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/product-icon/"><tcw-list-item slot="header" class="nav_subitem">Product icon</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/progress-spinner/"><tcw-list-item slot="header" class="nav_subitem">Progress spinner</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/radio-button/"><tcw-list-item slot="header" class="nav_subitem">Radio button</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/scaffold/"><tcw-list-item slot="header" class="nav_subitem">Scaffold</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/select/"><tcw-list-item slot="header" class="nav_subitem">Select</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/skeleton/"><tcw-list-item slot="header" class="nav_subitem">Skeleton</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/slider/"><tcw-list-item slot="header" class="nav_subitem">Slider</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/stepper/"><tcw-list-item slot="header" class="nav_subitem">Stepper</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/switch/"><tcw-list-item slot="header" class="nav_subitem">Switch</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/tab-bar/"><tcw-list-item slot="header" class="nav_subitem">Tab bar</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/table/"><tcw-list-item slot="header" class="nav_subitem">Table</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/text-field/"><tcw-list-item slot="header" class="nav_subitem">Text field</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/toast/"><tcw-list-item slot="header" class="nav_subitem">Toast</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/toolbar/"><tcw-list-item slot="header" class="nav_subitem">Toolbar</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/tooltips/"><tcw-list-item slot="header" class="nav_subitem">Tooltips</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/view-switcher/"><tcw-list-item slot="header" class="nav_subitem">View switcher</tcw-list-item></a></tcw-list></tcw-expansion-panel><tcw-expansion-panel id="recipes-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">fastfood</i>
+			  Recipes
+			  <tcw-open-icon slot="trailing" style="line-height: 0.5;"></tcw-open-icon></tcw-list-item><tcw-list><a href="https://static-forge.netlify.com/development/recipes/card-recipes/"><tcw-list-item slot="header" class="nav_subitem">Card</tcw-list-item></a><a href="https://static-forge.netlify.com/development/recipes/dialog-recipes/"><tcw-list-item slot="header" class="nav_subitem">Dialog</tcw-list-item></a><a href="https://static-forge.netlify.com/development/recipes/error-pages/"><tcw-list-item slot="header" class="nav_subitem">Error pages</tcw-list-item></a><a href="https://static-forge.netlify.com/development/recipes/page-layout-recipes/"><tcw-list-item slot="header" class="nav_subitem">Page layout</tcw-list-item></a><a href="https://static-forge.netlify.com/development/recipes/table-recipes/"><tcw-list-item slot="header" class="nav_subitem">Table</tcw-list-item></a><a href="https://static-forge.netlify.com/development/recipes/toolbar-recipe/"><tcw-list-item slot="header" class="nav_subitem">Toolbar</tcw-list-item></a></tcw-list></tcw-expansion-panel><tcw-expansion-panel id="utilities-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">build</i>
+			  Utilities
+			  <tcw-open-icon slot="trailing" style="line-height: 0.5;"></tcw-open-icon></tcw-list-item><tcw-list><a href="https://static-forge.netlify.com/development/utilities/theme/"><tcw-list-item slot="header" class="nav_subitem">Theme</tcw-list-item></a><a href="https://static-forge.netlify.com/development/utilities/typography/"><tcw-list-item slot="header" class="nav_subitem">Typography</tcw-list-item></a></tcw-list></tcw-expansion-panel><tcw-expansion-panel id="tyler spatial-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">map</i>
+			  Tyler Spatial
+			  <tcw-open-icon slot="trailing" style="line-height: 0.5;"></tcw-open-icon></tcw-list-item><tcw-list><a href="https://static-forge.netlify.com/development/tyler-spatial/getting-started/"><tcw-list-item slot="header" class="nav_subitem">Getting started</tcw-list-item></a><a href="https://static-forge.netlify.com/development/tyler-spatial/mapview/"><tcw-list-item slot="header" class="nav_subitem">MapView</tcw-list-item></a></tcw-list></tcw-expansion-panel><a href="https://static-forge.netlify.com/development/cdn/" id="cdn-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">cloud</i>CDN</tcw-list-item></a><a href="https://static-forge.netlify.com/development/extensions/" id="extensions-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">extension</i>Extensions</tcw-list-item></a>    </tcw-list></tcw-drawer></div>
+      <div class="tyl-docs-content" slot="body" style="position: relative;" id="top-of-page">
+        <div id="tyl-docs-content" class="tyl-docs-content__container" style="padding: 16px; max-width: 1264px;">
+        <div class="flex-container" style="display: flex;">
+        <div class="left-content" style="max-width: 956px; width: 100%;">
+          <tcw-card has-padding="false"><div data-elementor-type="wp-page" data-elementor-id="43738" class="elementor elementor-43738" data-elementor-settings="[]">
+			<div class="elementor-inner">
+				<div class="elementor-section-wrap">
+							<section class="elementor-element elementor-element-1d939dfe elementor-section-height-min-height elementor-section-content-middle elementor-section-items-top elementor-section-boxed elementor-section-height-default elementor-section elementor-top-section" data-id="1d939dfe" data-element_type="section" id="overview" data-settings='{"background_background":"classic"}'><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-41b0bbda elementor-column elementor-col-100 elementor-top-column" data-id="41b0bbda" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<section class="elementor-element elementor-element-470a02f8 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="470a02f8" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-3d7458d0 elementor-column elementor-col-50 elementor-inner-column" data-id="3d7458d0" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-4c3559b5 elementor-widget elementor-widget-divider" data-id="4c3559b5" data-element_type="widget" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-28af1350 elementor-column elementor-col-50 elementor-inner-column" data-id="28af1350" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-254d73cf elementor-widget elementor-widget-html" data-id="254d73cf" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="display: flex; justify-content: flex-end; margin-right: 8px;">
+    <a href="/components/app-launcher/">
+<tcw-button style="margin-right: 24px;"><button type="button">
+      <i class="material-icons">format_paint</i>
+      <span>Design Guidelines</span>
+    </button>
+</tcw-button></a>
+
+<a href="https://bitbucket.tylertech.com/projects/TWC/repos/tyler-components-web/browse/src/lib/omni/app-launcher/" target="_blank">
+<tcw-button><button type="button">
+      <i class="material-icons">code</i>
+      <span>Open in BitBucket</span>
+    </button>
+  </tcw-button></a>
+</div>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><div class="elementor-element elementor-element-3ff2f0d3 elementor-widget elementor-widget-heading" data-id="3ff2f0d3" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">App launcher</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-72a297c6 elementor-widget elementor-widget-text-editor" data-id="72a297c6" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>The app launcher is a convenient navigation component that contains a personal and context-specific map to other parts of the Tyler ecosystem. It is intended to be located and accessed from within the omnibar actions for consistency and familiarity across all applications.</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-397616f1 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="397616f1" data-element_type="section" id="guidance"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-41b94504 elementor-column elementor-col-100 elementor-top-column" data-id="41b94504" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-1806d7a4 elementor-widget elementor-widget-spacer" data-id="1806d7a4" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-46daa1f9 elementor-widget elementor-widget-heading" data-id="46daa1f9" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Installation</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-3d5dc448 elementor-widget elementor-widget-text-editor" data-id="3d5dc448" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>This component can be installed via the omnibar npm package: <code>@tyler-components-web/omni</code></p><p>To install the full TCW component library package, see the <a href="https://static-forge.netlify.com/development/guides/getting-started/">getting started</a> guide.</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-89ea58a elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="89ea58a" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-8e5403c elementor-column elementor-col-100 elementor-top-column" data-id="8e5403c" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-16ccf82 elementor-widget elementor-widget-global elementor-global-3270 elementor-widget-html" data-id="16ccf82" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<tcw-divider></tcw-divider></div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-630162bd elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="630162bd" data-element_type="section" id="guidance"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-1e8cb71a elementor-column elementor-col-100 elementor-top-column" data-id="1e8cb71a" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-1a72cea7 elementor-widget elementor-widget-heading" data-id="1a72cea7" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Guidance</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-33f9d43b elementor-widget elementor-widget-text-editor" data-id="33f9d43b" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Although the app launcher is available as a standalone component, you will almost always use the convenient <code>tcw-omnibar-app-launcher-button</code> component. This will provide a common mechanism for accessing the app launcher within a popup, along with a common icon to use within the omnibar. More on this component below.</p><p>It’s worth noting that the full app-launcher component API is available through the wrapper button component.</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-fe2f3d4 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="fe2f3d4" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-2fb4353 elementor-column elementor-col-100 elementor-top-column" data-id="2fb4353" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-ef7c327 elementor-widget elementor-widget-global elementor-global-3270 elementor-widget-html" data-id="ef7c327" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<tcw-divider></tcw-divider></div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-61c4bdcf elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="61c4bdcf" data-element_type="section" id="guidance"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-2aab95b8 elementor-column elementor-col-100 elementor-top-column" data-id="2aab95b8" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-4ce76a4c elementor-widget elementor-widget-heading" data-id="4ce76a4c" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Usage</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-21f0d5ca elementor-widget elementor-widget-text-editor" data-id="21f0d5ca" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>To get started implementing this component into the omnibar, you will want to use the <code>tcw-omnibar-app-launcher-button</code> component that will ensure you are using the correct icon, as well as handle all of the interaction for you. The only requirement on your part is to provide the component an <code>optionsCallback</code> that can be invoked when the app-launcher needs to fetch options to display to the user. This function can simply a be callback function reference that return a promise containing the array of <code>IAppLauncherOption</code> objects that represent each application option.</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-491c5dbc elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="491c5dbc" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-4b81e839 elementor-column elementor-col-100 elementor-top-column" data-id="4b81e839" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<section class="elementor-element elementor-element-41fc71fc elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="41fc71fc" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-7e11c7bf elementor-column elementor-col-100 elementor-inner-column" data-id="7e11c7bf" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-7c2abb73 elementor-widget elementor-widget-heading" data-id="7c2abb73" data-element_type="widget" toc-subitem="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h6 class="elementor-heading-title elementor-size-default">Example</h6>		</div>
+				</div>
+				<div class="elementor-element elementor-element-44c8d1ce elementor-widget elementor-widget-html" data-id="44c8d1ce" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<tcw-omnibar title-text="Title text"><tcw-omnibar-app-launcher-button slot="action" id="app-launcher-1"></tcw-omnibar-app-launcher-button></tcw-omnibar><script>
+    (function() {
+        const appLauncher1 = document.querySelector('#app-launcher-1');
+        appLauncher1.optionsCallback = window.AppLauncherOptionsCallback;
+    })();
+</script></div>
+				</div>
+				<div class="elementor-element elementor-element-69f0a5d elementor-widget elementor-widget-wp-widget-wpb_widget" data-id="69f0a5d" data-element_type="widget" data-widget_type="wp-widget-wpb_widget.default">
+				<div class="elementor-widget-container">
+			<pre><code><span class="hljs-tag"><<span class="hljs-name">tcw-omnibar</span> <span class="hljs-attr">title-text</span>=<span class="hljs-string">"Title text"</span>></span>
+  <span class="hljs-tag"><<span class="hljs-name">tcw-omnibar-app-launcher-button</span> <span class="hljs-attr">slot</span>=<span class="hljs-string">"action"</span>></span><span class="hljs-tag"></<span class="hljs-name">tcw-omnibar-app-launcher-button</span>></span>
+<span class="hljs-tag"></<span class="hljs-name">tcw-omnibar</span>></span></code></pre>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section></div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-db3a480 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="db3a480" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-fd26a72 elementor-column elementor-col-100 elementor-top-column" data-id="fd26a72" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<section class="elementor-element elementor-element-6a6d969 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="6a6d969" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-4216b9a elementor-column elementor-col-100 elementor-inner-column" data-id="4216b9a" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-430a42d elementor-widget elementor-widget-heading" data-id="430a42d" data-element_type="widget" toc-subitem="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h6 class="elementor-heading-title elementor-size-default">Angular example</h6>		</div>
+				</div>
+				<div class="elementor-element elementor-element-83d132e elementor-widget elementor-widget-wp-widget-wpb_widget" data-id="83d132e" data-element_type="widget" data-widget_type="wp-widget-wpb_widget.default">
+				<div class="elementor-widget-container">
+			<pre><code><span class="hljs-tag"><<span class="hljs-name">tcw-omnibar</span> <span class="hljs-attr">title-text</span>=<span class="hljs-string">"Title text"</span>></span>
+  <span class="hljs-tag"><<span class="hljs-name">tcw-omnibar-app-launcher-button</span> <span class="hljs-attr">slot</span>=<span class="hljs-string">"action"</span> [<span class="hljs-attr">optionsCallback</span>]=<span class="hljs-string">"appLauncherOptionsListener"</span>></span><span class="hljs-tag"></<span class="hljs-name">tcw-omnibar-app-launcher-button</span>></span>
+<span class="hljs-tag"></<span class="hljs-name">tcw-omnibar</span>></span></code></pre>		</div>
+				</div>
+				<div class="elementor-element elementor-element-cbccafd elementor-widget elementor-widget-wp-widget-wpb_widget" data-id="cbccafd" data-element_type="widget" data-widget_type="wp-widget-wpb_widget.default">
+				<div class="elementor-widget-container">
+			<pre><code><span class="hljs-keyword">import</span> { Component, OnInit } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> { IAppLauncherOptionsCallback, IAppLauncherOptionsResult } <span class="hljs-keyword">from</span> <span class="hljs-string">'@tylertech/tyler-components-web'</span>;
+
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'app-launcher-example'</span>,
+  templateUrl: <span class="hljs-string">'./app-launcher.Angular.html'</span>
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> AppLauncherExample <span class="hljs-keyword">implements</span> OnInit {
+  <span class="hljs-keyword">public</span> appLauncherOptionsListener: IAppLauncherOptionsCallback;
+
+  <span class="hljs-keyword">public</span> ngOnInit(): <span class="hljs-built_in">void</span> {
+    <span class="hljs-keyword">this</span>.appLauncherOptionsListener = <span class="hljs-function"><span class="hljs-params">()</span> =></span> <span class="hljs-keyword">this</span>._getAppLauncherOptions();
+  }
+
+  <span class="hljs-keyword">private</span> _getAppLauncherOptions(): <span class="hljs-built_in">Promise</span><IAppLauncherOptionsResult> {
+    <span class="hljs-comment">// In a real world application you would make an HTTP request here, and map the result</span>
+    <span class="hljs-comment">// into an IAppLauncherOptionsResult type (structure shown below)</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span><IAppLauncherOptionsResult>(<span class="hljs-function"><span class="hljs-params">resolve</span> =></span> {
+      resolve({ 
+        options: [
+          <span class="hljs-comment">// This array contains objects of type IAppLauncherOption (should match the default intent type from your intents service)</span>
+        ]
+      });
+    });
+  }
+}
+</code></pre>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section></div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-56fe82e elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="56fe82e" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-ea0e716 elementor-column elementor-col-100 elementor-top-column" data-id="ea0e716" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-47030ff elementor-widget elementor-widget-global elementor-global-3270 elementor-widget-html" data-id="47030ff" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<tcw-divider></tcw-divider></div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-753d92c elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="753d92c" data-element_type="section" id="guidance"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-55f1e014 elementor-column elementor-col-100 elementor-top-column" data-id="55f1e014" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-2dd53e4c elementor-widget elementor-widget-heading" data-id="2dd53e4c" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">API details</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-f6ced2e elementor-widget elementor-widget-text-editor" data-id="f6ced2e" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>As noted above, the app launcher button component is provided for convenience to ensure consistency and ease of use when integrating the omnibar into an application. Below you will find an example, and the API for this component.</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-2b8034db elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="2b8034db" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-2392fffb elementor-column elementor-col-100 elementor-top-column" data-id="2392fffb" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-40c958d0 elementor-widget elementor-widget-heading" data-id="40c958d0" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Properties/attributes</h3>		</div>
+				</div>
+				<section class="elementor-element elementor-element-514cef98 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="514cef98" data-element_type="section" data-settings='{"background_background":"classic"}'><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-289ecfdc elementor-column elementor-col-33 elementor-inner-column" data-id="289ecfdc" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-6dea9816 mdc-typography--subtitle1 elementor-widget elementor-widget-heading" data-id="6dea9816" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">Property</p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-4849b152 elementor-column elementor-col-33 elementor-inner-column" data-id="4849b152" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-18317787 mdc-typography--subtitle1 elementor-widget elementor-widget-heading" data-id="18317787" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">Attribute</p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-78fd75ef elementor-column elementor-col-33 elementor-inner-column" data-id="78fd75ef" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-40c23da2 mdc-typography--subtitle1 elementor-widget elementor-widget-heading" data-id="40c23da2" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">Description</p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-382c454b elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="382c454b" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-45bdb603 elementor-column elementor-col-33 elementor-inner-column" data-id="45bdb603" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-4fcfa05c elementor-widget elementor-widget-heading" data-id="4fcfa05c" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">optionsCallback</p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-a3fbb58 elementor-column elementor-col-33 elementor-inner-column" data-id="a3fbb58" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-2797d2f5 elementor-column elementor-col-33 elementor-inner-column" data-id="2797d2f5" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-285de662 elementor-widget elementor-widget-heading" data-id="285de662" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">A reference to a function that the app-launcher uses to fetch its options asynchronously.</p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section></div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-2b97ecf6 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="2b97ecf6" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-b131b28 elementor-column elementor-col-100 elementor-top-column" data-id="b131b28" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-4da591a2 elementor-widget elementor-widget-heading" data-id="4da591a2" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Methods</h3>		</div>
+				</div>
+				<section class="elementor-element elementor-element-77d85c30 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="77d85c30" data-element_type="section" data-settings='{"background_background":"classic"}'><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-625385d3 elementor-column elementor-col-50 elementor-inner-column" data-id="625385d3" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-4a1b879e mdc-typography--subtitle1 elementor-widget elementor-widget-heading" data-id="4a1b879e" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">Name</p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-6992b5f5 elementor-column elementor-col-50 elementor-inner-column" data-id="6992b5f5" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-54e0b1fd mdc-typography--subtitle1 elementor-widget elementor-widget-heading" data-id="54e0b1fd" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">Description</p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-7c70910c elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="7c70910c" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-473dfd40 elementor-column elementor-col-50 elementor-inner-column" data-id="473dfd40" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-76b85b54 elementor-widget elementor-widget-heading" data-id="76b85b54" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">focusFirst()</p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-25d73381 elementor-column elementor-col-50 elementor-inner-column" data-id="25d73381" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-1be12bb0 elementor-widget elementor-widget-heading" data-id="1be12bb0" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">Sets focus to the first option.</p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section></div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-680e54a elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="680e54a" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-ce4505c elementor-column elementor-col-100 elementor-top-column" data-id="ce4505c" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-fa7834b elementor-widget elementor-widget-heading" data-id="fa7834b" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Events</h3>		</div>
+				</div>
+				<section class="elementor-element elementor-element-a5ca3b2 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="a5ca3b2" data-element_type="section" data-settings='{"background_background":"classic"}'><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-f9511b4 elementor-column elementor-col-50 elementor-inner-column" data-id="f9511b4" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-f064015 mdc-typography--subtitle1 elementor-widget elementor-widget-heading" data-id="f064015" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">Name</p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-212f065 elementor-column elementor-col-50 elementor-inner-column" data-id="212f065" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-33db31c mdc-typography--subtitle1 elementor-widget elementor-widget-heading" data-id="33db31c" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">Description</p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-4138e6a elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="4138e6a" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-6ba5f43 elementor-column elementor-col-50 elementor-inner-column" data-id="6ba5f43" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-9c1d0b6 elementor-widget elementor-widget-heading" data-id="9c1d0b6" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">tcw-app-launcher-select</p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-c4d21a6 elementor-column elementor-col-50 elementor-inner-column" data-id="c4d21a6" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-c8cdfb2 elementor-widget elementor-widget-heading" data-id="c8cdfb2" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">Emits when an option in the app-launcher popup is selected. This allows for the ability to prevent the default action of opening the URL in a new tab, and handling the action manually.</p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section></div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-54a2a453 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="54a2a453" data-element_type="section" id="guidance"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-6fe4e2dd elementor-column elementor-col-100 elementor-top-column" data-id="6fe4e2dd" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-1965d3a5 elementor-widget elementor-widget-heading" data-id="1965d3a5" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Types</h3>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-d633760 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="d633760" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-195c0d8 elementor-column elementor-col-100 elementor-top-column" data-id="195c0d8" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<section class="elementor-element elementor-element-dd909c2 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="dd909c2" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-75aad96 elementor-column elementor-col-100 elementor-inner-column" data-id="75aad96" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-342af13 elementor-widget elementor-widget-heading" data-id="342af13" data-element_type="widget" toc-subitem="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h6 class="elementor-heading-title elementor-size-default">AppLauncherOptionsCallback</h6>		</div>
+				</div>
+				<div class="elementor-element elementor-element-918cf9a elementor-widget elementor-widget-wp-widget-wpb_widget" data-id="918cf9a" data-element_type="widget" data-widget_type="wp-widget-wpb_widget.default">
+				<div class="elementor-widget-container">
+			<pre><code><span class="hljs-keyword">export</span> <span class="hljs-keyword">type</span> AppLauncherOptionsCallback = <span class="hljs-function"><span class="hljs-params">()</span> =></span> <span class="hljs-built_in">Promise</span><IAppLauncherOptionResult>;</code></pre>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section></div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-c5dbd3b elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="c5dbd3b" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-3a69924 elementor-column elementor-col-100 elementor-top-column" data-id="3a69924" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<section class="elementor-element elementor-element-dfa5284 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="dfa5284" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-9cf930f elementor-column elementor-col-100 elementor-inner-column" data-id="9cf930f" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-9c03ffb elementor-widget elementor-widget-heading" data-id="9c03ffb" data-element_type="widget" toc-subitem="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h6 class="elementor-heading-title elementor-size-default">IAppLauncherOptionResult</h6>		</div>
+				</div>
+				<div class="elementor-element elementor-element-f3efcbe elementor-widget elementor-widget-wp-widget-wpb_widget" data-id="f3efcbe" data-element_type="widget" data-widget_type="wp-widget-wpb_widget.default">
+				<div class="elementor-widget-container">
+			<pre><code><span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> IAppLauncherOptionResult {
+  options: IAppLauncherOption[];
+}
+</code></pre>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section></div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-daf4b80 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="daf4b80" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-51df627 elementor-column elementor-col-100 elementor-top-column" data-id="51df627" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<section class="elementor-element elementor-element-9df9682 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="9df9682" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-d218f43 elementor-column elementor-col-100 elementor-inner-column" data-id="d218f43" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-93857fb elementor-widget elementor-widget-heading" data-id="93857fb" data-element_type="widget" toc-subitem="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h6 class="elementor-heading-title elementor-size-default">IAppLauncherAppIcon</h6>		</div>
+				</div>
+				<div class="elementor-element elementor-element-c6c2430 elementor-widget elementor-widget-wp-widget-wpb_widget" data-id="c6c2430" data-element_type="widget" data-widget_type="wp-widget-wpb_widget.default">
+				<div class="elementor-widget-container">
+			<pre><code><span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> IAppLauncherAppIcon {
+  uri?: <span class="hljs-built_in">string</span>;
+  color?: <span class="hljs-built_in">string</span>;
+  <span class="hljs-keyword">type</span>: IconType;
+  name?: <span class="hljs-built_in">string</span>;
+}
+</code></pre>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section></div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-59040ec elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="59040ec" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-0247b14 elementor-column elementor-col-100 elementor-top-column" data-id="0247b14" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<section class="elementor-element elementor-element-9045939 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="9045939" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-1887311 elementor-column elementor-col-100 elementor-inner-column" data-id="1887311" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-cecfa28 elementor-widget elementor-widget-heading" data-id="cecfa28" data-element_type="widget" toc-subitem="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h6 class="elementor-heading-title elementor-size-default">IAppLauncherOption</h6>		</div>
+				</div>
+				<div class="elementor-element elementor-element-26eab1e elementor-widget elementor-widget-wp-widget-wpb_widget" data-id="26eab1e" data-element_type="widget" data-widget_type="wp-widget-wpb_widget.default">
+				<div class="elementor-widget-container">
+			<pre><code><span class="hljs-keyword">export</span> <span class="hljs-keyword">interface</span> IAppLauncherOption {
+  label: <span class="hljs-built_in">string</span>;
+  uri: <span class="hljs-built_in">string</span>;
+  priority?: <span class="hljs-built_in">number</span>;
+  icon?: IAppLauncherAppIcon;
+  helpText?: <span class="hljs-built_in">string</span>;
+  target?: <span class="hljs-built_in">string</span>;
+  iconURI?: <span class="hljs-built_in">string</span>;
+}
+</code></pre>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section></div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-b0cc7c8 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="b0cc7c8" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-a3901c5 elementor-column elementor-col-100 elementor-top-column" data-id="a3901c5" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<section class="elementor-element elementor-element-df62659 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="df62659" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-fcd5dd0 elementor-column elementor-col-100 elementor-inner-column" data-id="fcd5dd0" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-f59f9ba elementor-widget elementor-widget-heading" data-id="f59f9ba" data-element_type="widget" toc-subitem="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h6 class="elementor-heading-title elementor-size-default">IconType</h6>		</div>
+				</div>
+				<div class="elementor-element elementor-element-0cc5d40 elementor-widget elementor-widget-wp-widget-wpb_widget" data-id="0cc5d40" data-element_type="widget" data-widget_type="wp-widget-wpb_widget.default">
+				<div class="elementor-widget-container">
+			<pre><code><span class="hljs-keyword">export</span> <span class="hljs-keyword">type</span> IconType = <span class="hljs-string">'svg'</span> | <span class="hljs-string">'image'</span> | <span class="hljs-string">'font'</span> | <span class="hljs-string">''</span>;
+</code></pre>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section></div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section></div>
+			</div>
+		</div>
+		 
+                        </tcw-card><div class="tyl-typography--caption" style="margin-bottom: 8px;">Last modified on January 9, 2020 by: Kieran Nichols</div>
+          </div>
+
+            <div class="right-content" id="toc-right-container" style="position: relative; width: 300px;"> 
+                                <div><div class="textwidget custom-html-widget"><div class="toc" style="position: fixed;">
+                    <div class="toc-container">
+                      <div class="left-line" id="toc-left-line"></div>
+                      <div class="toc-items-container" id="toc-items">
+                        <h6 style="margin-top: 0px; margin-bottom: 16px;">Table of contents</h6>
+                      </div>
+                    </div>
+                  </div>
+
+<div id="back-to-top-button" class="tyl-back-to-top">
+            <tcw-fab extended="true"><button aria-label="Extended FAB with just text" onclick="scrollTo()">
+                <i class="material-icons" aria-hidden="true">arrow_upward</i>
+                <span>Back to top</span>
+              </button>
+            </tcw-fab></div></div></div>                            </div>
+
+        </div>
+       </div>
+      </div>
+    </tcw-scaffold><script type="text/javascript" src="scripts/custom-elements-es5-adapter.js"></script><script type="text/javascript" src="scripts/webcomponents-bundle.js"></script><script type="text/javascript" src="scripts/tyler-components-web-lib.min.js"></script><script type="text/javascript" src="scripts/tyler-components-web-forge-lib.min.js"></script><script>
+  window.addEventListener('WebComponentsReady', function() {
+    window.TylerComponentsWeb.lib.defineComponents();
+    window.TylerComponentsWeb.Forge.lib.defineComponents();
+  });
+</script><script type="text/javascript" src="scripts/menu-expander.js"></script><script type="text/javascript" src="scripts/drawer.js"></script><script type="text/javascript" src="scripts/navHeader.js"></script><script type="text/javascript" src="scripts/search.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-136930168-1"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-136930168-1');
+</script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/material-design-for-contact-form-7/assets/js/lib/autosize.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/material-design-for-contact-form-7/assets/js/cf7-material-design-bundle.js"></script><script type="text/javascript">
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"https:\/\/static-forge.netlify.com\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"}};
+/* ]]> */
+</script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/contact-form-7/includes/js/scripts.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/js/frontend-modules.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor-pro/assets/lib/sticky/jquery.sticky.min.js"></script><script type="text/javascript">
+var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/static-forge.netlify.com\/wp-admin\/admin-ajax.php","nonce":"a52c73ecd1","shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"google":{"title":"Google+","has_counter":true},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"delicious":{"title":"Delicious"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"}},"facebook_sdk":{"lang":"en_US","app_id":""}};
+</script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor-pro/assets/js/frontend.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-includes/js/jquery/ui/position.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/swiper/swiper.min.js"></script><script type="text/javascript">
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"version":"2.8.3","urls":{"assets":"https:\/\/static-forge.netlify.com\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"general":{"elementor_global_image_lightbox":"yes"},"editorPreferences":[]},"post":{"id":43738,"title":"App launcher","excerpt":""}};
+</script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/js/frontend.min.js"></script><script type="text/javascript" src="scripts/table-of-contents.js?x-version=1"></script></body></html>

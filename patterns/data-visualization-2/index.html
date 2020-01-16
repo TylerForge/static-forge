@@ -1,0 +1,1867 @@
+<!DOCTYPE html>
+<html lang="en-US"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="shortcut icon" href="favicon.ico" sizes="16x16" type="image/x-icon"><title>Data Viz: Charts – Tyler Forge</title><link rel="dns-prefetch" href="//fonts.googleapis.com"><link rel="dns-prefetch" href="//s.w.org"><link rel="stylesheet" id="cf7md_roboto-css" href="//fonts.googleapis.com/css?family=Roboto:400,500" type="text/css" media="all"><link rel="stylesheet" id="cf7-material-design-css" href="https://static-forge.netlify.com/wp-content/plugins/material-design-for-contact-form-7/assets/css/cf7-material-design.css" type="text/css" media="all"><link rel="stylesheet" id="contact-form-7-css" href="https://static-forge.netlify.com/wp-content/plugins/contact-form-7/includes/css/styles.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-icons-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-animations-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/animations/animations.min.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-frontend-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/css/frontend.min.css" type="text/css" media="all"><link rel="stylesheet" id="lae-animate-styles-css" href="https://static-forge.netlify.com/wp-content/plugins/addons-for-elementor/assets/css/animate.css" type="text/css" media="all"><link rel="stylesheet" id="lae-sliders-styles-css" href="https://static-forge.netlify.com/wp-content/plugins/addons-for-elementor/assets/css/sliders.css" type="text/css" media="all"><link rel="stylesheet" id="lae-icomoon-styles-css" href="https://static-forge.netlify.com/wp-content/plugins/addons-for-elementor/assets/css/icomoon.css" type="text/css" media="all"><link rel="stylesheet" id="lae-frontend-styles-css" href="https://static-forge.netlify.com/wp-content/plugins/addons-for-elementor/assets/css/lae-frontend.css" type="text/css" media="all"><link rel="stylesheet" id="lae-widgets-styles-css" href="https://static-forge.netlify.com/wp-content/plugins/addons-for-elementor/assets/css/lae-widgets.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-pro-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor-pro/assets/css/frontend.min.css" type="text/css" media="all"><link rel="stylesheet" id="font-awesome-5-all-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/all.min.css" type="text/css" media="all"><link rel="stylesheet" id="font-awesome-4-shim-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/v4-shims.min.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-global-css" href="https://static-forge.netlify.com/wp-content/uploads/elementor/css/global.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-post-5475-css" href="https://static-forge.netlify.com/wp-content/uploads/elementor/css/post-5475.css" type="text/css" media="all"><link rel="stylesheet" id="custom-frontend-style-css" href="https://static-forge.netlify.com/wp-content/plugins/ideapush/inc/css/frontendstyle.css" type="text/css" media="all"><style id="custom-frontend-style-inline-css" type="text/css">
+.ideapush-idea-filter{display: none;}
+</style><script type="text/javascript" src="https://static-forge.netlify.com/wp-includes/js/jquery/jquery.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-includes/js/jquery/jquery-migrate.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min.js"></script><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NB3CZPX');</script><script type="text/javascript">
+            (function () {
+                window.lae_fs = {can_use_premium_code: false};
+            })();
+        </script><style type="text/css" id="wp-custom-css">
+			.hljs {
+	background: none;
+}		</style><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono"><link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700"><link href="https://cdn.forge.tylertech.com/v1/libs/tcw/latest/tcw-material-design.css" rel="stylesheet"><link rel="stylesheet" href="styles/tyler-forge.css"><link rel="stylesheet" href="styles/hljs-theme.css"><link rel="stylesheet" href="styles/component.css"></head><body class="tyl-typography">
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NB3CZPX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+
+
+    <tcw-scaffold class="tyl-docs"><tcw-omnibar id="tyl-forge-omnibar" title-text="Tyler Forge" slot="header"><div slot="logo" style="width: 24px; height: 20px; margin-left: 8px;">
+    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 480.5 423.03"><title>forge-icon-only</title><g id="logo"><path d="M463.68,39H283.49A26,26,0,0,0,261,52l-39.38,68.2a26,26,0,0,0,22.55,39.05H424.3a26,26,0,0,0,22.55-13L486.22,78A26,26,0,0,0,463.68,39Z" transform="translate(-9.25 -38.98)" fill="#fff"></path><path d="M377,189.18H196.77a26,26,0,0,0-22.54,13l-37.37,64.72a26,26,0,0,0,0,26L227,449A26,26,0,0,0,272,449L399.51,228.23A26,26,0,0,0,377,189.18Z" transform="translate(-9.25 -38.98)" fill="#fff"></path><path d="M211.35,78A26,26,0,0,0,188.81,39H35.32A26,26,0,0,0,12.78,78L77,189.18,89.52,211a26,26,0,0,0,45.09,0Z" transform="translate(-9.25 -38.98)" fill="#fff"></path></g></svg></div>
+  <tcw-omnibar-search slot="center"><input type="text" placeholder="Search..."></tcw-omnibar-search><tcw-omnibar-menu-button slot="menu" id="tyl-forge-omnibar-menu"></tcw-omnibar-menu-button><div slot="action" style="display: flex; justify-content: space-around;">
+    <ul class="header-nav"><li class="header__nav-item" id="design-nav-indicator">
+        <a href="/getting-started-with-forge/" class="header__nav-link">
+          Design <span class="header__nav-indicator" id="design-link-indicator"></span>
+        </a>
+      </li>
+      <li class="header__nav-item" id="development-nav-indicator">
+        <a href="/development/" class="header__nav-link">
+          Development <span class="header__nav-indicator" id="development-link-indicator"></span>
+        </a>
+      </li>
+      <li class="header__nav-item" id="development-nav-indicator">
+        <a href="/give-feedback/" class="header__nav-link">
+          Feedback <span class="header__nav-indicator" id="feedback-link-indicator"></span>
+        </a>
+      </li>
+    </ul></div>
+</tcw-omnibar><div slot="body-left">
+  <tcw-drawer id="tyl-forge-sidenav" type="dismissible" open="true" style="--tyl-drawer-width: 320px;"><tcw-list class="nav navbar-nav"><a href="https://static-forge.netlify.com/" id="home-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">home</i>Home</tcw-list-item></a><tcw-expansion-panel id="get started-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">forward</i>
+			  Get started
+			  <tcw-open-icon slot="trailing" style="line-height: 0.5;"></tcw-open-icon></tcw-list-item><tcw-list><a href="https://static-forge.netlify.com/getting-started-as-a-designer/"><tcw-list-item slot="header" class="nav_subitem">As a designer</tcw-list-item></a><a href="https://static-forge.netlify.com/design-to-dev-handoff/"><tcw-list-item slot="header" class="nav_subitem">Design to Dev Handoff</tcw-list-item></a></tcw-list></tcw-expansion-panel><tcw-expansion-panel id="foundation-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">border_outer</i>
+			  Foundation
+			  <tcw-open-icon slot="trailing" style="line-height: 0.5;"></tcw-open-icon></tcw-list-item><tcw-list><a href="https://static-forge.netlify.com/foundation/overview/"><tcw-list-item slot="header" class="nav_subitem">Overview</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/intro-to-accessibility/"><tcw-list-item slot="header" class="nav_subitem">Accessibility</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/tyler-branding/"><tcw-list-item slot="header" class="nav_subitem">Branding</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/color/"><tcw-list-item slot="header" class="nav_subitem">Color</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/data-formats/"><tcw-list-item slot="header" class="nav_subitem">Data formats</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/tyler-icons-full/"><tcw-list-item slot="header" class="nav_subitem">Iconography</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/illustrations-usage/"><tcw-list-item slot="header" class="nav_subitem">Illustration: Usage</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/illustration-library/"><tcw-list-item slot="header" class="nav_subitem">Illustration: Library</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/theming/"><tcw-list-item slot="header" class="nav_subitem">Theming</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/layout-intro/"><tcw-list-item slot="header" class="nav_subitem">Layout: Intro</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/layout-grid/"><tcw-list-item slot="header" class="nav_subitem">Layout: Grid</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/layout-spacing/"><tcw-list-item slot="header" class="nav_subitem">Layout: Spacing</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/layout-page-layouts/"><tcw-list-item slot="header" class="nav_subitem">Layout: Page layouts</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/typography/"><tcw-list-item slot="header" class="nav_subitem">Typography</tcw-list-item></a><a href="https://static-forge.netlify.com/product-analytics/"><tcw-list-item slot="header" class="nav_subitem">Product analytics - coming soon</tcw-list-item></a></tcw-list></tcw-expansion-panel><tcw-expansion-panel id="patterns-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">ac_unit</i>
+			  Patterns
+			  <tcw-open-icon slot="trailing" style="line-height: 0.5;"></tcw-open-icon></tcw-list-item><tcw-list><a href="https://static-forge.netlify.com/patterns/data-visualization/"><tcw-list-item slot="header" class="nav_subitem">Data visualization: Intro</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/data-visualization-2/"><tcw-list-item slot="header" class="nav_subitem">Data visualization: Charts</tcw-list-item></a><a href="https://static-forge.netlify.com/colors-data-visualization/"><tcw-list-item slot="header" class="nav_subitem">Data visualization: Colors</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/drag-and-drop/"><tcw-list-item slot="header" class="nav_subitem">Drag and drop</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/empty-state/"><tcw-list-item slot="header" class="nav_subitem">Empty state</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/errors/"><tcw-list-item slot="header" class="nav_subitem">Errors</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/faceted-search/"><tcw-list-item slot="header" class="nav_subitem">Faceted filtering</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/forms/"><tcw-list-item slot="header" class="nav_subitem">Forms</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/login/"><tcw-list-item slot="header" class="nav_subitem">Login</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/mapping-gis/"><tcw-list-item slot="header" class="nav_subitem">Mapping & GIS</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/navigation/"><tcw-list-item slot="header" class="nav_subitem">Navigation</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/onboarding/"><tcw-list-item slot="header" class="nav_subitem">Onboarding - in progress</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/profile/"><tcw-list-item slot="header" class="nav_subitem">Profile - in progress</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/progress-loading/"><tcw-list-item slot="header" class="nav_subitem">Progress & loading</tcw-list-item></a></tcw-list></tcw-expansion-panel><tcw-expansion-panel id="components-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">settings_input_component</i>
+			  Components
+			  <tcw-open-icon slot="trailing" style="line-height: 0.5;"></tcw-open-icon></tcw-list-item><tcw-list><a href="https://static-forge.netlify.com/components/accordion/"><tcw-list-item slot="header" class="nav_subitem">Accordion</tcw-list-item></a><a href="https://static-forge.netlify.com/components/app-launcher/"><tcw-list-item slot="header" class="nav_subitem">App launcher</tcw-list-item></a><a href="https://static-forge.netlify.com/components/avatar/"><tcw-list-item slot="header" class="nav_subitem">Avatar</tcw-list-item></a><a href="https://static-forge.netlify.com/components/badge/"><tcw-list-item slot="header" class="nav_subitem">Badge - Coming soon</tcw-list-item></a><a href="https://static-forge.netlify.com/components/buttons/"><tcw-list-item slot="header" class="nav_subitem">Buttons</tcw-list-item></a><a href="https://static-forge.netlify.com/components/card/"><tcw-list-item slot="header" class="nav_subitem">Card</tcw-list-item></a><a href="https://static-forge.netlify.com/components/chips/"><tcw-list-item slot="header" class="nav_subitem">Chips</tcw-list-item></a><a href="https://static-forge.netlify.com/components/date-picker/"><tcw-list-item slot="header" class="nav_subitem">Date picker - coming soon</tcw-list-item></a><a href="https://static-forge.netlify.com/components/dialog/"><tcw-list-item slot="header" class="nav_subitem">Dialog</tcw-list-item></a><a href="https://static-forge.netlify.com/components/expansion-panel/"><tcw-list-item slot="header" class="nav_subitem">Expansion panel</tcw-list-item></a><a href="https://static-forge.netlify.com/components/floating-action-button/"><tcw-list-item slot="header" class="nav_subitem">Floating Action Button</tcw-list-item></a><a href="https://static-forge.netlify.com/components/list/"><tcw-list-item slot="header" class="nav_subitem">List</tcw-list-item></a><a href="https://static-forge.netlify.com/components/navigation-drawer/"><tcw-list-item slot="header" class="nav_subitem">Navigation drawer</tcw-list-item></a><a href="https://static-forge.netlify.com/components/omnibar/"><tcw-list-item slot="header" class="nav_subitem">Omnibar</tcw-list-item></a><a href="https://static-forge.netlify.com/components/progress-indicators/"><tcw-list-item slot="header" class="nav_subitem">Progress indicators</tcw-list-item></a><a href="https://static-forge.netlify.com/components/selection-controls/"><tcw-list-item slot="header" class="nav_subitem">Selection controls</tcw-list-item></a><a href="https://static-forge.netlify.com/components/sliders/"><tcw-list-item slot="header" class="nav_subitem">Sliders</tcw-list-item></a><a href="https://static-forge.netlify.com/components/stepper/"><tcw-list-item slot="header" class="nav_subitem">Stepper - coming soon</tcw-list-item></a><a href="https://static-forge.netlify.com/components/table/"><tcw-list-item slot="header" class="nav_subitem">Table</tcw-list-item></a><a href="https://static-forge.netlify.com/components/tabs/"><tcw-list-item slot="header" class="nav_subitem">Tabs</tcw-list-item></a><a href="https://static-forge.netlify.com/components/toast/"><tcw-list-item slot="header" class="nav_subitem">Toast</tcw-list-item></a><a href="https://static-forge.netlify.com/components/toolbar/"><tcw-list-item slot="header" class="nav_subitem">Toolbar - coming soon</tcw-list-item></a><a href="https://static-forge.netlify.com/components/tooltip/"><tcw-list-item slot="header" class="nav_subitem">Tooltip</tcw-list-item></a></tcw-list></tcw-expansion-panel><tcw-expansion-panel id="native mobile-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">phone_iphone</i>
+			  Native mobile
+			  <tcw-open-icon slot="trailing" style="line-height: 0.5;"></tcw-open-icon></tcw-list-item><tcw-list><a href="https://static-forge.netlify.com/native-mobile/basic-requirements/"><tcw-list-item slot="header" class="nav_subitem">Basic requirements</tcw-list-item></a><a href="https://static-forge.netlify.com/native-mobile/frameworks/"><tcw-list-item slot="header" class="nav_subitem">Frameworks</tcw-list-item></a><a href="https://static-forge.netlify.com/native-mobile/design-patterns/"><tcw-list-item slot="header" class="nav_subitem">Design patterns</tcw-list-item></a></tcw-list></tcw-expansion-panel><a href="https://static-forge.netlify.com/feedback-support/" id="feedback & support-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">pan_tool</i>Feedback & support</tcw-list-item></a><a href="https://static-forge.netlify.com/status/" id="status-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">trending_up</i>Status</tcw-list-item></a><a href="https://static-forge.netlify.com/faqs/" id="faqs-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">help</i>FAQs</tcw-list-item></a>    </tcw-list></tcw-drawer></div>
+      <div class="tyl-docs-content" slot="body" style="position: relative;" id="top-of-page">
+        <div id="tyl-docs-content" class="tyl-docs-content__container" style="padding: 16px; max-width: 1264px;">
+        <div class="flex-container" style="display: flex;">
+        <div class="left-content" style="max-width: 956px; width: 100%;">
+          <tcw-card has-padding="false"><div data-elementor-type="wp-page" data-elementor-id="5475" class="elementor elementor-5475" data-elementor-settings="[]">
+			<div class="elementor-inner">
+				<div class="elementor-section-wrap">
+							<section class="elementor-element elementor-element-16b85714 elementor-section-height-min-height elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-items-middle elementor-section elementor-top-section" data-id="16b85714" data-element_type="section" id="overview" data-settings='{"background_background":"classic"}'><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-43febf2a elementor-column elementor-col-50 elementor-top-column" data-id="43febf2a" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-2a11e958 elementor-widget elementor-widget-divider" data-id="2a11e958" data-element_type="widget" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-154a5825 elementor-widget elementor-widget-heading" data-id="154a5825" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Data Viz: Charts</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-8456619 elementor-widget elementor-widget-text-editor" data-id="8456619" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Turn numbers into narratives.</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-22f54247 elementor-column elementor-col-50 elementor-top-column" data-id="22f54247" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-3d56400c elementor-widget elementor-widget-image" data-id="3d56400c" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img src="https://static-forge.netlify.com/wp-content/uploads/2019/07/data-viz-spot-hero.svg" title="data viz-spot hero" alt="data viz-spot hero"></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-79f4b607 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="79f4b607" data-element_type="section" data-settings='{"background_background":"classic"}'><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-475bbe8 elementor-column elementor-col-33 elementor-top-column" data-id="475bbe8" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-29b9b0e0 elementor-widget elementor-widget-text-editor" data-id="29b9b0e0" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Contributors</p></div>
+				</div>
+				</div>
+				<section class="elementor-element elementor-element-4827e0a5 elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="4827e0a5" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-1a621d8b elementor-column elementor-col-33 elementor-inner-column" data-id="1a621d8b" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-54e25ac elementor-widget elementor-widget-image" data-id="54e25ac" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+											<a data-elementor-open-lightbox="" href="mailto:kaila.manca@tylertech.com">
+							<img width="624" height="436" src="https://static-forge.netlify.com/wp-content/uploads/2019/04/Screen-Shot-2019-04-01-at-10.38.46-AM.png" class="attachment-large size-large" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/04/Screen-Shot-2019-04-01-at-10.38.46-AM.png 624w,https://static-forge.netlify.com/wp-content/uploads/2019/04/Screen-Shot-2019-04-01-at-10.38.46-AM-300x210.png 300w" sizes="(max-width: 624px) 100vw, 624px"></a>
+											</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-e38baaa elementor-widget elementor-widget-heading" data-id="e38baaa" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">Kaila Manca</p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-506c1670 elementor-column elementor-col-33 elementor-inner-column" data-id="506c1670" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-967e60d elementor-widget elementor-widget-image" data-id="967e60d" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="500" height="500" src="https://static-forge.netlify.com/wp-content/uploads/2019/05/GJ3A8651.png" class="attachment-large size-large" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/05/GJ3A8651.png 500w,https://static-forge.netlify.com/wp-content/uploads/2019/05/GJ3A8651-150x150.png 150w,https://static-forge.netlify.com/wp-content/uploads/2019/05/GJ3A8651-300x300.png 300w" sizes="(max-width: 500px) 100vw, 500px"></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-d9ea697 elementor-widget elementor-widget-heading" data-id="d9ea697" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">Emily Roller</p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-5f4fa9f6 elementor-column elementor-col-33 elementor-inner-column" data-id="5f4fa9f6" data-element_type="column">
+			<div class="elementor-column-wrap">
+					<div class="elementor-widget-wrap">
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section></div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-5ea0d3a9 elementor-column elementor-col-33 elementor-top-column" data-id="5ea0d3a9" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-75e3f51b elementor-widget elementor-widget-text-editor" data-id="75e3f51b" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Implementation Effort</p></div>
+				</div>
+				</div>
+				<section class="elementor-element elementor-element-ecfab03 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="ecfab03" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-4dd0f58 elementor-column elementor-col-100 elementor-inner-column" data-id="4dd0f58" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-5ef77082 elementor-widget elementor-widget-html" data-id="5ef77082" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<tcw-chip text="Difficult"></tcw-chip></div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section></div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-42c80f81 elementor-column elementor-col-33 elementor-top-column" data-id="42c80f81" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-5105797c elementor-widget elementor-widget-text-editor" data-id="5105797c" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Supported Devices</p></div>
+				</div>
+				</div>
+				<section class="elementor-element elementor-element-5247b03b elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="5247b03b" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-364fdb51 elementor-column elementor-col-33 elementor-inner-column" data-id="364fdb51" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-22d4007d elementor-widget elementor-widget-html" data-id="22d4007d" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<i class="material-icons" style="font-size: 48px; color: #787878;">
+desktop_mac
+</i>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-3d447b40 elementor-column elementor-col-33 elementor-inner-column" data-id="3d447b40" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-506f46ef elementor-widget elementor-widget-html" data-id="506f46ef" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<i class="material-icons" style="font-size: 48px; color: #787878;">
+tablet
+</i>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-2f1be7f9 elementor-column elementor-col-33 elementor-inner-column" data-id="2f1be7f9" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-7a550096 elementor-widget elementor-widget-html" data-id="7a550096" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<i class="material-icons" style="font-size: 48px; color: #787878;">
+phone_android
+</i>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section></div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-7e07a9d3 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="7e07a9d3" data-element_type="section" id="guidance"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-4e5af6d1 elementor-column elementor-col-100 elementor-top-column" data-id="4e5af6d1" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-5c9ba089 elementor-widget elementor-widget-spacer" data-id="5c9ba089" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-eb2bbc9 elementor-widget elementor-widget-text-editor" data-id="eb2bbc9" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><i class="material-icons" style="vertical-align: middle; margin-right: 16px">
+face
+</i>Heads up, this page is still in progress! Check back soon to see the final product 🙂</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-401101e4 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="401101e4" data-element_type="section" id="guidance"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-389ac7f2 elementor-column elementor-col-100 elementor-top-column" data-id="389ac7f2" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-2076c31e elementor-widget elementor-widget-spacer" data-id="2076c31e" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-745ba990 elementor-widget elementor-widget-heading" data-id="745ba990" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">What chart should I use?</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-9232f2a elementor-widget elementor-widget-text-editor" data-id="9232f2a" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><h4>Comparing data</h4><h5>Over time</h5><p>When displaying categorical data, or different types of data (e.g. dogs and cats) with the goal of showing that <b>data in relation to time</b> (“how the population of cats and dogs in NYC has changed over the past 40 years”), use <b>a line graph.</b></p><p><img class="wp-image-5476 size-thumbnail alignnone" src="http://PLACEHOLDER.wpsho/wp-content/uploads/2019/06/line-chart-150x150.png" alt="" width="150" height="150" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/06/line-chart-150x150.png 150w,https://static-forge.netlify.com/wp-content/uploads/2019/06/line-chart.png 300w" sizes="(max-width: 150px) 100vw, 150px"></p><h5>Between groups</h5><p>When highlighting the differences between two groups, e.g. the population of dogs and cats in NYC, use<strong> a bar chart to help the user make a comparison.</strong> Stacked bar charts can be useful for comparing data between groups as well.</p><p><img class="alignnone wp-image-5484 size-thumbnail" src="http://PLACEHOLDER.wpsho/wp-content/uploads/2019/06/barchart-150x150.png" alt="" width="150" height="150" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/06/barchart-150x150.png 150w,https://static-forge.netlify.com/wp-content/uploads/2019/06/barchart.png 300w" sizes="(max-width: 150px) 100vw, 150px"><img class="alignleft wp-image-5489 size-thumbnail" src="http://PLACEHOLDER.wpsho/wp-content/uploads/2019/06/stacked-bar-chart-1-1-150x150.png" alt="" width="150" height="150" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/06/stacked-bar-chart-1-1-150x150.png 150w,https://static-forge.netlify.com/wp-content/uploads/2019/06/stacked-bar-chart-1-1.png 300w" sizes="(max-width: 150px) 100vw, 150px"></p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-30501f0 elementor-widget elementor-widget-text-editor" data-id="30501f0" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><h4>Displaying distributions</h4><p>When the goal is to <strong>show the overall pattern</strong> (the forest vs. the individual trees) or <strong>distribution of data, use scatter plots, bubble charts, alluvials, histograms, and maybe maps or heatmaps.</strong> Whatever visually shows the pattern clearly is best.</p><p><img class="alignleft wp-image-5481 size-thumbnail" src="http://PLACEHOLDER.wpsho/wp-content/uploads/2019/06/histogram-copy-150x150.png" alt="" width="150" height="150" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/06/histogram-copy-150x150.png 150w,https://static-forge.netlify.com/wp-content/uploads/2019/06/histogram-copy.png 300w" sizes="(max-width: 150px) 100vw, 150px"><img class="alignleft wp-image-5483 size-thumbnail" src="http://PLACEHOLDER.wpsho/wp-content/uploads/2019/06/histogram-150x150.png" alt="" width="150" height="150" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/06/histogram-150x150.png 150w,https://static-forge.netlify.com/wp-content/uploads/2019/06/histogram.png 300w" sizes="(max-width: 150px) 100vw, 150px"><img class="alignnone wp-image-5502 size-thumbnail" src="http://PLACEHOLDER.wpsho/wp-content/uploads/2019/06/heatmap-150x150.png" alt="" width="150" height="150" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/06/heatmap-150x150.png 150w,https://static-forge.netlify.com/wp-content/uploads/2019/06/heatmap.png 300w" sizes="(max-width: 150px) 100vw, 150px"></p><h4>Displaying subsets of data</h4><p id="eaa9" class="graf graf--p graf-after--h4">When the goal is to <strong>show the relationship between one of the data sets and the rest </strong>— where the individual data sets are a subset of a larger category,<strong> use stacked bar charts, treemaps, or stacked area charts.</strong> Pie charts can be appropriate here but should be used mindfully.</p><p class="graf graf--p graf-after--h4">For example: to show a chart summarizing last year’s budget, each of the categories (rent, utilities, gas, etc.) is a subset of the budget year, so a stacked bar chart would work well.</p><p><img class="alignnone wp-image-5489 size-thumbnail" src="http://PLACEHOLDER.wpsho/wp-content/uploads/2019/06/stacked-bar-chart-1-1-150x150.png" alt="" width="150" height="150" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/06/stacked-bar-chart-1-1-150x150.png 150w,https://static-forge.netlify.com/wp-content/uploads/2019/06/stacked-bar-chart-1-1.png 300w" sizes="(max-width: 150px) 100vw, 150px"><img class="alignleft wp-image-5480 size-thumbnail" src="http://PLACEHOLDER.wpsho/wp-content/uploads/2019/06/pie-charts-150x150.png" alt="" width="150" height="150" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/06/pie-charts-150x150.png 150w,https://static-forge.netlify.com/wp-content/uploads/2019/06/pie-charts.png 300w" sizes="(max-width: 150px) 100vw, 150px"></p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-2095144 elementor-widget elementor-widget-spacer" data-id="2095144" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-69f0c44b elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="69f0c44b" data-element_type="section" id="guidance"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-3ea835ef elementor-column elementor-col-100 elementor-top-column" data-id="3ea835ef" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-1ef93f55 elementor-widget elementor-widget-spacer" data-id="1ef93f55" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-cf9472f elementor-widget elementor-widget-spacer" data-id="cf9472f" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-3a1d1d7b elementor-widget elementor-widget-heading" data-id="3a1d1d7b" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Understanding chart types</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-99da780 elementor-widget elementor-widget-spacer" data-id="99da780" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-410836e elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="410836e" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-94bf395 elementor-column elementor-col-20 elementor-top-column" data-id="94bf395" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-aaefb23 elementor-widget elementor-widget-image" data-id="aaefb23" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+											<a data-elementor-open-lightbox="" href="http://PLACEHOLDER.wpsho/patterns/data-visualization-2/#kpi's-/-simple-cards">
+							<img width="300" height="300" src="https://static-forge.netlify.com/wp-content/uploads/2019/06/kpis.png" class="attachment-large size-large" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/06/kpis.png 300w,https://static-forge.netlify.com/wp-content/uploads/2019/06/kpis-150x150.png 150w" sizes="(max-width: 300px) 100vw, 300px"></a>
+											</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-b6da0b6 elementor-widget elementor-widget-text-editor" data-id="b6da0b6" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><strong>KPIs / Simple cards</strong></p><p>Summarize high level data</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-311ea77 elementor-column elementor-col-20 elementor-top-column" data-id="311ea77" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-33fe533 elementor-widget elementor-widget-image" data-id="33fe533" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+											<a data-elementor-open-lightbox="" href="./#barcharts">
+							<img width="300" height="300" src="https://static-forge.netlify.com/wp-content/uploads/2019/06/barchart.png" class="attachment-large size-large" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/06/barchart.png 300w,https://static-forge.netlify.com/wp-content/uploads/2019/06/barchart-150x150.png 150w" sizes="(max-width: 300px) 100vw, 300px"></a>
+											</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-7fb7269 elementor-widget elementor-widget-text-editor" data-id="7fb7269" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><strong>Bar charts</strong></p><p>Compare categories</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-783dabb elementor-column elementor-col-20 elementor-top-column" data-id="783dabb" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-c65336e elementor-widget elementor-widget-image" data-id="c65336e" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+											<a data-elementor-open-lightbox="" href="http://PLACEHOLDER.wpsho/patterns/data-visualization-2/#line-charts">
+							<img width="300" height="300" src="https://static-forge.netlify.com/wp-content/uploads/2019/06/line-chart.png" class="attachment-large size-large" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/06/line-chart.png 300w,https://static-forge.netlify.com/wp-content/uploads/2019/06/line-chart-150x150.png 150w" sizes="(max-width: 300px) 100vw, 300px"></a>
+											</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-0e79fa7 elementor-widget elementor-widget-text-editor" data-id="0e79fa7" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><strong>Line charts</strong></p><p>Display trends</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-b44a1ff elementor-column elementor-col-20 elementor-top-column" data-id="b44a1ff" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-22d1828 elementor-widget elementor-widget-image" data-id="22d1828" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+											<a data-elementor-open-lightbox="" href="http://PLACEHOLDER.wpsho/patterns/data-visualization-2/#stacked-bar-charts">
+							<img width="300" height="300" src="https://static-forge.netlify.com/wp-content/uploads/2019/06/stacked-bar-chart-1-1.png" class="attachment-large size-large" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/06/stacked-bar-chart-1-1.png 300w,https://static-forge.netlify.com/wp-content/uploads/2019/06/stacked-bar-chart-1-1-150x150.png 150w" sizes="(max-width: 300px) 100vw, 300px"></a>
+											</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-6efdff6 elementor-widget elementor-widget-text-editor" data-id="6efdff6" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><span style="letter-spacing: 0.05px;"><b>Stacked bar charts </b></span></p><p><span style="letter-spacing: 0.05px;">Display subdivisions in time</span></p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-866e149 elementor-column elementor-col-20 elementor-top-column" data-id="866e149" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-6e1857a elementor-widget elementor-widget-image" data-id="6e1857a" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+											<a data-elementor-open-lightbox="" href="http://PLACEHOLDER.wpsho/patterns/data-visualization-2/#pictograms">
+							<img width="300" height="300" src="https://static-forge.netlify.com/wp-content/uploads/2019/06/pictogram.png" class="attachment-large size-large" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/06/pictogram.png 300w,https://static-forge.netlify.com/wp-content/uploads/2019/06/pictogram-150x150.png 150w" sizes="(max-width: 300px) 100vw, 300px"></a>
+											</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-3c66c78 elementor-widget elementor-widget-text-editor" data-id="3c66c78" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><span style="letter-spacing: 0.05px;"><b>Pictograms</b></span></p><p><span style="letter-spacing: 0.05px;">Represent people or physical things</span></p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-04d959f elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="04d959f" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-5982dfc elementor-column elementor-col-20 elementor-top-column" data-id="5982dfc" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-7f2ba5d elementor-widget elementor-widget-image" data-id="7f2ba5d" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+											<a data-elementor-open-lightbox="" href="http://PLACEHOLDER.wpsho/patterns/data-visualization-2/#scatter-plots">
+							<img width="300" height="300" src="https://static-forge.netlify.com/wp-content/uploads/2019/06/histogram-copy.png" class="attachment-large size-large" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/06/histogram-copy.png 300w,https://static-forge.netlify.com/wp-content/uploads/2019/06/histogram-copy-150x150.png 150w" sizes="(max-width: 300px) 100vw, 300px"></a>
+											</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-90fa3a8 elementor-widget elementor-widget-text-editor" data-id="90fa3a8" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><span style="letter-spacing: 0.05px;"><b>Scatterplots</b></span></p><p><span style="letter-spacing: 0.05px;">Show correlations among multi dimensional data</span></p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-a154ca3 elementor-column elementor-col-20 elementor-top-column" data-id="a154ca3" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-6344321 elementor-widget elementor-widget-image" data-id="6344321" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+											<a data-elementor-open-lightbox="" href="http://PLACEHOLDER.wpsho/patterns/data-visualization-2/#pie-charts">
+							<img width="300" height="300" src="https://static-forge.netlify.com/wp-content/uploads/2019/06/pie-charts.png" class="attachment-large size-large" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/06/pie-charts.png 300w,https://static-forge.netlify.com/wp-content/uploads/2019/06/pie-charts-150x150.png 150w" sizes="(max-width: 300px) 100vw, 300px"></a>
+											</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-8b27942 elementor-widget elementor-widget-text-editor" data-id="8b27942" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><span style="letter-spacing: 0.05px;"><b>Pie charts </b></span></p><p><span style="letter-spacing: 0.05px;">Display subdivisions</span></p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-5007eb5 elementor-column elementor-col-20 elementor-top-column" data-id="5007eb5" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-b643e17 elementor-widget elementor-widget-image" data-id="b643e17" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+											<a data-elementor-open-lightbox="" href="http://PLACEHOLDER.wpsho/patterns/data-visualization-2/#maps">
+							<img width="300" height="300" src="https://static-forge.netlify.com/wp-content/uploads/2019/06/maps.png" class="attachment-large size-large" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/06/maps.png 300w,https://static-forge.netlify.com/wp-content/uploads/2019/06/maps-150x150.png 150w" sizes="(max-width: 300px) 100vw, 300px"></a>
+											</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-db9433d elementor-widget elementor-widget-text-editor" data-id="db9433d" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><span style="letter-spacing: 0.05px;"><b>Maps</b></span></p><p><span style="letter-spacing: 0.05px;">Display locational data </span></p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-fafcb81 elementor-column elementor-col-20 elementor-top-column" data-id="fafcb81" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-a154a62 elementor-widget elementor-widget-image" data-id="a154a62" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+											<a data-elementor-open-lightbox="" href="http://PLACEHOLDER.wpsho/patterns/data-visualization-2/#heatmaps">
+							<img width="300" height="300" src="https://static-forge.netlify.com/wp-content/uploads/2019/06/heatmap.png" class="attachment-large size-large" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/06/heatmap.png 300w,https://static-forge.netlify.com/wp-content/uploads/2019/06/heatmap-150x150.png 150w" sizes="(max-width: 300px) 100vw, 300px"></a>
+											</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-363d37a elementor-widget elementor-widget-text-editor" data-id="363d37a" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><span style="letter-spacing: 0.05px;"><b>Heatmaps</b></span></p><p>Highlight clusters, patterns, and distribution</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-0110b35 elementor-column elementor-col-20 elementor-top-column" data-id="0110b35" data-element_type="column">
+			<div class="elementor-column-wrap">
+					<div class="elementor-widget-wrap">
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-02e0143 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="02e0143" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-c09aa54 elementor-column elementor-col-100 elementor-top-column" data-id="c09aa54" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-275d56b elementor-widget elementor-widget-spacer" data-id="275d56b" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-06c2c3f elementor-widget elementor-widget-heading" data-id="06c2c3f" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">KPIs / Simple cards</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-0a3a5aa elementor-widget elementor-widget-text-editor" data-id="0a3a5aa" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>KPIs (“Key Performance Indicators”) and simple cards summarize high level data for users. </p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-5d74de5 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="5d74de5" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-a6f786e elementor-column elementor-col-50 elementor-top-column" data-id="a6f786e" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-d3672f6 elementor-widget elementor-widget-heading" data-id="d3672f6" data-element_type="widget" toc-item="false" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h5 class="elementor-heading-title elementor-size-default">Use for:</h5>		</div>
+				</div>
+				<div class="elementor-element elementor-element-125169f elementor-widget elementor-widget-text-editor" data-id="125169f" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><ul><li>Showing high level information and insights</li></ul></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-d4430cf elementor-column elementor-col-50 elementor-top-column" data-id="d4430cf" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-2af8424 elementor-widget elementor-widget-heading" data-id="2af8424" data-element_type="widget" toc-item="false" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h5 class="elementor-heading-title elementor-size-default">Use with:</h5>		</div>
+				</div>
+				<div class="elementor-element elementor-element-480ea5a elementor-widget elementor-widget-text-editor" data-id="480ea5a" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><ul><li>Any data</li><li>Break down data to be easily consumable and obvious.</li></ul></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-9a6a88e elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="9a6a88e" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-da6e2ca elementor-column elementor-col-50 elementor-top-column" data-id="da6e2ca" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-5fbb3c3 elementor-widget elementor-widget-heading" data-id="5fbb3c3" data-element_type="widget" toc-item="false" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h5 class="elementor-heading-title elementor-size-default">Don't: </h5>		</div>
+				</div>
+				<div class="elementor-element elementor-element-5f212db elementor-widget elementor-widget-text-editor" data-id="5f212db" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><ul><li>Don’t use KPIs for numbers that do not matter to your user.  </li><li>Don’t use KPIs to hide important data that users may want to manipulate and understand themselves</li></ul></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-f1cec7e elementor-column elementor-col-50 elementor-top-column" data-id="f1cec7e" data-element_type="column">
+			<div class="elementor-column-wrap">
+					<div class="elementor-widget-wrap">
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-26f8e85 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="26f8e85" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-55fb23b elementor-column elementor-col-100 elementor-top-column" data-id="55fb23b" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-b498d65 elementor-widget elementor-widget-spacer" data-id="b498d65" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-0ddf2ca elementor-widget elementor-widget-heading" data-id="0ddf2ca" data-element_type="widget" toc-item="false" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h5 class="elementor-heading-title elementor-size-default">Examples:</h5>		</div>
+				</div>
+				<div class="elementor-element elementor-element-cd80a5d elementor-widget elementor-widget-image" data-id="cd80a5d" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="612" height="792" src="https://static-forge.netlify.com/wp-content/uploads/2019/04/Cards-1.0.png" class="attachment-large size-large" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/04/Cards-1.0.png 612w,https://static-forge.netlify.com/wp-content/uploads/2019/04/Cards-1.0-232x300.png 232w" sizes="(max-width: 612px) 100vw, 612px"></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-cb94e24 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="cb94e24" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-8cd2cd2 elementor-column elementor-col-100 elementor-top-column" data-id="8cd2cd2" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-4dd4709 elementor-widget elementor-widget-spacer" data-id="4dd4709" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-1285b14 elementor-widget elementor-widget-spacer" data-id="1285b14" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-5b38ff1 elementor-widget elementor-widget-heading" data-id="5b38ff1" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Bar charts</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-658b5ee elementor-widget elementor-widget-spacer" data-id="658b5ee" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-e402ab4 elementor-widget elementor-widget-text-editor" data-id="e402ab4" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Bar charts present categorical data with rectangular bars with heights or lengths proportional to the values that they represent. The bars can be plotted vertically or horizontally. Bar charts should be used to compare different values that are hierarchically equivalent.</p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-557e19b elementor-widget elementor-widget-spacer" data-id="557e19b" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-72f589e elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="72f589e" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-4ae2d0c elementor-column elementor-col-50 elementor-top-column" data-id="4ae2d0c" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-e91a759 elementor-widget elementor-widget-heading" data-id="e91a759" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h5 class="elementor-heading-title elementor-size-default">Use for:</h5>		</div>
+				</div>
+				<div class="elementor-element elementor-element-46346a3 elementor-widget elementor-widget-text-editor" data-id="46346a3" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><ul><li>Observing differences in trends over time</li><li>Showing an overall trend (line charts are less good at drilling down on each value for a point in time)</li><li>Showing comparisons</li><li>Showing correlations</li></ul></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-cf3a64c elementor-column elementor-col-50 elementor-top-column" data-id="cf3a64c" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-16d75cd elementor-widget elementor-widget-heading" data-id="16d75cd" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h5 class="elementor-heading-title elementor-size-default">Use with:</h5>		</div>
+				</div>
+				<div class="elementor-element elementor-element-93d7c05 elementor-widget elementor-widget-text-editor" data-id="93d7c05" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><ul><li>Time-based data</li><li>Categorized data</li></ul></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-dd92b35 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="dd92b35" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-8b55777 elementor-column elementor-col-50 elementor-top-column" data-id="8b55777" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-a10131e elementor-widget elementor-widget-heading" data-id="a10131e" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h5 class="elementor-heading-title elementor-size-default">Don't:</h5>		</div>
+				</div>
+				<div class="elementor-element elementor-element-b839152 elementor-widget elementor-widget-text-editor" data-id="b839152" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><ul><li>Don’t compare between values that have different units (cost in one category and time in another, both on the y axis).</li></ul></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-415dccb elementor-column elementor-col-50 elementor-top-column" data-id="415dccb" data-element_type="column">
+			<div class="elementor-column-wrap">
+					<div class="elementor-widget-wrap">
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-b2181c4 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="b2181c4" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-a105cd4 elementor-column elementor-col-100 elementor-top-column" data-id="a105cd4" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-bbd9e7a elementor-widget elementor-widget-heading" data-id="bbd9e7a" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h5 class="elementor-heading-title elementor-size-default">Examples:</h5>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-af8fbe7 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="af8fbe7" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-264b718 elementor-column elementor-col-50 elementor-top-column" data-id="264b718" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-5fc1037 elementor-widget elementor-widget-image" data-id="5fc1037" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="300" height="277" src="https://static-forge.netlify.com/wp-content/uploads/2019/04/GroupedBar-300x277.png" class="attachment-medium size-medium" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/04/GroupedBar-300x277.png 300w,https://static-forge.netlify.com/wp-content/uploads/2019/04/GroupedBar.png 417w" sizes="(max-width: 300px) 100vw, 300px"></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-dff58db elementor-column elementor-col-50 elementor-top-column" data-id="dff58db" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-23c2dfa elementor-widget elementor-widget-image" data-id="23c2dfa" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="300" height="237" src="https://static-forge.netlify.com/wp-content/uploads/2019/04/HeaderCard-300x237.png" class="attachment-medium size-medium" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/04/HeaderCard-300x237.png 300w,https://static-forge.netlify.com/wp-content/uploads/2019/04/HeaderCard-768x606.png 768w,https://static-forge.netlify.com/wp-content/uploads/2019/04/HeaderCard.png 776w" sizes="(max-width: 300px) 100vw, 300px"></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-be49283 elementor-widget elementor-widget-text-editor" data-id="be49283" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>(This is actually a stacked bar chart)</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-fc4109a elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="fc4109a" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-729dc06 elementor-column elementor-col-100 elementor-top-column" data-id="729dc06" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-04a6713 elementor-widget elementor-widget-spacer" data-id="04a6713" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-916a679 elementor-widget elementor-widget-spacer" data-id="916a679" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-bf95b6f elementor-widget elementor-widget-heading" data-id="bf95b6f" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Line charts</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-3b7e6f2 elementor-widget elementor-widget-spacer" data-id="3b7e6f2" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-98fb5c2 elementor-widget elementor-widget-text-editor" data-id="98fb5c2" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>A line chart or line plot or line graph is a type of chart which displays information as a series of data points called ‘markers’ connected by straight line segments. It is a basic type of chart common in many fields. </p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-9ddc80f elementor-widget elementor-widget-spacer" data-id="9ddc80f" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-45bccf5 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="45bccf5" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-a1df0a0 elementor-column elementor-col-50 elementor-top-column" data-id="a1df0a0" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-3dbc7bb elementor-widget elementor-widget-text-editor" data-id="3dbc7bb" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><h5>Use for:</h5><ul><li>Watching differences in trends over time, when the focus is the trend (bar charts are better at comparing the data differences, but slightly less good at showing the pattern/trend).</li><li>Comparisons</li><li>Showing correlation</li></ul></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-e21058f elementor-column elementor-col-50 elementor-top-column" data-id="e21058f" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-fa22844 elementor-widget elementor-widget-text-editor" data-id="fa22844" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><h5>Use with:</h5><ul><li>Time-based data (line charts are often the best chart to use for this). </li></ul></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-cadfcfd elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="cadfcfd" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-a35172e elementor-column elementor-col-50 elementor-top-column" data-id="a35172e" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-3745109 elementor-widget elementor-widget-text-editor" data-id="3745109" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><h5>Don’t:</h5><p>Don’t use line charts for data that is not time-based.</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-6ec5c61 elementor-column elementor-col-50 elementor-top-column" data-id="6ec5c61" data-element_type="column">
+			<div class="elementor-column-wrap">
+					<div class="elementor-widget-wrap">
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-2d233a5 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="2d233a5" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-e85731c elementor-column elementor-col-100 elementor-top-column" data-id="e85731c" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-e1c6424 elementor-widget elementor-widget-text-editor" data-id="e1c6424" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><h5>Examples:</h5></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-fb8fc8c elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="fb8fc8c" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-cfbaf23 elementor-column elementor-col-25 elementor-top-column" data-id="cfbaf23" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-6b4bc33 elementor-widget elementor-widget-image" data-id="6b4bc33" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="759" height="593" src="https://static-forge.netlify.com/wp-content/uploads/2019/04/datavisualization.png" class="attachment-large size-large" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/04/datavisualization.png 759w,https://static-forge.netlify.com/wp-content/uploads/2019/04/datavisualization-300x234.png 300w" sizes="(max-width: 759px) 100vw, 759px"></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-c4346d3 elementor-column elementor-col-25 elementor-top-column" data-id="c4346d3" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-b0e4863 elementor-widget elementor-widget-image" data-id="b0e4863" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="732" height="582" src="https://static-forge.netlify.com/wp-content/uploads/2019/04/Screen-Shot-2019-04-18-at-12.39.47-PM.png" class="attachment-large size-large" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/04/Screen-Shot-2019-04-18-at-12.39.47-PM.png 732w,https://static-forge.netlify.com/wp-content/uploads/2019/04/Screen-Shot-2019-04-18-at-12.39.47-PM-300x239.png 300w" sizes="(max-width: 732px) 100vw, 732px"></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-d96bc9a elementor-column elementor-col-25 elementor-top-column" data-id="d96bc9a" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-f7d653c elementor-widget elementor-widget-image" data-id="f7d653c" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="805" height="570" src="https://static-forge.netlify.com/wp-content/uploads/2019/04/cust.png" class="attachment-large size-large" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/04/cust.png 805w,https://static-forge.netlify.com/wp-content/uploads/2019/04/cust-300x212.png 300w,https://static-forge.netlify.com/wp-content/uploads/2019/04/cust-768x544.png 768w" sizes="(max-width: 805px) 100vw, 805px"></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-469e4cb elementor-column elementor-col-25 elementor-top-column" data-id="469e4cb" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-e3edfdd elementor-widget elementor-widget-image" data-id="e3edfdd" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="720" height="438" src="https://static-forge.netlify.com/wp-content/uploads/2019/04/Screen-Shot-2019-04-18-at-12.40.10-PM.png" class="attachment-large size-large" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/04/Screen-Shot-2019-04-18-at-12.40.10-PM.png 720w,https://static-forge.netlify.com/wp-content/uploads/2019/04/Screen-Shot-2019-04-18-at-12.40.10-PM-300x183.png 300w" sizes="(max-width: 720px) 100vw, 720px"></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-c593f3d elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="c593f3d" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-0abf883 elementor-column elementor-col-100 elementor-top-column" data-id="0abf883" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-f7a60ba elementor-widget elementor-widget-spacer" data-id="f7a60ba" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-9a0c6da elementor-widget elementor-widget-spacer" data-id="9a0c6da" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-f1a0d3a elementor-widget elementor-widget-heading" data-id="f1a0d3a" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Stacked bar charts</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-1a4930d elementor-widget elementor-widget-spacer" data-id="1a4930d" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-4d3222e elementor-widget elementor-widget-text-editor" data-id="4d3222e" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>A standard bar chart compares individual data points with each other. Stacked bar charts allow users to see changes in a series of data and where they occurred, especially in comparison to the totals. They can be great alternatives to pie charts.</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-b6748f7 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="b6748f7" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-9b288e8 elementor-column elementor-col-50 elementor-top-column" data-id="9b288e8" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-c39839d elementor-widget elementor-widget-text-editor" data-id="c39839d" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><h5>Use for:</h5><ul><li>Comparisons</li><li>Show correlations</li><li>Explore in time</li><li>Show subdivisions of data–two y values per each x value.</li><li>Alternatives to pie charts</li></ul></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-9c7a2f8 elementor-column elementor-col-50 elementor-top-column" data-id="9c7a2f8" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-2c9a06e elementor-widget elementor-widget-text-editor" data-id="2c9a06e" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><h5>Use with:</h5><ul><li>Time-based data</li><li>Categorical data</li><li>Use the stacked bar instead of a regular bar chart if you want to show a total or projected amount alongside the value. </li></ul></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-c9e7cd5 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="c9e7cd5" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-e6cc7ca elementor-column elementor-col-50 elementor-top-column" data-id="e6cc7ca" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-1dda2ce elementor-widget elementor-widget-text-editor" data-id="1dda2ce" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><h5>Don’t:</h5><p>Don’t use when the focus is on comparing the sizes of the individual categories or when the total sum of the elements in the bar is not relevant.</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-5db83a3 elementor-column elementor-col-50 elementor-top-column" data-id="5db83a3" data-element_type="column">
+			<div class="elementor-column-wrap">
+					<div class="elementor-widget-wrap">
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-3677980 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="3677980" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-53ef365 elementor-column elementor-col-100 elementor-top-column" data-id="53ef365" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-4233a5d elementor-widget elementor-widget-text-editor" data-id="4233a5d" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><h5>Examples:</h5></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-5b50f24 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="5b50f24" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-964479d elementor-column elementor-col-33 elementor-top-column" data-id="964479d" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-b83abbd elementor-widget elementor-widget-image" data-id="b83abbd" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="472" height="385" src="https://static-forge.netlify.com/wp-content/uploads/2019/04/StackedBar2.png" class="attachment-large size-large" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/04/StackedBar2.png 472w,https://static-forge.netlify.com/wp-content/uploads/2019/04/StackedBar2-300x245.png 300w" sizes="(max-width: 472px) 100vw, 472px"></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-eece701 elementor-column elementor-col-33 elementor-top-column" data-id="eece701" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-9ca016e elementor-widget elementor-widget-image" data-id="9ca016e" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="541" height="322" src="https://static-forge.netlify.com/wp-content/uploads/2019/04/Group-3.png" class="attachment-large size-large" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/04/Group-3.png 541w,https://static-forge.netlify.com/wp-content/uploads/2019/04/Group-3-300x179.png 300w" sizes="(max-width: 541px) 100vw, 541px"></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-94aacbd elementor-column elementor-col-33 elementor-top-column" data-id="94aacbd" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-af6a2e5 elementor-widget elementor-widget-image" data-id="af6a2e5" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="1024" height="520" src="https://static-forge.netlify.com/wp-content/uploads/2019/04/Stacked-Column-Chart-1-1024x520.png" class="attachment-large size-large" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/04/Stacked-Column-Chart-1-1024x520.png 1024w,https://static-forge.netlify.com/wp-content/uploads/2019/04/Stacked-Column-Chart-1-300x152.png 300w,https://static-forge.netlify.com/wp-content/uploads/2019/04/Stacked-Column-Chart-1-768x390.png 768w,https://static-forge.netlify.com/wp-content/uploads/2019/04/Stacked-Column-Chart-1.png 1036w" sizes="(max-width: 1024px) 100vw, 1024px"></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-656e2aa elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="656e2aa" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-f23bfa7 elementor-column elementor-col-100 elementor-top-column" data-id="f23bfa7" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-1feae7b elementor-widget elementor-widget-spacer" data-id="1feae7b" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-60f3785 elementor-widget elementor-widget-heading" data-id="60f3785" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Pictograms</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-6153dbe elementor-widget elementor-widget-text-editor" data-id="6153dbe" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Use to show broad stroke patterns and trends when your data is in multiple categories. </p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-542e907 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="542e907" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-3d5b800 elementor-column elementor-col-50 elementor-top-column" data-id="3d5b800" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-a1287b9 elementor-widget elementor-widget-text-editor" data-id="a1287b9" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><h5>Use for:</h5><ul><li>Infusing some interest into the page and representing physical people or things, while also showing a pattern or trend.</li></ul></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-a2198c7 elementor-column elementor-col-50 elementor-top-column" data-id="a2198c7" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-384db67 elementor-widget elementor-widget-text-editor" data-id="384db67" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><h5>Use with:</h5><ul><li>Categorical data</li><li>Multi-dimensional data</li></ul></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-10d0de6 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="10d0de6" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-4d04b03 elementor-column elementor-col-50 elementor-top-column" data-id="4d04b03" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-93a3f13 elementor-widget elementor-widget-text-editor" data-id="93a3f13" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><h5>Don’t:</h5><ul><li>Don’t use if exact values need to be shown</li><li>E.g. in the chart below “3 need to complete additional training” would be harder to assess. This pictogram is better at showing the patterns and takeaways from multiple layers: employees who need to complete training and who is in/out of office. </li></ul></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-8760574 elementor-column elementor-col-50 elementor-top-column" data-id="8760574" data-element_type="column">
+			<div class="elementor-column-wrap">
+					<div class="elementor-widget-wrap">
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-06fdab8 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="06fdab8" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-3d008c2 elementor-column elementor-col-100 elementor-top-column" data-id="3d008c2" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-68b3aca elementor-widget elementor-widget-text-editor" data-id="68b3aca" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><h5>Examples:</h5></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-dc4dcdc elementor-widget elementor-widget-image" data-id="dc4dcdc" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="750" height="172" src="https://static-forge.netlify.com/wp-content/uploads/2019/04/Screen-Shot-2018-11-06-at-4.38.54-PM-1.png" class="attachment-medium_large size-medium_large" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/04/Screen-Shot-2018-11-06-at-4.38.54-PM-1.png 750w,https://static-forge.netlify.com/wp-content/uploads/2019/04/Screen-Shot-2018-11-06-at-4.38.54-PM-1-300x69.png 300w" sizes="(max-width: 750px) 100vw, 750px"></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-f6c6ceb elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="f6c6ceb" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-cb2d639 elementor-column elementor-col-100 elementor-top-column" data-id="cb2d639" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-67d48db elementor-widget elementor-widget-spacer" data-id="67d48db" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-5acde02 elementor-widget elementor-widget-spacer" data-id="5acde02" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-0d4df2e elementor-widget elementor-widget-heading" data-id="0d4df2e" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Scatter plots</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-b4b9007 elementor-widget elementor-widget-spacer" data-id="b4b9007" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-1a31855 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="1a31855" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-f0d23ab elementor-column elementor-col-50 elementor-top-column" data-id="f0d23ab" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-00d333d elementor-widget elementor-widget-text-editor" data-id="00d333d" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><h5>Use for:</h5><ul><li>Exploring in time and showing general patterns/trends</li><li>Showing correlations</li></ul></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-beb0d69 elementor-column elementor-col-50 elementor-top-column" data-id="beb0d69" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-518dabd elementor-widget elementor-widget-text-editor" data-id="518dabd" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><h5>Use with:</h5><ul><li>Categorical data</li><li>Multi-dimensional data</li></ul></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-81a8d46 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="81a8d46" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-0fbcd61 elementor-column elementor-col-100 elementor-top-column" data-id="0fbcd61" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-b294e47 elementor-widget elementor-widget-text-editor" data-id="b294e47" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><h5>Don’t:</h5><p>Don’t use this chart type if you don’t have enough data in the set.</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-0bb4f2e elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="0bb4f2e" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-a0d0609 elementor-column elementor-col-100 elementor-top-column" data-id="a0d0609" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-24ccc21 elementor-widget elementor-widget-text-editor" data-id="24ccc21" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><h5>Examples:</h5></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-b825d31 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="b825d31" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-726f360 elementor-column elementor-col-50 elementor-top-column" data-id="726f360" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-3ade236 elementor-widget elementor-widget-image" data-id="3ade236" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="665" height="358" src="https://static-forge.netlify.com/wp-content/uploads/2019/04/Categoricalfg.png" class="attachment-large size-large" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/04/Categoricalfg.png 665w,https://static-forge.netlify.com/wp-content/uploads/2019/04/Categoricalfg-300x162.png 300w" sizes="(max-width: 665px) 100vw, 665px"></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-42db167 elementor-column elementor-col-50 elementor-top-column" data-id="42db167" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-5baf702 elementor-widget elementor-widget-image" data-id="5baf702" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="665" height="358" src="https://static-forge.netlify.com/wp-content/uploads/2019/04/SingleHue.png" class="attachment-large size-large" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/04/SingleHue.png 665w,https://static-forge.netlify.com/wp-content/uploads/2019/04/SingleHue-300x162.png 300w" sizes="(max-width: 665px) 100vw, 665px"></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-3809885 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="3809885" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-d643217 elementor-column elementor-col-100 elementor-top-column" data-id="d643217" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-bf83eea elementor-widget elementor-widget-spacer" data-id="bf83eea" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-9a5b902 elementor-widget elementor-widget-spacer" data-id="9a5b902" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-e76a25e elementor-widget elementor-widget-heading" data-id="e76a25e" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Pie charts</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-5da2950 elementor-widget elementor-widget-spacer" data-id="5da2950" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-d177ce7 elementor-widget elementor-widget-text-editor" data-id="d177ce7" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Typically we do not recommend the use of pie charts.</p><p>There are almost no circumstances where a stacked bar or bar can’t show the same information in a better/more easily consumable way.</p><p>That said, if you do want to use a pie, limit the amount of “slices” to 7 maximum. Use the pie chart only when the different values add up to a total and there is a need to highlight percentages.</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-e484563 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="e484563" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-3e9a187 elementor-column elementor-col-50 elementor-top-column" data-id="3e9a187" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-9883da8 elementor-widget elementor-widget-text-editor" data-id="9883da8" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><h5>Use for:</h5><ul><li>Comparisons and showing subdivision.</li><li>Use the pie chart only when the different values add up to a total and there is a need to highlight percentages.</li></ul></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-4418f7c elementor-column elementor-col-50 elementor-top-column" data-id="4418f7c" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-7218c55 elementor-widget elementor-widget-text-editor" data-id="7218c55" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><h5>Use with:</h5><ul><li> Categorical data</li></ul></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-51dcb25 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="51dcb25" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-692fee1 elementor-column elementor-col-100 elementor-top-column" data-id="692fee1" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-3ff4376 elementor-widget elementor-widget-text-editor" data-id="3ff4376" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><h5>Examples:</h5></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-9f6aa2c elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="9f6aa2c" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-c7519f6 elementor-column elementor-col-100 elementor-top-column" data-id="c7519f6" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-c3d23ac elementor-widget elementor-widget-image" data-id="c3d23ac" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="218" height="167" src="https://static-forge.netlify.com/wp-content/uploads/2019/04/thumb_Pie-Chart2.png" class="attachment-full size-full" alt=""></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-72e44b2 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="72e44b2" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-37216db elementor-column elementor-col-100 elementor-top-column" data-id="37216db" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-60d3595 elementor-widget elementor-widget-spacer" data-id="60d3595" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-6240ed3 elementor-widget elementor-widget-spacer" data-id="6240ed3" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-c4bd1bd elementor-widget elementor-widget-heading" data-id="c4bd1bd" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Maps</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-524297a elementor-widget elementor-widget-spacer" data-id="524297a" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-d625932 elementor-widget elementor-widget-text-editor" data-id="d625932" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Use maps when the focus of your visualization is geographical, and the best method of showing that information is through engaging with the locational data. See <a href="http://10.81.12.49/patterns/mapping-gis/">Mapping/GIS</a> under “Patterns” for more. </p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-6f01943 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="6f01943" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-1655faa elementor-column elementor-col-50 elementor-top-column" data-id="1655faa" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-c4860b7 elementor-widget elementor-widget-text-editor" data-id="c4860b7" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><h5>Use for:</h5><ul><li>Explore in time</li><li>Show geographical distribution</li><li>Compare</li></ul></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-193c639 elementor-column elementor-col-50 elementor-top-column" data-id="193c639" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-e44f334 elementor-widget elementor-widget-text-editor" data-id="e44f334" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><h5>Use with:</h5><ul><li>Spatial data</li></ul></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-6b61fd7 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="6b61fd7" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-c625fa0 elementor-column elementor-col-100 elementor-top-column" data-id="c625fa0" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-094ebf4 elementor-widget elementor-widget-text-editor" data-id="094ebf4" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><h5>Don’t:</h5><ul><li>Don’t use animated charts and maps.</li><li>Don’t use maps for all spatial data; use them only if they add value. </li></ul></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-892a6fa elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="892a6fa" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-e2c2d78 elementor-column elementor-col-100 elementor-top-column" data-id="e2c2d78" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-fb2a3b0 elementor-widget elementor-widget-text-editor" data-id="fb2a3b0" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><h5>Examples:</h5></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-ef692bd elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="ef692bd" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-ee76ae9 elementor-column elementor-col-50 elementor-top-column" data-id="ee76ae9" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-8640f75 elementor-widget elementor-widget-image" data-id="8640f75" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="1024" height="527" src="https://static-forge.netlify.com/wp-content/uploads/2019/04/Map-1024x527.png" class="attachment-large size-large" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/04/Map-1024x527.png 1024w,https://static-forge.netlify.com/wp-content/uploads/2019/04/Map-300x154.png 300w,https://static-forge.netlify.com/wp-content/uploads/2019/04/Map-768x395.png 768w,https://static-forge.netlify.com/wp-content/uploads/2019/04/Map.png 1361w" sizes="(max-width: 1024px) 100vw, 1024px"></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-ec53913 elementor-column elementor-col-50 elementor-top-column" data-id="ec53913" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-a73496e elementor-widget elementor-widget-image" data-id="a73496e" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="1024" height="728" src="https://static-forge.netlify.com/wp-content/uploads/2019/04/Open-Neighborhood-SocrataCC_Analysis-Split-Out-Trends-vs.-Mapviews-TR-1-1024x728.png" class="attachment-large size-large" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/04/Open-Neighborhood-SocrataCC_Analysis-Split-Out-Trends-vs.-Mapviews-TR-1-1024x728.png 1024w,https://static-forge.netlify.com/wp-content/uploads/2019/04/Open-Neighborhood-SocrataCC_Analysis-Split-Out-Trends-vs.-Mapviews-TR-1-300x213.png 300w,https://static-forge.netlify.com/wp-content/uploads/2019/04/Open-Neighborhood-SocrataCC_Analysis-Split-Out-Trends-vs.-Mapviews-TR-1-768x546.png 768w,https://static-forge.netlify.com/wp-content/uploads/2019/04/Open-Neighborhood-SocrataCC_Analysis-Split-Out-Trends-vs.-Mapviews-TR-1.png 1440w" sizes="(max-width: 1024px) 100vw, 1024px"></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-6a4d5c7 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="6a4d5c7" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-86d3a24 elementor-column elementor-col-100 elementor-top-column" data-id="86d3a24" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-377e8de elementor-widget elementor-widget-spacer" data-id="377e8de" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-4b6cdc5 elementor-widget elementor-widget-spacer" data-id="4b6cdc5" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-b5305bf elementor-widget elementor-widget-heading" data-id="b5305bf" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Heatmaps</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-e6b4c99 elementor-widget elementor-widget-spacer" data-id="e6b4c99" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-20cf179 elementor-widget elementor-widget-text-editor" data-id="20cf179" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Don’t always have to be map-based (see first example of a year’s calendar heatmap developed by Kaila for the EAM team). Heatmaps are intended to show trends and correlation within a data set. </p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-695bcc9 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="695bcc9" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-e15cfc9 elementor-column elementor-col-50 elementor-top-column" data-id="e15cfc9" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-3469577 elementor-widget elementor-widget-text-editor" data-id="3469577" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><h5>Use for:</h5><ul><li>Use it to highlight clusters, patterns, and distribution among indicators which might be correlated.</li><li>Showing relationships</li></ul></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-d7b62a0 elementor-column elementor-col-50 elementor-top-column" data-id="d7b62a0" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-ff34283 elementor-widget elementor-widget-text-editor" data-id="ff34283" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><h5>Use with:</h5><ul><li>Multi-dimensional data</li></ul></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-be19ebb elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="be19ebb" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-c02106e elementor-column elementor-col-100 elementor-top-column" data-id="c02106e" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-0dd8d2f elementor-widget elementor-widget-text-editor" data-id="0dd8d2f" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><h5>Examples:</h5></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-2a1b4f8 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="2a1b4f8" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-49d6035 elementor-column elementor-col-50 elementor-top-column" data-id="49d6035" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-0545893 elementor-widget elementor-widget-image" data-id="0545893" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="300" height="300" src="https://static-forge.netlify.com/wp-content/uploads/2019/04/Heatmap-300x300.png" class="attachment-medium size-medium" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/04/Heatmap-300x300.png 300w,https://static-forge.netlify.com/wp-content/uploads/2019/04/Heatmap-150x150.png 150w,https://static-forge.netlify.com/wp-content/uploads/2019/04/Heatmap-768x768.png 768w,https://static-forge.netlify.com/wp-content/uploads/2019/04/Heatmap.png 1024w" sizes="(max-width: 300px) 100vw, 300px"></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-a1392d8 elementor-column elementor-col-50 elementor-top-column" data-id="a1392d8" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-010b346 elementor-widget elementor-widget-image" data-id="010b346" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="1024" height="241" src="https://static-forge.netlify.com/wp-content/uploads/2019/04/Filled-1024x241.png" class="attachment-large size-large" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/04/Filled-1024x241.png 1024w,https://static-forge.netlify.com/wp-content/uploads/2019/04/Filled-300x71.png 300w,https://static-forge.netlify.com/wp-content/uploads/2019/04/Filled-768x181.png 768w,https://static-forge.netlify.com/wp-content/uploads/2019/04/Filled.png 1186w" sizes="(max-width: 1024px) 100vw, 1024px"></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-95714e2 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="95714e2" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-3f5ab8e elementor-column elementor-col-100 elementor-top-column" data-id="3f5ab8e" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-74c463b elementor-widget elementor-widget-spacer" data-id="74c463b" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-3347f8b elementor-widget elementor-widget-spacer" data-id="3347f8b" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-de70b12 elementor-widget elementor-widget-heading" data-id="de70b12" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Additional examples</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-dc39e0e elementor-widget elementor-widget-text-editor" data-id="dc39e0e" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-42940333 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="42940333" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-d03df13 elementor-column elementor-col-100 elementor-top-column" data-id="d03df13" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-1d2dc9dd gallery-spacing-custom elementor-widget__width-auto elementor-widget elementor-widget-image-gallery" data-id="1d2dc9dd" data-element_type="widget" data-widget_type="image-gallery.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image-gallery">
+			
+		<style type="text/css">
+			#gallery-1 {
+				margin: auto;
+			}
+			#gallery-1 .gallery-item {
+				float: left;
+				margin-top: 10px;
+				text-align: center;
+				width: 25%;
+			}
+			#gallery-1 img {
+				border: 2px solid #cfcfcf;
+			}
+			#gallery-1 .gallery-caption {
+				margin-left: 0;
+			}
+			/* see gallery_shortcode() in wp-includes/media.php */
+		</style><div id="gallery-1" class="gallery galleryid-5475 gallery-columns-4 gallery-size-thumbnail"><dl class="gallery-item"><dt class="gallery-icon landscape">
+				<a data-elementor-open-lightbox="default" data-elementor-lightbox-slideshow="1d2dc9dd" href="https://static-forge.netlify.com/wp-content/uploads/2019/04/Overview.png"><img width="150" height="150" src="https://static-forge.netlify.com/wp-content/uploads/2019/04/Overview-150x150.png" class="attachment-thumbnail size-thumbnail" alt=""></a>
+			</dt></dl><dl class="gallery-item"><dt class="gallery-icon landscape">
+				<a data-elementor-open-lightbox="default" data-elementor-lightbox-slideshow="1d2dc9dd" href="https://static-forge.netlify.com/wp-content/uploads/2019/04/Line-Chart-Qualitative-Colors.png"><img width="150" height="150" src="https://static-forge.netlify.com/wp-content/uploads/2019/04/Line-Chart-Qualitative-Colors-150x150.png" class="attachment-thumbnail size-thumbnail" alt=""></a>
+			</dt></dl><dl class="gallery-item"><dt class="gallery-icon landscape">
+				<a data-elementor-open-lightbox="default" data-elementor-lightbox-slideshow="1d2dc9dd" href="https://static-forge.netlify.com/wp-content/uploads/2019/04/Column-Chart.png"><img width="150" height="150" src="https://static-forge.netlify.com/wp-content/uploads/2019/04/Column-Chart-150x150.png" class="attachment-thumbnail size-thumbnail" alt=""></a>
+			</dt></dl><dl class="gallery-item"><dt class="gallery-icon landscape">
+				<a data-elementor-open-lightbox="default" data-elementor-lightbox-slideshow="1d2dc9dd" href="https://static-forge.netlify.com/wp-content/uploads/2019/04/Stacked-Column-Chart.png"><img width="150" height="150" src="https://static-forge.netlify.com/wp-content/uploads/2019/04/Stacked-Column-Chart-150x150.png" class="attachment-thumbnail size-thumbnail" alt=""></a>
+			</dt></dl><br style="clear: both"><dl class="gallery-item"><dt class="gallery-icon landscape">
+				<a data-elementor-open-lightbox="default" data-elementor-lightbox-slideshow="1d2dc9dd" href="https://static-forge.netlify.com/wp-content/uploads/2019/04/Bar-Chart.png"><img width="150" height="150" src="https://static-forge.netlify.com/wp-content/uploads/2019/04/Bar-Chart-150x150.png" class="attachment-thumbnail size-thumbnail" alt=""></a>
+			</dt></dl><dl class="gallery-item"><dt class="gallery-icon landscape">
+				<a data-elementor-open-lightbox="default" data-elementor-lightbox-slideshow="1d2dc9dd" href="https://static-forge.netlify.com/wp-content/uploads/2019/04/Dashboard@2x-copy.png"><img width="150" height="150" src="https://static-forge.netlify.com/wp-content/uploads/2019/04/Dashboard@2x-copy-150x150.png" class="attachment-thumbnail size-thumbnail" alt=""></a>
+			</dt></dl><dl class="gallery-item"><dt class="gallery-icon landscape">
+				<a data-elementor-open-lightbox="default" data-elementor-lightbox-slideshow="1d2dc9dd" href="https://static-forge.netlify.com/wp-content/uploads/2019/04/Screen-Shot-2018-11-06-at-4.37.41-PM.png"><img width="150" height="150" src="https://static-forge.netlify.com/wp-content/uploads/2019/04/Screen-Shot-2018-11-06-at-4.37.41-PM-150x150.png" class="attachment-thumbnail size-thumbnail" alt=""></a>
+			</dt></dl><dl class="gallery-item"><dt class="gallery-icon landscape">
+				<a data-elementor-open-lightbox="default" data-elementor-lightbox-slideshow="1d2dc9dd" href="https://static-forge.netlify.com/wp-content/uploads/2019/04/Screen-Shot-2018-11-06-at-4.38.54-PM.png"><img width="150" height="150" src="https://static-forge.netlify.com/wp-content/uploads/2019/04/Screen-Shot-2018-11-06-at-4.38.54-PM-150x150.png" class="attachment-thumbnail size-thumbnail" alt=""></a>
+			</dt></dl><br style="clear: both"><dl class="gallery-item"><dt class="gallery-icon landscape">
+				<a data-elementor-open-lightbox="default" data-elementor-lightbox-slideshow="1d2dc9dd" href="https://static-forge.netlify.com/wp-content/uploads/2019/04/MonthUC.png"><img width="150" height="150" src="https://static-forge.netlify.com/wp-content/uploads/2019/04/MonthUC-150x150.png" class="attachment-thumbnail size-thumbnail" alt=""></a>
+			</dt></dl><dl class="gallery-item"><dt class="gallery-icon landscape">
+				<a data-elementor-open-lightbox="default" data-elementor-lightbox-slideshow="1d2dc9dd" href="https://static-forge.netlify.com/wp-content/uploads/2019/04/Analytic-Suggestions.png"><img width="150" height="150" src="https://static-forge.netlify.com/wp-content/uploads/2019/04/Analytic-Suggestions-150x150.png" class="attachment-thumbnail size-thumbnail" alt=""></a>
+			</dt></dl><br style="clear: both"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-29d15c0a elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="29d15c0a" data-element_type="section" id="guidance"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-29d44ac elementor-column elementor-col-100 elementor-top-column" data-id="29d44ac" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-3609238c elementor-widget elementor-widget-spacer" data-id="3609238c" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-21e46b7 elementor-widget elementor-widget-spacer" data-id="21e46b7" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-245bbbca elementor-widget elementor-widget-heading" data-id="245bbbca" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Implementation</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-4beb80c5 elementor-widget elementor-widget-text-editor" data-id="4beb80c5" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p style="text-decoration-style: initial; text-decoration-color: initial; text-transform: none; color: rgba(0, 0, 0, 0.86);">Additionally, Kaila outlines her process for solving data-related problems in an <a href="https://blog.prototypr.io/how-to-design-data-visualizations-that-people-understand-d93624144c31?source=your_stories_page---------------------------">article for Medium</a> and in a <a href="https://docs.google.com/presentation/d/1O3lZJp6yVH1wcQyvJ2hIpniRn9oWtLqy3bWbWiF8xDk/edit">presentation</a> for a Tyler UX Collab.</p><p><a href="http://PLACEHOLDER.wpsho/patterns/data-viz-in-context/">Read about</a> how Kaila solved a data vis problem for a utility billing product here at Tyler. </p><div> </div></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-2b0cd7a5 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="2b0cd7a5" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-524b67d6 elementor-column elementor-col-33 elementor-top-column" data-id="524b67d6" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-5d398915 elementor-widget elementor-widget-image" data-id="5d398915" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+											<a data-elementor-open-lightbox="" href="http://PLACEHOLDER.wpsho/patterns/data-visualization/">
+							<img width="300" height="300" src="https://static-forge.netlify.com/wp-content/uploads/2019/06/heatmap.png" class="attachment-large size-large" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/06/heatmap.png 300w,https://static-forge.netlify.com/wp-content/uploads/2019/06/heatmap-150x150.png 150w" sizes="(max-width: 300px) 100vw, 300px"></a>
+											</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-d21292e elementor-widget elementor-widget-heading" data-id="d21292e" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h6 class="elementor-heading-title elementor-size-default">Learn about the Data Viz process</h6>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-284822e elementor-column elementor-col-33 elementor-top-column" data-id="284822e" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-c98b545 elementor-widget elementor-widget-image" data-id="c98b545" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+											<a data-elementor-open-lightbox="" href="http://10.81.12.49/wp-content/uploads/2019/04/Charts_2019.sketch-1.zip">
+							<img width="300" height="300" src="https://static-forge.netlify.com/wp-content/uploads/2019/06/pictogram-copy.png" class="attachment-large size-large" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/06/pictogram-copy.png 300w,https://static-forge.netlify.com/wp-content/uploads/2019/06/pictogram-copy-150x150.png 150w" sizes="(max-width: 300px) 100vw, 300px"></a>
+											</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-7a3a96f1 elementor-widget elementor-widget-heading" data-id="7a3a96f1" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h6 class="elementor-heading-title elementor-size-default">Download the Sketch library</h6>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-612a4d4f elementor-column elementor-col-33 elementor-top-column" data-id="612a4d4f" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-4409649e elementor-widget elementor-widget-image" data-id="4409649e" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+											<a data-elementor-open-lightbox="" href="http://PLACEHOLDER.wpsho/colors-data-visualization/">
+							<img width="300" height="300" src="https://static-forge.netlify.com/wp-content/uploads/2019/06/pictogram-copy-2.png" class="attachment-large size-large" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/06/pictogram-copy-2.png 300w,https://static-forge.netlify.com/wp-content/uploads/2019/06/pictogram-copy-2-150x150.png 150w" sizes="(max-width: 300px) 100vw, 300px"></a>
+											</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-4ca4894e elementor-widget elementor-widget-heading" data-id="4ca4894e" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h6 class="elementor-heading-title elementor-size-default">Get the Data Viz color palettes</h6>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-dd8ec55 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="dd8ec55" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-0f9bb37 elementor-column elementor-col-100 elementor-top-column" data-id="0f9bb37" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-6201cfe elementor-widget elementor-widget-spacer" data-id="6201cfe" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section></div>
+			</div>
+		</div>
+		 
+                        </tcw-card><div class="tyl-typography--caption" style="margin-bottom: 8px;">Last modified on September 17, 2019 by: emily.roller</div>
+          </div>
+
+            <div class="right-content" id="toc-right-container" style="position: relative; width: 300px;"> 
+                                <div><div class="textwidget custom-html-widget"><div class="toc" style="position: fixed;">
+                    <div class="toc-container">
+                      <div class="left-line" id="toc-left-line"></div>
+                      <div class="toc-items-container" id="toc-items">
+                        <h6 style="margin-top: 0px; margin-bottom: 16px;">Table of contents</h6>
+                      </div>
+                    </div>
+                  </div>
+
+<div id="back-to-top-button" class="tyl-back-to-top">
+            <tcw-fab extended="true"><button aria-label="Extended FAB with just text" onclick="scrollTo()">
+                <i class="material-icons" aria-hidden="true">arrow_upward</i>
+                <span>Back to top</span>
+              </button>
+            </tcw-fab></div></div></div>                            </div>
+
+        </div>
+       </div>
+      </div>
+    </tcw-scaffold><script type="text/javascript" src="scripts/custom-elements-es5-adapter.js"></script><script type="text/javascript" src="scripts/webcomponents-bundle.js"></script><script type="text/javascript" src="scripts/tyler-components-web-lib.min.js"></script><script type="text/javascript" src="scripts/tyler-components-web-forge-lib.min.js"></script><script>
+  window.addEventListener('WebComponentsReady', function() {
+    window.TylerComponentsWeb.lib.defineComponents();
+    window.TylerComponentsWeb.Forge.lib.defineComponents();
+  });
+</script><script type="text/javascript" src="scripts/menu-expander.js"></script><script type="text/javascript" src="scripts/drawer.js"></script><script type="text/javascript" src="scripts/navHeader.js"></script><script type="text/javascript" src="scripts/search.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-136930168-1"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-136930168-1');
+</script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/material-design-for-contact-form-7/assets/js/lib/autosize.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/material-design-for-contact-form-7/assets/js/cf7-material-design-bundle.js"></script><script type="text/javascript">
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"https:\/\/static-forge.netlify.com\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"}};
+/* ]]> */
+</script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/contact-form-7/includes/js/scripts.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/js/frontend-modules.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor-pro/assets/lib/sticky/jquery.sticky.min.js"></script><script type="text/javascript">
+var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/static-forge.netlify.com\/wp-admin\/admin-ajax.php","nonce":"a52c73ecd1","shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"google":{"title":"Google+","has_counter":true},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"delicious":{"title":"Delicious"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"}},"facebook_sdk":{"lang":"en_US","app_id":""}};
+</script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor-pro/assets/js/frontend.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-includes/js/jquery/ui/position.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/swiper/swiper.min.js"></script><script type="text/javascript">
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"version":"2.8.3","urls":{"assets":"https:\/\/static-forge.netlify.com\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"general":{"elementor_global_image_lightbox":"yes"},"editorPreferences":[]},"post":{"id":5475,"title":"Data Viz: Charts","excerpt":""}};
+</script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/js/frontend.min.js"></script><script type="text/javascript" src="scripts/table-of-contents.js?x-version=1"></script></body></html>

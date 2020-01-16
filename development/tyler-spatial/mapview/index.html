@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en-US"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="shortcut icon" href="favicon.ico" sizes="16x16" type="image/x-icon"><title>MapView – Tyler Forge</title><link rel="dns-prefetch" href="//fonts.googleapis.com"><link rel="dns-prefetch" href="//s.w.org"><link rel="stylesheet" id="cf7md_roboto-css" href="//fonts.googleapis.com/css?family=Roboto:400,500" type="text/css" media="all"><link rel="stylesheet" id="cf7-material-design-css" href="https://static-forge.netlify.com/wp-content/plugins/material-design-for-contact-form-7/assets/css/cf7-material-design.css" type="text/css" media="all"><link rel="stylesheet" id="contact-form-7-css" href="https://static-forge.netlify.com/wp-content/plugins/contact-form-7/includes/css/styles.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-icons-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-animations-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/animations/animations.min.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-frontend-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/css/frontend.min.css" type="text/css" media="all"><link rel="stylesheet" id="lae-animate-styles-css" href="https://static-forge.netlify.com/wp-content/plugins/addons-for-elementor/assets/css/animate.css" type="text/css" media="all"><link rel="stylesheet" id="lae-sliders-styles-css" href="https://static-forge.netlify.com/wp-content/plugins/addons-for-elementor/assets/css/sliders.css" type="text/css" media="all"><link rel="stylesheet" id="lae-icomoon-styles-css" href="https://static-forge.netlify.com/wp-content/plugins/addons-for-elementor/assets/css/icomoon.css" type="text/css" media="all"><link rel="stylesheet" id="lae-frontend-styles-css" href="https://static-forge.netlify.com/wp-content/plugins/addons-for-elementor/assets/css/lae-frontend.css" type="text/css" media="all"><link rel="stylesheet" id="lae-widgets-styles-css" href="https://static-forge.netlify.com/wp-content/plugins/addons-for-elementor/assets/css/lae-widgets.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-pro-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor-pro/assets/css/frontend.min.css" type="text/css" media="all"><link rel="stylesheet" id="font-awesome-5-all-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/all.min.css" type="text/css" media="all"><link rel="stylesheet" id="font-awesome-4-shim-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/v4-shims.min.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-global-css" href="https://static-forge.netlify.com/wp-content/uploads/elementor/css/global.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-post-25524-css" href="https://static-forge.netlify.com/wp-content/uploads/elementor/css/post-25524.css" type="text/css" media="all"><link rel="stylesheet" id="custom-frontend-style-css" href="https://static-forge.netlify.com/wp-content/plugins/ideapush/inc/css/frontendstyle.css" type="text/css" media="all"><style id="custom-frontend-style-inline-css" type="text/css">
+.ideapush-idea-filter{display: none;}
+</style><script type="text/javascript" src="https://static-forge.netlify.com/wp-includes/js/jquery/jquery.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-includes/js/jquery/jquery-migrate.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min.js"></script><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NB3CZPX');</script><script type="text/javascript">
+            (function () {
+                window.lae_fs = {can_use_premium_code: false};
+            })();
+        </script><style type="text/css" id="wp-custom-css">
+			.hljs {
+	background: none;
+}		</style><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono"><link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700"><link href="https://cdn.forge.tylertech.com/v1/libs/tcw/latest/tcw-material-design.css" rel="stylesheet"><link rel="stylesheet" href="styles/tyler-forge.css"><link rel="stylesheet" href="styles/hljs-theme.css"><link rel="stylesheet" href="styles/component.css"></head><body class="tyl-typography">
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NB3CZPX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+
+
+    <tcw-scaffold class="tyl-docs"><tcw-omnibar id="tyl-forge-omnibar" title-text="Tyler Forge" slot="header"><div slot="logo" style="width: 24px; height: 20px; margin-left: 8px;">
+    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 480.5 423.03"><title>forge-icon-only</title><g id="logo"><path d="M463.68,39H283.49A26,26,0,0,0,261,52l-39.38,68.2a26,26,0,0,0,22.55,39.05H424.3a26,26,0,0,0,22.55-13L486.22,78A26,26,0,0,0,463.68,39Z" transform="translate(-9.25 -38.98)" fill="#fff"></path><path d="M377,189.18H196.77a26,26,0,0,0-22.54,13l-37.37,64.72a26,26,0,0,0,0,26L227,449A26,26,0,0,0,272,449L399.51,228.23A26,26,0,0,0,377,189.18Z" transform="translate(-9.25 -38.98)" fill="#fff"></path><path d="M211.35,78A26,26,0,0,0,188.81,39H35.32A26,26,0,0,0,12.78,78L77,189.18,89.52,211a26,26,0,0,0,45.09,0Z" transform="translate(-9.25 -38.98)" fill="#fff"></path></g></svg></div>
+  <tcw-omnibar-search slot="center"><input type="text" placeholder="Search..."></tcw-omnibar-search><tcw-omnibar-menu-button slot="menu" id="tyl-forge-omnibar-menu"></tcw-omnibar-menu-button><div slot="action" style="display: flex; justify-content: space-around;">
+    <ul class="header-nav"><li class="header__nav-item" id="design-nav-indicator">
+        <a href="/getting-started-with-forge/" class="header__nav-link">
+          Design <span class="header__nav-indicator" id="design-link-indicator"></span>
+        </a>
+      </li>
+      <li class="header__nav-item" id="development-nav-indicator">
+        <a href="/development/" class="header__nav-link">
+          Development <span class="header__nav-indicator" id="development-link-indicator"></span>
+        </a>
+      </li>
+      <li class="header__nav-item" id="development-nav-indicator">
+        <a href="/give-feedback/" class="header__nav-link">
+          Feedback <span class="header__nav-indicator" id="feedback-link-indicator"></span>
+        </a>
+      </li>
+    </ul></div>
+</tcw-omnibar><div slot="body-left">
+  <tcw-drawer id="tyl-forge-sidenav" type="dismissible" open="true" style="--tyl-drawer-width: 320px;"><tcw-list class="nav navbar-nav"><a href="/" id="back to design-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">arrow_back</i>Back to design</tcw-list-item></a><tcw-expansion-panel id="guides-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">description</i>
+			  Guides
+			  <tcw-open-icon slot="trailing" style="line-height: 0.5;"></tcw-open-icon></tcw-list-item><tcw-list><a href="https://static-forge.netlify.com/development/guides/introduction/"><tcw-list-item slot="header" class="nav_subitem">Introduction</tcw-list-item></a><a href="https://static-forge.netlify.com/development/guides/prerequisites/"><tcw-list-item slot="header" class="nav_subitem">Prerequisites</tcw-list-item></a><a href="https://static-forge.netlify.com/development/guides/getting-started-2/"><tcw-list-item slot="header" class="nav_subitem">Getting started</tcw-list-item></a><a href="https://static-forge.netlify.com/development/guides/getting-started-angular/"><tcw-list-item slot="header" class="nav_subitem">Getting started – Angular</tcw-list-item></a><a href="https://static-forge.netlify.com/development/guides/omnibar-implementation/"><tcw-list-item slot="header" class="nav_subitem">Omnibar implementation</tcw-list-item></a><a href="https://static-forge.netlify.com/development/guides/table-implementation/"><tcw-list-item slot="header" class="nav_subitem">Table implementation</tcw-list-item></a><a href="https://static-forge.netlify.com/development/guides/theming/"><tcw-list-item slot="header" class="nav_subitem">Theming</tcw-list-item></a><a href="https://static-forge.netlify.com/development/guides/development/"><tcw-list-item slot="header" class="nav_subitem">Development</tcw-list-item></a><a href="https://static-forge.netlify.com/development/guides/component-tutorial/"><tcw-list-item slot="header" class="nav_subitem">Component tutorial</tcw-list-item></a><a href="https://static-forge.netlify.com/development/guides/testing-a-package-locally/"><tcw-list-item slot="header" class="nav_subitem">Testing a package locally</tcw-list-item></a></tcw-list></tcw-expansion-panel><tcw-expansion-panel id="components-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">settings_input_component</i>
+			  Components
+			  <tcw-open-icon slot="trailing" style="line-height: 0.5;"></tcw-open-icon></tcw-list-item><tcw-list><a href="https://static-forge.netlify.com/development/components/accordion/"><tcw-list-item slot="header" class="nav_subitem">Accordion</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/app-launcher/"><tcw-list-item slot="header" class="nav_subitem">App launcher</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/autocomplete/"><tcw-list-item slot="header" class="nav_subitem">Autocomplete</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/avatar/"><tcw-list-item slot="header" class="nav_subitem">Avatar</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/backdrop/"><tcw-list-item slot="header" class="nav_subitem">Backdrop</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/badge/"><tcw-list-item slot="header" class="nav_subitem">Badge</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/busy-indicator/"><tcw-list-item slot="header" class="nav_subitem">Busy indicator</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/button/"><tcw-list-item slot="header" class="nav_subitem">Button</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/button-toggle/"><tcw-list-item slot="header" class="nav_subitem">Button toggle</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/card/"><tcw-list-item slot="header" class="nav_subitem">Card</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/checkbox/"><tcw-list-item slot="header" class="nav_subitem">Checkbox</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/chips/"><tcw-list-item slot="header" class="nav_subitem">Chip</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/color-picker/"><tcw-list-item slot="header" class="nav_subitem">Color picker</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/datepicker/"><tcw-list-item slot="header" class="nav_subitem">Date picker</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/dialog/"><tcw-list-item slot="header" class="nav_subitem">Dialog</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/divider/"><tcw-list-item slot="header" class="nav_subitem">Divider</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/drawer/"><tcw-list-item slot="header" class="nav_subitem">Drawer</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/expansion-panel/"><tcw-list-item slot="header" class="nav_subitem">Expansion panel</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/floating-action-button/"><tcw-list-item slot="header" class="nav_subitem">Floating action button</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/icon-button/"><tcw-list-item slot="header" class="nav_subitem">Icon button</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/label-value/"><tcw-list-item slot="header" class="nav_subitem">Label value</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/linear-progress/"><tcw-list-item slot="header" class="nav_subitem">Linear progress</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/list/"><tcw-list-item slot="header" class="nav_subitem">List</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/menu/"><tcw-list-item slot="header" class="nav_subitem">Menu</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/omnibar/"><tcw-list-item slot="header" class="nav_subitem">Omnibar</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/omnibar-search/"><tcw-list-item slot="header" class="nav_subitem">Omnibar search</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/omnibar-profile/"><tcw-list-item slot="header" class="nav_subitem">Omnibar profile</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/omnibar-help-button/"><tcw-list-item slot="header" class="nav_subitem">Omnibar help button</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/omnibar-notification-button/"><tcw-list-item slot="header" class="nav_subitem">Omnibar notification button</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/open-icon/"><tcw-list-item slot="header" class="nav_subitem">Open icon</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/page-state/"><tcw-list-item slot="header" class="nav_subitem">Page state</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/paginator/"><tcw-list-item slot="header" class="nav_subitem">Paginator</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/popup/"><tcw-list-item slot="header" class="nav_subitem">Popup</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/product-icon/"><tcw-list-item slot="header" class="nav_subitem">Product icon</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/progress-spinner/"><tcw-list-item slot="header" class="nav_subitem">Progress spinner</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/radio-button/"><tcw-list-item slot="header" class="nav_subitem">Radio button</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/scaffold/"><tcw-list-item slot="header" class="nav_subitem">Scaffold</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/select/"><tcw-list-item slot="header" class="nav_subitem">Select</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/skeleton/"><tcw-list-item slot="header" class="nav_subitem">Skeleton</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/slider/"><tcw-list-item slot="header" class="nav_subitem">Slider</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/stepper/"><tcw-list-item slot="header" class="nav_subitem">Stepper</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/switch/"><tcw-list-item slot="header" class="nav_subitem">Switch</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/tab-bar/"><tcw-list-item slot="header" class="nav_subitem">Tab bar</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/table/"><tcw-list-item slot="header" class="nav_subitem">Table</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/text-field/"><tcw-list-item slot="header" class="nav_subitem">Text field</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/toast/"><tcw-list-item slot="header" class="nav_subitem">Toast</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/toolbar/"><tcw-list-item slot="header" class="nav_subitem">Toolbar</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/tooltips/"><tcw-list-item slot="header" class="nav_subitem">Tooltips</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/view-switcher/"><tcw-list-item slot="header" class="nav_subitem">View switcher</tcw-list-item></a></tcw-list></tcw-expansion-panel><tcw-expansion-panel id="recipes-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">fastfood</i>
+			  Recipes
+			  <tcw-open-icon slot="trailing" style="line-height: 0.5;"></tcw-open-icon></tcw-list-item><tcw-list><a href="https://static-forge.netlify.com/development/recipes/card-recipes/"><tcw-list-item slot="header" class="nav_subitem">Card</tcw-list-item></a><a href="https://static-forge.netlify.com/development/recipes/dialog-recipes/"><tcw-list-item slot="header" class="nav_subitem">Dialog</tcw-list-item></a><a href="https://static-forge.netlify.com/development/recipes/error-pages/"><tcw-list-item slot="header" class="nav_subitem">Error pages</tcw-list-item></a><a href="https://static-forge.netlify.com/development/recipes/page-layout-recipes/"><tcw-list-item slot="header" class="nav_subitem">Page layout</tcw-list-item></a><a href="https://static-forge.netlify.com/development/recipes/table-recipes/"><tcw-list-item slot="header" class="nav_subitem">Table</tcw-list-item></a><a href="https://static-forge.netlify.com/development/recipes/toolbar-recipe/"><tcw-list-item slot="header" class="nav_subitem">Toolbar</tcw-list-item></a></tcw-list></tcw-expansion-panel><tcw-expansion-panel id="utilities-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">build</i>
+			  Utilities
+			  <tcw-open-icon slot="trailing" style="line-height: 0.5;"></tcw-open-icon></tcw-list-item><tcw-list><a href="https://static-forge.netlify.com/development/utilities/theme/"><tcw-list-item slot="header" class="nav_subitem">Theme</tcw-list-item></a><a href="https://static-forge.netlify.com/development/utilities/typography/"><tcw-list-item slot="header" class="nav_subitem">Typography</tcw-list-item></a></tcw-list></tcw-expansion-panel><tcw-expansion-panel id="tyler spatial-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">map</i>
+			  Tyler Spatial
+			  <tcw-open-icon slot="trailing" style="line-height: 0.5;"></tcw-open-icon></tcw-list-item><tcw-list><a href="https://static-forge.netlify.com/development/tyler-spatial/getting-started/"><tcw-list-item slot="header" class="nav_subitem">Getting started</tcw-list-item></a><a href="https://static-forge.netlify.com/development/tyler-spatial/mapview/"><tcw-list-item slot="header" class="nav_subitem">MapView</tcw-list-item></a></tcw-list></tcw-expansion-panel><a href="https://static-forge.netlify.com/development/cdn/" id="cdn-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">cloud</i>CDN</tcw-list-item></a><a href="https://static-forge.netlify.com/development/extensions/" id="extensions-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">extension</i>Extensions</tcw-list-item></a>    </tcw-list></tcw-drawer></div>
+      <div class="tyl-docs-content" slot="body" style="position: relative;" id="top-of-page">
+        <div id="tyl-docs-content" class="tyl-docs-content__container" style="padding: 16px; max-width: 1264px;">
+        <div class="flex-container" style="display: flex;">
+        <div class="left-content" style="max-width: 956px; width: 100%;">
+          <tcw-card has-padding="false"><div data-elementor-type="wp-page" data-elementor-id="25524" class="elementor elementor-25524" data-elementor-settings="[]">
+			<div class="elementor-inner">
+				<div class="elementor-section-wrap">
+							<section class="elementor-element elementor-element-6d9d375c elementor-section-height-min-height elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-items-middle elementor-section elementor-top-section" data-id="6d9d375c" data-element_type="section" id="overview" data-settings='{"background_background":"classic"}'><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-e51c435 elementor-column elementor-col-50 elementor-top-column" data-id="e51c435" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-154db521 elementor-widget elementor-widget-divider" data-id="154db521" data-element_type="widget" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-5b4665d6 elementor-widget elementor-widget-heading" data-id="5b4665d6" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">MapView</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-5d4c9a6b elementor-widget elementor-widget-text-editor" data-id="5d4c9a6b" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>MapView is a framework agnostic, JavaScript map component built on Esri’s ArcGIS JavaScript API (version 3.x).  It provides a range of functionality, from basic map viewing to a feature-rich integration with a variety of ArcGIS services. </p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-12e2f741 elementor-column elementor-col-50 elementor-top-column" data-id="12e2f741" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-29bd15be elementor-widget elementor-widget-html" data-id="29bd15be" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="display: flex; justify-content: flex-end;">
+    <a href="/development/tyler-spatial/mapview/mapview-api/">
+<tcw-button><button type="button">
+      <i class="material-icons">code</i>
+      <span>API Documentation</span>
+    </button>
+</tcw-button></a>
+</div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-6da24e67 elementor-widget elementor-widget-image" data-id="6da24e67" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img src="https://static-forge.netlify.com/wp-content/uploads/elementor/thumbs/TylerSpatial-oe0fc95t7quv6qhid02if7nzb0jqcrk0svhnmopwyw.png" title="Tyler Spatial MapView" alt="Tyler Spatial MapView"></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-f3bd79b elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="f3bd79b" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-700a5c9 elementor-column elementor-col-100 elementor-top-column" data-id="700a5c9" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<section class="elementor-element elementor-element-4791fba elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="4791fba" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-3879dbd elementor-column elementor-col-100 elementor-inner-column" data-id="3879dbd" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-41cf2522 elementor-widget elementor-widget-heading" data-id="41cf2522" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Interactive demo</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-6892dd6d elementor-widget elementor-widget-html" data-id="6892dd6d" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<iframe src="interactive-demos/tyler-spatial/mapview/mapview-simple.html" style="height: 350px;" class="interactive-demo-iframe"></iframe>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section></div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-74bb0f5 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="74bb0f5" data-element_type="section" id="guidance"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-67861bae elementor-column elementor-col-100 elementor-top-column" data-id="67861bae" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-76363c69 elementor-widget elementor-widget-spacer" data-id="76363c69" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-770d2c60 elementor-widget elementor-widget-heading" data-id="770d2c60" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Guidance</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-5451a13a elementor-widget elementor-widget-text-editor" data-id="5451a13a" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Spatial location is a common element for public sector organizations, facilitating views between data, information and end-users.  With the use of a Geographic Information System (GIS), this relationship is easily seen and understood.  To further define this relationship, mapping provides a powerful tool to aggregate many sources of data and visualize how they affect each other.  A dataset that contains a spatial location through coordinates (latitude and longitude) or an address can be visualized using MapView.  User GIS data and layers can be added through the StartupConfig construction parameter.  Records in these datasets can be selected in the map to be used in the host program and vice versa.  The MapView component should be used to drive the application through the visualization and selection of these spatial datasets.</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-3b7e31d5 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="3b7e31d5" data-element_type="section" id="guidance"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-52842ae7 elementor-column elementor-col-100 elementor-top-column" data-id="52842ae7" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-5ed99b5d elementor-widget elementor-widget-spacer" data-id="5ed99b5d" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-124b6cff elementor-widget elementor-widget-heading" data-id="124b6cff" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Functionality</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-40c03840 elementor-widget elementor-widget-text-editor" data-id="40c03840" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>MapView comes packed with functionality that consuming applications can use out-of-the-box.  This functionality includes:</p><ul><li>Displaying one of the 20+ default Esri basemaps, or custom basemaps provided by the client.</li><li>Displaying and interacting with client’s GIS data through custom Esri Map and Feature Services.</li><li>Visualizing application-specific information by adding and interacting with point graphics. (polygon and polyline graphics coming soon!)</li><li>Customizing graphic styling and providing custom application-specific actions to graphics.</li><li>Clustering of graphics added to the map by the application.</li><li>Querying a client’s GIS service(s) for spatially selecting data.</li><li>Basic sketching functionality. (complete sketch and graphic edit functionality coming soon!)</li></ul></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-544b6962 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="544b6962" data-element_type="section" id="guidance"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-4d52dea8 elementor-column elementor-col-100 elementor-top-column" data-id="4d52dea8" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-6391e366 elementor-widget elementor-widget-spacer" data-id="6391e366" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-42e6bb7e elementor-widget elementor-widget-heading" data-id="42e6bb7e" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Client-Facing Terminology</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-6f6db380 elementor-widget elementor-widget-text-editor" data-id="6f6db380" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p class="MsoNormal">MapView is a map control that can be embedded in any web application.  A dataset that contains a spatial location through coordinates (latitude and longitude) or an address can be visualized using MapView.  Records in these datasets can be selected in the map to be used in the host program and vice versa.  A number of tools are included in MapView and the consuming product has control over the tools available in the map.  User GIS data and layers can be added to MapView through the application’s GIS Configuration page or through a config file included with the control.</p><p>MapView utilizes two modes to accommodate the varied needs of consuming applications, an embedded mode and panel mode.  When the map is in embedded mode the following tools are surfaced for users.</p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-3055c63 elementor-widget elementor-widget-text-editor" data-id="3055c63" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><b>Address Search</b></p><p>The Address Search bar zooms and pans the map to an address provided by the user.  The tool utilizes ESRI’s world geocoding service unless a different geocoding service is provided in the configuration.  Suggest functionality is also provided as a user types and address.   List of suggested addresses will be provided allowing the user to click on a standard address provided by the geocoding service.</p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-179ba8e elementor-widget elementor-widget-image" data-id="179ba8e" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="909" height="343" src="https://static-forge.netlify.com/wp-content/uploads/2020/01/Address-Search.png" class="attachment-large size-large" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2020/01/Address-Search.png 909w,https://static-forge.netlify.com/wp-content/uploads/2020/01/Address-Search-300x113.png 300w,https://static-forge.netlify.com/wp-content/uploads/2020/01/Address-Search-768x290.png 768w" sizes="(max-width: 909px) 100vw, 909px"></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-54d944b elementor-widget elementor-widget-text-editor" data-id="54d944b" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><b>Navigation Tools</b></p><p class="MsoNormal">Tools are provided to change the extent of the map.  The <i>Zoom to Current Items</i> tool will change the extent of the map to the current features in the map.  Use the Zoom to Full Extent to change the extent of the map to the full extent of your map service.  The Find my location tool will pan the map to the coordinates provided by the location services of your device.  Also included are zoom in and zoom out tools to zoom the map in or out based on a set increment.</p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-6d0c2a8 elementor-widget elementor-widget-text-editor" data-id="6d0c2a8" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><b>Info Window</b></p><p>When a user clicks on a feature in the map an info window will point to the feature and provide attributes as defined by the configuration.</p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-804b2f2 elementor-widget elementor-widget-image" data-id="804b2f2" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="911" height="346" src="https://static-forge.netlify.com/wp-content/uploads/2020/01/Info-Window.png" class="attachment-large size-large" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2020/01/Info-Window.png 911w,https://static-forge.netlify.com/wp-content/uploads/2020/01/Info-Window-300x114.png 300w,https://static-forge.netlify.com/wp-content/uploads/2020/01/Info-Window-768x292.png 768w" sizes="(max-width: 911px) 100vw, 911px"></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-678f953 elementor-widget elementor-widget-text-editor" data-id="678f953" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><b>Feature Clustering</b></p><p class="MsoNormal">If a dataset contains a large number of features clustering can make it easier to visualize and understand your data.  Be default the map will group point features that are within a specific distance of one another into one symbol.  The number of features represented by the cluster will be labeled on top of the symbol.  Clicking on the symbol will change to extent of the map to the features included in that cluster.  Double click anywhere on the map to turn off feature clustering.</p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-51761b8 elementor-widget elementor-widget-image" data-id="51761b8" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="908" height="342" src="https://static-forge.netlify.com/wp-content/uploads/2020/01/Clustering.png" class="attachment-large size-large" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2020/01/Clustering.png 908w,https://static-forge.netlify.com/wp-content/uploads/2020/01/Clustering-300x113.png 300w,https://static-forge.netlify.com/wp-content/uploads/2020/01/Clustering-768x289.png 768w" sizes="(max-width: 908px) 100vw, 908px"></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-d27082e elementor-widget elementor-widget-text-editor" data-id="d27082e" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>When the map is in panel mode additional tools (see below) are surfaced for users.</p><p><b>Attribute Search</b></p><p>The attribute search provides user the ability to select assets or GIS features through an attribute search of any GIS attribute in the layers provided by the services added to the map.</p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-133e7a6 elementor-widget elementor-widget-image" data-id="133e7a6" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="239" height="300" src="https://static-forge.netlify.com/wp-content/uploads/2020/01/Attribute-Search-239x300.png" class="attachment-medium size-medium" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2020/01/Attribute-Search-239x300.png 239w,https://static-forge.netlify.com/wp-content/uploads/2020/01/Attribute-Search.png 381w" sizes="(max-width: 239px) 100vw, 239px"></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-a15b8f0 elementor-widget elementor-widget-text-editor" data-id="a15b8f0" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><b>Basemap</b></p><p>The basemap picker provides a list of the basemaps available for the map.  The standard ESRI basemaps or user defined basemaps can be made available in the basemap picker.</p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-cdc0ae1 elementor-widget elementor-widget-image" data-id="cdc0ae1" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="146" height="300" src="https://static-forge.netlify.com/wp-content/uploads/2020/01/Basemap-146x300.png" class="attachment-medium size-medium" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2020/01/Basemap-146x300.png 146w,https://static-forge.netlify.com/wp-content/uploads/2020/01/Basemap.png 378w" sizes="(max-width: 146px) 100vw, 146px"></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-a8b8562 elementor-widget elementor-widget-text-editor" data-id="a8b8562" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><b>Bookmarks</b></p><p>The Bookmark tool gives users the ability to save and name a specific spatial extent.  Users can open the bookmark tool at any time and change the extent of the map to the bookmark of their choice.</p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-d7474f4 elementor-widget elementor-widget-image" data-id="d7474f4" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="300" height="218" src="https://static-forge.netlify.com/wp-content/uploads/2020/01/Bookmarks-300x218.png" class="attachment-medium size-medium" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2020/01/Bookmarks-300x218.png 300w,https://static-forge.netlify.com/wp-content/uploads/2020/01/Bookmarks.png 379w" sizes="(max-width: 300px) 100vw, 300px"></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-1dd6f45 elementor-widget elementor-widget-text-editor" data-id="1dd6f45" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><b>Print</b></p><p class="MsoNormal">With the print tool users can export an image of the current extent providing a map title and using a map layout of their choice.</p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-97b6d4a elementor-widget elementor-widget-image" data-id="97b6d4a" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="235" height="300" src="https://static-forge.netlify.com/wp-content/uploads/2020/01/Print-Options-235x300.png" class="attachment-medium size-medium" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2020/01/Print-Options-235x300.png 235w,https://static-forge.netlify.com/wp-content/uploads/2020/01/Print-Options.png 377w" sizes="(max-width: 235px) 100vw, 235px"></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-86f6b76 elementor-widget elementor-widget-image" data-id="86f6b76" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="768" height="509" src="https://static-forge.netlify.com/wp-content/uploads/2020/01/Print-Map-768x509.png" class="attachment-medium_large size-medium_large" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2020/01/Print-Map-768x509.png 768w,https://static-forge.netlify.com/wp-content/uploads/2020/01/Print-Map-300x199.png 300w,https://static-forge.netlify.com/wp-content/uploads/2020/01/Print-Map-1024x679.png 1024w,https://static-forge.netlify.com/wp-content/uploads/2020/01/Print-Map.png 1051w" sizes="(max-width: 768px) 100vw, 768px"></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-e7f5f71 elementor-widget elementor-widget-text-editor" data-id="e7f5f71" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><b>Select</b></p><p>Use the select tool to graphically select features in the map.  There are three options for graphic selections.  A polygon selection tool, a free hand selection tool and a buffer tool.  The buffer tool will draw a circle of the radius the user provides and select all the features within that area.  The layer list in the selection tool defines the layers that will participate in the feature selection.</p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-a54a8e3 elementor-widget elementor-widget-image" data-id="a54a8e3" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="768" height="590" src="https://static-forge.netlify.com/wp-content/uploads/2020/01/Select-768x590.png" class="attachment-medium_large size-medium_large" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2020/01/Select-768x590.png 768w,https://static-forge.netlify.com/wp-content/uploads/2020/01/Select-300x231.png 300w,https://static-forge.netlify.com/wp-content/uploads/2020/01/Select-1024x787.png 1024w,https://static-forge.netlify.com/wp-content/uploads/2020/01/Select.png 1062w" sizes="(max-width: 768px) 100vw, 768px"></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-02ee1c4 elementor-widget elementor-widget-text-editor" data-id="02ee1c4" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><b>Layers</b></p><p>The Layers tool provide a list of the layers available in the map and the ability to turn layers visibility on or off.  A transparency slider is also available to adjust the transparency of a layer.</p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-e74dd1b elementor-widget elementor-widget-image" data-id="e74dd1b" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="768" height="590" src="https://static-forge.netlify.com/wp-content/uploads/2020/01/Layers-768x590.png" class="attachment-medium_large size-medium_large" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2020/01/Layers-768x590.png 768w,https://static-forge.netlify.com/wp-content/uploads/2020/01/Layers-300x230.png 300w,https://static-forge.netlify.com/wp-content/uploads/2020/01/Layers-1024x786.png 1024w,https://static-forge.netlify.com/wp-content/uploads/2020/01/Layers.png 1060w" sizes="(max-width: 768px) 100vw, 768px"></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-28211b1 elementor-widget elementor-widget-text-editor" data-id="28211b1" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><b>Legend</b></p><p>View the legend for the currently visible layers in the map.</p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-a003f55 elementor-widget elementor-widget-image" data-id="a003f55" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="768" height="589" src="https://static-forge.netlify.com/wp-content/uploads/2020/01/Legend-768x589.png" class="attachment-medium_large size-medium_large" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2020/01/Legend-768x589.png 768w,https://static-forge.netlify.com/wp-content/uploads/2020/01/Legend-300x230.png 300w,https://static-forge.netlify.com/wp-content/uploads/2020/01/Legend-1024x786.png 1024w,https://static-forge.netlify.com/wp-content/uploads/2020/01/Legend.png 1061w" sizes="(max-width: 768px) 100vw, 768px"></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-b32b87a elementor-widget elementor-widget-text-editor" data-id="b32b87a" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><b>Draw / Measure</b></p><p class="MsoNormal">Use the draw/ measure tool to draw graphics on the map (Text, Points, Lines, Polygons).  The measure tool allows user to measure lengths, areas and points.</p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-81f39e6 elementor-widget elementor-widget-image" data-id="81f39e6" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="163" height="300" src="https://static-forge.netlify.com/wp-content/uploads/2020/01/Draw-163x300.png" class="attachment-medium size-medium" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2020/01/Draw-163x300.png 163w,https://static-forge.netlify.com/wp-content/uploads/2020/01/Draw.png 377w" sizes="(max-width: 163px) 100vw, 163px"></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-30a8f7a elementor-widget elementor-widget-text-editor" data-id="30a8f7a" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><b>Clear</b></p><p>The clear tool clears all graphics and selections that are currently on the map.</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section></div>
+			</div>
+		</div>
+		 
+                        </tcw-card><div class="tyl-typography--caption" style="margin-bottom: 8px;">Last modified on January 14, 2020 by: Holden Parker</div>
+          </div>
+
+            <div class="right-content" id="toc-right-container" style="position: relative; width: 300px;"> 
+                                <div><div class="textwidget custom-html-widget"><div class="toc" style="position: fixed;">
+                    <div class="toc-container">
+                      <div class="left-line" id="toc-left-line"></div>
+                      <div class="toc-items-container" id="toc-items">
+                        <h6 style="margin-top: 0px; margin-bottom: 16px;">Table of contents</h6>
+                      </div>
+                    </div>
+                  </div>
+
+<div id="back-to-top-button" class="tyl-back-to-top">
+            <tcw-fab extended="true"><button aria-label="Extended FAB with just text" onclick="scrollTo()">
+                <i class="material-icons" aria-hidden="true">arrow_upward</i>
+                <span>Back to top</span>
+              </button>
+            </tcw-fab></div></div></div>                            </div>
+
+        </div>
+       </div>
+      </div>
+    </tcw-scaffold><script type="text/javascript" src="scripts/custom-elements-es5-adapter.js"></script><script type="text/javascript" src="scripts/webcomponents-bundle.js"></script><script type="text/javascript" src="scripts/tyler-components-web-lib.min.js"></script><script type="text/javascript" src="scripts/tyler-components-web-forge-lib.min.js"></script><script>
+  window.addEventListener('WebComponentsReady', function() {
+    window.TylerComponentsWeb.lib.defineComponents();
+    window.TylerComponentsWeb.Forge.lib.defineComponents();
+  });
+</script><script type="text/javascript" src="scripts/menu-expander.js"></script><script type="text/javascript" src="scripts/drawer.js"></script><script type="text/javascript" src="scripts/navHeader.js"></script><script type="text/javascript" src="scripts/search.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-136930168-1"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-136930168-1');
+</script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/material-design-for-contact-form-7/assets/js/lib/autosize.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/material-design-for-contact-form-7/assets/js/cf7-material-design-bundle.js"></script><script type="text/javascript">
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"https:\/\/static-forge.netlify.com\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"}};
+/* ]]> */
+</script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/contact-form-7/includes/js/scripts.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/js/frontend-modules.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor-pro/assets/lib/sticky/jquery.sticky.min.js"></script><script type="text/javascript">
+var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/static-forge.netlify.com\/wp-admin\/admin-ajax.php","nonce":"a52c73ecd1","shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"google":{"title":"Google+","has_counter":true},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"delicious":{"title":"Delicious"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"}},"facebook_sdk":{"lang":"en_US","app_id":""}};
+</script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor-pro/assets/js/frontend.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-includes/js/jquery/ui/position.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/swiper/swiper.min.js"></script><script type="text/javascript">
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"version":"2.8.3","urls":{"assets":"https:\/\/static-forge.netlify.com\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"general":{"elementor_global_image_lightbox":"yes"},"editorPreferences":[]},"post":{"id":25524,"title":"MapView","excerpt":""}};
+</script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/js/frontend.min.js"></script><script type="text/javascript" src="scripts/table-of-contents.js?x-version=1"></script></body></html>

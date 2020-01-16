@@ -1,0 +1,35 @@
+.elementor-41160 .elementor-element.elementor-element-3aad7795 > .elementor-container {max-width: 960px;min-height: 300px;}
+.elementor-41160 .elementor-element.elementor-element-3aad7795 > .elementor-container:after {content: "";min-height: inherit;}
+.elementor-41160 .elementor-element.elementor-element-3aad7795 > .elementor-container > .elementor-row > .elementor-column > .elementor-column-wrap > .elementor-widget-wrap {align-content: center;align-items: center;}
+.elementor-41160 .elementor-element.elementor-element-3aad7795:not(.elementor-motion-effects-element-type-background), .elementor-41160 .elementor-element.elementor-element-3aad7795 > .elementor-motion-effects-container > .elementor-motion-effects-layer {background-color: rgba(241,243,245,.5);}
+.elementor-41160 .elementor-element.elementor-element-3aad7795 {transition: background .3s,border .3s,border-radius .3s,box-shadow .3s;}
+.elementor-41160 .elementor-element.elementor-element-3aad7795 > .elementor-background-overlay {transition: background .3s,border-radius .3s,opacity .3s;}
+.elementor-41160 .elementor-element.elementor-element-39fa154 > .elementor-element-populated {padding: 8px 16px 0px 16px;}
+.elementor-41160 .elementor-element.elementor-element-590f2f46 {--divider-border-style: solid;--divider-border-color: #4054b2;--divider-border-width: 5px;}
+.elementor-41160 .elementor-element.elementor-element-590f2f46 .elementor-divider-separator {width: 20%;}
+.elementor-41160 .elementor-element.elementor-element-590f2f46 .elementor-divider {padding-top: 25px;padding-bottom: 25px;}
+.elementor-41160 .elementor-element.elementor-element-5224d6a4.elementor-widget-heading .elementor-heading-title {color: #444;}
+.elementor-41160 .elementor-element.elementor-element-4ddb841a {font-size: 17px;font-weight: 300;line-height: 1.8em;}
+.elementor-41160 .elementor-element.elementor-element-4ddb841a > .elementor-widget-container {padding: 10px 0px 10px 0px;}
+.elementor-41160 .elementor-element.elementor-element-2401d5ba {text-align: center;}
+.elementor-41160 .elementor-element.elementor-element-2401d5ba .elementor-image img {width: 260px;max-width: 100%;opacity: 1;}
+.elementor-41160 .elementor-element.elementor-element-53b18100 {margin-top: 0px;margin-bottom: 0px;padding: 0px 8px 0px 8px;}
+.elementor-41160 .elementor-element.elementor-global-4605 > .elementor-widget-container {margin: 12px 12px 12px 12px;padding: 6px 6px 6px 6px;background-color: rgba(97,206,112,.2);border-style: solid;border-width: 1px 1px 1px 1px;border-color: #61ce70;}
+.elementor-41160 .elementor-element.elementor-element-34769029 .elementor-spacer-inner {height: 16px;}
+.elementor-41160 .elementor-element.elementor-element-76925c81.elementor-widget-heading .elementor-heading-title {color: rgba(0,0,0,.86);}
+.elementor-41160 .elementor-element.elementor-element-76925c81 > .elementor-widget-container {margin: 0px 0px 0px 0px;}
+.elementor-41160 .elementor-element.elementor-element-7fe36e5 {margin-top: 0px;margin-bottom: 0px;padding: 0px 8px 0px 8px;}
+.elementor-41160 .elementor-element.elementor-element-1f94be7 .elementor-spacer-inner {height: 16px;}
+.elementor-41160 .elementor-element.elementor-element-5d1bee8.elementor-widget-heading .elementor-heading-title {color: rgba(0,0,0,.86);}
+.elementor-41160 .elementor-element.elementor-element-5d1bee8 > .elementor-widget-container {margin: 0px 0px 0px 0px;}
+@media (min-width:768px) {.elementor-41160 .elementor-element.elementor-element-39fa154 {width: 57.964%;}
+	.elementor-41160 .elementor-element.elementor-element-72b6d1e0 {width: 42.036%;}}
+@media (max-width:1024px) {.elementor-41160 .elementor-element.elementor-element-3aad7795 {padding: 30px 50px 30px 50px;}
+	.elementor-41160 .elementor-element.elementor-element-2401d5ba {text-align: center;}}
+@media (max-width:767px) {.elementor-41160 .elementor-element.elementor-element-3aad7795 {padding: 30px 30px 30px 30px;}
+	.elementor-41160 .elementor-element.elementor-element-590f2f46 .elementor-divider {text-align: center;}
+	.elementor-41160 .elementor-element.elementor-element-590f2f46 .elementor-divider-separator {margin: 0 auto;margin-center: 0;}
+	.elementor-41160 .elementor-element.elementor-element-5224d6a4 {text-align: center;}
+	.elementor-41160 .elementor-element.elementor-element-4ddb841a .elementor-text-editor {text-align: center;}
+	.elementor-41160 .elementor-element.elementor-element-72b6d1e0 > .elementor-element-populated {padding: 50px 0px 50px 0px;}
+	.elementor-41160 .elementor-element.elementor-element-2401d5ba {text-align: center;}}

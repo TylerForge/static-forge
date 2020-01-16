@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en-US"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="shortcut icon" href="favicon.ico" sizes="16x16" type="image/x-icon"><title>Mapping & GIS – Tyler Forge</title><link rel="dns-prefetch" href="//fonts.googleapis.com"><link rel="dns-prefetch" href="//s.w.org"><link rel="stylesheet" id="cf7md_roboto-css" href="//fonts.googleapis.com/css?family=Roboto:400,500" type="text/css" media="all"><link rel="stylesheet" id="cf7-material-design-css" href="https://static-forge.netlify.com/wp-content/plugins/material-design-for-contact-form-7/assets/css/cf7-material-design.css" type="text/css" media="all"><link rel="stylesheet" id="contact-form-7-css" href="https://static-forge.netlify.com/wp-content/plugins/contact-form-7/includes/css/styles.css" type="text/css" media="all"><link rel="stylesheet" id="eael-front-end-css" href="https://static-forge.netlify.com/wp-content/uploads/essential-addons-elementor/eael-post-1406.min.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-icons-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-animations-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/animations/animations.min.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-frontend-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/css/frontend.min.css" type="text/css" media="all"><link rel="stylesheet" id="lae-animate-styles-css" href="https://static-forge.netlify.com/wp-content/plugins/addons-for-elementor/assets/css/animate.css" type="text/css" media="all"><link rel="stylesheet" id="lae-sliders-styles-css" href="https://static-forge.netlify.com/wp-content/plugins/addons-for-elementor/assets/css/sliders.css" type="text/css" media="all"><link rel="stylesheet" id="lae-icomoon-styles-css" href="https://static-forge.netlify.com/wp-content/plugins/addons-for-elementor/assets/css/icomoon.css" type="text/css" media="all"><link rel="stylesheet" id="lae-frontend-styles-css" href="https://static-forge.netlify.com/wp-content/plugins/addons-for-elementor/assets/css/lae-frontend.css" type="text/css" media="all"><link rel="stylesheet" id="lae-widgets-styles-css" href="https://static-forge.netlify.com/wp-content/plugins/addons-for-elementor/assets/css/lae-widgets.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-pro-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor-pro/assets/css/frontend.min.css" type="text/css" media="all"><link rel="stylesheet" id="font-awesome-5-all-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/all.min.css" type="text/css" media="all"><link rel="stylesheet" id="font-awesome-4-shim-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/v4-shims.min.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-global-css" href="https://static-forge.netlify.com/wp-content/uploads/elementor/css/global.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-post-1406-css" href="https://static-forge.netlify.com/wp-content/uploads/elementor/css/post-1406.css" type="text/css" media="all"><link rel="stylesheet" id="custom-frontend-style-css" href="https://static-forge.netlify.com/wp-content/plugins/ideapush/inc/css/frontendstyle.css" type="text/css" media="all"><style id="custom-frontend-style-inline-css" type="text/css">
+.ideapush-idea-filter{display: none;}
+</style><link rel="stylesheet" id="google-fonts-1-css" href="https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&ver=5.1.1" type="text/css" media="all"><script type="text/javascript" src="https://static-forge.netlify.com/wp-includes/js/jquery/jquery.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-includes/js/jquery/jquery-migrate.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min.js"></script><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NB3CZPX');</script><script type="text/javascript">
+            (function () {
+                window.lae_fs = {can_use_premium_code: false};
+            })();
+        </script><style type="text/css" id="wp-custom-css">
+			.hljs {
+	background: none;
+}		</style><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono"><link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700"><link href="https://cdn.forge.tylertech.com/v1/libs/tcw/latest/tcw-material-design.css" rel="stylesheet"><link rel="stylesheet" href="styles/tyler-forge.css"><link rel="stylesheet" href="styles/hljs-theme.css"><link rel="stylesheet" href="styles/component.css"></head><body class="tyl-typography">
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NB3CZPX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+
+
+    <tcw-scaffold class="tyl-docs"><tcw-omnibar id="tyl-forge-omnibar" title-text="Tyler Forge" slot="header"><div slot="logo" style="width: 24px; height: 20px; margin-left: 8px;">
+    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 480.5 423.03"><title>forge-icon-only</title><g id="logo"><path d="M463.68,39H283.49A26,26,0,0,0,261,52l-39.38,68.2a26,26,0,0,0,22.55,39.05H424.3a26,26,0,0,0,22.55-13L486.22,78A26,26,0,0,0,463.68,39Z" transform="translate(-9.25 -38.98)" fill="#fff"></path><path d="M377,189.18H196.77a26,26,0,0,0-22.54,13l-37.37,64.72a26,26,0,0,0,0,26L227,449A26,26,0,0,0,272,449L399.51,228.23A26,26,0,0,0,377,189.18Z" transform="translate(-9.25 -38.98)" fill="#fff"></path><path d="M211.35,78A26,26,0,0,0,188.81,39H35.32A26,26,0,0,0,12.78,78L77,189.18,89.52,211a26,26,0,0,0,45.09,0Z" transform="translate(-9.25 -38.98)" fill="#fff"></path></g></svg></div>
+  <tcw-omnibar-search slot="center"><input type="text" placeholder="Search..."></tcw-omnibar-search><tcw-omnibar-menu-button slot="menu" id="tyl-forge-omnibar-menu"></tcw-omnibar-menu-button><div slot="action" style="display: flex; justify-content: space-around;">
+    <ul class="header-nav"><li class="header__nav-item" id="design-nav-indicator">
+        <a href="/getting-started-with-forge/" class="header__nav-link">
+          Design <span class="header__nav-indicator" id="design-link-indicator"></span>
+        </a>
+      </li>
+      <li class="header__nav-item" id="development-nav-indicator">
+        <a href="/development/" class="header__nav-link">
+          Development <span class="header__nav-indicator" id="development-link-indicator"></span>
+        </a>
+      </li>
+      <li class="header__nav-item" id="development-nav-indicator">
+        <a href="/give-feedback/" class="header__nav-link">
+          Feedback <span class="header__nav-indicator" id="feedback-link-indicator"></span>
+        </a>
+      </li>
+    </ul></div>
+</tcw-omnibar><div slot="body-left">
+  <tcw-drawer id="tyl-forge-sidenav" type="dismissible" open="true" style="--tyl-drawer-width: 320px;"><tcw-list class="nav navbar-nav"><a href="https://static-forge.netlify.com/" id="home-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">home</i>Home</tcw-list-item></a><tcw-expansion-panel id="get started-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">forward</i>
+			  Get started
+			  <tcw-open-icon slot="trailing" style="line-height: 0.5;"></tcw-open-icon></tcw-list-item><tcw-list><a href="https://static-forge.netlify.com/getting-started-as-a-designer/"><tcw-list-item slot="header" class="nav_subitem">As a designer</tcw-list-item></a><a href="https://static-forge.netlify.com/design-to-dev-handoff/"><tcw-list-item slot="header" class="nav_subitem">Design to Dev Handoff</tcw-list-item></a></tcw-list></tcw-expansion-panel><tcw-expansion-panel id="foundation-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">border_outer</i>
+			  Foundation
+			  <tcw-open-icon slot="trailing" style="line-height: 0.5;"></tcw-open-icon></tcw-list-item><tcw-list><a href="https://static-forge.netlify.com/foundation/overview/"><tcw-list-item slot="header" class="nav_subitem">Overview</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/intro-to-accessibility/"><tcw-list-item slot="header" class="nav_subitem">Accessibility</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/tyler-branding/"><tcw-list-item slot="header" class="nav_subitem">Branding</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/color/"><tcw-list-item slot="header" class="nav_subitem">Color</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/data-formats/"><tcw-list-item slot="header" class="nav_subitem">Data formats</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/tyler-icons-full/"><tcw-list-item slot="header" class="nav_subitem">Iconography</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/illustrations-usage/"><tcw-list-item slot="header" class="nav_subitem">Illustration: Usage</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/illustration-library/"><tcw-list-item slot="header" class="nav_subitem">Illustration: Library</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/theming/"><tcw-list-item slot="header" class="nav_subitem">Theming</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/layout-intro/"><tcw-list-item slot="header" class="nav_subitem">Layout: Intro</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/layout-grid/"><tcw-list-item slot="header" class="nav_subitem">Layout: Grid</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/layout-spacing/"><tcw-list-item slot="header" class="nav_subitem">Layout: Spacing</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/layout-page-layouts/"><tcw-list-item slot="header" class="nav_subitem">Layout: Page layouts</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/typography/"><tcw-list-item slot="header" class="nav_subitem">Typography</tcw-list-item></a><a href="https://static-forge.netlify.com/product-analytics/"><tcw-list-item slot="header" class="nav_subitem">Product analytics - coming soon</tcw-list-item></a></tcw-list></tcw-expansion-panel><tcw-expansion-panel id="patterns-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">ac_unit</i>
+			  Patterns
+			  <tcw-open-icon slot="trailing" style="line-height: 0.5;"></tcw-open-icon></tcw-list-item><tcw-list><a href="https://static-forge.netlify.com/patterns/data-visualization/"><tcw-list-item slot="header" class="nav_subitem">Data visualization: Intro</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/data-visualization-2/"><tcw-list-item slot="header" class="nav_subitem">Data visualization: Charts</tcw-list-item></a><a href="https://static-forge.netlify.com/colors-data-visualization/"><tcw-list-item slot="header" class="nav_subitem">Data visualization: Colors</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/drag-and-drop/"><tcw-list-item slot="header" class="nav_subitem">Drag and drop</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/empty-state/"><tcw-list-item slot="header" class="nav_subitem">Empty state</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/errors/"><tcw-list-item slot="header" class="nav_subitem">Errors</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/faceted-search/"><tcw-list-item slot="header" class="nav_subitem">Faceted filtering</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/forms/"><tcw-list-item slot="header" class="nav_subitem">Forms</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/login/"><tcw-list-item slot="header" class="nav_subitem">Login</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/mapping-gis/"><tcw-list-item slot="header" class="nav_subitem">Mapping & GIS</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/navigation/"><tcw-list-item slot="header" class="nav_subitem">Navigation</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/onboarding/"><tcw-list-item slot="header" class="nav_subitem">Onboarding - in progress</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/profile/"><tcw-list-item slot="header" class="nav_subitem">Profile - in progress</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/progress-loading/"><tcw-list-item slot="header" class="nav_subitem">Progress & loading</tcw-list-item></a></tcw-list></tcw-expansion-panel><tcw-expansion-panel id="components-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">settings_input_component</i>
+			  Components
+			  <tcw-open-icon slot="trailing" style="line-height: 0.5;"></tcw-open-icon></tcw-list-item><tcw-list><a href="https://static-forge.netlify.com/components/accordion/"><tcw-list-item slot="header" class="nav_subitem">Accordion</tcw-list-item></a><a href="https://static-forge.netlify.com/components/app-launcher/"><tcw-list-item slot="header" class="nav_subitem">App launcher</tcw-list-item></a><a href="https://static-forge.netlify.com/components/avatar/"><tcw-list-item slot="header" class="nav_subitem">Avatar</tcw-list-item></a><a href="https://static-forge.netlify.com/components/badge/"><tcw-list-item slot="header" class="nav_subitem">Badge - Coming soon</tcw-list-item></a><a href="https://static-forge.netlify.com/components/buttons/"><tcw-list-item slot="header" class="nav_subitem">Buttons</tcw-list-item></a><a href="https://static-forge.netlify.com/components/card/"><tcw-list-item slot="header" class="nav_subitem">Card</tcw-list-item></a><a href="https://static-forge.netlify.com/components/chips/"><tcw-list-item slot="header" class="nav_subitem">Chips</tcw-list-item></a><a href="https://static-forge.netlify.com/components/date-picker/"><tcw-list-item slot="header" class="nav_subitem">Date picker - coming soon</tcw-list-item></a><a href="https://static-forge.netlify.com/components/dialog/"><tcw-list-item slot="header" class="nav_subitem">Dialog</tcw-list-item></a><a href="https://static-forge.netlify.com/components/expansion-panel/"><tcw-list-item slot="header" class="nav_subitem">Expansion panel</tcw-list-item></a><a href="https://static-forge.netlify.com/components/floating-action-button/"><tcw-list-item slot="header" class="nav_subitem">Floating Action Button</tcw-list-item></a><a href="https://static-forge.netlify.com/components/list/"><tcw-list-item slot="header" class="nav_subitem">List</tcw-list-item></a><a href="https://static-forge.netlify.com/components/navigation-drawer/"><tcw-list-item slot="header" class="nav_subitem">Navigation drawer</tcw-list-item></a><a href="https://static-forge.netlify.com/components/omnibar/"><tcw-list-item slot="header" class="nav_subitem">Omnibar</tcw-list-item></a><a href="https://static-forge.netlify.com/components/progress-indicators/"><tcw-list-item slot="header" class="nav_subitem">Progress indicators</tcw-list-item></a><a href="https://static-forge.netlify.com/components/selection-controls/"><tcw-list-item slot="header" class="nav_subitem">Selection controls</tcw-list-item></a><a href="https://static-forge.netlify.com/components/sliders/"><tcw-list-item slot="header" class="nav_subitem">Sliders</tcw-list-item></a><a href="https://static-forge.netlify.com/components/stepper/"><tcw-list-item slot="header" class="nav_subitem">Stepper - coming soon</tcw-list-item></a><a href="https://static-forge.netlify.com/components/table/"><tcw-list-item slot="header" class="nav_subitem">Table</tcw-list-item></a><a href="https://static-forge.netlify.com/components/tabs/"><tcw-list-item slot="header" class="nav_subitem">Tabs</tcw-list-item></a><a href="https://static-forge.netlify.com/components/toast/"><tcw-list-item slot="header" class="nav_subitem">Toast</tcw-list-item></a><a href="https://static-forge.netlify.com/components/toolbar/"><tcw-list-item slot="header" class="nav_subitem">Toolbar - coming soon</tcw-list-item></a><a href="https://static-forge.netlify.com/components/tooltip/"><tcw-list-item slot="header" class="nav_subitem">Tooltip</tcw-list-item></a></tcw-list></tcw-expansion-panel><tcw-expansion-panel id="native mobile-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">phone_iphone</i>
+			  Native mobile
+			  <tcw-open-icon slot="trailing" style="line-height: 0.5;"></tcw-open-icon></tcw-list-item><tcw-list><a href="https://static-forge.netlify.com/native-mobile/basic-requirements/"><tcw-list-item slot="header" class="nav_subitem">Basic requirements</tcw-list-item></a><a href="https://static-forge.netlify.com/native-mobile/frameworks/"><tcw-list-item slot="header" class="nav_subitem">Frameworks</tcw-list-item></a><a href="https://static-forge.netlify.com/native-mobile/design-patterns/"><tcw-list-item slot="header" class="nav_subitem">Design patterns</tcw-list-item></a></tcw-list></tcw-expansion-panel><a href="https://static-forge.netlify.com/feedback-support/" id="feedback & support-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">pan_tool</i>Feedback & support</tcw-list-item></a><a href="https://static-forge.netlify.com/status/" id="status-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">trending_up</i>Status</tcw-list-item></a><a href="https://static-forge.netlify.com/faqs/" id="faqs-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">help</i>FAQs</tcw-list-item></a>    </tcw-list></tcw-drawer></div>
+      <div class="tyl-docs-content" slot="body" style="position: relative;" id="top-of-page">
+        <div id="tyl-docs-content" class="tyl-docs-content__container" style="padding: 16px; max-width: 1264px;">
+        <div class="flex-container" style="display: flex;">
+        <div class="left-content" style="max-width: 956px; width: 100%;">
+          <tcw-card has-padding="false"><div data-elementor-type="wp-page" data-elementor-id="1406" class="elementor elementor-1406" data-elementor-settings="[]">
+			<div class="elementor-inner">
+				<div class="elementor-section-wrap">
+							<section class="elementor-element elementor-element-1d84dfb4 elementor-section-height-min-height elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-items-middle elementor-section elementor-top-section" data-id="1d84dfb4" data-element_type="section" id="overview" data-settings='{"background_background":"classic"}'><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-145ac686 elementor-column elementor-col-50 elementor-top-column" data-id="145ac686" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-4c890b74 elementor-widget elementor-widget-divider" data-id="4c890b74" data-element_type="widget" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-3e41147f elementor-widget elementor-widget-heading" data-id="3e41147f" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-large">Mapping & GIS</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-88484a5 elementor-widget elementor-widget-text-editor" data-id="88484a5" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Designing mapping interfaces are one of the more complex patterns. </p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-306b8bb5 elementor-column elementor-col-50 elementor-top-column" data-id="306b8bb5" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-6976f275 elementor-widget elementor-widget-image" data-id="6976f275" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img src="https://static-forge.netlify.com/wp-content/uploads/2019/07/mapping-spot-hero.svg" title="mapping-spot hero" alt="mapping-spot hero"></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-4e84210a elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="4e84210a" data-element_type="section" id="guidance"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-56c208c6 elementor-column elementor-col-100 elementor-top-column" data-id="56c208c6" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-6ee0c20a elementor-widget elementor-widget-spacer" data-id="6ee0c20a" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-16c64e2f elementor-widget elementor-widget-heading" data-id="16c64e2f" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Guidance</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-747d3e8f elementor-widget elementor-widget-text-editor" data-id="747d3e8f" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>There are several separate features incorporated in map interfaces. We will review some guidance for these here. </p><ul><li>Detail Panel</li><li>Hamburger Menu </li><li>Layer/Legend Panel</li><li>Navigational Tools</li><li>Search Box</li><li>Toolbar</li></ul></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-9fef8b9 elementor-widget elementor-widget-text-editor" data-id="9fef8b9" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>This is an oversimplification, but often there are two different aims when designing map interfaces, depending on the persona and scenario.</p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-737a257 elementor-widget elementor-widget-text-editor" data-id="737a257" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p class="auto-cursor-target"><strong>Back Office: </strong></p><p class="auto-cursor-target">Built for power users and government employees who want to access lots of information and data via the map. Editable and searchable map focused on allowing user to access & manipulate data. Can exist as a standalone product or as an additional “panel” or feature in an existing program.</p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-d1e455c elementor-widget elementor-widget-text-editor" data-id="d1e455c" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p class="auto-cursor-target"><strong>Citizen-Facing: </strong></p><p>Map intended to surface useful and relevant information to citizens and/or others.  Map focused on the presentation of data rather than its manipulation. May be a view-only map interface.</p><p><strong>Note: </strong></p><p>With maps, it’s tempting to include more functionality, to try and meet the needs of many people at once. Be cautious about this: the best map interfaces often start by trying to thoroughly meet the needs of one persona or user base. </p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-3bf7fdd2 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="3bf7fdd2" data-element_type="section" id="guidance"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-5ee2fd98 elementor-column elementor-col-100 elementor-top-column" data-id="5ee2fd98" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-6bfcf27d elementor-widget elementor-widget-spacer" data-id="6bfcf27d" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-1a830e8f elementor-widget elementor-widget-heading" data-id="1a830e8f" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Examples</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-61eb591 elementor-widget elementor-widget-heading" data-id="61eb591" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h6 class="elementor-heading-title elementor-size-default">Asset Registry - EAM</h6>		</div>
+				</div>
+				<div class="elementor-element elementor-element-bf5c9ea elementor-widget elementor-widget-image" data-id="bf5c9ea" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+											<a data-elementor-open-lightbox="yes" href="http://10.81.12.49/wp-content/uploads/2019/04/Screen-Shot-2017-10-03-at-10.00.31-AM.png">
+							<img width="768" height="411" src="https://static-forge.netlify.com/wp-content/uploads/2019/04/Screen-Shot-2017-10-03-at-10.00.31-AM-768x411.png" class="attachment-medium_large size-medium_large" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/04/Screen-Shot-2017-10-03-at-10.00.31-AM-768x411.png 768w,https://static-forge.netlify.com/wp-content/uploads/2019/04/Screen-Shot-2017-10-03-at-10.00.31-AM-300x161.png 300w,https://static-forge.netlify.com/wp-content/uploads/2019/04/Screen-Shot-2017-10-03-at-10.00.31-AM-1024x549.png 1024w" sizes="(max-width: 768px) 100vw, 768px"></a>
+											</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-8e85cb2 elementor-widget elementor-widget-heading" data-id="8e85cb2" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h6 class="elementor-heading-title elementor-size-default">Mobile</h6>		</div>
+				</div>
+				<div class="elementor-element elementor-element-84145ea elementor-widget elementor-widget-image" data-id="84145ea" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+											<a data-elementor-open-lightbox="yes" href="http://10.81.12.49/wp-content/uploads/2019/04/pasted-image-0.png">
+							<img width="300" height="246" src="https://static-forge.netlify.com/wp-content/uploads/2019/04/pasted-image-0-300x246.png" class="attachment-medium size-medium" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/04/pasted-image-0-300x246.png 300w,https://static-forge.netlify.com/wp-content/uploads/2019/04/pasted-image-0-768x630.png 768w,https://static-forge.netlify.com/wp-content/uploads/2019/04/pasted-image-0-1024x839.png 1024w,https://static-forge.netlify.com/wp-content/uploads/2019/04/pasted-image-0.png 1137w" sizes="(max-width: 300px) 100vw, 300px"></a>
+											</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-24d7ff8c elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="24d7ff8c" data-element_type="section" id="guidance"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-2e433c2 elementor-column elementor-col-100 elementor-top-column" data-id="2e433c2" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-45907546 elementor-widget elementor-widget-spacer" data-id="45907546" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-aa702a7 elementor-widget elementor-widget-heading" data-id="aa702a7" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Detail Panel</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-1da2965b elementor-widget elementor-widget-text-editor" data-id="1da2965b" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>The detail panel is a sliding panel on the left-hand side that allows users to gain additional information about the map features they interact with.</p><p>When a user searches on something broad where there are multiple possible search results, the detail panel displays multiple search results, allows user to drill down into individuals or take action on any results. Quickfilters and tabs are optional.</p><p>When a user searches for a single element, or when a user drills down on search results, the detail panel shows additional information and allows users to take action. Also, the detail panel should never overlap the search.  </p><p>The detail panel is overlaid with filter criteria, for mapping applications that include filters. </p><p><em>Note: For maps that exist as a panel (EAM’s Field Work or Asset Registry), and not in a standalone environment (Atlas), it may be appropriate to have selections on the map reflect changes in the program itself, rather than integrating a detail or list panel. This is a topic we are deciding on currently (see “search results and the most appropriate dynamic interactions on dual-panel programs”) </em></p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-5be2010 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="5be2010" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-115807e elementor-column elementor-col-50 elementor-top-column" data-id="115807e" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-0e5a8e8 elementor-widget elementor-widget-image" data-id="0e5a8e8" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+											<a data-elementor-open-lightbox="yes" href="http://10.81.12.49/wp-content/uploads/2019/04/SR_History.png">
+							<img width="300" height="246" src="https://static-forge.netlify.com/wp-content/uploads/2019/04/SR_History-300x246.png" class="attachment-medium size-medium" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/04/SR_History-300x246.png 300w,https://static-forge.netlify.com/wp-content/uploads/2019/04/SR_History-768x630.png 768w,https://static-forge.netlify.com/wp-content/uploads/2019/04/SR_History-1024x839.png 1024w,https://static-forge.netlify.com/wp-content/uploads/2019/04/SR_History.png 1137w" sizes="(max-width: 300px) 100vw, 300px"></a>
+											</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-006fa83 elementor-column elementor-col-50 elementor-top-column" data-id="006fa83" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-1ee67c2 elementor-widget elementor-widget-image" data-id="1ee67c2" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+											<a data-elementor-open-lightbox="yes" href="http://10.81.12.49/wp-content/uploads/2019/04/SR_Asset-1.png">
+							<img width="300" height="246" src="https://static-forge.netlify.com/wp-content/uploads/2019/04/SR_Asset-1-300x246.png" class="attachment-medium size-medium" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/04/SR_Asset-1-300x246.png 300w,https://static-forge.netlify.com/wp-content/uploads/2019/04/SR_Asset-1-768x630.png 768w,https://static-forge.netlify.com/wp-content/uploads/2019/04/SR_Asset-1-1024x839.png 1024w,https://static-forge.netlify.com/wp-content/uploads/2019/04/SR_Asset-1.png 1137w" sizes="(max-width: 300px) 100vw, 300px"></a>
+											</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-5e87f08 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="5e87f08" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-faad857 elementor-column elementor-col-50 elementor-top-column" data-id="faad857" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-cc4c62d elementor-widget elementor-widget-image" data-id="cc4c62d" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+											<a data-elementor-open-lightbox="yes" href="http://10.81.12.49/wp-content/uploads/2019/04/SR_List.png">
+							<img width="300" height="246" src="https://static-forge.netlify.com/wp-content/uploads/2019/04/SR_List-300x246.png" class="attachment-medium size-medium" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/04/SR_List-300x246.png 300w,https://static-forge.netlify.com/wp-content/uploads/2019/04/SR_List-768x630.png 768w,https://static-forge.netlify.com/wp-content/uploads/2019/04/SR_List-1024x839.png 1024w,https://static-forge.netlify.com/wp-content/uploads/2019/04/SR_List.png 1137w" sizes="(max-width: 300px) 100vw, 300px"></a>
+											</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-c15525e elementor-column elementor-col-50 elementor-top-column" data-id="c15525e" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-fbc199e elementor-widget elementor-widget-image" data-id="fbc199e" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+											<a data-elementor-open-lightbox="yes" href="http://10.81.12.49/wp-content/uploads/2019/04/Open-Neighborhood-SocrataCC_Analysis-Split-Out-Trends-vs.-Mapviews-TR.png">
+							<img width="300" height="213" src="https://static-forge.netlify.com/wp-content/uploads/2019/04/Open-Neighborhood-SocrataCC_Analysis-Split-Out-Trends-vs.-Mapviews-TR-300x213.png" class="attachment-medium size-medium" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/04/Open-Neighborhood-SocrataCC_Analysis-Split-Out-Trends-vs.-Mapviews-TR-300x213.png 300w,https://static-forge.netlify.com/wp-content/uploads/2019/04/Open-Neighborhood-SocrataCC_Analysis-Split-Out-Trends-vs.-Mapviews-TR-768x546.png 768w,https://static-forge.netlify.com/wp-content/uploads/2019/04/Open-Neighborhood-SocrataCC_Analysis-Split-Out-Trends-vs.-Mapviews-TR-1024x728.png 1024w,https://static-forge.netlify.com/wp-content/uploads/2019/04/Open-Neighborhood-SocrataCC_Analysis-Split-Out-Trends-vs.-Mapviews-TR.png 1440w" sizes="(max-width: 300px) 100vw, 300px"></a>
+											</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-479ac09a elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="479ac09a" data-element_type="section" id="guidance"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-15ddd050 elementor-column elementor-col-100 elementor-top-column" data-id="15ddd050" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-1eaa0852 elementor-widget elementor-widget-spacer" data-id="1eaa0852" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-1119d7e4 elementor-widget elementor-widget-heading" data-id="1119d7e4" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Menu</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-163faead elementor-widget elementor-widget-text-editor" data-id="163faead" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>The hamburger menu houses global settings and actions for your map interface. The hamburger icon should be on the upper left of the search bar.</p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-0680110 elementor-widget elementor-widget-image" data-id="0680110" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+											<a data-elementor-open-lightbox="yes" href="http://10.81.12.49/wp-content/uploads/2019/04/Hamburger.png">
+							<img width="300" height="246" src="https://static-forge.netlify.com/wp-content/uploads/2019/04/Hamburger-300x246.png" class="attachment-medium size-medium" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/04/Hamburger-300x246.png 300w,https://static-forge.netlify.com/wp-content/uploads/2019/04/Hamburger-768x630.png 768w,https://static-forge.netlify.com/wp-content/uploads/2019/04/Hamburger-1024x839.png 1024w,https://static-forge.netlify.com/wp-content/uploads/2019/04/Hamburger.png 1137w" sizes="(max-width: 300px) 100vw, 300px"></a>
+											</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-53cc47b elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="53cc47b" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-2334d4f elementor-column elementor-col-100 elementor-top-column" data-id="2334d4f" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-6faddc8 elementor-widget elementor-widget-text-editor" data-id="6faddc8" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><h3>Layer / Legend Panel</h3></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-624662c elementor-widget elementor-widget-text-editor" data-id="624662c" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>If you have a complex map with layers, you should combine layers & the legend into one panel.</p>
+<p> </p>
+<p>Any individual features on the map should be links, when clicked they navigate the map to that feature. “Groups” and collections of features should not be links, but instead expand/collapse their child items. </p>
+<p>Checkboxes are the most intuitive method for showing that layers are on and off.</p>
+<p>Sliders can be used on tablet and mobile devices, because of the naturally larger touch target. If you use checkboxes, just increase the touch target size and add the text title to the touch target, so clicking on the title of the layer will also turn it on or off. We also recommend including the title in the touch target for sliders. </p>
+<p> </p>
+<p>See the individual components for checkboxes and toggles for more information. </p>
+<p> </p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-f50bea3 elementor-widget elementor-widget-image" data-id="f50bea3" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+											<a data-elementor-open-lightbox="yes" href="http://10.81.12.49/wp-content/uploads/2019/04/SR_List-Copy.png">
+							<img width="300" height="246" src="https://static-forge.netlify.com/wp-content/uploads/2019/04/SR_List-Copy-300x246.png" class="attachment-medium size-medium" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/04/SR_List-Copy-300x246.png 300w,https://static-forge.netlify.com/wp-content/uploads/2019/04/SR_List-Copy-768x630.png 768w,https://static-forge.netlify.com/wp-content/uploads/2019/04/SR_List-Copy-1024x839.png 1024w,https://static-forge.netlify.com/wp-content/uploads/2019/04/SR_List-Copy.png 1137w" sizes="(max-width: 300px) 100vw, 300px"></a>
+											</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-6031bd1 elementor-widget elementor-widget-spacer" data-id="6031bd1" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-2ffe494d elementor-widget elementor-widget-text-editor" data-id="2ffe494d" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><h3>Navigational Tools</h3>
+<p><span style="font-weight: 400;">Navigational tools are zoom in, zoom out, and current location. They should be reflected on every map interface. On responsive devices, these can be supplemented or replaced by gesture (pinch to zoom etc). They should be located on the bottom right of the map interface. </span></p>
+<p> </p>
+<h4><span style="font-weight: 400;">Functions</span></h4>
+<ul><li style="font-weight: 400;"><span style="font-weight: 400;">Zoom in</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Zoom out</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Optional: Zoom “full”</span></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;">Optional: “Current Location”</span></li>
+</ul><p> </p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-ebb0b53 elementor-widget elementor-widget-image" data-id="ebb0b53" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="112" height="230" src="https://static-forge.netlify.com/wp-content/uploads/2019/04/Screen-Shot-2019-04-17-at-8.23.49-AM.png" class="attachment-large size-large" alt=""></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-5b3f234 elementor-widget elementor-widget-spacer" data-id="5b3f234" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-b172867 elementor-widget elementor-widget-text-editor" data-id="b172867" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><h3>Search Bar</h3>
+<p>User research showed confusion amongst users regarding whether to use the omnibar to search the map. When we eliminated the omnibar and used an on-map search bar, this tested far better. <strong>Our recommendation is to turn off the “Search” in the omnibar, and include a search box on the upper left-hand corner of screen. *</strong></p>
+<p>The left-hand side of the search bar includes the hamburger menu if applicable. The search bar also has a search icon to the right.</p>
+<p> </p>
+<p>*Some of the mockups shown here are older: so ignore the use of both the omni search and the search bar.</p>
+<p> </p>
+<p><em>Future versions may also offer an “Advanced search” or additional querying mechanism here. See “upcoming decisions”</em></p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-d0518d9 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="d0518d9" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-9264276 elementor-column elementor-col-50 elementor-top-column" data-id="9264276" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-318c20e elementor-widget elementor-widget-image" data-id="318c20e" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="792" height="288" src="https://static-forge.netlify.com/wp-content/uploads/2019/04/Screen-Shot-2019-04-17-at-8.38.21-AM.png" class="attachment-large size-large" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/04/Screen-Shot-2019-04-17-at-8.38.21-AM.png 792w,https://static-forge.netlify.com/wp-content/uploads/2019/04/Screen-Shot-2019-04-17-at-8.38.21-AM-300x109.png 300w,https://static-forge.netlify.com/wp-content/uploads/2019/04/Screen-Shot-2019-04-17-at-8.38.21-AM-768x279.png 768w" sizes="(max-width: 792px) 100vw, 792px"></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-368f3f2 elementor-column elementor-col-50 elementor-top-column" data-id="368f3f2" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-db3369b elementor-widget elementor-widget-image" data-id="db3369b" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="191" height="300" src="https://static-forge.netlify.com/wp-content/uploads/2019/04/Screen-Shot-2019-04-17-at-8.37.48-AM-191x300.png" class="attachment-medium size-medium" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/04/Screen-Shot-2019-04-17-at-8.37.48-AM-191x300.png 191w,https://static-forge.netlify.com/wp-content/uploads/2019/04/Screen-Shot-2019-04-17-at-8.37.48-AM-768x1208.png 768w,https://static-forge.netlify.com/wp-content/uploads/2019/04/Screen-Shot-2019-04-17-at-8.37.48-AM-651x1024.png 651w,https://static-forge.netlify.com/wp-content/uploads/2019/04/Screen-Shot-2019-04-17-at-8.37.48-AM.png 870w" sizes="(max-width: 191px) 100vw, 191px"></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-3ea99ce elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="3ea99ce" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-187ef2d elementor-column elementor-col-100 elementor-top-column" data-id="187ef2d" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-963e574 elementor-widget elementor-widget-spacer" data-id="963e574" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-5c694b0 elementor-widget elementor-widget-text-editor" data-id="5c694b0" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><h3>Toolbar Guidelines:</h3><div><h3 style="margin-top: 10px; color: #172b4d; font-size: 16px; font-weight: bold; line-height: 1.5; letter-spacing: -0.006em; font-family: -apple-system, system-ui, 'Segoe UI', Roboto, Oxygen, Ubuntu, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif; background-color: #ffffff;">Functionality</h3><ul style="margin: 10px 0px 0px; color: #172b4d; font-family: -apple-system, system-ui, 'Segoe UI', Roboto, Oxygen, Ubuntu, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif; font-size: 14px; letter-spacing: normal; background-color: #ffffff;"><li style="list-style-type: circle;"><span style="margin-left: 0px;">We are in the process of deciding on a “Central Suite” of tools that will exist in all Tyler “Back-Office Map UI’s.”</span></li></ul><h3 style="margin-top: 30px; color: #172b4d; font-size: 16px; font-weight: bold; line-height: 1.5; letter-spacing: -0.006em; font-family: -apple-system, system-ui, 'Segoe UI', Roboto, Oxygen, Ubuntu, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif; background-color: #ffffff;">Design</h3><ul style="margin: 10px 0px 0px; color: #172b4d; font-family: -apple-system, system-ui, 'Segoe UI', Roboto, Oxygen, Ubuntu, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif; font-size: 14px; letter-spacing: normal; background-color: #ffffff;"><li><span style="margin-left: 0px;">Follow the styling for “Cards” in Material UI. Mimic same style as the <a style="color: #0052cc;" href="https://confl.tylertech.com/display/TGS/Navigation+Tools">Navigation Tools</a>.</span></li><li><span style="margin-left: 0px;">See<a style="color: #0052cc;" href="https://confl.tylertech.com/pages/viewpage.action?pageId=6292358" target="_blank" rel="nofollow noopener"> icons and text documentation</a> for more discussion on the use of both in the toolbar. </span></li></ul></div></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-2c0a064 elementor-widget elementor-widget-image" data-id="2c0a064" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="53" height="300" src="https://static-forge.netlify.com/wp-content/uploads/2019/04/Toolbar-53x300.png" class="attachment-medium size-medium" alt=""></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-49acf4f7 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="49acf4f7" data-element_type="section" id="guidance"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-820f782 elementor-column elementor-col-100 elementor-top-column" data-id="820f782" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-890aef3 elementor-widget elementor-widget-spacer" data-id="890aef3" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-59eff359 elementor-widget elementor-widget-heading" data-id="59eff359" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Products with maps</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-60f250a elementor-widget elementor-widget-spacer" data-id="60f250a" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-bccb869 eael-table-align-center eael-dt-th-align-left eael-dt-td-align-left elementor-widget elementor-widget-eael-data-table" data-id="bccb869" data-element_type="widget" data-widget_type="eael-data-table.default">
+				<div class="elementor-widget-container">
+					<div class="eael-data-table-wrap" data-table_id="bccb869" data-custom_responsive="false">
+			<table class="tablesorter eael-data-table center" id="eael-data-table-bccb869"><thead><tr class="table-header"><th class="" id="" colspan="">
+														<span class="data-table-header-text">Team</span></th>
+			        				            <th class="" id="" colspan="">
+														<span class="data-table-header-text">Contact</span></th>
+			        				            <th class="" id="" colspan="">
+														<span class="data-table-header-text">Type of map</span></th>
+			        				        </tr></thead><tbody><tr><td colspan="" rowspan="" class="" id="">
+												<div class="td-content-wrapper"><div class="td-content">EAM</div></div>
+											</td>
+																																									<td colspan="" rowspan="" class="" id="">
+												<div class="td-content-wrapper"><div class="td-content">Cris Thompson (strategy) / Travis Sparks (dev)</div></div>
+											</td>
+																																									<td colspan="" rowspan="" class="" id="">
+												<div class="td-content-wrapper"><div class="td-content">Back-office
+Embedded in applications</div></div>
+											</td>
+																										</tr><tr><td colspan="" rowspan="" class="" id="">
+												<div class="td-content-wrapper"><div class="td-content">Munis UB
+</div></div>
+											</td>
+																																									<td colspan="" rowspan="" class="" id="">
+												<div class="td-content-wrapper"><div class="td-content">Gregg Zimmerman / Cris Thompson
+</div></div>
+											</td>
+																																									<td colspan="" rowspan="" class="" id="">
+												<div class="td-content-wrapper"><div class="td-content">Back office</div></div>
+											</td>
+																										</tr><tr><td colspan="" rowspan="" class="" id="">
+												<div class="td-content-wrapper"><div class="td-content">Socrata</div></div>
+											</td>
+																																									<td colspan="" rowspan="" class="" id="">
+												<div class="td-content-wrapper"><div class="td-content">Mathias Burton</div></div>
+											</td>
+																										</tr><tr><td colspan="" rowspan="" class="" id="">
+												<div class="td-content-wrapper"><div class="td-content">TIM</div></div>
+											</td>
+																																									<td colspan="" rowspan="" class="" id="">
+												<div class="td-content-wrapper"><div class="td-content">Emily Roller</div></div>
+											</td>
+																																									<td colspan="" rowspan="" class="" id="">
+												<div class="td-content-wrapper"><div class="td-content"></div></div>
+											</td>
+																										</tr><tr><td colspan="" rowspan="" class="" id="">
+												<div class="td-content-wrapper"><div class="td-content">Energov</div></div>
+											</td>
+																																									<td colspan="" rowspan="" class="" id="">
+												<div class="td-content-wrapper"><div class="td-content">Chris Therrian</div></div>
+											</td>
+																																									<td colspan="" rowspan="" class="" id="">
+												<div class="td-content-wrapper"><div class="td-content">Back office</div></div>
+											</td>
+																										</tr><tr><td colspan="" rowspan="" class="" id="">
+												<div class="td-content-wrapper"><div class="td-content">Atlas (Depreciated)</div></div>
+											</td>
+																																									<td colspan="" rowspan="" class="" id="">
+												<div class="td-content-wrapper"><div class="td-content">Vijay V</div></div>
+											</td>
+																																									<td colspan="" rowspan="" class="" id="">
+												<div class="td-content-wrapper"><div class="td-content">Citizen facing</div></div>
+											</td>
+																										</tr><tr><td colspan="" rowspan="" class="" id="">
+												<div class="td-content-wrapper"><div class="td-content">New World (MSP LERMS, others)</div></div>
+											</td>
+																																									<td colspan="" rowspan="" class="" id="">
+												<div class="td-content-wrapper"><div class="td-content">Amanda Stierman, DJ Pennala</div></div>
+											</td>
+																																									<td colspan="" rowspan="" class="" id="">
+												<div class="td-content-wrapper"><div class="td-content">Back office</div></div>
+											</td>
+																										</tr><tr><td colspan="" rowspan="" class="" id="">
+												<div class="td-content-wrapper"><div class="td-content">Executime</div></div>
+											</td>
+																																									<td colspan="" rowspan="" class="" id="">
+												<div class="td-content-wrapper"><div class="td-content">Peter Krausche</div></div>
+											</td>
+																																									<td colspan="" rowspan="" class="" id="">
+												<div class="td-content-wrapper"><div class="td-content">Back office</div></div>
+											</td>
+																										</tr><tr><td colspan="" rowspan="" class="" id="">
+												<div class="td-content-wrapper"><div class="td-content">iasWorld</div></div>
+											</td>
+																																									<td colspan="" rowspan="" class="" id="">
+												<div class="td-content-wrapper"><div class="td-content">Natalie Hoel / Einat Parran</div></div>
+											</td>
+																																									<td colspan="" rowspan="" class="" id="">
+												<div class="td-content-wrapper"><div class="td-content"> </div></div>
+											</td>
+																										</tr><tr><td colspan="" rowspan="" class="" id="">
+												<div class="td-content-wrapper"><div class="td-content"> Versatrans / Traversa</div></div>
+											</td>
+																																									<td colspan="" rowspan="" class="" id="">
+												<div class="td-content-wrapper"><div class="td-content">Kosta Bidoshi, Chandra Swaminathan</div></div>
+											</td>
+																																									<td colspan="" rowspan="" class="" id="">
+												<div class="td-content-wrapper"><div class="td-content"> </div></div>
+											</td>
+																										</tr><tr><td colspan="" rowspan="" class="" id="">
+												<div class="td-content-wrapper"><div class="td-content"> Hub</div></div>
+											</td>
+																																									<td colspan="" rowspan="" class="" id="">
+												<div class="td-content-wrapper"><div class="td-content">Joni Tompson</div></div>
+											</td>
+																																									<td colspan="" rowspan="" class="" id="">
+												<div class="td-content-wrapper"><div class="td-content"> </div></div>
+											</td>
+																										</tr></tbody></table></div>
+	  			</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section></div>
+			</div>
+		</div>
+		 
+                        </tcw-card><div class="tyl-typography--caption" style="margin-bottom: 8px;">Last modified on September 17, 2019 by: Nick Andrews</div>
+          </div>
+
+            <div class="right-content" id="toc-right-container" style="position: relative; width: 300px;"> 
+                                <div><div class="textwidget custom-html-widget"><div class="toc" style="position: fixed;">
+                    <div class="toc-container">
+                      <div class="left-line" id="toc-left-line"></div>
+                      <div class="toc-items-container" id="toc-items">
+                        <h6 style="margin-top: 0px; margin-bottom: 16px;">Table of contents</h6>
+                      </div>
+                    </div>
+                  </div>
+
+<div id="back-to-top-button" class="tyl-back-to-top">
+            <tcw-fab extended="true"><button aria-label="Extended FAB with just text" onclick="scrollTo()">
+                <i class="material-icons" aria-hidden="true">arrow_upward</i>
+                <span>Back to top</span>
+              </button>
+            </tcw-fab></div></div></div>                            </div>
+
+        </div>
+       </div>
+      </div>
+    </tcw-scaffold><script type="text/javascript" src="scripts/custom-elements-es5-adapter.js"></script><script type="text/javascript" src="scripts/webcomponents-bundle.js"></script><script type="text/javascript" src="scripts/tyler-components-web-lib.min.js"></script><script type="text/javascript" src="scripts/tyler-components-web-forge-lib.min.js"></script><script>
+  window.addEventListener('WebComponentsReady', function() {
+    window.TylerComponentsWeb.lib.defineComponents();
+    window.TylerComponentsWeb.Forge.lib.defineComponents();
+  });
+</script><script type="text/javascript" src="scripts/menu-expander.js"></script><script type="text/javascript" src="scripts/drawer.js"></script><script type="text/javascript" src="scripts/navHeader.js"></script><script type="text/javascript" src="scripts/search.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-136930168-1"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-136930168-1');
+</script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/material-design-for-contact-form-7/assets/js/lib/autosize.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/material-design-for-contact-form-7/assets/js/cf7-material-design-bundle.js"></script><script type="text/javascript">
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"https:\/\/static-forge.netlify.com\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"}};
+/* ]]> */
+</script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/contact-form-7/includes/js/scripts.js"></script><script type="text/javascript">
+/* <![CDATA[ */
+var localize = {"ajaxurl":"https:\/\/static-forge.netlify.com\/wp-admin\/admin-ajax.php","nonce":"03b8479eee"};
+/* ]]> */
+</script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/uploads/essential-addons-elementor/eael-post-1406.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/js/frontend-modules.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor-pro/assets/lib/sticky/jquery.sticky.min.js"></script><script type="text/javascript">
+var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/static-forge.netlify.com\/wp-admin\/admin-ajax.php","nonce":"a52c73ecd1","shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"google":{"title":"Google+","has_counter":true},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"delicious":{"title":"Delicious"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"}},"facebook_sdk":{"lang":"en_US","app_id":""}};
+</script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor-pro/assets/js/frontend.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-includes/js/jquery/ui/position.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/swiper/swiper.min.js"></script><script type="text/javascript">
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"version":"2.8.3","urls":{"assets":"https:\/\/static-forge.netlify.com\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"general":{"elementor_global_image_lightbox":"yes"},"editorPreferences":[]},"post":{"id":1406,"title":"Mapping & GIS","excerpt":""}};
+</script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/js/frontend.min.js"></script><script type="text/javascript" src="scripts/table-of-contents.js?x-version=1"></script></body></html>

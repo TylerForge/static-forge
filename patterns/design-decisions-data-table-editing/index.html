@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en-US"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="shortcut icon" href="favicon.ico" sizes="16x16" type="image/x-icon"><title>Design decisions: Data table editing – Tyler Forge</title><link rel="dns-prefetch" href="//fonts.googleapis.com"><link rel="dns-prefetch" href="//s.w.org"><link rel="stylesheet" id="cf7md_roboto-css" href="//fonts.googleapis.com/css?family=Roboto:400,500" type="text/css" media="all"><link rel="stylesheet" id="cf7-material-design-css" href="https://static-forge.netlify.com/wp-content/plugins/material-design-for-contact-form-7/assets/css/cf7-material-design.css" type="text/css" media="all"><link rel="stylesheet" id="contact-form-7-css" href="https://static-forge.netlify.com/wp-content/plugins/contact-form-7/includes/css/styles.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-icons-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-animations-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/animations/animations.min.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-frontend-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/css/frontend.min.css" type="text/css" media="all"><link rel="stylesheet" id="lae-animate-styles-css" href="https://static-forge.netlify.com/wp-content/plugins/addons-for-elementor/assets/css/animate.css" type="text/css" media="all"><link rel="stylesheet" id="lae-sliders-styles-css" href="https://static-forge.netlify.com/wp-content/plugins/addons-for-elementor/assets/css/sliders.css" type="text/css" media="all"><link rel="stylesheet" id="lae-icomoon-styles-css" href="https://static-forge.netlify.com/wp-content/plugins/addons-for-elementor/assets/css/icomoon.css" type="text/css" media="all"><link rel="stylesheet" id="lae-frontend-styles-css" href="https://static-forge.netlify.com/wp-content/plugins/addons-for-elementor/assets/css/lae-frontend.css" type="text/css" media="all"><link rel="stylesheet" id="lae-widgets-styles-css" href="https://static-forge.netlify.com/wp-content/plugins/addons-for-elementor/assets/css/lae-widgets.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-pro-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor-pro/assets/css/frontend.min.css" type="text/css" media="all"><link rel="stylesheet" id="font-awesome-5-all-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/all.min.css" type="text/css" media="all"><link rel="stylesheet" id="font-awesome-4-shim-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/v4-shims.min.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-global-css" href="https://static-forge.netlify.com/wp-content/uploads/elementor/css/global.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-post-4616-css" href="https://static-forge.netlify.com/wp-content/uploads/elementor/css/post-4616.css" type="text/css" media="all"><link rel="stylesheet" id="custom-frontend-style-css" href="https://static-forge.netlify.com/wp-content/plugins/ideapush/inc/css/frontendstyle.css" type="text/css" media="all"><style id="custom-frontend-style-inline-css" type="text/css">
+.ideapush-idea-filter{display: none;}
+</style><script type="text/javascript" src="https://static-forge.netlify.com/wp-includes/js/jquery/jquery.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-includes/js/jquery/jquery-migrate.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min.js"></script><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NB3CZPX');</script><script type="text/javascript">
+            (function () {
+                window.lae_fs = {can_use_premium_code: false};
+            })();
+        </script><style type="text/css" id="wp-custom-css">
+			.hljs {
+	background: none;
+}		</style><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono"><link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700"><link href="https://cdn.forge.tylertech.com/v1/libs/tcw/latest/tcw-material-design.css" rel="stylesheet"><link rel="stylesheet" href="styles/tyler-forge.css"><link rel="stylesheet" href="styles/hljs-theme.css"><link rel="stylesheet" href="styles/component.css"></head><body class="tyl-typography">
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NB3CZPX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+
+
+    <tcw-scaffold class="tyl-docs"><tcw-omnibar id="tyl-forge-omnibar" title-text="Tyler Forge" slot="header"><div slot="logo" style="width: 24px; height: 20px; margin-left: 8px;">
+    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 480.5 423.03"><title>forge-icon-only</title><g id="logo"><path d="M463.68,39H283.49A26,26,0,0,0,261,52l-39.38,68.2a26,26,0,0,0,22.55,39.05H424.3a26,26,0,0,0,22.55-13L486.22,78A26,26,0,0,0,463.68,39Z" transform="translate(-9.25 -38.98)" fill="#fff"></path><path d="M377,189.18H196.77a26,26,0,0,0-22.54,13l-37.37,64.72a26,26,0,0,0,0,26L227,449A26,26,0,0,0,272,449L399.51,228.23A26,26,0,0,0,377,189.18Z" transform="translate(-9.25 -38.98)" fill="#fff"></path><path d="M211.35,78A26,26,0,0,0,188.81,39H35.32A26,26,0,0,0,12.78,78L77,189.18,89.52,211a26,26,0,0,0,45.09,0Z" transform="translate(-9.25 -38.98)" fill="#fff"></path></g></svg></div>
+  <tcw-omnibar-search slot="center"><input type="text" placeholder="Search..."></tcw-omnibar-search><tcw-omnibar-menu-button slot="menu" id="tyl-forge-omnibar-menu"></tcw-omnibar-menu-button><div slot="action" style="display: flex; justify-content: space-around;">
+    <ul class="header-nav"><li class="header__nav-item" id="design-nav-indicator">
+        <a href="/getting-started-with-forge/" class="header__nav-link">
+          Design <span class="header__nav-indicator" id="design-link-indicator"></span>
+        </a>
+      </li>
+      <li class="header__nav-item" id="development-nav-indicator">
+        <a href="/development/" class="header__nav-link">
+          Development <span class="header__nav-indicator" id="development-link-indicator"></span>
+        </a>
+      </li>
+      <li class="header__nav-item" id="development-nav-indicator">
+        <a href="/give-feedback/" class="header__nav-link">
+          Feedback <span class="header__nav-indicator" id="feedback-link-indicator"></span>
+        </a>
+      </li>
+    </ul></div>
+</tcw-omnibar><div slot="body-left">
+  <tcw-drawer id="tyl-forge-sidenav" type="dismissible" open="true" style="--tyl-drawer-width: 320px;"><tcw-list class="nav navbar-nav"><a href="https://static-forge.netlify.com/" id="home-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">home</i>Home</tcw-list-item></a><tcw-expansion-panel id="get started-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">forward</i>
+			  Get started
+			  <tcw-open-icon slot="trailing" style="line-height: 0.5;"></tcw-open-icon></tcw-list-item><tcw-list><a href="https://static-forge.netlify.com/getting-started-as-a-designer/"><tcw-list-item slot="header" class="nav_subitem">As a designer</tcw-list-item></a><a href="https://static-forge.netlify.com/design-to-dev-handoff/"><tcw-list-item slot="header" class="nav_subitem">Design to Dev Handoff</tcw-list-item></a></tcw-list></tcw-expansion-panel><tcw-expansion-panel id="foundation-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">border_outer</i>
+			  Foundation
+			  <tcw-open-icon slot="trailing" style="line-height: 0.5;"></tcw-open-icon></tcw-list-item><tcw-list><a href="https://static-forge.netlify.com/foundation/overview/"><tcw-list-item slot="header" class="nav_subitem">Overview</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/intro-to-accessibility/"><tcw-list-item slot="header" class="nav_subitem">Accessibility</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/tyler-branding/"><tcw-list-item slot="header" class="nav_subitem">Branding</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/color/"><tcw-list-item slot="header" class="nav_subitem">Color</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/data-formats/"><tcw-list-item slot="header" class="nav_subitem">Data formats</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/tyler-icons-full/"><tcw-list-item slot="header" class="nav_subitem">Iconography</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/illustrations-usage/"><tcw-list-item slot="header" class="nav_subitem">Illustration: Usage</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/illustration-library/"><tcw-list-item slot="header" class="nav_subitem">Illustration: Library</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/theming/"><tcw-list-item slot="header" class="nav_subitem">Theming</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/layout-intro/"><tcw-list-item slot="header" class="nav_subitem">Layout: Intro</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/layout-grid/"><tcw-list-item slot="header" class="nav_subitem">Layout: Grid</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/layout-spacing/"><tcw-list-item slot="header" class="nav_subitem">Layout: Spacing</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/layout-page-layouts/"><tcw-list-item slot="header" class="nav_subitem">Layout: Page layouts</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/typography/"><tcw-list-item slot="header" class="nav_subitem">Typography</tcw-list-item></a><a href="https://static-forge.netlify.com/product-analytics/"><tcw-list-item slot="header" class="nav_subitem">Product analytics - coming soon</tcw-list-item></a></tcw-list></tcw-expansion-panel><tcw-expansion-panel id="patterns-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">ac_unit</i>
+			  Patterns
+			  <tcw-open-icon slot="trailing" style="line-height: 0.5;"></tcw-open-icon></tcw-list-item><tcw-list><a href="https://static-forge.netlify.com/patterns/data-visualization/"><tcw-list-item slot="header" class="nav_subitem">Data visualization: Intro</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/data-visualization-2/"><tcw-list-item slot="header" class="nav_subitem">Data visualization: Charts</tcw-list-item></a><a href="https://static-forge.netlify.com/colors-data-visualization/"><tcw-list-item slot="header" class="nav_subitem">Data visualization: Colors</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/drag-and-drop/"><tcw-list-item slot="header" class="nav_subitem">Drag and drop</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/empty-state/"><tcw-list-item slot="header" class="nav_subitem">Empty state</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/errors/"><tcw-list-item slot="header" class="nav_subitem">Errors</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/faceted-search/"><tcw-list-item slot="header" class="nav_subitem">Faceted filtering</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/forms/"><tcw-list-item slot="header" class="nav_subitem">Forms</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/login/"><tcw-list-item slot="header" class="nav_subitem">Login</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/mapping-gis/"><tcw-list-item slot="header" class="nav_subitem">Mapping & GIS</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/navigation/"><tcw-list-item slot="header" class="nav_subitem">Navigation</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/onboarding/"><tcw-list-item slot="header" class="nav_subitem">Onboarding - in progress</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/profile/"><tcw-list-item slot="header" class="nav_subitem">Profile - in progress</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/progress-loading/"><tcw-list-item slot="header" class="nav_subitem">Progress & loading</tcw-list-item></a></tcw-list></tcw-expansion-panel><tcw-expansion-panel id="components-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">settings_input_component</i>
+			  Components
+			  <tcw-open-icon slot="trailing" style="line-height: 0.5;"></tcw-open-icon></tcw-list-item><tcw-list><a href="https://static-forge.netlify.com/components/accordion/"><tcw-list-item slot="header" class="nav_subitem">Accordion</tcw-list-item></a><a href="https://static-forge.netlify.com/components/app-launcher/"><tcw-list-item slot="header" class="nav_subitem">App launcher</tcw-list-item></a><a href="https://static-forge.netlify.com/components/avatar/"><tcw-list-item slot="header" class="nav_subitem">Avatar</tcw-list-item></a><a href="https://static-forge.netlify.com/components/badge/"><tcw-list-item slot="header" class="nav_subitem">Badge - Coming soon</tcw-list-item></a><a href="https://static-forge.netlify.com/components/buttons/"><tcw-list-item slot="header" class="nav_subitem">Buttons</tcw-list-item></a><a href="https://static-forge.netlify.com/components/card/"><tcw-list-item slot="header" class="nav_subitem">Card</tcw-list-item></a><a href="https://static-forge.netlify.com/components/chips/"><tcw-list-item slot="header" class="nav_subitem">Chips</tcw-list-item></a><a href="https://static-forge.netlify.com/components/date-picker/"><tcw-list-item slot="header" class="nav_subitem">Date picker - coming soon</tcw-list-item></a><a href="https://static-forge.netlify.com/components/dialog/"><tcw-list-item slot="header" class="nav_subitem">Dialog</tcw-list-item></a><a href="https://static-forge.netlify.com/components/expansion-panel/"><tcw-list-item slot="header" class="nav_subitem">Expansion panel</tcw-list-item></a><a href="https://static-forge.netlify.com/components/floating-action-button/"><tcw-list-item slot="header" class="nav_subitem">Floating Action Button</tcw-list-item></a><a href="https://static-forge.netlify.com/components/list/"><tcw-list-item slot="header" class="nav_subitem">List</tcw-list-item></a><a href="https://static-forge.netlify.com/components/navigation-drawer/"><tcw-list-item slot="header" class="nav_subitem">Navigation drawer</tcw-list-item></a><a href="https://static-forge.netlify.com/components/omnibar/"><tcw-list-item slot="header" class="nav_subitem">Omnibar</tcw-list-item></a><a href="https://static-forge.netlify.com/components/progress-indicators/"><tcw-list-item slot="header" class="nav_subitem">Progress indicators</tcw-list-item></a><a href="https://static-forge.netlify.com/components/selection-controls/"><tcw-list-item slot="header" class="nav_subitem">Selection controls</tcw-list-item></a><a href="https://static-forge.netlify.com/components/sliders/"><tcw-list-item slot="header" class="nav_subitem">Sliders</tcw-list-item></a><a href="https://static-forge.netlify.com/components/stepper/"><tcw-list-item slot="header" class="nav_subitem">Stepper - coming soon</tcw-list-item></a><a href="https://static-forge.netlify.com/components/table/"><tcw-list-item slot="header" class="nav_subitem">Table</tcw-list-item></a><a href="https://static-forge.netlify.com/components/tabs/"><tcw-list-item slot="header" class="nav_subitem">Tabs</tcw-list-item></a><a href="https://static-forge.netlify.com/components/toast/"><tcw-list-item slot="header" class="nav_subitem">Toast</tcw-list-item></a><a href="https://static-forge.netlify.com/components/toolbar/"><tcw-list-item slot="header" class="nav_subitem">Toolbar - coming soon</tcw-list-item></a><a href="https://static-forge.netlify.com/components/tooltip/"><tcw-list-item slot="header" class="nav_subitem">Tooltip</tcw-list-item></a></tcw-list></tcw-expansion-panel><tcw-expansion-panel id="native mobile-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">phone_iphone</i>
+			  Native mobile
+			  <tcw-open-icon slot="trailing" style="line-height: 0.5;"></tcw-open-icon></tcw-list-item><tcw-list><a href="https://static-forge.netlify.com/native-mobile/basic-requirements/"><tcw-list-item slot="header" class="nav_subitem">Basic requirements</tcw-list-item></a><a href="https://static-forge.netlify.com/native-mobile/frameworks/"><tcw-list-item slot="header" class="nav_subitem">Frameworks</tcw-list-item></a><a href="https://static-forge.netlify.com/native-mobile/design-patterns/"><tcw-list-item slot="header" class="nav_subitem">Design patterns</tcw-list-item></a></tcw-list></tcw-expansion-panel><a href="https://static-forge.netlify.com/feedback-support/" id="feedback & support-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">pan_tool</i>Feedback & support</tcw-list-item></a><a href="https://static-forge.netlify.com/status/" id="status-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">trending_up</i>Status</tcw-list-item></a><a href="https://static-forge.netlify.com/faqs/" id="faqs-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">help</i>FAQs</tcw-list-item></a>    </tcw-list></tcw-drawer></div>
+      <div class="tyl-docs-content" slot="body" style="position: relative;" id="top-of-page">
+        <div id="tyl-docs-content" class="tyl-docs-content__container" style="padding: 16px; max-width: 1264px;">
+        <div class="flex-container" style="display: flex;">
+        <div class="left-content" style="max-width: 956px; width: 100%;">
+          <tcw-card has-padding="false"><div data-elementor-type="wp-page" data-elementor-id="4616" class="elementor elementor-4616" data-elementor-settings="[]">
+			<div class="elementor-inner">
+				<div class="elementor-section-wrap">
+							<section class="elementor-element elementor-element-47e5db06 elementor-section-height-min-height elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-items-middle elementor-section elementor-top-section" data-id="47e5db06" data-element_type="section" id="overview" data-settings='{"background_background":"classic"}'><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-5a4e54c7 elementor-column elementor-col-100 elementor-top-column" data-id="5a4e54c7" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-1ec0299c elementor-widget elementor-widget-divider" data-id="1ec0299c" data-element_type="widget" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-53950b3e elementor-widget elementor-widget-heading" data-id="53950b3e" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Design decisions: Data table editing</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-17fca69f elementor-widget elementor-widget-text-editor" data-id="17fca69f" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Data tables will use a custom editing component in order to facilitate keyboard first, heavy data entry.</p><p><strong>Status</strong>:<br>Design: In progress      Web component: In progress</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-6dd6679b elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="6dd6679b" data-element_type="section" id="guidance"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-59465632 elementor-column elementor-col-100 elementor-top-column" data-id="59465632" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-57f54554 elementor-widget elementor-widget-spacer" data-id="57f54554" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-4c399e78 elementor-widget elementor-widget-heading" data-id="4c399e78" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Initial business requirements</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-7ccc3e9c elementor-widget elementor-widget-text-editor" data-id="7ccc3e9c" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><span style="color: var(--mdc-theme-text-primary-on-background,rgba(0,0,0,0.87)); letter-spacing: 0.05px;">Users can:</span></p><ul><li>Edit a single cell </li><li>Add, edit, delete a single table row </li><li>Edit a full data table </li></ul><div>Considerations for a better table experience. </div><div><ul><li>Provide error forgiveness (cancel / undo at the cell or row level )</li><li>Facilitate bulk editing</li><li>Support keyboard first (tab) interactions</li><li>Provide visual affordances that row or values within row are editable</li><li>Allow for long entry / overflow </li><li>Provide for single cell / full row error state</li><li>Display text overflow on hover or click, as needed</li></ul></div><div id="Signature"><div><div><div class="x_PlainText"> </div></div></div></div></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-002a89b elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="002a89b" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-9304636 elementor-column elementor-col-100 elementor-top-column" data-id="9304636" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-2cd1ff7 elementor-widget elementor-widget-spacer" data-id="2cd1ff7" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-77f7fd9 elementor-widget elementor-widget-heading" data-id="77f7fd9" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Reasons to diverge from Material guidance</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-2258eaf elementor-widget elementor-widget-text-editor" data-id="2258eaf" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><a href="https://material.io/design/components/data-%20tables.html#behavior">Material’s guidance </a></p><p>Material design recommends a small or large edit dialog for users to modify or add table information.</p><p>While this pattern provides focus to infrequent edits within a table, it becomes distracting and cumbersome from heavy data entry; obscuring other cell values and providing unnecessary animation. </p><p>Instead we’re proposing inline editing that uses the dense TCW bordered inputs against an active state within the table row. The pattern is intended to create a seamless editing experience to facilitate a state of flow when updating potentially large amounts of information. An editing state will be triggered explicitly by users at row or table level. Edit mode will facilitate both mouse and tab interactions. </p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-1b9f920 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="1b9f920" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-64b0d0d elementor-column elementor-col-100 elementor-top-column" data-id="64b0d0d" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-590e524 elementor-widget elementor-widget-spacer" data-id="590e524" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-fafccd8 elementor-widget elementor-widget-heading" data-id="fafccd8" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Pending research items</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-bf93a83 elementor-widget elementor-widget-text-editor" data-id="bf93a83" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><ol><li>Meet with larger stakeholder group to review tables</li><li>UX research<ol><li>Personas: Power user and infrequent user</li><li>Single row edit: Hide action icons or disable? Which is both less distracting and prevents more errors? Does hiding action icons actually draw attention away from single row edit?</li><li>Full table edit: Is this functionality needed? Would single line editing patterns be enough?</li><li>Adding a new record: Should new record be added to top or bottom? How should appropriate resorting be handled?</li><li> Keyboard interactions. What should be standard? What are users used to / currently using for keyboard interactions for tables?<ol><li>ie, enter to save or enter for a new row?</li></ol></li><li> </li></ol></li></ol></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-2fb2161 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="2fb2161" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-20d723a elementor-column elementor-col-100 elementor-top-column" data-id="20d723a" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-d82e6fa elementor-widget elementor-widget-spacer" data-id="d82e6fa" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-3e82258 elementor-widget elementor-widget-heading" data-id="3e82258" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Initial design plan</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-4ecbab5 elementor-widget elementor-widget-text-editor" data-id="4ecbab5" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix">5/14/2019 (Nick, Kieran, Emily)
+<div>
+
+<strong>Supported editing states:</strong>
+<ul><li>Single cell (uses pencil icon to enable editing in a cell; within editing state, displays save / cancel within cell)</li>
+ 	<li>Row (uses pencil icon to enable editing in a row; within editing state, displays save / cancel at end of row)</li>
+ 	<li>Full table (trigger edit from table header; within edit state, bulk action header can be used to hold save / cancel; teams can decide whether to support automatic or explicit saving)</li>
+ 	<li>Dialog or sidesheet editing (use for more information than displayed in the cell)</li>
+</ul><div><span style="color: #000000; font-family: Calibri,Arial,Helvetica,sans-serif;"> </span></div>
+<strong>Editing affordances</strong>
+<ul><li>Explicit edit (pencil) EITHER on hover or persistent
+<ul><li>at cell, row, table level</li>
+</ul></li>
+</ul><strong>Style</strong>
+<ul><li>On edit, use filter inputs and apply row background color (active state; indigo @ 10%)</li>
+ 	<li>Row inputs support text, dropdowns, datepicker, switches, icons</li>
+ 	<li>Display save / cancel (at cell level or row level)
+<ul><li>at whatever level you’re working at? (per cell, per row, auto save, save at table level</li>
+</ul></li>
+</ul><strong>Validation</strong>
+<ul><li>Use default input validation styling
+<ul><li>Options for error text: inline text beneath field, tooltip for fewer characters, overlay/modified dialog for longer messages)</li>
+</ul></li>
+ 	<li>Use same styling for hints</li>
+</ul><strong>Overflow</strong>
+<ul><li>Later on: add resizable columns</li>
+ 	<li>Tooltips? modified dialog? help on hover?
+<ul><li>click into field for ellipsis with an overlay?</li>
+ 	<li>Revisit this?</li>
+</ul></li>
+</ul><strong>Questions to answer in the future</strong>
+<ul><li>Can the full table be toggled to be editable or should this be handled row by row?</li>
+ 	<li>revisit overflow styling?</li>
+ 	<li>Consider Handsontable component for heavy editing needs</li>
+</ul></div>
+<div><b> </b></div>
+<div><b>Resources</b></div></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-128714f elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="128714f" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-2d0a7eb elementor-column elementor-col-33 elementor-top-column" data-id="2d0a7eb" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-ed7d663 elementor-widget elementor-widget-text-editor" data-id="ed7d663" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Articles:</p><p><a href="https://uxdesign.cc/design-better-data-tables-4ecc99d23356" target="_blank" rel="noopener noreferrer">https://uxdesign.cc/design-better-data-tables-4ecc99d23356</a></p><div><a id="LPlnk201056" href="https://alistapart.com/article/web-typography-tables/">https://alistapart.com/article/web-typography-tables/</a></div><div><a id="LPNoLP231201" href="https://design-nation.icons8.com/intro-to-data-tables-design-349f55861803">https://design-nation.icons8.com/intro-to-data-tables-design-349f55861803</a></div><div><a id="LPNoLP688788" href="https://uxdesign.cc/designing-tables-for-reusability-490a3760533">https://uxdesign.cc/designing-tables-for-reusability-490a3760533</a></div><div> </div></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-8af2b1d elementor-column elementor-col-33 elementor-top-column" data-id="8af2b1d" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-324b423 elementor-widget elementor-widget-text-editor" data-id="324b423" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Decent:</p><p><a href="https://ej2.syncfusion.com/demos/#/material/grid/normal-editing.html" target="_blank" rel="noopener noreferrer">https://ej2.syncfusion.com/demos/#/material/grid/normal-editing.html</a></p><p><a href="https://gijgo.com/grid/demos/bootstrap-grid-inline-edit" target="_blank" rel="noopener noreferrer">https://gijgo.com/grid/demos/bootstrap-grid-inline-edit</a></p><div><a id="LPlnk191559" href="https://handsontable.com/">https://handsontable.com/</a></div><div><a id="LPlnk264866" href="https://material-table.com/#/docs/features/editable">https://material-table.com/#/docs/features/editable</a></div></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-e28a7a8 elementor-column elementor-col-33 elementor-top-column" data-id="e28a7a8" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-64fe2b5 elementor-widget elementor-widget-text-editor" data-id="64fe2b5" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Somewhat Decent:</p><p><a href="https://github.com/irossimoline/angular4-material-table" target="_blank" rel="noopener noreferrer">https://github.com/irossimoline/angular4-material-table</a></p><p><a href="https://react-md.mlaursen.com/components/data-tables" target="_blank" rel="noopener noreferrer">https://react-md.mlaursen.com/components/data-tables</a></p><div><p><a href="https://editor.datatables.net/examples/inline-editing/simple" target="_blank" rel="noopener noreferrer">https://editor.datatables.net/examples/inline-editing/simple</a></p><div><a href="https://www.ag-grid.com/javascript-grid-themes/material-theme.php">https://www.ag-grid.com/javascript-grid-themes/material-theme.php</a></div></div></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-fa6ea82 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="fa6ea82" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-6275b97 elementor-column elementor-col-100 elementor-top-column" data-id="6275b97" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-cb28e0a elementor-widget elementor-widget-spacer" data-id="cb28e0a" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-d64fc8f elementor-widget elementor-widget-heading" data-id="d64fc8f" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Feedback session - 6/10</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-1f49100 elementor-widget elementor-widget-text-editor" data-id="1f49100" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><ol><li>Met with representatives from Tyler product teams to review designs so far. </li></ol><div>Concerns with current designs:</div><ul><li>Where should records be added?<ul><li>Some concerns about findability for adding records to the bottom of a table </li><li>Consider allowing users to records to a specific location within a data table</li><li>How should “rows per page” be handled as a user adds a new record? Should it update to reflect a nonstandard number of rows?</li><li><strong>Follow up on this in UX research</strong></li></ul></li><li>Full data table edit should provide options for either automatic or explicit save<ul><li>We can recommend automatic saving for full table editing to improve data preservation</li><li>But also provide option for teams to use an explicit “save” and “cancel” to increase user control, especially in administrative contexts</li></ul></li></ul><div> </div><div>Other use cases to consider:</div><ul><li>Datatables within GL / PO’s / financial products can get more complex than what’s covered here </li><li>Allow for conditional logic within adding <ul><li>ie, selecting a specific value from a dropdown enables or disables specific columns within the row entry </li><li>Dialogs could be too cumbersome make these entries quickly / efficiently. </li></ul></li><li>Consider keyboard shortcuts / interactions used by legacy products so we can be as consistent as possible<ul><li><strong>Let’s set a defined set of keyboard interactions and follow up in UX testing. </strong></li><li>Ie, should “enter” save data or create a new row?</li></ul></li><li>Consider supporting column or row sums <ul><li>How will this be reflected in inline editing pattern?</li><li>Potentially recommend HandsOnTable for an Excel-like experience when advanced calculations are needed beyond a simple column sum</li><li>Loot at Swimlane table example for built in column sum </li></ul></li><li>Consider data density. <ul><li>If we support “compact” and “roomy” styles, consider impacts on inline editing.</li><li>What is our row height minimum at which to support editing?</li><li>May depend somewhat on final text field styles / heights.</li></ul></li><li>Consider these three guiding “tiers” instead of frequency tiers potentially?<ol><li>Non-prescriptive data entry (works well with current inline editing model)</li><li>Prescriptive / specific data entry (ie, GL and PO examples which may include conditional entry/validation and more complex interactions)</li><li>Bulk editing – supporting quick data entry for use cases where large amounts of data are added/edited at once</li></ol></li></ul></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-26b7c69e elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="26b7c69e" data-element_type="section" id="guidance"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-3461e27a elementor-column elementor-col-100 elementor-top-column" data-id="3461e27a" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-7196a1f6 elementor-widget elementor-widget-spacer" data-id="7196a1f6" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-58bbe482 elementor-widget elementor-widget-heading" data-id="58bbe482" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Updated designs: Kathy's review</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-b8a8052 elementor-widget elementor-widget-text-editor" data-id="b8a8052" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>5/28/2019, updated guidance in <b>bold</b></p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-b10b3b0 elementor-widget elementor-widget-text-editor" data-id="b10b3b0" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><b>**Consider tiers for table guidance:</b></p><p><b>1. Where editing is infrequent (less than 25% of the time), viewing is the primary action (80%+ of use), and records are edited singly, use table with single row edit pattern. </b></p><p><b>2. Where users are equally likely to view and to edit, and records are likely to be edited in bulk., use full table editing pattern.</b></p><p><b>3. Where editing is the primary action (75%+ of the time), use the material skin of HandsOnTable to closely mimic the Excel data entry experience. </b></p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-7f4420c elementor-widget elementor-widget-spacer" data-id="7f4420c" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-70fc7c2 elementor-widget elementor-widget-heading" data-id="70fc7c2" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Inline row edit</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-617878c elementor-widget elementor-widget-image" data-id="617878c" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+							<figure class="wp-caption"><a data-elementor-open-lightbox="yes" href="http://10.81.12.49/wp-content/uploads/2019/05/basic-table-row-edit-copy-1.png">
+							<img width="1201" height="333" src="https://static-forge.netlify.com/wp-content/uploads/2019/05/basic-table-row-edit-copy-1.png" class="attachment-full size-full" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/05/basic-table-row-edit-copy-1.png 1201w,https://static-forge.netlify.com/wp-content/uploads/2019/05/basic-table-row-edit-copy-1-300x83.png 300w,https://static-forge.netlify.com/wp-content/uploads/2019/05/basic-table-row-edit-copy-1-768x213.png 768w,https://static-forge.netlify.com/wp-content/uploads/2019/05/basic-table-row-edit-copy-1-1024x284.png 1024w" sizes="(max-width: 1201px) 100vw, 1201px"></a>
+											<figcaption class="widget-image-caption wp-caption-text"></figcaption></figure></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-c52acc2 elementor-widget elementor-widget-text-editor" data-id="c52acc2" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Table cells become standard dense TCW bordered inputs.</p><p>Row background becomes primary active state.</p><p>Currently focused input receives standard TCW focus state.</p><p>Row actions become “save” and “cancel”; both apply to the row in full.</p><p>“Cancel” undoes any changes made and reverts data.</p><p><b>Checkboxes and row actions become disabled or hidden so that users can’t take additional actions in edit mode.</b></p><p><b>Actions should have a hover tooltip: “Save or cancel edits first.”</b></p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-4bd9519 elementor-widget elementor-widget-spacer" data-id="4bd9519" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-0f37a80 elementor-widget elementor-widget-heading" data-id="0f37a80" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Single cell edit</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-d663586 elementor-widget elementor-widget-image" data-id="d663586" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+											<a data-elementor-open-lightbox="yes" href="http://10.81.12.49/wp-content/uploads/2019/05/basic-table-single-cell-kw-change.png">
+							<img width="1201" height="333" src="https://static-forge.netlify.com/wp-content/uploads/2019/05/basic-table-single-cell-kw-change.png" class="attachment-full size-full" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/05/basic-table-single-cell-kw-change.png 1201w,https://static-forge.netlify.com/wp-content/uploads/2019/05/basic-table-single-cell-kw-change-300x83.png 300w,https://static-forge.netlify.com/wp-content/uploads/2019/05/basic-table-single-cell-kw-change-768x213.png 768w,https://static-forge.netlify.com/wp-content/uploads/2019/05/basic-table-single-cell-kw-change-1024x284.png 1024w" sizes="(max-width: 1201px) 100vw, 1201px"></a>
+											</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-f14b4ff elementor-widget elementor-widget-text-editor" data-id="f14b4ff" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Uses the same styling as row editing for consistency, but only fields that can be edited become standard dense TCW bordered inputs. </p><p><span style="letter-spacing: 0.05px; color: var(--mdc-theme-text-primary-on-background,rgba(0,0,0,0.87));">Row actions become “save” and “cancel”; both apply to the row in full.</span></p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-4987155 elementor-widget elementor-widget-spacer" data-id="4987155" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-727df2e elementor-widget elementor-widget-heading" data-id="727df2e" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Full table edit</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-49080be elementor-widget elementor-widget-image" data-id="49080be" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+											<a data-elementor-open-lightbox="yes" href="http://10.81.12.49/wp-content/uploads/2019/05/full-table-edit.png">
+							<img width="1201" height="333" src="https://static-forge.netlify.com/wp-content/uploads/2019/05/full-table-edit.png" class="attachment-full size-full" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/05/full-table-edit.png 1201w,https://static-forge.netlify.com/wp-content/uploads/2019/05/full-table-edit-300x83.png 300w,https://static-forge.netlify.com/wp-content/uploads/2019/05/full-table-edit-768x213.png 768w,https://static-forge.netlify.com/wp-content/uploads/2019/05/full-table-edit-1024x284.png 1024w" sizes="(max-width: 1201px) 100vw, 1201px"></a>
+											</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-939e37b elementor-widget elementor-widget-image" data-id="939e37b" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+											<a data-elementor-open-lightbox="yes" href="http://10.81.12.49/wp-content/uploads/2019/05/full-table-edit-with-autosave-kw-review-.png">
+							<img width="1201" height="297" src="https://static-forge.netlify.com/wp-content/uploads/2019/05/full-table-edit-with-autosave-kw-review-.png" class="attachment-full size-full" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/05/full-table-edit-with-autosave-kw-review-.png 1201w,https://static-forge.netlify.com/wp-content/uploads/2019/05/full-table-edit-with-autosave-kw-review--300x74.png 300w,https://static-forge.netlify.com/wp-content/uploads/2019/05/full-table-edit-with-autosave-kw-review--768x190.png 768w,https://static-forge.netlify.com/wp-content/uploads/2019/05/full-table-edit-with-autosave-kw-review--1024x253.png 1024w" sizes="(max-width: 1201px) 100vw, 1201px"></a>
+											</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-6d07e2b elementor-widget elementor-widget-text-editor" data-id="6d07e2b" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>User hits “edit” to enable edit mode.</p><p>In edit mode, header changes to display edit actions, using same style as bulk action header. </p><p>First editable field receives focus; user can click or tab any field as needed. </p><p><b>Recommend that full table use automatic save to prevent data loss. </b></p><p><span style="color: var(--mdc-theme-text-primary-on-background,rgba(0,0,0,0.87)); letter-spacing: 0.05px;">Automatic save mode should indicate that changes have been saved and offer a way for users to undo. </span></p><p>User hits “save” or “finish” to close edit mode. </p><p><b>Disable actions in full table edit mode, with tooltip guidance (see above).</b></p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-6161ef3 elementor-widget elementor-widget-spacer" data-id="6161ef3" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-f5ff133 elementor-widget elementor-widget-heading" data-id="f5ff133" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Adding a row</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-a80932b elementor-widget elementor-widget-image" data-id="a80932b" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+											<a data-elementor-open-lightbox="yes" href="http://10.81.12.49/wp-content/uploads/2019/05/add-row-1.png">
+							<img width="1201" height="883" src="https://static-forge.netlify.com/wp-content/uploads/2019/05/add-row-1.png" class="attachment-full size-full" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/05/add-row-1.png 1201w,https://static-forge.netlify.com/wp-content/uploads/2019/05/add-row-1-300x221.png 300w,https://static-forge.netlify.com/wp-content/uploads/2019/05/add-row-1-768x565.png 768w,https://static-forge.netlify.com/wp-content/uploads/2019/05/add-row-1-1024x753.png 1024w" sizes="(max-width: 1201px) 100vw, 1201px"></a>
+											</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-cec6d1c elementor-widget elementor-widget-image" data-id="cec6d1c" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+											<a data-elementor-open-lightbox="yes" href="http://10.81.12.49/wp-content/uploads/2019/05/add-row-2.png">
+							<img width="1201" height="317" src="https://static-forge.netlify.com/wp-content/uploads/2019/05/add-row-2.png" class="attachment-full size-full" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/05/add-row-2.png 1201w,https://static-forge.netlify.com/wp-content/uploads/2019/05/add-row-2-300x79.png 300w,https://static-forge.netlify.com/wp-content/uploads/2019/05/add-row-2-768x203.png 768w,https://static-forge.netlify.com/wp-content/uploads/2019/05/add-row-2-1024x270.png 1024w" sizes="(max-width: 1201px) 100vw, 1201px"></a>
+											</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-c05c640 elementor-widget elementor-widget-image" data-id="c05c640" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+											<a data-elementor-open-lightbox="yes" href="http://10.81.12.49/wp-content/uploads/2019/05/add-row-3.png">
+							<img width="1201" height="317" src="https://static-forge.netlify.com/wp-content/uploads/2019/05/add-row-3.png" class="attachment-full size-full" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/05/add-row-3.png 1201w,https://static-forge.netlify.com/wp-content/uploads/2019/05/add-row-3-300x79.png 300w,https://static-forge.netlify.com/wp-content/uploads/2019/05/add-row-3-768x203.png 768w,https://static-forge.netlify.com/wp-content/uploads/2019/05/add-row-3-1024x270.png 1024w" sizes="(max-width: 1201px) 100vw, 1201px"></a>
+											</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-79f1345 elementor-widget elementor-widget-image" data-id="79f1345" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+											<a data-elementor-open-lightbox="yes" href="http://10.81.12.49/wp-content/uploads/2019/05/add-row-4.png">
+							<img width="1201" height="317" src="https://static-forge.netlify.com/wp-content/uploads/2019/05/add-row-4.png" class="attachment-full size-full" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/05/add-row-4.png 1201w,https://static-forge.netlify.com/wp-content/uploads/2019/05/add-row-4-300x79.png 300w,https://static-forge.netlify.com/wp-content/uploads/2019/05/add-row-4-768x203.png 768w,https://static-forge.netlify.com/wp-content/uploads/2019/05/add-row-4-1024x270.png 1024w" sizes="(max-width: 1201px) 100vw, 1201px"></a>
+											</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-585ff9f elementor-widget elementor-widget-text-editor" data-id="585ff9f" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>For tables that allow adding a new row, “Add” should be placed in the footer, close to where new row will be added. </p><p>New row uses single row edit styling; all inputs should be empty. </p><p>“Cancel” deletes the new row. If data has been entered, user is prompted with a dialog to discard or keep changes. </p><p>Users hits “save” or enter to add row and will see a toast confirmation. Row highlight persists for a few seconds and fades to show where the row has been added. </p><p><b>Recommend that new rows be added to the bottom of a table; if app team is using infinite scroll, recommend that rows be added to the top of the table instead. “Add row” displays at the top of the table accordingly. </b></p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-ed3d5f2 elementor-widget elementor-widget-image" data-id="ed3d5f2" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+											<a data-elementor-open-lightbox="yes" href="http://10.81.12.49/wp-content/uploads/2019/05/add-row-fab.png">
+							<img width="1201" height="883" src="https://static-forge.netlify.com/wp-content/uploads/2019/05/add-row-fab.png" class="attachment-full size-full" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/05/add-row-fab.png 1201w,https://static-forge.netlify.com/wp-content/uploads/2019/05/add-row-fab-300x221.png 300w,https://static-forge.netlify.com/wp-content/uploads/2019/05/add-row-fab-768x565.png 768w,https://static-forge.netlify.com/wp-content/uploads/2019/05/add-row-fab-1024x753.png 1024w" sizes="(max-width: 1201px) 100vw, 1201px"></a>
+											</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-f67e0fb elementor-widget elementor-widget-text-editor" data-id="f67e0fb" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><b>For tables where adding new records is the most common action, use an extended fab. By definition, a represents the primary action of a screen, so it should only be used in contexts where adding is the primary action. Otherwise, use a flat button for the “add new” action. </b></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-c4399f6 elementor-widget elementor-widget-spacer" data-id="c4399f6" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-c6fb860 elementor-widget elementor-widget-heading" data-id="c6fb860" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Error validation</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-8be719f elementor-widget elementor-widget-image" data-id="8be719f" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+											<a data-elementor-open-lightbox="yes" href="http://10.81.12.49/wp-content/uploads/2019/05/table-char-count-error-1.png">
+							<img width="1201" height="392" src="https://static-forge.netlify.com/wp-content/uploads/2019/05/table-char-count-error-1.png" class="attachment-full size-full" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/05/table-char-count-error-1.png 1201w,https://static-forge.netlify.com/wp-content/uploads/2019/05/table-char-count-error-1-300x98.png 300w,https://static-forge.netlify.com/wp-content/uploads/2019/05/table-char-count-error-1-768x251.png 768w,https://static-forge.netlify.com/wp-content/uploads/2019/05/table-char-count-error-1-1024x334.png 1024w" sizes="(max-width: 1201px) 100vw, 1201px"></a>
+											</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-21ca394 elementor-widget elementor-widget-image" data-id="21ca394" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+											<a data-elementor-open-lightbox="yes" href="http://10.81.12.49/wp-content/uploads/2019/05/table-tooltip-error-1.png">
+							<img width="1201" height="392" src="https://static-forge.netlify.com/wp-content/uploads/2019/05/table-tooltip-error-1.png" class="attachment-full size-full" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/05/table-tooltip-error-1.png 1201w,https://static-forge.netlify.com/wp-content/uploads/2019/05/table-tooltip-error-1-300x98.png 300w,https://static-forge.netlify.com/wp-content/uploads/2019/05/table-tooltip-error-1-768x251.png 768w,https://static-forge.netlify.com/wp-content/uploads/2019/05/table-tooltip-error-1-1024x334.png 1024w" sizes="(max-width: 1201px) 100vw, 1201px"></a>
+											</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-734b73a elementor-widget elementor-widget-text-editor" data-id="734b73a" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Inputs with errors should display an error icon within the field. On hover, user sees a tooltip with the error. </p><p>Input takes the default TCW error border. </p><p>Validation should occur as the user tabs to the next field.</p><p>Tooltips should be used for validation under three words.</p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-2d24d41 elementor-widget elementor-widget-image" data-id="2d24d41" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+											<a data-elementor-open-lightbox="yes" href="http://10.81.12.49/wp-content/uploads/2019/05/table-error-long-1.png">
+							<img width="1201" height="392" src="https://static-forge.netlify.com/wp-content/uploads/2019/05/table-error-long-1.png" class="attachment-full size-full" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/05/table-error-long-1.png 1201w,https://static-forge.netlify.com/wp-content/uploads/2019/05/table-error-long-1-300x98.png 300w,https://static-forge.netlify.com/wp-content/uploads/2019/05/table-error-long-1-768x251.png 768w,https://static-forge.netlify.com/wp-content/uploads/2019/05/table-error-long-1-1024x334.png 1024w" sizes="(max-width: 1201px) 100vw, 1201px"></a>
+											</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-ea6e78d elementor-widget elementor-widget-text-editor" data-id="ea6e78d" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>For validation messages longer than three words, use a modified toast on hover to improve readability. </p><p><b>Toast should be text only. </b></p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-fc80ef2 elementor-widget elementor-widget-spacer" data-id="fc80ef2" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-e61c9fb elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="e61c9fb" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-5a1214e elementor-column elementor-col-100 elementor-top-column" data-id="5a1214e" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-2312a93 elementor-widget elementor-widget-spacer" data-id="2312a93" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-12c614d elementor-widget elementor-widget-heading" data-id="12c614d" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Initial designs</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-eb808fb elementor-widget elementor-widget-text-editor" data-id="eb808fb" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>5/20/2019</p><p><b>Inline row edit</b></p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-3352779 elementor-widget elementor-widget-image" data-id="3352779" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+							<figure class="wp-caption"><a data-elementor-open-lightbox="yes" href="http://10.81.12.49/wp-content/uploads/2019/05/basic-table-row-edit-copy.png">
+							<img width="1201" height="349" src="https://static-forge.netlify.com/wp-content/uploads/2019/05/basic-table-row-edit-copy.png" class="attachment-full size-full" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/05/basic-table-row-edit-copy.png 1201w,https://static-forge.netlify.com/wp-content/uploads/2019/05/basic-table-row-edit-copy-300x87.png 300w,https://static-forge.netlify.com/wp-content/uploads/2019/05/basic-table-row-edit-copy-768x223.png 768w,https://static-forge.netlify.com/wp-content/uploads/2019/05/basic-table-row-edit-copy-1024x298.png 1024w" sizes="(max-width: 1201px) 100vw, 1201px"></a>
+											<figcaption class="widget-image-caption wp-caption-text"></figcaption></figure></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-4e56312 elementor-widget elementor-widget-text-editor" data-id="4e56312" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Table cells become standard dense TCW bordered inputs.</p><p>Row background becomes primary active state.</p><p>Currently focused input receives standard TCW focus state.</p><p>Row actions become “save” and “cancel”; both apply to the row in full.</p><p>“Cancel” undoes any changes made and reverts data.</p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-e9eac12 elementor-widget elementor-widget-spacer" data-id="e9eac12" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-6e10df9 elementor-widget elementor-widget-text-editor" data-id="6e10df9" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><b>Single cell edit</b></p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-ec4394d elementor-widget elementor-widget-image" data-id="ec4394d" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+											<a data-elementor-open-lightbox="yes" href="http://10.81.12.49/wp-content/uploads/2019/05/basic-table-single-cell-edit.png">
+							<img width="1201" height="333" src="https://static-forge.netlify.com/wp-content/uploads/2019/05/basic-table-single-cell-edit.png" class="attachment-full size-full" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/05/basic-table-single-cell-edit.png 1201w,https://static-forge.netlify.com/wp-content/uploads/2019/05/basic-table-single-cell-edit-300x83.png 300w,https://static-forge.netlify.com/wp-content/uploads/2019/05/basic-table-single-cell-edit-768x213.png 768w,https://static-forge.netlify.com/wp-content/uploads/2019/05/basic-table-single-cell-edit-1024x284.png 1024w" sizes="(max-width: 1201px) 100vw, 1201px"></a>
+											</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-cfd2589 elementor-widget elementor-widget-text-editor" data-id="cfd2589" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Uses the same styling as row editing for consistency, but only fields that can be edited become standard dense TCW bordered inputs. </p><p><span style="letter-spacing: 0.05px; color: var(--mdc-theme-text-primary-on-background,rgba(0,0,0,0.87));">Row actions become “save” and “cancel”; both apply to the row in full.</span></p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-3f8b603 elementor-widget elementor-widget-spacer" data-id="3f8b603" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-1c3963d elementor-widget elementor-widget-text-editor" data-id="1c3963d" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><b>Full table edit</b></p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-b4fdef2 elementor-widget elementor-widget-image" data-id="b4fdef2" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+											<a data-elementor-open-lightbox="yes" href="http://10.81.12.49/wp-content/uploads/2019/05/full-table-edit.png">
+							<img width="1201" height="333" src="https://static-forge.netlify.com/wp-content/uploads/2019/05/full-table-edit.png" class="attachment-full size-full" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/05/full-table-edit.png 1201w,https://static-forge.netlify.com/wp-content/uploads/2019/05/full-table-edit-300x83.png 300w,https://static-forge.netlify.com/wp-content/uploads/2019/05/full-table-edit-768x213.png 768w,https://static-forge.netlify.com/wp-content/uploads/2019/05/full-table-edit-1024x284.png 1024w" sizes="(max-width: 1201px) 100vw, 1201px"></a>
+											</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-0354555 elementor-widget elementor-widget-image" data-id="0354555" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+											<a data-elementor-open-lightbox="yes" href="http://10.81.12.49/wp-content/uploads/2019/05/full-table-edit-mode.png">
+							<img width="1201" height="333" src="https://static-forge.netlify.com/wp-content/uploads/2019/05/full-table-edit-mode.png" class="attachment-full size-full" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/05/full-table-edit-mode.png 1201w,https://static-forge.netlify.com/wp-content/uploads/2019/05/full-table-edit-mode-300x83.png 300w,https://static-forge.netlify.com/wp-content/uploads/2019/05/full-table-edit-mode-768x213.png 768w,https://static-forge.netlify.com/wp-content/uploads/2019/05/full-table-edit-mode-1024x284.png 1024w" sizes="(max-width: 1201px) 100vw, 1201px"></a>
+											</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-f852309 elementor-widget elementor-widget-image" data-id="f852309" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+											<a data-elementor-open-lightbox="yes" href="http://10.81.12.49/wp-content/uploads/2019/05/full-table-edit-with-autosave.png">
+							<img width="1201" height="333" src="https://static-forge.netlify.com/wp-content/uploads/2019/05/full-table-edit-with-autosave.png" class="attachment-full size-full" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/05/full-table-edit-with-autosave.png 1201w,https://static-forge.netlify.com/wp-content/uploads/2019/05/full-table-edit-with-autosave-300x83.png 300w,https://static-forge.netlify.com/wp-content/uploads/2019/05/full-table-edit-with-autosave-768x213.png 768w,https://static-forge.netlify.com/wp-content/uploads/2019/05/full-table-edit-with-autosave-1024x284.png 1024w" sizes="(max-width: 1201px) 100vw, 1201px"></a>
+											</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-1fff1fc elementor-widget elementor-widget-text-editor" data-id="1fff1fc" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>User hits “edit” to enable edit mode.</p><p>In edit mode, header changes to display edit actions, using same style as bulk action header. </p><p>First editable field receives focus; user can click or tab any field as needed. </p><p>Full table edit supports either manual or automatic save.</p><p>Automatic save mode should indicate that changes have been saved and offer a way for users to undo. </p><p>User hits “save” or “finish” to close edit mode. </p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-f535082 elementor-widget elementor-widget-spacer" data-id="f535082" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-2a3dbd8 elementor-widget elementor-widget-text-editor" data-id="2a3dbd8" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><b>Add new row</b></p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-9e3fec8 elementor-widget elementor-widget-image" data-id="9e3fec8" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+											<a data-elementor-open-lightbox="yes" href="http://10.81.12.49/wp-content/uploads/2019/05/add-row-1.png">
+							<img width="1201" height="883" src="https://static-forge.netlify.com/wp-content/uploads/2019/05/add-row-1.png" class="attachment-full size-full" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/05/add-row-1.png 1201w,https://static-forge.netlify.com/wp-content/uploads/2019/05/add-row-1-300x221.png 300w,https://static-forge.netlify.com/wp-content/uploads/2019/05/add-row-1-768x565.png 768w,https://static-forge.netlify.com/wp-content/uploads/2019/05/add-row-1-1024x753.png 1024w" sizes="(max-width: 1201px) 100vw, 1201px"></a>
+											</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-8157566 elementor-widget elementor-widget-image" data-id="8157566" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+											<a data-elementor-open-lightbox="yes" href="http://10.81.12.49/wp-content/uploads/2019/05/add-row-2.png">
+							<img width="1201" height="317" src="https://static-forge.netlify.com/wp-content/uploads/2019/05/add-row-2.png" class="attachment-full size-full" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/05/add-row-2.png 1201w,https://static-forge.netlify.com/wp-content/uploads/2019/05/add-row-2-300x79.png 300w,https://static-forge.netlify.com/wp-content/uploads/2019/05/add-row-2-768x203.png 768w,https://static-forge.netlify.com/wp-content/uploads/2019/05/add-row-2-1024x270.png 1024w" sizes="(max-width: 1201px) 100vw, 1201px"></a>
+											</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-ad296b6 elementor-widget elementor-widget-image" data-id="ad296b6" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+											<a data-elementor-open-lightbox="yes" href="http://10.81.12.49/wp-content/uploads/2019/05/add-row-3.png">
+							<img width="1201" height="317" src="https://static-forge.netlify.com/wp-content/uploads/2019/05/add-row-3.png" class="attachment-full size-full" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/05/add-row-3.png 1201w,https://static-forge.netlify.com/wp-content/uploads/2019/05/add-row-3-300x79.png 300w,https://static-forge.netlify.com/wp-content/uploads/2019/05/add-row-3-768x203.png 768w,https://static-forge.netlify.com/wp-content/uploads/2019/05/add-row-3-1024x270.png 1024w" sizes="(max-width: 1201px) 100vw, 1201px"></a>
+											</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-f223c3b elementor-widget elementor-widget-image" data-id="f223c3b" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+											<a data-elementor-open-lightbox="yes" href="http://10.81.12.49/wp-content/uploads/2019/05/add-row-4.png">
+							<img width="1201" height="317" src="https://static-forge.netlify.com/wp-content/uploads/2019/05/add-row-4.png" class="attachment-full size-full" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/05/add-row-4.png 1201w,https://static-forge.netlify.com/wp-content/uploads/2019/05/add-row-4-300x79.png 300w,https://static-forge.netlify.com/wp-content/uploads/2019/05/add-row-4-768x203.png 768w,https://static-forge.netlify.com/wp-content/uploads/2019/05/add-row-4-1024x270.png 1024w" sizes="(max-width: 1201px) 100vw, 1201px"></a>
+											</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-b51f91d elementor-widget elementor-widget-text-editor" data-id="b51f91d" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>For tables that allow adding a new row, “Add” should be placed in the footer, close to where new row will be added. </p><p>New row uses single row edit styling; all inputs should be empty. </p><p>“Cancel” deletes the new row. If data has been entered, user is prompted with a dialog to discard or keep changes. </p><p>Users hits “save” or enter to add row and will see a toast confirmation. Row highlight persists for a few seconds and fades to show where the row has been added. </p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-c3dd0b0 elementor-widget elementor-widget-spacer" data-id="c3dd0b0" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-ba680f9 elementor-widget elementor-widget-text-editor" data-id="ba680f9" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><strong>Error validation</strong></p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-43c0b47 elementor-widget elementor-widget-image" data-id="43c0b47" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+											<a data-elementor-open-lightbox="yes" href="http://10.81.12.49/wp-content/uploads/2019/05/table-char-count-error.png">
+							<img width="1201" height="392" src="https://static-forge.netlify.com/wp-content/uploads/2019/05/table-char-count-error.png" class="attachment-full size-full" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/05/table-char-count-error.png 1201w,https://static-forge.netlify.com/wp-content/uploads/2019/05/table-char-count-error-300x98.png 300w,https://static-forge.netlify.com/wp-content/uploads/2019/05/table-char-count-error-768x251.png 768w,https://static-forge.netlify.com/wp-content/uploads/2019/05/table-char-count-error-1024x334.png 1024w" sizes="(max-width: 1201px) 100vw, 1201px"></a>
+											</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-0d7f79e elementor-widget elementor-widget-image" data-id="0d7f79e" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+											<a data-elementor-open-lightbox="yes" href="http://10.81.12.49/wp-content/uploads/2019/05/table-tooltip-error.png">
+							<img width="1201" height="392" src="https://static-forge.netlify.com/wp-content/uploads/2019/05/table-tooltip-error.png" class="attachment-full size-full" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/05/table-tooltip-error.png 1201w,https://static-forge.netlify.com/wp-content/uploads/2019/05/table-tooltip-error-300x98.png 300w,https://static-forge.netlify.com/wp-content/uploads/2019/05/table-tooltip-error-768x251.png 768w,https://static-forge.netlify.com/wp-content/uploads/2019/05/table-tooltip-error-1024x334.png 1024w" sizes="(max-width: 1201px) 100vw, 1201px"></a>
+											</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-e575075 elementor-widget elementor-widget-text-editor" data-id="e575075" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Inputs with errors should display an error icon within the field. On hover, user sees a tooltip with the error. </p><p>Input takes the default TCW error border. </p><p>Validation should occur as the user tabs to the next field.</p><p>Tooltips should be used for validation under three words.</p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-3b6a19a elementor-widget elementor-widget-image" data-id="3b6a19a" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+											<a data-elementor-open-lightbox="yes" href="http://10.81.12.49/wp-content/uploads/2019/05/table-error-long.png">
+							<img width="1201" height="392" src="https://static-forge.netlify.com/wp-content/uploads/2019/05/table-error-long.png" class="attachment-full size-full" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/05/table-error-long.png 1201w,https://static-forge.netlify.com/wp-content/uploads/2019/05/table-error-long-300x98.png 300w,https://static-forge.netlify.com/wp-content/uploads/2019/05/table-error-long-768x251.png 768w,https://static-forge.netlify.com/wp-content/uploads/2019/05/table-error-long-1024x334.png 1024w" sizes="(max-width: 1201px) 100vw, 1201px"></a>
+											</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-e3f4307 elementor-widget elementor-widget-text-editor" data-id="e3f4307" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>For validation messages longer than three words, use a modified toast on hover to improve readability. </p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section></div>
+			</div>
+		</div>
+		 
+                        </tcw-card><div class="tyl-typography--caption" style="margin-bottom: 8px;">Last modified on June 10, 2019 by: emily.roller</div>
+          </div>
+
+            <div class="right-content" id="toc-right-container" style="position: relative; width: 300px;"> 
+                                <div><div class="textwidget custom-html-widget"><div class="toc" style="position: fixed;">
+                    <div class="toc-container">
+                      <div class="left-line" id="toc-left-line"></div>
+                      <div class="toc-items-container" id="toc-items">
+                        <h6 style="margin-top: 0px; margin-bottom: 16px;">Table of contents</h6>
+                      </div>
+                    </div>
+                  </div>
+
+<div id="back-to-top-button" class="tyl-back-to-top">
+            <tcw-fab extended="true"><button aria-label="Extended FAB with just text" onclick="scrollTo()">
+                <i class="material-icons" aria-hidden="true">arrow_upward</i>
+                <span>Back to top</span>
+              </button>
+            </tcw-fab></div></div></div>                            </div>
+
+        </div>
+       </div>
+      </div>
+    </tcw-scaffold><script type="text/javascript" src="scripts/custom-elements-es5-adapter.js"></script><script type="text/javascript" src="scripts/webcomponents-bundle.js"></script><script type="text/javascript" src="scripts/tyler-components-web-lib.min.js"></script><script type="text/javascript" src="scripts/tyler-components-web-forge-lib.min.js"></script><script>
+  window.addEventListener('WebComponentsReady', function() {
+    window.TylerComponentsWeb.lib.defineComponents();
+    window.TylerComponentsWeb.Forge.lib.defineComponents();
+  });
+</script><script type="text/javascript" src="scripts/menu-expander.js"></script><script type="text/javascript" src="scripts/drawer.js"></script><script type="text/javascript" src="scripts/navHeader.js"></script><script type="text/javascript" src="scripts/search.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-136930168-1"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-136930168-1');
+</script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/material-design-for-contact-form-7/assets/js/lib/autosize.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/material-design-for-contact-form-7/assets/js/cf7-material-design-bundle.js"></script><script type="text/javascript">
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"https:\/\/static-forge.netlify.com\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"}};
+/* ]]> */
+</script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/contact-form-7/includes/js/scripts.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/js/frontend-modules.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor-pro/assets/lib/sticky/jquery.sticky.min.js"></script><script type="text/javascript">
+var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/static-forge.netlify.com\/wp-admin\/admin-ajax.php","nonce":"a52c73ecd1","shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"google":{"title":"Google+","has_counter":true},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"delicious":{"title":"Delicious"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"}},"facebook_sdk":{"lang":"en_US","app_id":""}};
+</script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor-pro/assets/js/frontend.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-includes/js/jquery/ui/position.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/swiper/swiper.min.js"></script><script type="text/javascript">
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"version":"2.8.3","urls":{"assets":"https:\/\/static-forge.netlify.com\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"general":{"elementor_global_image_lightbox":"yes"},"editorPreferences":[]},"post":{"id":4616,"title":"Design decisions: Data table editing","excerpt":""}};
+</script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/js/frontend.min.js"></script><script type="text/javascript" src="scripts/table-of-contents.js?x-version=1"></script></body></html>

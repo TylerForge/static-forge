@@ -1,0 +1,35 @@
+.elementor-1142 .elementor-element.elementor-element-135d899f > .elementor-container {max-width: 960px;min-height: 300px;}
+.elementor-1142 .elementor-element.elementor-element-135d899f > .elementor-container:after {content: "";min-height: inherit;}
+.elementor-1142 .elementor-element.elementor-element-135d899f > .elementor-container > .elementor-row > .elementor-column > .elementor-column-wrap > .elementor-widget-wrap {align-content: center;align-items: center;}
+.elementor-1142 .elementor-element.elementor-element-135d899f:not(.elementor-motion-effects-element-type-background), .elementor-1142 .elementor-element.elementor-element-135d899f > .elementor-motion-effects-container > .elementor-motion-effects-layer {background-color: rgba(241,243,245,.5);}
+.elementor-1142 .elementor-element.elementor-element-135d899f {transition: background .3s,border .3s,border-radius .3s,box-shadow .3s;}
+.elementor-1142 .elementor-element.elementor-element-135d899f > .elementor-background-overlay {transition: background .3s,border-radius .3s,opacity .3s;}
+.elementor-1142 .elementor-element.elementor-element-390c6716 > .elementor-element-populated {padding: 8px 16px 0px 16px;}
+.elementor-1142 .elementor-element.elementor-element-ef67922 {--divider-border-style: solid;--divider-border-color: #4054b2;--divider-border-width: 5px;}
+.elementor-1142 .elementor-element.elementor-element-ef67922 .elementor-divider-separator {width: 20%;}
+.elementor-1142 .elementor-element.elementor-element-ef67922 .elementor-divider {padding-top: 25px;padding-bottom: 25px;}
+.elementor-1142 .elementor-element.elementor-element-676da77c.elementor-widget-heading .elementor-heading-title {color: #444;}
+.elementor-1142 .elementor-element.elementor-element-8ff8f7d {font-size: 17px;font-weight: 300;line-height: 1.8em;}
+.elementor-1142 .elementor-element.elementor-element-8ff8f7d > .elementor-widget-container {padding: 10px 0px 10px 0px;}
+.elementor-1142 .elementor-element.elementor-element-71a1ba92 {text-align: center;}
+.elementor-1142 .elementor-element.elementor-element-71a1ba92 .elementor-image img {width: 260px;max-width: 100%;opacity: 1;}
+.elementor-1142 .elementor-element.elementor-element-55dbf595 {margin-top: 0px;margin-bottom: 0px;padding: 0px 8px 0px 8px;}
+.elementor-1142 .elementor-element.elementor-element-7706930a .elementor-spacer-inner {height: 16px;}
+.elementor-1142 .elementor-element.elementor-element-a75f14f.elementor-widget-heading .elementor-heading-title {color: rgba(0,0,0,.86);}
+.elementor-1142 .elementor-element.elementor-element-a75f14f > .elementor-widget-container {margin: 0px 0px 0px 0px;}
+.elementor-1142 .elementor-element.elementor-element-4d83d59 {margin-top: 0px;margin-bottom: 0px;padding: 0px 8px 0px 8px;}
+.elementor-1142 .elementor-element.elementor-element-b3954d7 .elementor-spacer-inner {height: 16px;}
+.elementor-1142 .elementor-element.elementor-element-1cb5bbd.elementor-widget-heading .elementor-heading-title {color: rgba(0,0,0,.86);}
+.elementor-1142 .elementor-element.elementor-element-1cb5bbd > .elementor-widget-container {margin: 0px 0px 0px 0px;}
+body.elementor-page-1142:not(.elementor-motion-effects-element-type-background), body.elementor-page-1142 > .elementor-motion-effects-container > .elementor-motion-effects-layer {background-color: rgba(0,0,0,.33);background-image: url("http://10.81.12.49/wp-content/uploads/2019/03/Screen-Shot-2019-03-14-at-10.44.38-AM.png");}
+@media (min-width:768px) {.elementor-1142 .elementor-element.elementor-element-390c6716 {width: 57.964%;}
+	.elementor-1142 .elementor-element.elementor-element-128d1385 {width: 42.036%;}}
+@media (max-width:1024px) {.elementor-1142 .elementor-element.elementor-element-135d899f {padding: 30px 50px 30px 50px;}
+	.elementor-1142 .elementor-element.elementor-element-71a1ba92 {text-align: center;}}
+@media (max-width:767px) {.elementor-1142 .elementor-element.elementor-element-135d899f {padding: 30px 30px 30px 30px;}
+	.elementor-1142 .elementor-element.elementor-element-ef67922 .elementor-divider {text-align: center;}
+	.elementor-1142 .elementor-element.elementor-element-ef67922 .elementor-divider-separator {margin: 0 auto;margin-center: 0;}
+	.elementor-1142 .elementor-element.elementor-element-676da77c {text-align: center;}
+	.elementor-1142 .elementor-element.elementor-element-8ff8f7d .elementor-text-editor {text-align: center;}
+	.elementor-1142 .elementor-element.elementor-element-128d1385 > .elementor-element-populated {padding: 50px 0px 50px 0px;}
+	.elementor-1142 .elementor-element.elementor-element-71a1ba92 {text-align: center;}}

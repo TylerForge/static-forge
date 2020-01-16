@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en-US"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="shortcut icon" href="favicon.ico" sizes="16x16" type="image/x-icon"><title>Button Toggle – Tyler Forge</title><link rel="dns-prefetch" href="//fonts.googleapis.com"><link rel="dns-prefetch" href="//s.w.org"><link rel="stylesheet" id="cf7md_roboto-css" href="//fonts.googleapis.com/css?family=Roboto:400,500" type="text/css" media="all"><link rel="stylesheet" id="cf7-material-design-css" href="https://static-forge.netlify.com/wp-content/plugins/material-design-for-contact-form-7/assets/css/cf7-material-design.css" type="text/css" media="all"><link rel="stylesheet" id="contact-form-7-css" href="https://static-forge.netlify.com/wp-content/plugins/contact-form-7/includes/css/styles.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-icons-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-animations-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/animations/animations.min.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-frontend-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/css/frontend.min.css" type="text/css" media="all"><link rel="stylesheet" id="lae-animate-styles-css" href="https://static-forge.netlify.com/wp-content/plugins/addons-for-elementor/assets/css/animate.css" type="text/css" media="all"><link rel="stylesheet" id="lae-sliders-styles-css" href="https://static-forge.netlify.com/wp-content/plugins/addons-for-elementor/assets/css/sliders.css" type="text/css" media="all"><link rel="stylesheet" id="lae-icomoon-styles-css" href="https://static-forge.netlify.com/wp-content/plugins/addons-for-elementor/assets/css/icomoon.css" type="text/css" media="all"><link rel="stylesheet" id="lae-frontend-styles-css" href="https://static-forge.netlify.com/wp-content/plugins/addons-for-elementor/assets/css/lae-frontend.css" type="text/css" media="all"><link rel="stylesheet" id="lae-widgets-styles-css" href="https://static-forge.netlify.com/wp-content/plugins/addons-for-elementor/assets/css/lae-widgets.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-pro-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor-pro/assets/css/frontend.min.css" type="text/css" media="all"><link rel="stylesheet" id="font-awesome-5-all-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/all.min.css" type="text/css" media="all"><link rel="stylesheet" id="font-awesome-4-shim-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/v4-shims.min.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-global-css" href="https://static-forge.netlify.com/wp-content/uploads/elementor/css/global.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-post-41266-css" href="https://static-forge.netlify.com/wp-content/uploads/elementor/css/post-41266.css" type="text/css" media="all"><link rel="stylesheet" id="custom-frontend-style-css" href="https://static-forge.netlify.com/wp-content/plugins/ideapush/inc/css/frontendstyle.css" type="text/css" media="all"><style id="custom-frontend-style-inline-css" type="text/css">
+.ideapush-idea-filter{display: none;}
+</style><script type="text/javascript" src="https://static-forge.netlify.com/wp-includes/js/jquery/jquery.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-includes/js/jquery/jquery-migrate.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min.js"></script><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NB3CZPX');</script><script type="text/javascript">
+            (function () {
+                window.lae_fs = {can_use_premium_code: false};
+            })();
+        </script><style type="text/css" id="wp-custom-css">
+			.hljs {
+	background: none;
+}		</style><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono"><link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700"><link href="https://cdn.forge.tylertech.com/v1/libs/tcw/latest/tcw-material-design.css" rel="stylesheet"><link rel="stylesheet" href="styles/tyler-forge.css"><link rel="stylesheet" href="styles/hljs-theme.css"><link rel="stylesheet" href="styles/component.css"></head><body class="tyl-typography">
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NB3CZPX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+
+
+    <tcw-scaffold class="tyl-docs"><tcw-omnibar id="tyl-forge-omnibar" title-text="Tyler Forge" slot="header"><div slot="logo" style="width: 24px; height: 20px; margin-left: 8px;">
+    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 480.5 423.03"><title>forge-icon-only</title><g id="logo"><path d="M463.68,39H283.49A26,26,0,0,0,261,52l-39.38,68.2a26,26,0,0,0,22.55,39.05H424.3a26,26,0,0,0,22.55-13L486.22,78A26,26,0,0,0,463.68,39Z" transform="translate(-9.25 -38.98)" fill="#fff"></path><path d="M377,189.18H196.77a26,26,0,0,0-22.54,13l-37.37,64.72a26,26,0,0,0,0,26L227,449A26,26,0,0,0,272,449L399.51,228.23A26,26,0,0,0,377,189.18Z" transform="translate(-9.25 -38.98)" fill="#fff"></path><path d="M211.35,78A26,26,0,0,0,188.81,39H35.32A26,26,0,0,0,12.78,78L77,189.18,89.52,211a26,26,0,0,0,45.09,0Z" transform="translate(-9.25 -38.98)" fill="#fff"></path></g></svg></div>
+  <tcw-omnibar-search slot="center"><input type="text" placeholder="Search..."></tcw-omnibar-search><tcw-omnibar-menu-button slot="menu" id="tyl-forge-omnibar-menu"></tcw-omnibar-menu-button><div slot="action" style="display: flex; justify-content: space-around;">
+    <ul class="header-nav"><li class="header__nav-item" id="design-nav-indicator">
+        <a href="/getting-started-with-forge/" class="header__nav-link">
+          Design <span class="header__nav-indicator" id="design-link-indicator"></span>
+        </a>
+      </li>
+      <li class="header__nav-item" id="development-nav-indicator">
+        <a href="/development/" class="header__nav-link">
+          Development <span class="header__nav-indicator" id="development-link-indicator"></span>
+        </a>
+      </li>
+      <li class="header__nav-item" id="development-nav-indicator">
+        <a href="/give-feedback/" class="header__nav-link">
+          Feedback <span class="header__nav-indicator" id="feedback-link-indicator"></span>
+        </a>
+      </li>
+    </ul></div>
+</tcw-omnibar><div slot="body-left">
+  <tcw-drawer id="tyl-forge-sidenav" type="dismissible" open="true" style="--tyl-drawer-width: 320px;"><tcw-list class="nav navbar-nav"><a href="/" id="back to design-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">arrow_back</i>Back to design</tcw-list-item></a><tcw-expansion-panel id="guides-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">description</i>
+			  Guides
+			  <tcw-open-icon slot="trailing" style="line-height: 0.5;"></tcw-open-icon></tcw-list-item><tcw-list><a href="https://static-forge.netlify.com/development/guides/introduction/"><tcw-list-item slot="header" class="nav_subitem">Introduction</tcw-list-item></a><a href="https://static-forge.netlify.com/development/guides/prerequisites/"><tcw-list-item slot="header" class="nav_subitem">Prerequisites</tcw-list-item></a><a href="https://static-forge.netlify.com/development/guides/getting-started-2/"><tcw-list-item slot="header" class="nav_subitem">Getting started</tcw-list-item></a><a href="https://static-forge.netlify.com/development/guides/getting-started-angular/"><tcw-list-item slot="header" class="nav_subitem">Getting started – Angular</tcw-list-item></a><a href="https://static-forge.netlify.com/development/guides/omnibar-implementation/"><tcw-list-item slot="header" class="nav_subitem">Omnibar implementation</tcw-list-item></a><a href="https://static-forge.netlify.com/development/guides/table-implementation/"><tcw-list-item slot="header" class="nav_subitem">Table implementation</tcw-list-item></a><a href="https://static-forge.netlify.com/development/guides/theming/"><tcw-list-item slot="header" class="nav_subitem">Theming</tcw-list-item></a><a href="https://static-forge.netlify.com/development/guides/development/"><tcw-list-item slot="header" class="nav_subitem">Development</tcw-list-item></a><a href="https://static-forge.netlify.com/development/guides/component-tutorial/"><tcw-list-item slot="header" class="nav_subitem">Component tutorial</tcw-list-item></a><a href="https://static-forge.netlify.com/development/guides/testing-a-package-locally/"><tcw-list-item slot="header" class="nav_subitem">Testing a package locally</tcw-list-item></a></tcw-list></tcw-expansion-panel><tcw-expansion-panel id="components-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">settings_input_component</i>
+			  Components
+			  <tcw-open-icon slot="trailing" style="line-height: 0.5;"></tcw-open-icon></tcw-list-item><tcw-list><a href="https://static-forge.netlify.com/development/components/accordion/"><tcw-list-item slot="header" class="nav_subitem">Accordion</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/app-launcher/"><tcw-list-item slot="header" class="nav_subitem">App launcher</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/autocomplete/"><tcw-list-item slot="header" class="nav_subitem">Autocomplete</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/avatar/"><tcw-list-item slot="header" class="nav_subitem">Avatar</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/backdrop/"><tcw-list-item slot="header" class="nav_subitem">Backdrop</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/badge/"><tcw-list-item slot="header" class="nav_subitem">Badge</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/busy-indicator/"><tcw-list-item slot="header" class="nav_subitem">Busy indicator</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/button/"><tcw-list-item slot="header" class="nav_subitem">Button</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/button-toggle/"><tcw-list-item slot="header" class="nav_subitem">Button toggle</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/card/"><tcw-list-item slot="header" class="nav_subitem">Card</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/checkbox/"><tcw-list-item slot="header" class="nav_subitem">Checkbox</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/chips/"><tcw-list-item slot="header" class="nav_subitem">Chip</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/color-picker/"><tcw-list-item slot="header" class="nav_subitem">Color picker</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/datepicker/"><tcw-list-item slot="header" class="nav_subitem">Date picker</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/dialog/"><tcw-list-item slot="header" class="nav_subitem">Dialog</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/divider/"><tcw-list-item slot="header" class="nav_subitem">Divider</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/drawer/"><tcw-list-item slot="header" class="nav_subitem">Drawer</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/expansion-panel/"><tcw-list-item slot="header" class="nav_subitem">Expansion panel</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/floating-action-button/"><tcw-list-item slot="header" class="nav_subitem">Floating action button</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/icon-button/"><tcw-list-item slot="header" class="nav_subitem">Icon button</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/label-value/"><tcw-list-item slot="header" class="nav_subitem">Label value</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/linear-progress/"><tcw-list-item slot="header" class="nav_subitem">Linear progress</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/list/"><tcw-list-item slot="header" class="nav_subitem">List</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/menu/"><tcw-list-item slot="header" class="nav_subitem">Menu</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/omnibar/"><tcw-list-item slot="header" class="nav_subitem">Omnibar</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/omnibar-search/"><tcw-list-item slot="header" class="nav_subitem">Omnibar search</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/omnibar-profile/"><tcw-list-item slot="header" class="nav_subitem">Omnibar profile</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/omnibar-help-button/"><tcw-list-item slot="header" class="nav_subitem">Omnibar help button</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/omnibar-notification-button/"><tcw-list-item slot="header" class="nav_subitem">Omnibar notification button</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/open-icon/"><tcw-list-item slot="header" class="nav_subitem">Open icon</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/page-state/"><tcw-list-item slot="header" class="nav_subitem">Page state</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/paginator/"><tcw-list-item slot="header" class="nav_subitem">Paginator</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/popup/"><tcw-list-item slot="header" class="nav_subitem">Popup</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/product-icon/"><tcw-list-item slot="header" class="nav_subitem">Product icon</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/progress-spinner/"><tcw-list-item slot="header" class="nav_subitem">Progress spinner</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/radio-button/"><tcw-list-item slot="header" class="nav_subitem">Radio button</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/scaffold/"><tcw-list-item slot="header" class="nav_subitem">Scaffold</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/select/"><tcw-list-item slot="header" class="nav_subitem">Select</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/skeleton/"><tcw-list-item slot="header" class="nav_subitem">Skeleton</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/slider/"><tcw-list-item slot="header" class="nav_subitem">Slider</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/stepper/"><tcw-list-item slot="header" class="nav_subitem">Stepper</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/switch/"><tcw-list-item slot="header" class="nav_subitem">Switch</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/tab-bar/"><tcw-list-item slot="header" class="nav_subitem">Tab bar</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/table/"><tcw-list-item slot="header" class="nav_subitem">Table</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/text-field/"><tcw-list-item slot="header" class="nav_subitem">Text field</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/toast/"><tcw-list-item slot="header" class="nav_subitem">Toast</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/toolbar/"><tcw-list-item slot="header" class="nav_subitem">Toolbar</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/tooltips/"><tcw-list-item slot="header" class="nav_subitem">Tooltips</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/view-switcher/"><tcw-list-item slot="header" class="nav_subitem">View switcher</tcw-list-item></a></tcw-list></tcw-expansion-panel><tcw-expansion-panel id="recipes-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">fastfood</i>
+			  Recipes
+			  <tcw-open-icon slot="trailing" style="line-height: 0.5;"></tcw-open-icon></tcw-list-item><tcw-list><a href="https://static-forge.netlify.com/development/recipes/card-recipes/"><tcw-list-item slot="header" class="nav_subitem">Card</tcw-list-item></a><a href="https://static-forge.netlify.com/development/recipes/dialog-recipes/"><tcw-list-item slot="header" class="nav_subitem">Dialog</tcw-list-item></a><a href="https://static-forge.netlify.com/development/recipes/error-pages/"><tcw-list-item slot="header" class="nav_subitem">Error pages</tcw-list-item></a><a href="https://static-forge.netlify.com/development/recipes/page-layout-recipes/"><tcw-list-item slot="header" class="nav_subitem">Page layout</tcw-list-item></a><a href="https://static-forge.netlify.com/development/recipes/table-recipes/"><tcw-list-item slot="header" class="nav_subitem">Table</tcw-list-item></a><a href="https://static-forge.netlify.com/development/recipes/toolbar-recipe/"><tcw-list-item slot="header" class="nav_subitem">Toolbar</tcw-list-item></a></tcw-list></tcw-expansion-panel><tcw-expansion-panel id="utilities-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">build</i>
+			  Utilities
+			  <tcw-open-icon slot="trailing" style="line-height: 0.5;"></tcw-open-icon></tcw-list-item><tcw-list><a href="https://static-forge.netlify.com/development/utilities/theme/"><tcw-list-item slot="header" class="nav_subitem">Theme</tcw-list-item></a><a href="https://static-forge.netlify.com/development/utilities/typography/"><tcw-list-item slot="header" class="nav_subitem">Typography</tcw-list-item></a></tcw-list></tcw-expansion-panel><tcw-expansion-panel id="tyler spatial-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">map</i>
+			  Tyler Spatial
+			  <tcw-open-icon slot="trailing" style="line-height: 0.5;"></tcw-open-icon></tcw-list-item><tcw-list><a href="https://static-forge.netlify.com/development/tyler-spatial/getting-started/"><tcw-list-item slot="header" class="nav_subitem">Getting started</tcw-list-item></a><a href="https://static-forge.netlify.com/development/tyler-spatial/mapview/"><tcw-list-item slot="header" class="nav_subitem">MapView</tcw-list-item></a></tcw-list></tcw-expansion-panel><a href="https://static-forge.netlify.com/development/cdn/" id="cdn-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">cloud</i>CDN</tcw-list-item></a><a href="https://static-forge.netlify.com/development/extensions/" id="extensions-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">extension</i>Extensions</tcw-list-item></a>    </tcw-list></tcw-drawer></div>
+      <div class="tyl-docs-content" slot="body" style="position: relative;" id="top-of-page">
+        <div id="tyl-docs-content" class="tyl-docs-content__container" style="padding: 16px; max-width: 1264px;">
+        <div class="flex-container" style="display: flex;">
+        <div class="left-content" style="max-width: 956px; width: 100%;">
+          <tcw-card has-padding="false"><div data-elementor-type="wp-page" data-elementor-id="41266" class="elementor elementor-41266" data-elementor-settings="[]">
+			<div class="elementor-inner">
+				<div class="elementor-section-wrap">
+							<section class="elementor-element elementor-element-11273227 elementor-section-height-min-height elementor-section-content-middle elementor-section-items-top elementor-section-boxed elementor-section-height-default elementor-section elementor-top-section" data-id="11273227" data-element_type="section" id="overview" data-settings='{"background_background":"classic"}'><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-6413b0f4 elementor-column elementor-col-100 elementor-top-column" data-id="6413b0f4" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<section class="elementor-element elementor-element-b79921e elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="b79921e" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-5b821bb5 elementor-column elementor-col-50 elementor-inner-column" data-id="5b821bb5" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-2eb9ad9f elementor-widget elementor-widget-divider" data-id="2eb9ad9f" data-element_type="widget" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-1667b9fe elementor-column elementor-col-50 elementor-inner-column" data-id="1667b9fe" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-1362afc8 elementor-widget elementor-widget-html" data-id="1362afc8" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="display: flex; justify-content: flex-end; margin-right: 8px;">
+    <a href="/components/buttons/#toggle-button">
+<tcw-button style="margin-right: 24px;"><button type="button">
+      <i class="material-icons">format_paint</i>
+      <span>Design Guidelines</span>
+    </button>
+</tcw-button></a>
+
+<a href="https://bitbucket.tylertech.com/projects/TWC/repos/tyler-components-web/browse/src/lib/button-toggle" target="_blank">
+<tcw-button><button type="button">
+      <i class="material-icons">code</i>
+      <span>Open in BitBucket</span>
+    </button>
+  </tcw-button></a>
+</div>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><div class="elementor-element elementor-element-3d24a4dc elementor-widget elementor-widget-heading" data-id="3d24a4dc" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Button Toggle</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-2d3231c9 elementor-widget elementor-widget-text-editor" data-id="2d3231c9" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><span style="font-size: medium; letter-spacing: 0.05px;">Toggle buttons can be used to group related options. To emphasize groups of related toggle buttons, a group should share a common container.</span></p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-7c40f331 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="7c40f331" data-element_type="section" id="guidance"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-7b3e3fae elementor-column elementor-col-100 elementor-top-column" data-id="7b3e3fae" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-54115686 elementor-widget elementor-widget-spacer" data-id="54115686" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-4e694cd2 elementor-widget elementor-widget-heading" data-id="4e694cd2" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Installation</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-4234423e elementor-widget elementor-widget-text-editor" data-id="4234423e" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>This component can be installed as an individual npm package via <code>@tyler-components-web/button-toggle</code></p><p>To install the full TCW component library package, see the <a href="https://static-forge.netlify.com/development/guides/getting-started/">getting started</a> guide.</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-51f759c elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="51f759c" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-aafb338 elementor-column elementor-col-100 elementor-top-column" data-id="aafb338" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-09f455e elementor-widget elementor-widget-global elementor-global-3270 elementor-widget-html" data-id="09f455e" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<tcw-divider></tcw-divider></div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-72863a08 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="72863a08" data-element_type="section" id="guidance"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-1fac8c33 elementor-column elementor-col-100 elementor-top-column" data-id="1fac8c33" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-67f4428b elementor-widget elementor-widget-heading" data-id="67f4428b" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Guidance</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-4e66d6e3 elementor-widget elementor-widget-text-editor" data-id="4e66d6e3" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Use the button-toggle-group component to manage child button-toggle component instances. You can get/set the value from the group component, as well as control various</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-27ec3805 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="27ec3805" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-6441af39 elementor-column elementor-col-100 elementor-top-column" data-id="6441af39" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<section class="elementor-element elementor-element-6fc90198 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="6fc90198" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-7ae2d0de elementor-column elementor-col-100 elementor-inner-column" data-id="7ae2d0de" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-3c891f0a elementor-widget elementor-widget-heading" data-id="3c891f0a" data-element_type="widget" toc-subitem="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h6 class="elementor-heading-title elementor-size-default">Default</h6>		</div>
+				</div>
+				<div class="elementor-element elementor-element-31a49fc8 elementor-widget elementor-widget-html" data-id="31a49fc8" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<tcw-button-toggle-group><tcw-button-toggle value="email" aria-label="By email">By email</tcw-button-toggle><tcw-button-toggle value="mail" aria-label="By mail">By mail</tcw-button-toggle><tcw-button-toggle value="phone" aria-label="By phone">By phone</tcw-button-toggle></tcw-button-toggle-group></div>
+				</div>
+				<div class="elementor-element elementor-element-22b4b305 elementor-widget elementor-widget-wp-widget-wpb_widget" data-id="22b4b305" data-element_type="widget" data-widget_type="wp-widget-wpb_widget.default">
+				<div class="elementor-widget-container">
+			<pre><code><span class="hljs-tag"><<span class="hljs-name">tcw-button-toggle-group</span>></span>
+  <span class="hljs-tag"><<span class="hljs-name">tcw-button-toggle</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"email"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"By email"</span>></span>By email<span class="hljs-tag"></<span class="hljs-name">tcw-button-toggle</span>></span>
+  <span class="hljs-tag"><<span class="hljs-name">tcw-button-toggle</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"mail"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"By mail"</span>></span>By mail<span class="hljs-tag"></<span class="hljs-name">tcw-button-toggle</span>></span>
+  <span class="hljs-tag"><<span class="hljs-name">tcw-button-toggle</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"phone"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"By phone"</span>></span>By phone<span class="hljs-tag"></<span class="hljs-name">tcw-button-toggle</span>></span>
+<span class="hljs-tag"></<span class="hljs-name">tcw-button-toggle-group</span>></span>
+</code></pre>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section></div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-5f356e97 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="5f356e97" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-1335f7a1 elementor-column elementor-col-100 elementor-top-column" data-id="1335f7a1" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<section class="elementor-element elementor-element-a4e263b elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="a4e263b" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-3f0bf4d4 elementor-column elementor-col-100 elementor-inner-column" data-id="3f0bf4d4" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-51e865f0 elementor-widget elementor-widget-heading" data-id="51e865f0" data-element_type="widget" toc-subitem="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h6 class="elementor-heading-title elementor-size-default">Stretch</h6>		</div>
+				</div>
+				<div class="elementor-element elementor-element-6c0b3c46 elementor-widget elementor-widget-html" data-id="6c0b3c46" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<tcw-button-toggle-group value="mail" stretch><tcw-button-toggle value="email" aria-label="By email">
+    By email
+  </tcw-button-toggle><tcw-button-toggle value="mail" aria-label="By mail">By mail</tcw-button-toggle><tcw-button-toggle value="phone" aria-label="By phone">
+    By phone
+  </tcw-button-toggle></tcw-button-toggle-group></div>
+				</div>
+				<div class="elementor-element elementor-element-29cdefb4 elementor-widget elementor-widget-wp-widget-wpb_widget" data-id="29cdefb4" data-element_type="widget" data-widget_type="wp-widget-wpb_widget.default">
+				<div class="elementor-widget-container">
+			<pre><code><span class="hljs-tag"><<span class="hljs-name">tcw-button-toggle-group</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"mail"</span> <span class="hljs-attr">stretch</span>></span>
+  <span class="hljs-tag"><<span class="hljs-name">tcw-button-toggle</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"email"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"By email"</span>></span>
+    By email
+  <span class="hljs-tag"></<span class="hljs-name">tcw-button-toggle</span>></span>
+  <span class="hljs-tag"><<span class="hljs-name">tcw-button-toggle</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"mail"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"By mail"</span>></span>By mail<span class="hljs-tag"></<span class="hljs-name">tcw-button-toggle</span>></span>
+  <span class="hljs-tag"><<span class="hljs-name">tcw-button-toggle</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"phone"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"By phone"</span>></span>
+    By phone
+  <span class="hljs-tag"></<span class="hljs-name">tcw-button-toggle</span>></span>
+<span class="hljs-tag"></<span class="hljs-name">tcw-button-toggle-group</span>></span>
+</code></pre>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section></div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-9e9238e elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="9e9238e" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-9fe5917 elementor-column elementor-col-100 elementor-top-column" data-id="9fe5917" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<section class="elementor-element elementor-element-217d044 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="217d044" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-7875b58 elementor-column elementor-col-100 elementor-inner-column" data-id="7875b58" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-066bacb elementor-widget elementor-widget-heading" data-id="066bacb" data-element_type="widget" toc-subitem="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h6 class="elementor-heading-title elementor-size-default">Multiple</h6>		</div>
+				</div>
+				<div class="elementor-element elementor-element-12dad2d elementor-widget elementor-widget-html" data-id="12dad2d" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<tcw-button-toggle-group multiple value="email"><tcw-button-toggle value="email" aria-label="By email">By email</tcw-button-toggle><tcw-button-toggle value="mail" aria-label="By mail">By mail</tcw-button-toggle><tcw-button-toggle value="phone" aria-label="By phone">By phone</tcw-button-toggle></tcw-button-toggle-group></div>
+				</div>
+				<div class="elementor-element elementor-element-ca4f65b elementor-widget elementor-widget-wp-widget-wpb_widget" data-id="ca4f65b" data-element_type="widget" data-widget_type="wp-widget-wpb_widget.default">
+				<div class="elementor-widget-container">
+			<pre><code><span class="hljs-tag"><<span class="hljs-name">tcw-button-toggle-group</span> <span class="hljs-attr">multiple</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"email"</span>></span>
+  <span class="hljs-tag"><<span class="hljs-name">tcw-button-toggle</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"email"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"By email"</span>></span>By email<span class="hljs-tag"></<span class="hljs-name">tcw-button-toggle</span>></span>
+  <span class="hljs-tag"><<span class="hljs-name">tcw-button-toggle</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"mail"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"By mail"</span>></span>By mail<span class="hljs-tag"></<span class="hljs-name">tcw-button-toggle</span>></span>
+  <span class="hljs-tag"><<span class="hljs-name">tcw-button-toggle</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"phone"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"By phone"</span>></span>By phone<span class="hljs-tag"></<span class="hljs-name">tcw-button-toggle</span>></span>
+<span class="hljs-tag"></<span class="hljs-name">tcw-button-toggle-group</span>></span>
+</code></pre>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section></div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-1e66348 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="1e66348" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-68d97a7 elementor-column elementor-col-100 elementor-top-column" data-id="68d97a7" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<section class="elementor-element elementor-element-a988e3b elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="a988e3b" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-d29b342 elementor-column elementor-col-100 elementor-inner-column" data-id="d29b342" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-0d89dee elementor-widget elementor-widget-heading" data-id="0d89dee" data-element_type="widget" toc-subitem="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h6 class="elementor-heading-title elementor-size-default">With leading and trailing icons</h6>		</div>
+				</div>
+				<div class="elementor-element elementor-element-56af971 elementor-widget elementor-widget-html" data-id="56af971" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<tcw-button-toggle-group id="button-toggle-group"><tcw-button-toggle value="email" aria-label="By email"><i class="material-icons" slot="leading" aria-hidden="true">email</i>
+    By email
+  </tcw-button-toggle><tcw-button-toggle value="mail" aria-label="By mail">
+      By mail
+  </tcw-button-toggle><tcw-button-toggle value="phone" aria-label="By phone">
+    By phone
+    <i class="material-icons" slot="trailing" aria-hidden="true">phone</i>
+  </tcw-button-toggle></tcw-button-toggle-group></div>
+				</div>
+				<div class="elementor-element elementor-element-41bbae3 elementor-widget elementor-widget-wp-widget-wpb_widget" data-id="41bbae3" data-element_type="widget" data-widget_type="wp-widget-wpb_widget.default">
+				<div class="elementor-widget-container">
+			<pre><code><span class="hljs-tag"><<span class="hljs-name">tcw-button-toggle-group</span>></span>
+  <span class="hljs-tag"><<span class="hljs-name">tcw-button-toggle</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"email"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"By email"</span>></span>
+    <span class="hljs-tag"><<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"material-icons"</span> <span class="hljs-attr">slot</span>=<span class="hljs-string">"leading"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>></span>email<span class="hljs-tag"></<span class="hljs-name">i</span>></span>
+    By email
+  <span class="hljs-tag"></<span class="hljs-name">tcw-button-toggle</span>></span>
+  <span class="hljs-tag"><<span class="hljs-name">tcw-button-toggle</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"mail"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"By mail"</span>></span>
+      By mail
+  <span class="hljs-tag"></<span class="hljs-name">tcw-button-toggle</span>></span>
+  <span class="hljs-tag"><<span class="hljs-name">tcw-button-toggle</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"phone"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"By phone"</span>></span>
+    By phone
+    <span class="hljs-tag"><<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"material-icons"</span> <span class="hljs-attr">slot</span>=<span class="hljs-string">"trailing"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>></span>phone<span class="hljs-tag"></<span class="hljs-name">i</span>></span>
+  <span class="hljs-tag"></<span class="hljs-name">tcw-button-toggle</span>></span>
+<span class="hljs-tag"></<span class="hljs-name">tcw-button-toggle-group</span>></span>
+</code></pre>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section></div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-7320d4e elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="7320d4e" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-5497a45 elementor-column elementor-col-100 elementor-top-column" data-id="5497a45" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-330c062 elementor-widget elementor-widget-global elementor-global-3270 elementor-widget-html" data-id="330c062" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<tcw-divider></tcw-divider></div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-1c4b6292 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="1c4b6292" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-20abeacf elementor-column elementor-col-100 elementor-top-column" data-id="20abeacf" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-4473a52d elementor-widget elementor-widget-heading" data-id="4473a52d" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Button toggle group properties/attributes</h3>		</div>
+				</div>
+				<section class="elementor-element elementor-element-171a0220 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="171a0220" data-element_type="section" data-settings='{"background_background":"classic"}'><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-6c6b1f2f elementor-column elementor-col-33 elementor-inner-column" data-id="6c6b1f2f" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-1680dfd5 mdc-typography--subtitle1 elementor-widget elementor-widget-heading" data-id="1680dfd5" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">Property</p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-55d26984 elementor-column elementor-col-33 elementor-inner-column" data-id="55d26984" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-ceb6a21 mdc-typography--subtitle1 elementor-widget elementor-widget-heading" data-id="ceb6a21" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">Attribute</p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-3a7af2a0 elementor-column elementor-col-33 elementor-inner-column" data-id="3a7af2a0" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-fbc69b1 mdc-typography--subtitle1 elementor-widget elementor-widget-heading" data-id="fbc69b1" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">Description</p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-6a26cac2 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="6a26cac2" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-782f8508 elementor-column elementor-col-33 elementor-inner-column" data-id="782f8508" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-68ba97f1 elementor-widget elementor-widget-heading" data-id="68ba97f1" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">value</p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-61b75d1d elementor-column elementor-col-33 elementor-inner-column" data-id="61b75d1d" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-2533a88f elementor-widget elementor-widget-heading" data-id="2533a88f" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">value</p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-2afd1b81 elementor-column elementor-col-33 elementor-inner-column" data-id="2afd1b81" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-20631f50 elementor-widget elementor-widget-heading" data-id="20631f50" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">Gets/sets the selected value.</p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-431b83b elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="431b83b" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-f6259b8 elementor-column elementor-col-33 elementor-inner-column" data-id="f6259b8" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-e445bca elementor-widget elementor-widget-heading" data-id="e445bca" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">multiple</p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-092c5e3 elementor-column elementor-col-33 elementor-inner-column" data-id="092c5e3" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-55f4997 elementor-widget elementor-widget-heading" data-id="55f4997" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">multiple</p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-25bdc8f elementor-column elementor-col-33 elementor-inner-column" data-id="25bdc8f" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-a2d517a elementor-widget elementor-widget-heading" data-id="a2d517a" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">Controls whether multiple buttons can be selected at the same time. False by default.</p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-26d0313 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="26d0313" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-bd9c430 elementor-column elementor-col-33 elementor-inner-column" data-id="bd9c430" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-d8ea0c8 elementor-widget elementor-widget-heading" data-id="d8ea0c8" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">stretch</p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-19def2f elementor-column elementor-col-33 elementor-inner-column" data-id="19def2f" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-bba344f elementor-widget elementor-widget-heading" data-id="bba344f" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">stretch</p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-1cd39d7 elementor-column elementor-col-33 elementor-inner-column" data-id="1cd39d7" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-b06a142 elementor-widget elementor-widget-heading" data-id="b06a142" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">Controls whether the child button-toggle elements will stretch to fill the available space.</p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-4bec199 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="4bec199" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-c7c0d77 elementor-column elementor-col-33 elementor-inner-column" data-id="c7c0d77" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-c623de9 elementor-widget elementor-widget-heading" data-id="c623de9" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">mandatory</p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-c0fa2d8 elementor-column elementor-col-33 elementor-inner-column" data-id="c0fa2d8" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-df8dd5b elementor-widget elementor-widget-heading" data-id="df8dd5b" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">mandatory</p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-a15ca37 elementor-column elementor-col-33 elementor-inner-column" data-id="a15ca37" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-d3f80f5 elementor-widget elementor-widget-heading" data-id="d3f80f5" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">Gets/sets whether a selection must be made at all times. False by default.</p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-6e299d0 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="6e299d0" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-9a32476 elementor-column elementor-col-33 elementor-inner-column" data-id="9a32476" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-835380d elementor-widget elementor-widget-heading" data-id="835380d" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">vertical</p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-3bb98a4 elementor-column elementor-col-33 elementor-inner-column" data-id="3bb98a4" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-9abf404 elementor-widget elementor-widget-heading" data-id="9abf404" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">vertical</p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-88744c5 elementor-column elementor-col-33 elementor-inner-column" data-id="88744c5" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-6a9cd8f elementor-widget elementor-widget-heading" data-id="6a9cd8f" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">Controls whether the layout is vertical. False by default.</p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-f76d7c5 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="f76d7c5" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-d21c7b2 elementor-column elementor-col-33 elementor-inner-column" data-id="d21c7b2" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-528b88e elementor-widget elementor-widget-heading" data-id="528b88e" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">disabled</p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-287bdb5 elementor-column elementor-col-33 elementor-inner-column" data-id="287bdb5" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-c622537 elementor-widget elementor-widget-heading" data-id="c622537" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">disabled</p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-5edcad6 elementor-column elementor-col-33 elementor-inner-column" data-id="5edcad6" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-8e07542 elementor-widget elementor-widget-heading" data-id="8e07542" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">Gets/sets  the disabled state of the component as a whole.</p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-da6ab22 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="da6ab22" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-c67e44b elementor-column elementor-col-33 elementor-inner-column" data-id="c67e44b" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-2379a07 elementor-widget elementor-widget-heading" data-id="2379a07" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">dense</p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-4b7ddd5 elementor-column elementor-col-33 elementor-inner-column" data-id="4b7ddd5" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-9df66de elementor-widget elementor-widget-heading" data-id="9df66de" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">dense</p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-b773ccc elementor-column elementor-col-33 elementor-inner-column" data-id="b773ccc" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-c0c5afd elementor-widget elementor-widget-heading" data-id="c0c5afd" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">Applies the dense style to each child button-toggle component.</p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-00fce1f elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="00fce1f" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-5b7f22c elementor-column elementor-col-33 elementor-inner-column" data-id="5b7f22c" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-8f7edfa elementor-widget elementor-widget-heading" data-id="8f7edfa" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">options</p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-7aacef5 elementor-column elementor-col-33 elementor-inner-column" data-id="7aacef5" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-cb57de7 elementor-widget elementor-widget-heading" data-id="cb57de7" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">n/a</p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-737b858 elementor-column elementor-col-33 elementor-inner-column" data-id="737b858" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-49e0b3e elementor-widget elementor-widget-heading" data-id="49e0b3e" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">Allows for button-toggle components to be rendered via code instead of HTML.</p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section></div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-3d95c79 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="3d95c79" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-b238f3c elementor-column elementor-col-100 elementor-top-column" data-id="b238f3c" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-44d2639 elementor-widget elementor-widget-global elementor-global-3270 elementor-widget-html" data-id="44d2639" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<tcw-divider></tcw-divider></div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-8614048 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="8614048" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-303a447 elementor-column elementor-col-100 elementor-top-column" data-id="303a447" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-236bf92 elementor-widget elementor-widget-heading" data-id="236bf92" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Button toggle properties/attributes</h3>		</div>
+				</div>
+				<section class="elementor-element elementor-element-1ff6781 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="1ff6781" data-element_type="section" data-settings='{"background_background":"classic"}'><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-4b68a0e elementor-column elementor-col-33 elementor-inner-column" data-id="4b68a0e" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-d175bf0 mdc-typography--subtitle1 elementor-widget elementor-widget-heading" data-id="d175bf0" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">Property</p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-c63ee0b elementor-column elementor-col-33 elementor-inner-column" data-id="c63ee0b" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-1ab07e1 mdc-typography--subtitle1 elementor-widget elementor-widget-heading" data-id="1ab07e1" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">Attribute</p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-2dce1fe elementor-column elementor-col-33 elementor-inner-column" data-id="2dce1fe" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-d6bcefc mdc-typography--subtitle1 elementor-widget elementor-widget-heading" data-id="d6bcefc" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">Description</p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-2b3301a elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="2b3301a" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-b13b429 elementor-column elementor-col-33 elementor-inner-column" data-id="b13b429" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-92213c1 elementor-widget elementor-widget-heading" data-id="92213c1" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">value</p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-7993a0b elementor-column elementor-col-33 elementor-inner-column" data-id="7993a0b" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-d1cc387 elementor-widget elementor-widget-heading" data-id="d1cc387" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">value</p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-4cdba3c elementor-column elementor-col-33 elementor-inner-column" data-id="4cdba3c" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-94dcd61 elementor-widget elementor-widget-heading" data-id="94dcd61" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">Gets/sets the value.</p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-35b2f14 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="35b2f14" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-a2377fb elementor-column elementor-col-33 elementor-inner-column" data-id="a2377fb" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-8c89fe3 elementor-widget elementor-widget-heading" data-id="8c89fe3" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">selected</p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-c12029d elementor-column elementor-col-33 elementor-inner-column" data-id="c12029d" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-e0afb35 elementor-widget elementor-widget-heading" data-id="e0afb35" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">selected</p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-ce015fd elementor-column elementor-col-33 elementor-inner-column" data-id="ce015fd" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-e715bf9 elementor-widget elementor-widget-heading" data-id="e715bf9" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">Gets/sets  the selected state.</p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-d31176a elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="d31176a" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-c2ba2c7 elementor-column elementor-col-33 elementor-inner-column" data-id="c2ba2c7" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-78ad6ad elementor-widget elementor-widget-heading" data-id="78ad6ad" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">disabled</p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-5152cbd elementor-column elementor-col-33 elementor-inner-column" data-id="5152cbd" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-c4d3ffd elementor-widget elementor-widget-heading" data-id="c4d3ffd" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">disabled</p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-9200e40 elementor-column elementor-col-33 elementor-inner-column" data-id="9200e40" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-31fd1ac elementor-widget elementor-widget-heading" data-id="31fd1ac" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">Gets/sets  the disabled state.</p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-bee3ad2 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="bee3ad2" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-69bbcc6 elementor-column elementor-col-33 elementor-inner-column" data-id="69bbcc6" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-a24aa6e elementor-widget elementor-widget-heading" data-id="a24aa6e" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">dense</p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-50be533 elementor-column elementor-col-33 elementor-inner-column" data-id="50be533" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-fd369a1 elementor-widget elementor-widget-heading" data-id="fd369a1" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">dense</p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-c6d672d elementor-column elementor-col-33 elementor-inner-column" data-id="c6d672d" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-58d402c elementor-widget elementor-widget-heading" data-id="58d402c" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">Applies the dense style.</p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section></div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-ea6a698 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="ea6a698" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-ce2a37f elementor-column elementor-col-100 elementor-top-column" data-id="ce2a37f" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-b2fa9f2 elementor-widget elementor-widget-global elementor-global-3270 elementor-widget-html" data-id="b2fa9f2" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<tcw-divider></tcw-divider></div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-7e204aaa elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="7e204aaa" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-217b40b0 elementor-column elementor-col-100 elementor-top-column" data-id="217b40b0" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-215e067b elementor-widget elementor-widget-heading" data-id="215e067b" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Button toggle methods</h3>		</div>
+				</div>
+				<section class="elementor-element elementor-element-5c584b3 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="5c584b3" data-element_type="section" data-settings='{"background_background":"classic"}'><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-d0a1f0f elementor-column elementor-col-50 elementor-inner-column" data-id="d0a1f0f" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-7ebc2962 mdc-typography--subtitle1 elementor-widget elementor-widget-heading" data-id="7ebc2962" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">Name</p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-5f538479 elementor-column elementor-col-50 elementor-inner-column" data-id="5f538479" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-2b2e72d9 mdc-typography--subtitle1 elementor-widget elementor-widget-heading" data-id="2b2e72d9" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">Description</p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-4d779391 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="4d779391" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-1627171b elementor-column elementor-col-50 elementor-inner-column" data-id="1627171b" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-4d31d338 elementor-widget elementor-widget-heading" data-id="4d31d338" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">setFocus()</p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-7314b9a2 elementor-column elementor-col-50 elementor-inner-column" data-id="7314b9a2" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-2719a59f elementor-widget elementor-widget-heading" data-id="2719a59f" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">Sets the focus to the child <button> element.</p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section></div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-ee5ab9d elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="ee5ab9d" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-ac6a63e elementor-column elementor-col-100 elementor-top-column" data-id="ac6a63e" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-75f8666 elementor-widget elementor-widget-global elementor-global-3270 elementor-widget-html" data-id="75f8666" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<tcw-divider></tcw-divider></div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-18694e43 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="18694e43" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-699dd805 elementor-column elementor-col-100 elementor-top-column" data-id="699dd805" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-6c4f3d97 elementor-widget elementor-widget-heading" data-id="6c4f3d97" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Events</h3>		</div>
+				</div>
+				<section class="elementor-element elementor-element-32608ee elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="32608ee" data-element_type="section" data-settings='{"background_background":"classic"}'><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-510ae802 elementor-column elementor-col-50 elementor-inner-column" data-id="510ae802" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-10ce6844 mdc-typography--subtitle1 elementor-widget elementor-widget-heading" data-id="10ce6844" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">Name</p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-65e2fbd4 elementor-column elementor-col-50 elementor-inner-column" data-id="65e2fbd4" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-ec837dd mdc-typography--subtitle1 elementor-widget elementor-widget-heading" data-id="ec837dd" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">Description</p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-3622f15a elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="3622f15a" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-16dffe6c elementor-column elementor-col-50 elementor-inner-column" data-id="16dffe6c" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-680133cf elementor-widget elementor-widget-heading" data-id="680133cf" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">tcw-button-toggle-select</p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-173718b1 elementor-column elementor-col-50 elementor-inner-column" data-id="173718b1" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-1e12d5d4 elementor-widget elementor-widget-heading" data-id="1e12d5d4" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<p class="elementor-heading-title elementor-size-default">Emits when the selected state is changed.</p>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section></div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section></div>
+			</div>
+		</div>
+		 
+                        </tcw-card><div class="tyl-typography--caption" style="margin-bottom: 8px;">Last modified on December 9, 2019 by: Kieran Nichols</div>
+          </div>
+
+            <div class="right-content" id="toc-right-container" style="position: relative; width: 300px;"> 
+                                <div><div class="textwidget custom-html-widget"><div class="toc" style="position: fixed;">
+                    <div class="toc-container">
+                      <div class="left-line" id="toc-left-line"></div>
+                      <div class="toc-items-container" id="toc-items">
+                        <h6 style="margin-top: 0px; margin-bottom: 16px;">Table of contents</h6>
+                      </div>
+                    </div>
+                  </div>
+
+<div id="back-to-top-button" class="tyl-back-to-top">
+            <tcw-fab extended="true"><button aria-label="Extended FAB with just text" onclick="scrollTo()">
+                <i class="material-icons" aria-hidden="true">arrow_upward</i>
+                <span>Back to top</span>
+              </button>
+            </tcw-fab></div></div></div>                            </div>
+
+        </div>
+       </div>
+      </div>
+    </tcw-scaffold><script type="text/javascript" src="scripts/custom-elements-es5-adapter.js"></script><script type="text/javascript" src="scripts/webcomponents-bundle.js"></script><script type="text/javascript" src="scripts/tyler-components-web-lib.min.js"></script><script type="text/javascript" src="scripts/tyler-components-web-forge-lib.min.js"></script><script>
+  window.addEventListener('WebComponentsReady', function() {
+    window.TylerComponentsWeb.lib.defineComponents();
+    window.TylerComponentsWeb.Forge.lib.defineComponents();
+  });
+</script><script type="text/javascript" src="scripts/menu-expander.js"></script><script type="text/javascript" src="scripts/drawer.js"></script><script type="text/javascript" src="scripts/navHeader.js"></script><script type="text/javascript" src="scripts/search.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-136930168-1"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-136930168-1');
+</script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/material-design-for-contact-form-7/assets/js/lib/autosize.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/material-design-for-contact-form-7/assets/js/cf7-material-design-bundle.js"></script><script type="text/javascript">
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"https:\/\/static-forge.netlify.com\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"}};
+/* ]]> */
+</script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/contact-form-7/includes/js/scripts.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/js/frontend-modules.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor-pro/assets/lib/sticky/jquery.sticky.min.js"></script><script type="text/javascript">
+var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/static-forge.netlify.com\/wp-admin\/admin-ajax.php","nonce":"a52c73ecd1","shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"google":{"title":"Google+","has_counter":true},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"delicious":{"title":"Delicious"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"}},"facebook_sdk":{"lang":"en_US","app_id":""}};
+</script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor-pro/assets/js/frontend.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-includes/js/jquery/ui/position.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/swiper/swiper.min.js"></script><script type="text/javascript">
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"version":"2.8.3","urls":{"assets":"https:\/\/static-forge.netlify.com\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"general":{"elementor_global_image_lightbox":"yes"},"editorPreferences":[]},"post":{"id":41266,"title":"Button Toggle","excerpt":""}};
+</script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/js/frontend.min.js"></script><script type="text/javascript" src="scripts/table-of-contents.js?x-version=1"></script></body></html>

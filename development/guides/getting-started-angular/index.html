@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en-US"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="shortcut icon" href="favicon.ico" sizes="16x16" type="image/x-icon"><title>Getting Started – Angular – Tyler Forge</title><link rel="dns-prefetch" href="//fonts.googleapis.com"><link rel="dns-prefetch" href="//s.w.org"><link rel="stylesheet" id="cf7md_roboto-css" href="//fonts.googleapis.com/css?family=Roboto:400,500" type="text/css" media="all"><link rel="stylesheet" id="cf7-material-design-css" href="https://static-forge.netlify.com/wp-content/plugins/material-design-for-contact-form-7/assets/css/cf7-material-design.css" type="text/css" media="all"><link rel="stylesheet" id="contact-form-7-css" href="https://static-forge.netlify.com/wp-content/plugins/contact-form-7/includes/css/styles.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-icons-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-animations-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/animations/animations.min.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-frontend-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/css/frontend.min.css" type="text/css" media="all"><link rel="stylesheet" id="lae-animate-styles-css" href="https://static-forge.netlify.com/wp-content/plugins/addons-for-elementor/assets/css/animate.css" type="text/css" media="all"><link rel="stylesheet" id="lae-sliders-styles-css" href="https://static-forge.netlify.com/wp-content/plugins/addons-for-elementor/assets/css/sliders.css" type="text/css" media="all"><link rel="stylesheet" id="lae-icomoon-styles-css" href="https://static-forge.netlify.com/wp-content/plugins/addons-for-elementor/assets/css/icomoon.css" type="text/css" media="all"><link rel="stylesheet" id="lae-frontend-styles-css" href="https://static-forge.netlify.com/wp-content/plugins/addons-for-elementor/assets/css/lae-frontend.css" type="text/css" media="all"><link rel="stylesheet" id="lae-widgets-styles-css" href="https://static-forge.netlify.com/wp-content/plugins/addons-for-elementor/assets/css/lae-widgets.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-pro-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor-pro/assets/css/frontend.min.css" type="text/css" media="all"><link rel="stylesheet" id="font-awesome-5-all-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/all.min.css" type="text/css" media="all"><link rel="stylesheet" id="font-awesome-4-shim-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/v4-shims.min.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-global-css" href="https://static-forge.netlify.com/wp-content/uploads/elementor/css/global.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-post-2417-css" href="https://static-forge.netlify.com/wp-content/uploads/elementor/css/post-2417.css" type="text/css" media="all"><link rel="stylesheet" id="custom-frontend-style-css" href="https://static-forge.netlify.com/wp-content/plugins/ideapush/inc/css/frontendstyle.css" type="text/css" media="all"><style id="custom-frontend-style-inline-css" type="text/css">
+.ideapush-idea-filter{display: none;}
+</style><script type="text/javascript" src="https://static-forge.netlify.com/wp-includes/js/jquery/jquery.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-includes/js/jquery/jquery-migrate.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min.js"></script><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NB3CZPX');</script><script type="text/javascript">
+            (function () {
+                window.lae_fs = {can_use_premium_code: false};
+            })();
+        </script><style type="text/css" id="wp-custom-css">
+			.hljs {
+	background: none;
+}		</style><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono"><link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700"><link href="https://cdn.forge.tylertech.com/v1/libs/tcw/latest/tcw-material-design.css" rel="stylesheet"><link rel="stylesheet" href="styles/tyler-forge.css"><link rel="stylesheet" href="styles/hljs-theme.css"><link rel="stylesheet" href="styles/component.css"></head><body class="tyl-typography">
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NB3CZPX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+
+
+    <tcw-scaffold class="tyl-docs"><tcw-omnibar id="tyl-forge-omnibar" title-text="Tyler Forge" slot="header"><div slot="logo" style="width: 24px; height: 20px; margin-left: 8px;">
+    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 480.5 423.03"><title>forge-icon-only</title><g id="logo"><path d="M463.68,39H283.49A26,26,0,0,0,261,52l-39.38,68.2a26,26,0,0,0,22.55,39.05H424.3a26,26,0,0,0,22.55-13L486.22,78A26,26,0,0,0,463.68,39Z" transform="translate(-9.25 -38.98)" fill="#fff"></path><path d="M377,189.18H196.77a26,26,0,0,0-22.54,13l-37.37,64.72a26,26,0,0,0,0,26L227,449A26,26,0,0,0,272,449L399.51,228.23A26,26,0,0,0,377,189.18Z" transform="translate(-9.25 -38.98)" fill="#fff"></path><path d="M211.35,78A26,26,0,0,0,188.81,39H35.32A26,26,0,0,0,12.78,78L77,189.18,89.52,211a26,26,0,0,0,45.09,0Z" transform="translate(-9.25 -38.98)" fill="#fff"></path></g></svg></div>
+  <tcw-omnibar-search slot="center"><input type="text" placeholder="Search..."></tcw-omnibar-search><tcw-omnibar-menu-button slot="menu" id="tyl-forge-omnibar-menu"></tcw-omnibar-menu-button><div slot="action" style="display: flex; justify-content: space-around;">
+    <ul class="header-nav"><li class="header__nav-item" id="design-nav-indicator">
+        <a href="/getting-started-with-forge/" class="header__nav-link">
+          Design <span class="header__nav-indicator" id="design-link-indicator"></span>
+        </a>
+      </li>
+      <li class="header__nav-item" id="development-nav-indicator">
+        <a href="/development/" class="header__nav-link">
+          Development <span class="header__nav-indicator" id="development-link-indicator"></span>
+        </a>
+      </li>
+      <li class="header__nav-item" id="development-nav-indicator">
+        <a href="/give-feedback/" class="header__nav-link">
+          Feedback <span class="header__nav-indicator" id="feedback-link-indicator"></span>
+        </a>
+      </li>
+    </ul></div>
+</tcw-omnibar><div slot="body-left">
+  <tcw-drawer id="tyl-forge-sidenav" type="dismissible" open="true" style="--tyl-drawer-width: 320px;"><tcw-list class="nav navbar-nav"><a href="/" id="back to design-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">arrow_back</i>Back to design</tcw-list-item></a><tcw-expansion-panel id="guides-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">description</i>
+			  Guides
+			  <tcw-open-icon slot="trailing" style="line-height: 0.5;"></tcw-open-icon></tcw-list-item><tcw-list><a href="https://static-forge.netlify.com/development/guides/introduction/"><tcw-list-item slot="header" class="nav_subitem">Introduction</tcw-list-item></a><a href="https://static-forge.netlify.com/development/guides/prerequisites/"><tcw-list-item slot="header" class="nav_subitem">Prerequisites</tcw-list-item></a><a href="https://static-forge.netlify.com/development/guides/getting-started-2/"><tcw-list-item slot="header" class="nav_subitem">Getting started</tcw-list-item></a><a href="https://static-forge.netlify.com/development/guides/getting-started-angular/"><tcw-list-item slot="header" class="nav_subitem">Getting started – Angular</tcw-list-item></a><a href="https://static-forge.netlify.com/development/guides/omnibar-implementation/"><tcw-list-item slot="header" class="nav_subitem">Omnibar implementation</tcw-list-item></a><a href="https://static-forge.netlify.com/development/guides/table-implementation/"><tcw-list-item slot="header" class="nav_subitem">Table implementation</tcw-list-item></a><a href="https://static-forge.netlify.com/development/guides/theming/"><tcw-list-item slot="header" class="nav_subitem">Theming</tcw-list-item></a><a href="https://static-forge.netlify.com/development/guides/development/"><tcw-list-item slot="header" class="nav_subitem">Development</tcw-list-item></a><a href="https://static-forge.netlify.com/development/guides/component-tutorial/"><tcw-list-item slot="header" class="nav_subitem">Component tutorial</tcw-list-item></a><a href="https://static-forge.netlify.com/development/guides/testing-a-package-locally/"><tcw-list-item slot="header" class="nav_subitem">Testing a package locally</tcw-list-item></a></tcw-list></tcw-expansion-panel><tcw-expansion-panel id="components-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">settings_input_component</i>
+			  Components
+			  <tcw-open-icon slot="trailing" style="line-height: 0.5;"></tcw-open-icon></tcw-list-item><tcw-list><a href="https://static-forge.netlify.com/development/components/accordion/"><tcw-list-item slot="header" class="nav_subitem">Accordion</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/app-launcher/"><tcw-list-item slot="header" class="nav_subitem">App launcher</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/autocomplete/"><tcw-list-item slot="header" class="nav_subitem">Autocomplete</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/avatar/"><tcw-list-item slot="header" class="nav_subitem">Avatar</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/backdrop/"><tcw-list-item slot="header" class="nav_subitem">Backdrop</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/badge/"><tcw-list-item slot="header" class="nav_subitem">Badge</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/busy-indicator/"><tcw-list-item slot="header" class="nav_subitem">Busy indicator</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/button/"><tcw-list-item slot="header" class="nav_subitem">Button</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/button-toggle/"><tcw-list-item slot="header" class="nav_subitem">Button toggle</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/card/"><tcw-list-item slot="header" class="nav_subitem">Card</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/checkbox/"><tcw-list-item slot="header" class="nav_subitem">Checkbox</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/chips/"><tcw-list-item slot="header" class="nav_subitem">Chip</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/color-picker/"><tcw-list-item slot="header" class="nav_subitem">Color picker</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/datepicker/"><tcw-list-item slot="header" class="nav_subitem">Date picker</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/dialog/"><tcw-list-item slot="header" class="nav_subitem">Dialog</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/divider/"><tcw-list-item slot="header" class="nav_subitem">Divider</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/drawer/"><tcw-list-item slot="header" class="nav_subitem">Drawer</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/expansion-panel/"><tcw-list-item slot="header" class="nav_subitem">Expansion panel</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/floating-action-button/"><tcw-list-item slot="header" class="nav_subitem">Floating action button</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/icon-button/"><tcw-list-item slot="header" class="nav_subitem">Icon button</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/label-value/"><tcw-list-item slot="header" class="nav_subitem">Label value</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/linear-progress/"><tcw-list-item slot="header" class="nav_subitem">Linear progress</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/list/"><tcw-list-item slot="header" class="nav_subitem">List</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/menu/"><tcw-list-item slot="header" class="nav_subitem">Menu</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/omnibar/"><tcw-list-item slot="header" class="nav_subitem">Omnibar</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/omnibar-search/"><tcw-list-item slot="header" class="nav_subitem">Omnibar search</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/omnibar-profile/"><tcw-list-item slot="header" class="nav_subitem">Omnibar profile</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/omnibar-help-button/"><tcw-list-item slot="header" class="nav_subitem">Omnibar help button</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/omnibar-notification-button/"><tcw-list-item slot="header" class="nav_subitem">Omnibar notification button</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/open-icon/"><tcw-list-item slot="header" class="nav_subitem">Open icon</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/page-state/"><tcw-list-item slot="header" class="nav_subitem">Page state</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/paginator/"><tcw-list-item slot="header" class="nav_subitem">Paginator</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/popup/"><tcw-list-item slot="header" class="nav_subitem">Popup</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/product-icon/"><tcw-list-item slot="header" class="nav_subitem">Product icon</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/progress-spinner/"><tcw-list-item slot="header" class="nav_subitem">Progress spinner</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/radio-button/"><tcw-list-item slot="header" class="nav_subitem">Radio button</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/scaffold/"><tcw-list-item slot="header" class="nav_subitem">Scaffold</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/select/"><tcw-list-item slot="header" class="nav_subitem">Select</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/skeleton/"><tcw-list-item slot="header" class="nav_subitem">Skeleton</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/slider/"><tcw-list-item slot="header" class="nav_subitem">Slider</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/stepper/"><tcw-list-item slot="header" class="nav_subitem">Stepper</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/switch/"><tcw-list-item slot="header" class="nav_subitem">Switch</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/tab-bar/"><tcw-list-item slot="header" class="nav_subitem">Tab bar</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/table/"><tcw-list-item slot="header" class="nav_subitem">Table</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/text-field/"><tcw-list-item slot="header" class="nav_subitem">Text field</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/toast/"><tcw-list-item slot="header" class="nav_subitem">Toast</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/toolbar/"><tcw-list-item slot="header" class="nav_subitem">Toolbar</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/tooltips/"><tcw-list-item slot="header" class="nav_subitem">Tooltips</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/view-switcher/"><tcw-list-item slot="header" class="nav_subitem">View switcher</tcw-list-item></a></tcw-list></tcw-expansion-panel><tcw-expansion-panel id="recipes-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">fastfood</i>
+			  Recipes
+			  <tcw-open-icon slot="trailing" style="line-height: 0.5;"></tcw-open-icon></tcw-list-item><tcw-list><a href="https://static-forge.netlify.com/development/recipes/card-recipes/"><tcw-list-item slot="header" class="nav_subitem">Card</tcw-list-item></a><a href="https://static-forge.netlify.com/development/recipes/dialog-recipes/"><tcw-list-item slot="header" class="nav_subitem">Dialog</tcw-list-item></a><a href="https://static-forge.netlify.com/development/recipes/error-pages/"><tcw-list-item slot="header" class="nav_subitem">Error pages</tcw-list-item></a><a href="https://static-forge.netlify.com/development/recipes/page-layout-recipes/"><tcw-list-item slot="header" class="nav_subitem">Page layout</tcw-list-item></a><a href="https://static-forge.netlify.com/development/recipes/table-recipes/"><tcw-list-item slot="header" class="nav_subitem">Table</tcw-list-item></a><a href="https://static-forge.netlify.com/development/recipes/toolbar-recipe/"><tcw-list-item slot="header" class="nav_subitem">Toolbar</tcw-list-item></a></tcw-list></tcw-expansion-panel><tcw-expansion-panel id="utilities-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">build</i>
+			  Utilities
+			  <tcw-open-icon slot="trailing" style="line-height: 0.5;"></tcw-open-icon></tcw-list-item><tcw-list><a href="https://static-forge.netlify.com/development/utilities/theme/"><tcw-list-item slot="header" class="nav_subitem">Theme</tcw-list-item></a><a href="https://static-forge.netlify.com/development/utilities/typography/"><tcw-list-item slot="header" class="nav_subitem">Typography</tcw-list-item></a></tcw-list></tcw-expansion-panel><tcw-expansion-panel id="tyler spatial-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">map</i>
+			  Tyler Spatial
+			  <tcw-open-icon slot="trailing" style="line-height: 0.5;"></tcw-open-icon></tcw-list-item><tcw-list><a href="https://static-forge.netlify.com/development/tyler-spatial/getting-started/"><tcw-list-item slot="header" class="nav_subitem">Getting started</tcw-list-item></a><a href="https://static-forge.netlify.com/development/tyler-spatial/mapview/"><tcw-list-item slot="header" class="nav_subitem">MapView</tcw-list-item></a></tcw-list></tcw-expansion-panel><a href="https://static-forge.netlify.com/development/cdn/" id="cdn-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">cloud</i>CDN</tcw-list-item></a><a href="https://static-forge.netlify.com/development/extensions/" id="extensions-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">extension</i>Extensions</tcw-list-item></a>    </tcw-list></tcw-drawer></div>
+      <div class="tyl-docs-content" slot="body" style="position: relative;" id="top-of-page">
+        <div id="tyl-docs-content" class="tyl-docs-content__container" style="padding: 16px; max-width: 1264px;">
+        <div class="flex-container" style="display: flex;">
+        <div class="left-content" style="max-width: 956px; width: 100%;">
+          <tcw-card has-padding="false"><div data-elementor-type="wp-page" data-elementor-id="2417" class="elementor elementor-2417" data-elementor-settings="[]">
+			<div class="elementor-inner">
+				<div class="elementor-section-wrap">
+							<section class="elementor-element elementor-element-69c96d6a elementor-section-height-min-height elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-items-middle elementor-section elementor-top-section" data-id="69c96d6a" data-element_type="section" id="overview" data-settings='{"background_background":"classic"}'><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-b5eade elementor-column elementor-col-50 elementor-top-column" data-id="b5eade" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-6939b62f elementor-widget elementor-widget-divider" data-id="6939b62f" data-element_type="widget" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-316b1ade elementor-widget elementor-widget-heading" data-id="316b1ade" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Getting Started - Angular</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-74ceb046 elementor-widget elementor-widget-text-editor" data-id="74ceb046" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>This guide will walk you through how to consume the TCW library within an Angular application. The following guide assumes that you have created an Angular application using the Angular CLI (version 8.x at the time of writing, but should pertain to older versions as well).</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-5935b7d3 elementor-column elementor-col-50 elementor-top-column" data-id="5935b7d3" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-10eeb7b1 elementor-widget elementor-widget-image" data-id="10eeb7b1" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="787" height="730" src="https://static-forge.netlify.com/wp-content/uploads/2019/04/angular.png" class="attachment-full size-full" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/04/angular.png 787w,https://static-forge.netlify.com/wp-content/uploads/2019/04/angular-300x278.png 300w,https://static-forge.netlify.com/wp-content/uploads/2019/04/angular-768x712.png 768w" sizes="(max-width: 787px) 100vw, 787px"></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-34048596 elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="34048596" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-65e7728d elementor-column elementor-col-100 elementor-top-column" data-id="65e7728d" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<section class="elementor-element elementor-element-58a3e0e9 elementor-section-full_width elementor-section-height-min-height elementor-section-height-default elementor-section elementor-inner-section" data-id="58a3e0e9" data-element_type="section" data-settings='{"background_background":"classic"}'><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-29b138ed elementor-column elementor-col-100 elementor-inner-column" data-id="29b138ed" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-6f603d4e elementor-widget elementor-widget-text-editor" data-id="6f603d4e" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>If you’d like to reference a real demo Angular application while following along with this guide, feel free to browse and pull down the code in the <a href="https://bitbucket.tylertech.com/projects/TWC/repos/tyler-components-web-angular/browse">TCW Angular Demo</a> application on bitbucket. </p><p>If you’re using the dapper template, there is also a reference application for that located <a href="https://bitbucket.tylertech.com/projects/TWC/repos/tcw-dapper-example/browse">here</a>.</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section></div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-3375ba43 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="3375ba43" data-element_type="section" id="guidance"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-b85d674 elementor-column elementor-col-100 elementor-top-column" data-id="b85d674" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-2c53274 elementor-widget elementor-widget-spacer" data-id="2c53274" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-d5be72 elementor-widget elementor-widget-heading" data-id="d5be72" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Configuration</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-1f10902a elementor-widget elementor-widget-text-editor" data-id="1f10902a" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>If you haven’t already done so, create an <code>.npmrc</code> file in the root of your Angular project with the following content</p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-f6d1042 elementor-widget elementor-widget-html" data-id="f6d1042" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<pre><code class="typescript">registry=http://yarpvproget/npm/npm_Tyler_Core/</code></pre>		</div>
+				</div>
+				<section class="elementor-element elementor-element-6af1042d elementor-section-full_width elementor-section-height-min-height elementor-section-height-default elementor-section elementor-inner-section" data-id="6af1042d" data-element_type="section" data-settings='{"background_background":"classic"}'><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-65cf8290 elementor-column elementor-col-100 elementor-inner-column" data-id="65cf8290" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-16796640 elementor-widget elementor-widget-text-editor" data-id="16796640" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Note: If you’re using the npm_TEG_Foundation_Web feed currently, there is a connector used behind the scenes on npm_Tyler_Core to allow access to packages in the other feed. You can safely use npm_Tyler_Core only to ensure that you still get access to existing packages on npm_TEG_Foundation_Web while still getting access to all new Tyler-wide core npm packages.</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><div class="elementor-element elementor-element-d0a321b elementor-widget elementor-widget-text-editor" data-id="d0a321b" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>If you are already using a custom registry in your .npmrc file for a different feed, you can add another line that will scope just the @tylertech and @tyler-components-web packages:</p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-9871624 elementor-widget elementor-widget-html" data-id="9871624" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<pre><code class="typescript">@tylertech:registry=http://yarpvproget/npm/npm_Tyler_Core/</code></pre>		</div>
+				</div>
+				<div class="elementor-element elementor-element-4b270a8 elementor-widget elementor-widget-html" data-id="4b270a8" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<pre><code class="typescript">@tyler-components-web:registry=http://yarpvproget/npm/npm_Tyler_Core/</code></pre>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-75541aca elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="75541aca" data-element_type="section" id="guidance"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-4c21f490 elementor-column elementor-col-100 elementor-top-column" data-id="4c21f490" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-f45c38b elementor-widget elementor-widget-spacer" data-id="f45c38b" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-68301a1a elementor-widget elementor-widget-heading" data-id="68301a1a" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Installation</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-24cf2b83 elementor-widget elementor-widget-text-editor" data-id="24cf2b83" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Install the TCW component library package as a dependency for your project.</p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-771fb2e elementor-widget elementor-widget-html" data-id="771fb2e" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<pre><code class="typescript">$ npm install @tylertech/tyler-components-web</code>
+</pre>		</div>
+				</div>
+				<div class="elementor-element elementor-element-c44f4f9 elementor-widget elementor-widget-text-editor" data-id="c44f4f9" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>The next step is optional, but for a more seamless experience you can (and should) install the TCW Angular adapter library package. This package provides Angular services and directives to ensure that working with the Web Components is a familiar experience for an Angular developer.</p><p><strong>Important:</strong> This package makes things like <code>ngModel</code>, <code>formControlName</code>, and <code>formControl</code> work on elements that Angular doesn’t know how to bind to.</p><p>Install the package using the command below.</p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-5e555a9 elementor-widget elementor-widget-html" data-id="5e555a9" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<pre><code class="typescript">$ npm install @tylertech/tyler-components-web-angular
+</code></pre>		</div>
+				</div>
+				<div class="elementor-element elementor-element-0df7a77 elementor-widget elementor-widget-text-editor" data-id="0df7a77" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Then you need to import <code>TylerComponentsWebModule</code> in any Angular module that you need it in.</p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-0feba48 elementor-widget elementor-widget-html" data-id="0feba48" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<pre><code class="typescript"><span class="hljs-keyword">import</span> { TylerComponentsWebModule } <span class="hljs-keyword">from</span> <span class="hljs-string">'@tylertech/tyler-components-web-angular'</span>;
+
+@NgModule({
+  imports: [
+    TylerComponentsWebModule
+  ]
+})
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AppModule</span> {}</span></code></pre>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-4cf00cf4 elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="4cf00cf4" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-2b3b2a8 elementor-column elementor-col-100 elementor-top-column" data-id="2b3b2a8" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<section class="elementor-element elementor-element-f73efa3 elementor-section-full_width elementor-section-height-min-height elementor-section-height-default elementor-section elementor-inner-section" data-id="f73efa3" data-element_type="section" data-settings='{"background_background":"classic"}'><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-3cddbaae elementor-column elementor-col-100 elementor-inner-column" data-id="3cddbaae" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-785f50b3 elementor-widget elementor-widget-text-editor" data-id="785f50b3" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><strong>Note about versioning: </strong>The <code>@tylertech/tyler-components-web-angular</code> major version always maps to the major version of Angular that is is compatible with. For example, if you’re using Angular version 5.x, you will want to install the latest 5.x version of <code>@tylertech/tyler-components-web-angular</code>… etc. and so on for 8.x and 9.x.</p><p><strong>Important: </strong>By default, npm will always install the latest version of a package. If you’re using an older version of Angular, be sure to check that the major version matches, otherwise you may run into incompatibility errors.</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section></div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-7f27b088 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="7f27b088" data-element_type="section" id="guidance"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-3774e8f4 elementor-column elementor-col-100 elementor-top-column" data-id="3774e8f4" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-2b42a5da elementor-widget elementor-widget-spacer" data-id="2b42a5da" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-452ed24e elementor-widget elementor-widget-heading" data-id="452ed24e" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Enable the CUSTOM_ELEMENTS_SCHEMA</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-3b6643b3 elementor-widget elementor-widget-text-editor" data-id="3b6643b3" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>To enable the usage of custom element tags to be used within your Angular templates, you need to tell Angular that you plan to use them so that it can ignore element tags that it doesn’t know about.</p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-29cd966 elementor-widget elementor-widget-html" data-id="29cd966" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<pre><code class="typescript"><span class="hljs-keyword">import</span> { NgModule, CUSTOM_ELEMENTS_SCHEMA } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+
+@NgModule({
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
+  ]
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> AppModule { ... }</code></pre>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-4cdd8e2 elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="4cdd8e2" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-237f952 elementor-column elementor-col-100 elementor-top-column" data-id="237f952" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<section class="elementor-element elementor-element-680b640 elementor-section-full_width elementor-section-height-min-height elementor-section-height-default elementor-section elementor-inner-section" data-id="680b640" data-element_type="section" data-settings='{"background_background":"classic"}'><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-65a6c85 elementor-column elementor-col-100 elementor-inner-column" data-id="65a6c85" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-6b1000c elementor-widget elementor-widget-text-editor" data-id="6b1000c" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>When using <code>CUSTOM_ELEMENTS_SCHEMA</code> you are essentially telling Angular to ignore enforcing some of its built-in element/property/attribute validation. This allows Angular to skip validating these elements, and therefore will not report certain useful errors at runtime if you bind to the wrong properties, or forget to import the components. Keep this in mind as you use Web Components with the Angular and be more mindful about your syntax when using them.</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section></div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-44cd0144 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="44cd0144" data-element_type="section" id="guidance"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-11248246 elementor-column elementor-col-100 elementor-top-column" data-id="11248246" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-75601c8f elementor-widget elementor-widget-spacer" data-id="75601c8f" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-17c5ff62 elementor-widget elementor-widget-heading" data-id="17c5ff62" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Usage</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-50700e6a elementor-widget elementor-widget-text-editor" data-id="50700e6a" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>When consuming the library, it is best practice to import the TCW components that you are using individually. This is done mainly to support tree shaking to ensure that we aren’t bundling extra component code that we aren’t using from the library.</p><p>Open up the <code>main.ts</code> file (or whichever file contains application bootstrapping), and import each component from the library. Then you need call <code>defineCustomElements</code> and pass the array of components that you want to define.</p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-65bf457 elementor-widget elementor-widget-html" data-id="65bf457" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<pre><code class="typescript"><span class="hljs-keyword">import</span> { defineCustomElements } <span class="hljs-keyword">from</span> <span class="hljs-string">'@tyler-components-web/core'</span>;
+<span class="hljs-keyword">import</span> { AppBarComponent, ScaffoldComponent } <span class="hljs-keyword">from</span> <span class="hljs-string">'@tylertech/tyler-components-web'</span>;
+
+defineCustomElements([
+  AppBarComponent,
+  ScaffoldComponent
+]);
+
+platformBrowserDynamic().bootstrapModule(AppModule).<span class="hljs-keyword">catch</span>(err => <span class="hljs-built_in">console</span>.error(err));</code></pre>		</div>
+				</div>
+				<div class="elementor-element elementor-element-e1ad5c6 elementor-widget elementor-widget-text-editor" data-id="e1ad5c6" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Here we are importing the <code>defineCustomElements</code> function from the <code>@tyler-components-web/core</code> library, and we use that to tell the browser to register the <code>AppBarComponent</code> and <code>ScaffoldComponent</code> components as custom elements. This internally calls the <code>window.customElements.define()</code> API.</p><p>This could could technically go anywhere in your application. Since the TCW components do not rely on Angular, we just need to register them somewhere, we can then use the HTML tags for these custom elements anywhere in our Angular app just as we would any other HTML element like a <code><div></code> or <code><input></code> for example.</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-4ad8972c elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="4ad8972c" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-548d9caf elementor-column elementor-col-100 elementor-top-column" data-id="548d9caf" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<section class="elementor-element elementor-element-4c2174a1 elementor-section-full_width elementor-section-height-min-height elementor-section-height-default elementor-section elementor-inner-section" data-id="4c2174a1" data-element_type="section" data-settings='{"background_background":"classic"}'><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-5b4cc616 elementor-column elementor-col-100 elementor-inner-column" data-id="5b4cc616" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-1d0396df elementor-widget elementor-widget-text-editor" data-id="1d0396df" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>By importing each component individually, you are then allowing the tree shaking process during a production build to avoid including unused code from the component library.</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section></div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-4571260 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="4571260" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-4d119b5 elementor-column elementor-col-100 elementor-top-column" data-id="4d119b5" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-e2a391d elementor-widget elementor-widget-text-editor" data-id="e2a391d" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Another option you have is to import every component from the library if you know that you will be using everything. This is done by importing and calling a convenience method from the library called <code>defineComponents</code>.</p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-6458624 elementor-widget elementor-widget-html" data-id="6458624" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<pre><code class="typescript"><span class="hljs-keyword">import</span> { defineComponents } <span class="hljs-keyword">from</span> <span class="hljs-string">'@tylertech/tyler-components-web'</span>;
+defineComponents();</code></pre>		</div>
+				</div>
+				<div class="elementor-element elementor-element-dbaa5a1 elementor-widget elementor-widget-spacer" data-id="dbaa5a1" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-807520d elementor-widget elementor-widget-text-editor" data-id="807520d" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>The library provides this function as a convenience for developers to easily import and register every component in the library without having to specify each component individually. Keep in mind that this will cause every component from the library to include all of its code in your bundle. This may have unwanted side-effects related to performance if you aren’t careful.</p><p>Choose the approach that works best for your application, while keeping in mind what code is being downloaded at runtime.</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-79aa3a72 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="79aa3a72" data-element_type="section" id="guidance"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-63b2baa1 elementor-column elementor-col-100 elementor-top-column" data-id="63b2baa1" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-a0a07ec elementor-widget elementor-widget-spacer" data-id="a0a07ec" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-90f741 elementor-widget elementor-widget-heading" data-id="90f741" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Global Stylesheet</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-65dd4a59 elementor-widget elementor-widget-text-editor" data-id="65dd4a59" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>This step will guide you through the process of adding the TCW global stylesheet (tcw-material-design.css) to your application.</p><p>Most of the components in the TCW library are self-contained, meaning they encapsulate their own JavaScript, CSS, and HTML. There are certain components (The button and table components for example) that do not follow this pattern, and therefore rely on the styles being available globally on the page.</p><p>To ensure that you get the proper styling in place, please follow one of the methods below. Note: These steps assume you’re using the Angular CLI to build your application.</p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-ddf2aae elementor-widget elementor-widget-heading" data-id="ddf2aae" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h5 class="elementor-heading-title elementor-size-default">Option #1</h5>		</div>
+				</div>
+				<div class="elementor-element elementor-element-a15cf8c elementor-widget elementor-widget-text-editor" data-id="a15cf8c" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Add a reference to the stylesheet in your <code>index.html</code> file as a <code><link></code> tag.</p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-77322c1 elementor-widget elementor-widget-heading" data-id="77322c1" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h5 class="elementor-heading-title elementor-size-default">Option #2</h5>		</div>
+				</div>
+				<div class="elementor-element elementor-element-1ee9816 elementor-widget elementor-widget-text-editor" data-id="1ee9816" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Add the file to your <code>angular.json</code> configuration file so that it includes global styles in your app during the build.</p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-4f481e4 elementor-widget elementor-widget-heading" data-id="4f481e4" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h5 class="elementor-heading-title elementor-size-default">Option #3</h5>		</div>
+				</div>
+				<div class="elementor-element elementor-element-17aa588 elementor-widget elementor-widget-text-editor" data-id="17aa588" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Import the stylesheet in your global <code>styles.scss</code> file.</p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-6e1f246 elementor-widget elementor-widget-heading" data-id="6e1f246" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h5 class="elementor-heading-title elementor-size-default">Option #4</h5>		</div>
+				</div>
+				<div class="elementor-element elementor-element-ef63cd2 elementor-widget elementor-widget-text-editor" data-id="ef63cd2" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Import the stylesheet in your <code>app.component.scss</code> file and enable <code>ViewEncapsulation.None</code> in your <code>app.component.ts</code> file.</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-4860562 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="4860562" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-8bcaaeb elementor-column elementor-col-100 elementor-top-column" data-id="8bcaaeb" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-b1ba8ae elementor-widget elementor-widget-spacer" data-id="b1ba8ae" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-f463539 elementor-widget elementor-widget-heading" data-id="f463539" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Fonts and Icons</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-3ae282f elementor-widget elementor-widget-text-editor" data-id="3ae282f" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Add a <code>link</code> tag that references the <code>Roboto</code> font (with desired font weights), and <code>MaterialIcons</code> font to allow for properly setting up our typography and iconography:</p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-22ce928 elementor-widget elementor-widget-html" data-id="22ce928" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<pre>
+<code>
+<link <span class="hljs-attribute">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attribute">href</span>=<span class="hljs-string">"//fonts.googleapis.com/css?family=Roboto:400,500,700,400italic|Material+Icons"</span>>
+    </code>
+</pre>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-75e11d9c elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="75e11d9c" data-element_type="section" id="guidance"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-7ab26050 elementor-column elementor-col-100 elementor-top-column" data-id="7ab26050" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-68d4cbcd elementor-widget elementor-widget-spacer" data-id="68d4cbcd" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-6ab14f8 elementor-widget elementor-widget-heading" data-id="6ab14f8" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Install Polyfills</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-53e96f15 elementor-widget elementor-widget-text-editor" data-id="53e96f15" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>The TCW library relies on the official web component polyfills to support older browsers. Currently IE 11 and Edge do not support the Web Component spec natively. To ensure that the components work in those browsers run the following command to i<span style="color: var(--tyl-theme-text-primary-on-background,rgba(0,0,0,0.87)); letter-spacing: 0.05px;">nstall the Web Component polyfills.</span></p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-492774f elementor-widget elementor-widget-html" data-id="492774f" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<pre><code class="typescript">$ npm install --save @webcomponents/webcomponentsjs</code></pre>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-6a89205a elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="6a89205a" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-665bce10 elementor-column elementor-col-100 elementor-top-column" data-id="665bce10" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<section class="elementor-element elementor-element-1a055d46 elementor-section-full_width elementor-section-height-min-height elementor-section-height-default elementor-section elementor-inner-section" data-id="1a055d46" data-element_type="section" data-settings='{"background_background":"classic"}'><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-33a15593 elementor-column elementor-col-100 elementor-inner-column" data-id="33a15593" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-754cf5d7 elementor-widget elementor-widget-text-editor" data-id="754cf5d7" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><strong>Important note: </strong>Even if you’re not planning on supporting IE 11 and Edge, the installation of this package is still required for the following step.</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section></div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-650a7f37 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="650a7f37" data-element_type="section" id="guidance"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-11db1177 elementor-column elementor-col-100 elementor-top-column" data-id="11db1177" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-b1d26c elementor-widget elementor-widget-heading" data-id="b1d26c" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Include custom-elements-es5-adapter.js</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-433a4ced elementor-widget elementor-widget-text-editor" data-id="433a4ced" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Due to the fact that the TCW library ships its code in ES5, a separate (very lightweight) polyfill is required to make the ES5 components compatible with browsers that support custom elements natively (Chrome, Firefox, Safari… etc.).</p><p>Until we are able to stop supporting IE 11, we will continue to downlevel our code to ES5 for the most wide coverage of browsers. When that requirement is removed, we will then update the packages to support ES6 and up, at which point these polyfills will not be needed at all.</p><p>Open your <code>polyfills.ts</code> file, and add the following line:</p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-ae4c956 elementor-widget elementor-widget-html" data-id="ae4c956" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<pre><code class="typescript"><span class="hljs-attribute">import</span> <span class="hljs-string">'<span class="hljs-variable">@webcomponents</span>/webcomponentsjs/custom-elements-es5-adapter.js'</span>;</code></pre>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-41fd12d3 elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="41fd12d3" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-437812db elementor-column elementor-col-100 elementor-top-column" data-id="437812db" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<section class="elementor-element elementor-element-bafd76e elementor-section-full_width elementor-section-height-min-height elementor-section-height-default elementor-section elementor-inner-section" data-id="bafd76e" data-element_type="section" data-settings='{"background_background":"classic"}'><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-2a92956f elementor-column elementor-col-100 elementor-inner-column" data-id="2a92956f" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-1da708a2 elementor-widget elementor-widget-text-editor" data-id="1da708a2" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Per the custom elements spec, all custom elements must be a <code>class</code> that extends <code>HTMLElement</code>. Once all browsers natively support custom elements, we can safely ship the libraries in ES6 and remove the need for this polyfill.</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section></div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-7904b4bf elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="7904b4bf" data-element_type="section" id="guidance"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-52e02792 elementor-column elementor-col-100 elementor-top-column" data-id="52e02792" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-545268d8 elementor-widget elementor-widget-spacer" data-id="545268d8" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-73271996 elementor-widget elementor-widget-heading" data-id="73271996" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">(Optional) Include Web Components Polyfill</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-5562d583 elementor-widget elementor-widget-text-editor" data-id="5562d583" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>If you need to support a browser that does not natively support custom elements (IE 11 and Edge), then the final step of requiring the standard, official, web component polyfill is required.</p><p>Once again open the <code>polyfills.ts</code> file, and add the following line:</p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-e541a58 elementor-widget elementor-widget-html" data-id="e541a58" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<pre><code class="typesript"> <span class="hljs-attribute">import</span> <span class="hljs-string">'<span class="hljs-variable">@webcomponents</span>/webcomponentsjs/webcomponents-bundle.js'</span>;</code></pre>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-795a517f elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="795a517f" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-98ede9b elementor-column elementor-col-100 elementor-top-column" data-id="98ede9b" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<section class="elementor-element elementor-element-51593349 elementor-section-full_width elementor-section-height-min-height elementor-section-height-default elementor-section elementor-inner-section" data-id="51593349" data-element_type="section" data-settings='{"background_background":"classic"}'><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-e5e4a2c elementor-column elementor-col-100 elementor-inner-column" data-id="e5e4a2c" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-1f71b5e elementor-widget elementor-widget-text-editor" data-id="1f71b5e" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>The previous two steps for the polyfills are only required to be loaded before your application and TCW component library code. If you prefer to use the <code>angular.json</code> file or <code><script></code> tags to include the polyfills, feel free to do so.</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section></div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-bb61217 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="bb61217" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-0e8da47 elementor-column elementor-col-100 elementor-top-column" data-id="0e8da47" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-d17595d elementor-widget elementor-widget-heading" data-id="d17595d" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Conflicts with zone.js</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-1d6a21f elementor-widget elementor-widget-text-editor" data-id="1d6a21f" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>The webcomponentsjs polyfill conflicts with zone.js because both libraries patch the async <code>addEventListener</code> and <code>removeEventListener</code> DOM methods. This causes Angular to not be notified of certain events (such as <code>click</code>) and therefore will not execute its change detection due to the code running outside of the Angular zone.</p><p>To fix this, zone.js provides a file that can be imported into your <code>polyfills.ts</code> file that re-patches those async events and causes Angular to run those callbacks within its zone.</p><p>Be sure to import the <code>webapis-shadydom.js</code> file after the default zone polyfill in your <code>polyfills.ts</code> file:</p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-0c33378 elementor-widget elementor-widget-html" data-id="0c33378" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<pre><code class="typesript"><span class="hljs-attribute">import</span> <span class="hljs-string">'zone.js/dist/zone'</span>;
+<span class="hljs-attribute">import</span> <span class="hljs-string">'zone.js/dist/webapis-shadydom.js'</span>;</code></pre>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-3890b0dc elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="3890b0dc" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-76e0f40a elementor-column elementor-col-100 elementor-top-column" data-id="76e0f40a" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<section class="elementor-element elementor-element-65a16103 elementor-section-full_width elementor-section-height-min-height elementor-section-height-default elementor-section elementor-inner-section" data-id="65a16103" data-element_type="section" data-settings='{"background_background":"classic"}'><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-60b6420f elementor-column elementor-col-100 elementor-inner-column" data-id="60b6420f" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-35c9228e elementor-widget elementor-widget-text-editor" data-id="35c9228e" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><strong>Note: </strong>when loading the <code>webcomponents-bundle.js</code> polyfill, you must ensure that it loads BEFORE any of the Angular polyfills, such as the above zone.js files. This load order is important so that zone.js can re-patch the methods specified above.</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section></div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-4799c04 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="4799c04" data-element_type="section" id="guidance"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-580f84b7 elementor-column elementor-col-100 elementor-top-column" data-id="580f84b7" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-2bcb21f3 elementor-widget elementor-widget-spacer" data-id="2bcb21f3" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-339a0bdd elementor-widget elementor-widget-heading" data-id="339a0bdd" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Using a Component</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-2ad0a1a2 elementor-widget elementor-widget-text-editor" data-id="2ad0a1a2" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Now that you have installed, configured, and prepared your Angular application to use the TCW component library, all you need to do is reference any of the components in your Angular templates. The browser will take care of instantiating and rendering the components just as it would for any other built-in HTML element.</p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-7d6f2ad elementor-widget elementor-widget-html" data-id="7d6f2ad" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<pre><code class="typescript">@Component({
+  selector: <span class="hljs-string">'app-header'</span>,
+  template: <span class="hljs-string">'<tcw-omnibar></tcw-omnibar>'</span>
+})
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AppHeaderComponent</span> { ... }</span></code></pre>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-8a3264f elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="8a3264f" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-3b7b3be elementor-column elementor-col-100 elementor-top-column" data-id="3b7b3be" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-79a0639 elementor-widget elementor-widget-spacer" data-id="79a0639" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-9fc6cdb elementor-widget elementor-widget-heading" data-id="9fc6cdb" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Binding to properties</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-03f49bc elementor-widget elementor-widget-text-editor" data-id="03f49bc" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Angular’s built-in property binding syntax (square bracket notation) is fully-supported on all Web Components. It’s important to know the difference between properties and attributes on elements and how Angular binds to them.</p><p>In the example below you will see that we have a Web Components placed within an Angular template. There is a static HTML example that uses the element’s attribute to set the value, as well as examples of binding to the attribute and property.</p><p>See the API details for each component to learn what properties and attributes it has.</p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-70a848b elementor-widget elementor-widget-wp-widget-wpb_widget" data-id="70a848b" data-element_type="widget" data-widget_type="wp-widget-wpb_widget.default">
+				<div class="elementor-widget-container">
+			<pre><code><span class="hljs-comment"><!-- Static attribute value --></span>
+<span class="hljs-tag"><<span class="hljs-name">tcw-omnibar</span> <span class="hljs-attr">title-text</span>=<span class="hljs-string">"My Title"</span>></span><span class="hljs-tag"></<span class="hljs-name">tcw-omnibar</span>></span>
+
+<span class="hljs-comment"><!-- Bind to properties of the component (recommended) --></span>
+<span class="hljs-tag"><<span class="hljs-name">tcw-omnibar</span> [<span class="hljs-attr">titleText</span>]=<span class="hljs-string">"titleVariable"</span>></span><span class="hljs-tag"></<span class="hljs-name">tcw-omnibar</span>></span>
+
+<span class="hljs-comment"><!-- Bind to attributes of the component --></span>
+<span class="hljs-tag"><<span class="hljs-name">tcw-omnibar</span> [<span class="hljs-attr">attr.title-text</span>]=<span class="hljs-string">"titleVariable"</span>></span><span class="hljs-tag"></<span class="hljs-name">tcw-omnibar</span>></span>
+
+<span class="hljs-comment"><!-- THIS DOES NOT WORK --></span>
+<span class="hljs-comment"><!-- 
+  Here we are telling Angular to bind to a property by the name of "title-text",
+  which doesn't exist. This example is incorrectly using the attribute name, when
+  it should be using the property name of "titleText". If you absolutely need to 
+  bind to attribute values use the syntax noted above, but it's rarely necessary
+  in Angular when corresponding JavaScript properties exist on the element.
+--></span>
+<span class="hljs-tag"><<span class="hljs-name">tcw-omnibar</span> [<span class="hljs-attr">title-text</span>]=<span class="hljs-string">"titleVariable"</span>></span><span class="hljs-tag"></<span class="hljs-name">tcw-omnibar</span>></span>
+
+</code></pre>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-bbe075f elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="bbe075f" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-85130b5 elementor-column elementor-col-100 elementor-top-column" data-id="85130b5" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-f8b1c58 elementor-widget elementor-widget-spacer" data-id="f8b1c58" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-d85a954 elementor-widget elementor-widget-heading" data-id="d85a954" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Binding to events</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-2c7f721 elementor-widget elementor-widget-text-editor" data-id="2c7f721" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Angular’s built-in event binding syntax (parenthesis notation) is fully-supported on all Web Components. TCW uses <code>CustomEvent</code> when dispatching all custom events.</p><p>In the example below, you’ll see that we are listening for the <code>tcw-omnibar-search</code> event to know when the user has executed the search, which in turn will call our <code>onSearch(evt: CustomEvent)</code> method, and provide the <code>CustomEvent</code> as a parameter.</p><p>See the API details for each component to learn what events it can emit, and what the names of those are.</p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-e2a9b62 elementor-widget elementor-widget-wp-widget-wpb_widget" data-id="e2a9b62" data-element_type="widget" data-widget_type="wp-widget-wpb_widget.default">
+				<div class="elementor-widget-container">
+			<pre><code><span class="hljs-comment"><!-- Here we are listening for the "tcw-omnibar-search" custom event --></span>
+<span class="hljs-tag"><<span class="hljs-name">tcw-omnibar</span> [<span class="hljs-attr">titleText</span>]=<span class="hljs-string">"titleVariable"</span>></span>
+  <span class="hljs-tag"><<span class="hljs-name">tcw-omnibar-search</span> <span class="hljs-attr">slot</span>=<span class="hljs-string">"center"</span> (<span class="hljs-attr">tcw-omnibar-search</span>)=<span class="hljs-string">"onSearch($event)"</span>></span>
+    <span class="hljs-tag"><<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Search..."</span> (<span class="hljs-attr">input</span>)=<span class="hljs-string">"onInput($event)"</span> /></span>
+  <span class="hljs-tag"></<span class="hljs-name">tcw-omnibar-search</span>></span>
+<span class="hljs-tag"></<span class="hljs-name">tcw-omnibar</span>></span>
+</code></pre>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section></div>
+			</div>
+		</div>
+		 
+                        </tcw-card><div class="tyl-typography--caption" style="margin-bottom: 8px;">Last modified on January 10, 2020 by: Kieran Nichols</div>
+          </div>
+
+            <div class="right-content" id="toc-right-container" style="position: relative; width: 300px;"> 
+                                <div><div class="textwidget custom-html-widget"><div class="toc" style="position: fixed;">
+                    <div class="toc-container">
+                      <div class="left-line" id="toc-left-line"></div>
+                      <div class="toc-items-container" id="toc-items">
+                        <h6 style="margin-top: 0px; margin-bottom: 16px;">Table of contents</h6>
+                      </div>
+                    </div>
+                  </div>
+
+<div id="back-to-top-button" class="tyl-back-to-top">
+            <tcw-fab extended="true"><button aria-label="Extended FAB with just text" onclick="scrollTo()">
+                <i class="material-icons" aria-hidden="true">arrow_upward</i>
+                <span>Back to top</span>
+              </button>
+            </tcw-fab></div></div></div>                            </div>
+
+        </div>
+       </div>
+      </div>
+    </tcw-scaffold><script type="text/javascript" src="scripts/custom-elements-es5-adapter.js"></script><script type="text/javascript" src="scripts/webcomponents-bundle.js"></script><script type="text/javascript" src="scripts/tyler-components-web-lib.min.js"></script><script type="text/javascript" src="scripts/tyler-components-web-forge-lib.min.js"></script><script>
+  window.addEventListener('WebComponentsReady', function() {
+    window.TylerComponentsWeb.lib.defineComponents();
+    window.TylerComponentsWeb.Forge.lib.defineComponents();
+  });
+</script><script type="text/javascript" src="scripts/menu-expander.js"></script><script type="text/javascript" src="scripts/drawer.js"></script><script type="text/javascript" src="scripts/navHeader.js"></script><script type="text/javascript" src="scripts/search.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-136930168-1"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-136930168-1');
+</script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/material-design-for-contact-form-7/assets/js/lib/autosize.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/material-design-for-contact-form-7/assets/js/cf7-material-design-bundle.js"></script><script type="text/javascript">
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"https:\/\/static-forge.netlify.com\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"}};
+/* ]]> */
+</script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/contact-form-7/includes/js/scripts.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/js/frontend-modules.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor-pro/assets/lib/sticky/jquery.sticky.min.js"></script><script type="text/javascript">
+var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/static-forge.netlify.com\/wp-admin\/admin-ajax.php","nonce":"a52c73ecd1","shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"google":{"title":"Google+","has_counter":true},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"delicious":{"title":"Delicious"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"}},"facebook_sdk":{"lang":"en_US","app_id":""}};
+</script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor-pro/assets/js/frontend.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-includes/js/jquery/ui/position.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/swiper/swiper.min.js"></script><script type="text/javascript">
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"version":"2.8.3","urls":{"assets":"https:\/\/static-forge.netlify.com\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"general":{"elementor_global_image_lightbox":"yes"},"editorPreferences":[]},"post":{"id":2417,"title":"Getting Started - Angular","excerpt":""}};
+</script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/js/frontend.min.js"></script><script type="text/javascript" src="scripts/table-of-contents.js?x-version=1"></script></body></html>

@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en-US"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="shortcut icon" href="favicon.ico" sizes="16x16" type="image/x-icon"><title>Omnibar implementation – Tyler Forge</title><link rel="dns-prefetch" href="//fonts.googleapis.com"><link rel="dns-prefetch" href="//s.w.org"><link rel="stylesheet" id="cf7md_roboto-css" href="//fonts.googleapis.com/css?family=Roboto:400,500" type="text/css" media="all"><link rel="stylesheet" id="cf7-material-design-css" href="https://static-forge.netlify.com/wp-content/plugins/material-design-for-contact-form-7/assets/css/cf7-material-design.css" type="text/css" media="all"><link rel="stylesheet" id="contact-form-7-css" href="https://static-forge.netlify.com/wp-content/plugins/contact-form-7/includes/css/styles.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-icons-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-animations-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/animations/animations.min.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-frontend-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/css/frontend.min.css" type="text/css" media="all"><link rel="stylesheet" id="lae-animate-styles-css" href="https://static-forge.netlify.com/wp-content/plugins/addons-for-elementor/assets/css/animate.css" type="text/css" media="all"><link rel="stylesheet" id="lae-sliders-styles-css" href="https://static-forge.netlify.com/wp-content/plugins/addons-for-elementor/assets/css/sliders.css" type="text/css" media="all"><link rel="stylesheet" id="lae-icomoon-styles-css" href="https://static-forge.netlify.com/wp-content/plugins/addons-for-elementor/assets/css/icomoon.css" type="text/css" media="all"><link rel="stylesheet" id="lae-frontend-styles-css" href="https://static-forge.netlify.com/wp-content/plugins/addons-for-elementor/assets/css/lae-frontend.css" type="text/css" media="all"><link rel="stylesheet" id="lae-widgets-styles-css" href="https://static-forge.netlify.com/wp-content/plugins/addons-for-elementor/assets/css/lae-widgets.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-pro-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor-pro/assets/css/frontend.min.css" type="text/css" media="all"><link rel="stylesheet" id="font-awesome-5-all-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/all.min.css" type="text/css" media="all"><link rel="stylesheet" id="font-awesome-4-shim-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/v4-shims.min.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-global-css" href="https://static-forge.netlify.com/wp-content/uploads/elementor/css/global.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-post-39047-css" href="https://static-forge.netlify.com/wp-content/uploads/elementor/css/post-39047.css" type="text/css" media="all"><link rel="stylesheet" id="custom-frontend-style-css" href="https://static-forge.netlify.com/wp-content/plugins/ideapush/inc/css/frontendstyle.css" type="text/css" media="all"><style id="custom-frontend-style-inline-css" type="text/css">
+.ideapush-idea-filter{display: none;}
+</style><script type="text/javascript" src="https://static-forge.netlify.com/wp-includes/js/jquery/jquery.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-includes/js/jquery/jquery-migrate.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min.js"></script><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NB3CZPX');</script><script type="text/javascript" src="scripts/omnibar-example.js?x-forge-version=1"></script><script type="text/javascript">
+            (function () {
+                window.lae_fs = {can_use_premium_code: false};
+            })();
+        </script><style type="text/css" id="wp-custom-css">
+			.hljs {
+	background: none;
+}		</style><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono"><link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700"><link href="https://cdn.forge.tylertech.com/v1/libs/tcw/latest/tcw-material-design.css" rel="stylesheet"><link rel="stylesheet" href="styles/tyler-forge.css"><link rel="stylesheet" href="styles/hljs-theme.css"><link rel="stylesheet" href="styles/component.css"></head><body class="tyl-typography">
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NB3CZPX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+
+
+    <tcw-scaffold class="tyl-docs"><tcw-omnibar id="tyl-forge-omnibar" title-text="Tyler Forge" slot="header"><div slot="logo" style="width: 24px; height: 20px; margin-left: 8px;">
+    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 480.5 423.03"><title>forge-icon-only</title><g id="logo"><path d="M463.68,39H283.49A26,26,0,0,0,261,52l-39.38,68.2a26,26,0,0,0,22.55,39.05H424.3a26,26,0,0,0,22.55-13L486.22,78A26,26,0,0,0,463.68,39Z" transform="translate(-9.25 -38.98)" fill="#fff"></path><path d="M377,189.18H196.77a26,26,0,0,0-22.54,13l-37.37,64.72a26,26,0,0,0,0,26L227,449A26,26,0,0,0,272,449L399.51,228.23A26,26,0,0,0,377,189.18Z" transform="translate(-9.25 -38.98)" fill="#fff"></path><path d="M211.35,78A26,26,0,0,0,188.81,39H35.32A26,26,0,0,0,12.78,78L77,189.18,89.52,211a26,26,0,0,0,45.09,0Z" transform="translate(-9.25 -38.98)" fill="#fff"></path></g></svg></div>
+  <tcw-omnibar-search slot="center"><input type="text" placeholder="Search..."></tcw-omnibar-search><tcw-omnibar-menu-button slot="menu" id="tyl-forge-omnibar-menu"></tcw-omnibar-menu-button><div slot="action" style="display: flex; justify-content: space-around;">
+    <ul class="header-nav"><li class="header__nav-item" id="design-nav-indicator">
+        <a href="/getting-started-with-forge/" class="header__nav-link">
+          Design <span class="header__nav-indicator" id="design-link-indicator"></span>
+        </a>
+      </li>
+      <li class="header__nav-item" id="development-nav-indicator">
+        <a href="/development/" class="header__nav-link">
+          Development <span class="header__nav-indicator" id="development-link-indicator"></span>
+        </a>
+      </li>
+      <li class="header__nav-item" id="development-nav-indicator">
+        <a href="/give-feedback/" class="header__nav-link">
+          Feedback <span class="header__nav-indicator" id="feedback-link-indicator"></span>
+        </a>
+      </li>
+    </ul></div>
+</tcw-omnibar><div slot="body-left">
+  <tcw-drawer id="tyl-forge-sidenav" type="dismissible" open="true" style="--tyl-drawer-width: 320px;"><tcw-list class="nav navbar-nav"><a href="/" id="back to design-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">arrow_back</i>Back to design</tcw-list-item></a><tcw-expansion-panel id="guides-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">description</i>
+			  Guides
+			  <tcw-open-icon slot="trailing" style="line-height: 0.5;"></tcw-open-icon></tcw-list-item><tcw-list><a href="https://static-forge.netlify.com/development/guides/introduction/"><tcw-list-item slot="header" class="nav_subitem">Introduction</tcw-list-item></a><a href="https://static-forge.netlify.com/development/guides/prerequisites/"><tcw-list-item slot="header" class="nav_subitem">Prerequisites</tcw-list-item></a><a href="https://static-forge.netlify.com/development/guides/getting-started-2/"><tcw-list-item slot="header" class="nav_subitem">Getting started</tcw-list-item></a><a href="https://static-forge.netlify.com/development/guides/getting-started-angular/"><tcw-list-item slot="header" class="nav_subitem">Getting started – Angular</tcw-list-item></a><a href="https://static-forge.netlify.com/development/guides/omnibar-implementation/"><tcw-list-item slot="header" class="nav_subitem">Omnibar implementation</tcw-list-item></a><a href="https://static-forge.netlify.com/development/guides/table-implementation/"><tcw-list-item slot="header" class="nav_subitem">Table implementation</tcw-list-item></a><a href="https://static-forge.netlify.com/development/guides/theming/"><tcw-list-item slot="header" class="nav_subitem">Theming</tcw-list-item></a><a href="https://static-forge.netlify.com/development/guides/development/"><tcw-list-item slot="header" class="nav_subitem">Development</tcw-list-item></a><a href="https://static-forge.netlify.com/development/guides/component-tutorial/"><tcw-list-item slot="header" class="nav_subitem">Component tutorial</tcw-list-item></a><a href="https://static-forge.netlify.com/development/guides/testing-a-package-locally/"><tcw-list-item slot="header" class="nav_subitem">Testing a package locally</tcw-list-item></a></tcw-list></tcw-expansion-panel><tcw-expansion-panel id="components-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">settings_input_component</i>
+			  Components
+			  <tcw-open-icon slot="trailing" style="line-height: 0.5;"></tcw-open-icon></tcw-list-item><tcw-list><a href="https://static-forge.netlify.com/development/components/accordion/"><tcw-list-item slot="header" class="nav_subitem">Accordion</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/app-launcher/"><tcw-list-item slot="header" class="nav_subitem">App launcher</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/autocomplete/"><tcw-list-item slot="header" class="nav_subitem">Autocomplete</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/avatar/"><tcw-list-item slot="header" class="nav_subitem">Avatar</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/backdrop/"><tcw-list-item slot="header" class="nav_subitem">Backdrop</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/badge/"><tcw-list-item slot="header" class="nav_subitem">Badge</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/busy-indicator/"><tcw-list-item slot="header" class="nav_subitem">Busy indicator</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/button/"><tcw-list-item slot="header" class="nav_subitem">Button</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/button-toggle/"><tcw-list-item slot="header" class="nav_subitem">Button toggle</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/card/"><tcw-list-item slot="header" class="nav_subitem">Card</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/checkbox/"><tcw-list-item slot="header" class="nav_subitem">Checkbox</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/chips/"><tcw-list-item slot="header" class="nav_subitem">Chip</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/color-picker/"><tcw-list-item slot="header" class="nav_subitem">Color picker</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/datepicker/"><tcw-list-item slot="header" class="nav_subitem">Date picker</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/dialog/"><tcw-list-item slot="header" class="nav_subitem">Dialog</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/divider/"><tcw-list-item slot="header" class="nav_subitem">Divider</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/drawer/"><tcw-list-item slot="header" class="nav_subitem">Drawer</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/expansion-panel/"><tcw-list-item slot="header" class="nav_subitem">Expansion panel</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/floating-action-button/"><tcw-list-item slot="header" class="nav_subitem">Floating action button</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/icon-button/"><tcw-list-item slot="header" class="nav_subitem">Icon button</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/label-value/"><tcw-list-item slot="header" class="nav_subitem">Label value</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/linear-progress/"><tcw-list-item slot="header" class="nav_subitem">Linear progress</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/list/"><tcw-list-item slot="header" class="nav_subitem">List</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/menu/"><tcw-list-item slot="header" class="nav_subitem">Menu</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/omnibar/"><tcw-list-item slot="header" class="nav_subitem">Omnibar</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/omnibar-search/"><tcw-list-item slot="header" class="nav_subitem">Omnibar search</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/omnibar-profile/"><tcw-list-item slot="header" class="nav_subitem">Omnibar profile</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/omnibar-help-button/"><tcw-list-item slot="header" class="nav_subitem">Omnibar help button</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/omnibar-notification-button/"><tcw-list-item slot="header" class="nav_subitem">Omnibar notification button</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/open-icon/"><tcw-list-item slot="header" class="nav_subitem">Open icon</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/page-state/"><tcw-list-item slot="header" class="nav_subitem">Page state</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/paginator/"><tcw-list-item slot="header" class="nav_subitem">Paginator</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/popup/"><tcw-list-item slot="header" class="nav_subitem">Popup</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/product-icon/"><tcw-list-item slot="header" class="nav_subitem">Product icon</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/progress-spinner/"><tcw-list-item slot="header" class="nav_subitem">Progress spinner</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/radio-button/"><tcw-list-item slot="header" class="nav_subitem">Radio button</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/scaffold/"><tcw-list-item slot="header" class="nav_subitem">Scaffold</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/select/"><tcw-list-item slot="header" class="nav_subitem">Select</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/skeleton/"><tcw-list-item slot="header" class="nav_subitem">Skeleton</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/slider/"><tcw-list-item slot="header" class="nav_subitem">Slider</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/stepper/"><tcw-list-item slot="header" class="nav_subitem">Stepper</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/switch/"><tcw-list-item slot="header" class="nav_subitem">Switch</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/tab-bar/"><tcw-list-item slot="header" class="nav_subitem">Tab bar</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/table/"><tcw-list-item slot="header" class="nav_subitem">Table</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/text-field/"><tcw-list-item slot="header" class="nav_subitem">Text field</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/toast/"><tcw-list-item slot="header" class="nav_subitem">Toast</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/toolbar/"><tcw-list-item slot="header" class="nav_subitem">Toolbar</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/tooltips/"><tcw-list-item slot="header" class="nav_subitem">Tooltips</tcw-list-item></a><a href="https://static-forge.netlify.com/development/components/view-switcher/"><tcw-list-item slot="header" class="nav_subitem">View switcher</tcw-list-item></a></tcw-list></tcw-expansion-panel><tcw-expansion-panel id="recipes-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">fastfood</i>
+			  Recipes
+			  <tcw-open-icon slot="trailing" style="line-height: 0.5;"></tcw-open-icon></tcw-list-item><tcw-list><a href="https://static-forge.netlify.com/development/recipes/card-recipes/"><tcw-list-item slot="header" class="nav_subitem">Card</tcw-list-item></a><a href="https://static-forge.netlify.com/development/recipes/dialog-recipes/"><tcw-list-item slot="header" class="nav_subitem">Dialog</tcw-list-item></a><a href="https://static-forge.netlify.com/development/recipes/error-pages/"><tcw-list-item slot="header" class="nav_subitem">Error pages</tcw-list-item></a><a href="https://static-forge.netlify.com/development/recipes/page-layout-recipes/"><tcw-list-item slot="header" class="nav_subitem">Page layout</tcw-list-item></a><a href="https://static-forge.netlify.com/development/recipes/table-recipes/"><tcw-list-item slot="header" class="nav_subitem">Table</tcw-list-item></a><a href="https://static-forge.netlify.com/development/recipes/toolbar-recipe/"><tcw-list-item slot="header" class="nav_subitem">Toolbar</tcw-list-item></a></tcw-list></tcw-expansion-panel><tcw-expansion-panel id="utilities-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">build</i>
+			  Utilities
+			  <tcw-open-icon slot="trailing" style="line-height: 0.5;"></tcw-open-icon></tcw-list-item><tcw-list><a href="https://static-forge.netlify.com/development/utilities/theme/"><tcw-list-item slot="header" class="nav_subitem">Theme</tcw-list-item></a><a href="https://static-forge.netlify.com/development/utilities/typography/"><tcw-list-item slot="header" class="nav_subitem">Typography</tcw-list-item></a></tcw-list></tcw-expansion-panel><tcw-expansion-panel id="tyler spatial-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">map</i>
+			  Tyler Spatial
+			  <tcw-open-icon slot="trailing" style="line-height: 0.5;"></tcw-open-icon></tcw-list-item><tcw-list><a href="https://static-forge.netlify.com/development/tyler-spatial/getting-started/"><tcw-list-item slot="header" class="nav_subitem">Getting started</tcw-list-item></a><a href="https://static-forge.netlify.com/development/tyler-spatial/mapview/"><tcw-list-item slot="header" class="nav_subitem">MapView</tcw-list-item></a></tcw-list></tcw-expansion-panel><a href="https://static-forge.netlify.com/development/cdn/" id="cdn-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">cloud</i>CDN</tcw-list-item></a><a href="https://static-forge.netlify.com/development/extensions/" id="extensions-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">extension</i>Extensions</tcw-list-item></a>    </tcw-list></tcw-drawer></div>
+      <div class="tyl-docs-content" slot="body" style="position: relative;" id="top-of-page">
+        <div id="tyl-docs-content" class="tyl-docs-content__container" style="padding: 16px; max-width: 1264px;">
+        <div class="flex-container" style="display: flex;">
+        <div class="left-content" style="max-width: 956px; width: 100%;">
+          <tcw-card has-padding="false"><div data-elementor-type="wp-page" data-elementor-id="39047" class="elementor elementor-39047" data-elementor-settings="[]">
+			<div class="elementor-inner">
+				<div class="elementor-section-wrap">
+							<section class="elementor-element elementor-element-37668a80 elementor-section-height-min-height elementor-section-content-middle elementor-section-items-top elementor-section-boxed elementor-section-height-default elementor-section elementor-top-section" data-id="37668a80" data-element_type="section" id="overview" data-settings='{"background_background":"classic"}'><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-10ebb8c8 elementor-column elementor-col-100 elementor-top-column" data-id="10ebb8c8" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<section class="elementor-element elementor-element-70cf35b6 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="70cf35b6" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-7699debe elementor-column elementor-col-50 elementor-inner-column" data-id="7699debe" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-20f79d83 elementor-widget elementor-widget-divider" data-id="20f79d83" data-element_type="widget" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-26acb018 elementor-column elementor-col-50 elementor-inner-column" data-id="26acb018" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-52f6db75 elementor-widget elementor-widget-html" data-id="52f6db75" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="display: flex; justify-content: flex-end; margin-right: 8px;">
+
+<a href="https://static-forge.netlify.com/development/components/omnibar/" target="_blank">
+<tcw-button><button type="button">
+      <i class="material-icons">code</i>
+      <span>API details</span>
+    </button>
+  </tcw-button></a>
+</div>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><div class="elementor-element elementor-element-55c54f17 elementor-widget elementor-widget-heading" data-id="55c54f17" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Omnibar implementation</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-59924fa elementor-widget elementor-widget-text-editor" data-id="59924fa" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>This is a guide that is intended to provide general information and detailed implementation details regarding the TCW omnibar and its sub-components. You will learn about design decisions and how to integrate these components into your application.</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-6beb1f38 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="6beb1f38" data-element_type="section" id="guidance"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-5bc899e8 elementor-column elementor-col-100 elementor-top-column" data-id="5bc899e8" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-77f3073d elementor-widget elementor-widget-spacer" data-id="77f3073d" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-cbb83c6 elementor-widget elementor-widget-heading" data-id="cbb83c6" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Introduction</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-2955f5ed elementor-widget elementor-widget-text-editor" data-id="2955f5ed" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>This guide will help walk you through the process of integrating an application with the TCW omnibar web components. If you have further questions/concerns please provide feedback directly to the Forge team via our <a href="https://static-forge.netlify.com/feedback-support/">integrated feedback form</a>, or on slack under the <code>#tyler-forge</code> channel.</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-937be9f elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="937be9f" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-5616570 elementor-column elementor-col-100 elementor-top-column" data-id="5616570" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-338271e elementor-widget elementor-widget-global elementor-global-3270 elementor-widget-html" data-id="338271e" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<tcw-divider></tcw-divider></div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-baed8d9 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="baed8d9" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-1f0645f elementor-column elementor-col-100 elementor-top-column" data-id="1f0645f" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-2c5fba0 elementor-widget elementor-widget-heading" data-id="2c5fba0" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Design decisions</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-463ef2b elementor-widget elementor-widget-text-editor" data-id="463ef2b" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>There have been a few iterations of omnibar in the past. It has undergone style changes, functional changes… etc. but there has always been a need to adjust it slightly on a per-application basis. Previously this required including the functionality within the component itself, further bloating its scope. </p><p>The intention going forward is to provide a set of components that can be “composed” to create the experience you are looking for. Instead of providing all functionality into a single component, the omnibar has been split up into various individual components that can be used together. This helps keep component responsibilities lean, while still providing the consistency and flexibility that Tyler applications need.</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-5250462 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="5250462" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-a9d5127 elementor-column elementor-col-100 elementor-top-column" data-id="a9d5127" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-500b3b5 elementor-widget elementor-widget-global elementor-global-3270 elementor-widget-html" data-id="500b3b5" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<tcw-divider></tcw-divider></div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-f05b9a7 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="f05b9a7" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-afb19ae elementor-column elementor-col-100 elementor-top-column" data-id="afb19ae" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-5c19ee0 elementor-widget elementor-widget-heading" data-id="5c19ee0" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Components</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-ab80fab elementor-widget elementor-widget-text-editor" data-id="ab80fab" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Let’s start by introducing you to the various omnibar-related components that are available:</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-a35a52a elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="a35a52a" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-efd97bf elementor-column elementor-col-100 elementor-top-column" data-id="efd97bf" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-fe13483 elementor-widget elementor-widget-heading" data-id="fe13483" data-element_type="widget" toc-subitem="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h6 class="elementor-heading-title elementor-size-default">Omnibar</h6>		</div>
+				</div>
+				<div class="elementor-element elementor-element-b7ebbdb elementor-widget elementor-widget-text-editor" data-id="b7ebbdb" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>The omnibar component itself is just a simple component the provides common styles, structure, and typography. It is the most basic implementation that you can get. By itself, it’s nothing more than a container with a background color, logo and title. The power of using this component starts to shine when you look at it from the stand point of consistency. Every Tyler application should have a consistent header. The elements within that header can differ slightly, but overall this component will provide that base consistency.</p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-1744975 elementor-widget elementor-widget-html" data-id="1744975" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<tcw-omnibar title-text="Title text"></tcw-omnibar></div>
+				</div>
+				<div class="elementor-element elementor-element-a818148 elementor-widget elementor-widget-wp-widget-wpb_widget" data-id="a818148" data-element_type="widget" data-widget_type="wp-widget-wpb_widget.default">
+				<div class="elementor-widget-container">
+			<pre><code><span class="hljs-tag"><<span class="hljs-name">tcw-omnibar</span> <span class="hljs-attr">title-text</span>=<span class="hljs-string">"Title text"</span>></span><span class="hljs-tag"></<span class="hljs-name">tcw-omnibar</span>></span>
+</code></pre>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-5caadaa elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="5caadaa" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-878c512 elementor-column elementor-col-100 elementor-top-column" data-id="878c512" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-d2645e1 elementor-widget elementor-widget-global elementor-global-3270 elementor-widget-html" data-id="d2645e1" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<tcw-divider></tcw-divider></div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-7a41c6a elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="7a41c6a" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-4553e21 elementor-column elementor-col-100 elementor-top-column" data-id="4553e21" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-4da5e8e elementor-widget elementor-widget-heading" data-id="4da5e8e" data-element_type="widget" toc-subitem="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h6 class="elementor-heading-title elementor-size-default">Menu button</h6>		</div>
+				</div>
+				<div class="elementor-element elementor-element-8c3694c elementor-widget elementor-widget-text-editor" data-id="8c3694c" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>The menu button is nothing more than a predefined icon button. This component ensures that every application that needs to display a menu icon button will do so in the same way. It can be placed within the <code>menu</code> slot of the omnibar component.</p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-3587581 elementor-widget elementor-widget-html" data-id="3587581" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<tcw-omnibar title-text="Title text"><tcw-omnibar-menu-button slot="menu"></tcw-omnibar-menu-button></tcw-omnibar></div>
+				</div>
+				<div class="elementor-element elementor-element-d30b7ed elementor-widget elementor-widget-wp-widget-wpb_widget" data-id="d30b7ed" data-element_type="widget" data-widget_type="wp-widget-wpb_widget.default">
+				<div class="elementor-widget-container">
+			<pre><code><span class="hljs-tag"><<span class="hljs-name">tcw-omnibar</span> <span class="hljs-attr">title-text</span>=<span class="hljs-string">"Title text"</span>></span>
+  <span class="hljs-tag"><<span class="hljs-name">tcw-omnibar-menu-button</span> <span class="hljs-attr">slot</span>=<span class="hljs-string">"menu"</span>></span><span class="hljs-tag"></<span class="hljs-name">tcw-omnibar-menu-button</span>></span>
+<span class="hljs-tag"></<span class="hljs-name">tcw-omnibar</span>></span></code></pre>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-11da0e56 elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="11da0e56" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-e0654eb elementor-column elementor-col-100 elementor-top-column" data-id="e0654eb" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<section class="elementor-element elementor-element-2bdf7fa7 elementor-section-full_width elementor-section-height-min-height elementor-section-height-default elementor-section elementor-inner-section" data-id="2bdf7fa7" data-element_type="section" data-settings='{"background_background":"classic"}'><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-5b0ec518 elementor-column elementor-col-100 elementor-inner-column" data-id="5b0ec518" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-31f95a1b elementor-widget elementor-widget-text-editor" data-id="31f95a1b" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>You can bind a <code>click</code> event listener directly on the <code><tcw-omnibar-menu-button></code> component, and when the user clicks the internal <code><button></code>element, the event will bubble up through to the component.</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section></div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-66f0a30 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="66f0a30" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-47dfef5 elementor-column elementor-col-100 elementor-top-column" data-id="47dfef5" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-c2eacdc elementor-widget elementor-widget-global elementor-global-3270 elementor-widget-html" data-id="c2eacdc" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<tcw-divider></tcw-divider></div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-cbb8c12 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="cbb8c12" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-78eabd5 elementor-column elementor-col-100 elementor-top-column" data-id="78eabd5" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-13d2f94 elementor-widget elementor-widget-heading" data-id="13d2f94" data-element_type="widget" toc-subitem="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h6 class="elementor-heading-title elementor-size-default">Search</h6>		</div>
+				</div>
+				<div class="elementor-element elementor-element-3b67040 elementor-widget elementor-widget-text-editor" data-id="3b67040" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>This component is an input element that is styled to look natural within the omnibar. The intention is that this component will be placed in the <code>center</code> slot, and used to provide global and/or local searching within an application.</p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-71fe4a3 elementor-widget elementor-widget-html" data-id="71fe4a3" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<tcw-omnibar title-text="Title text"><tcw-omnibar-search slot="center"><input type="text" placeholder="Search..."></tcw-omnibar-search></tcw-omnibar></div>
+				</div>
+				<div class="elementor-element elementor-element-fb069c2 elementor-widget elementor-widget-wp-widget-wpb_widget" data-id="fb069c2" data-element_type="widget" data-widget_type="wp-widget-wpb_widget.default">
+				<div class="elementor-widget-container">
+			<pre><code><span class="hljs-tag"><<span class="hljs-name">tcw-omnibar</span> <span class="hljs-attr">title-text</span>=<span class="hljs-string">"Title text"</span>></span>
+  <span class="hljs-tag"><<span class="hljs-name">tcw-omnibar-search</span> <span class="hljs-attr">slot</span>=<span class="hljs-string">"center"</span>></span>
+      <span class="hljs-tag"><<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Search..."</span> /></span>
+  <span class="hljs-tag"></<span class="hljs-name">tcw-omnibar-search</span>></span>
+<span class="hljs-tag"></<span class="hljs-name">tcw-omnibar</span>></span></code></pre>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-3e5db56 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="3e5db56" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-8a89342 elementor-column elementor-col-100 elementor-top-column" data-id="8a89342" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-1f8c9f5 elementor-widget elementor-widget-text-editor" data-id="1f8c9f5" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>You can listen for the <code>tcw-omnibar-search</code> event on the component to know when the user has executed the search.</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-78997451 elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="78997451" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-22957742 elementor-column elementor-col-100 elementor-top-column" data-id="22957742" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<section class="elementor-element elementor-element-1e383765 elementor-section-full_width elementor-section-height-min-height elementor-section-height-default elementor-section elementor-inner-section" data-id="1e383765" data-element_type="section" data-settings='{"background_background":"classic"}'><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-2a09cfd1 elementor-column elementor-col-100 elementor-inner-column" data-id="2a09cfd1" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-7c53e03c elementor-widget elementor-widget-text-editor" data-id="7c53e03c" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Note that the <code>input</code> element is slotted in and left exposed to allow for easily binding to it using standard event listeners and/or various framework binding syntax without having to proxy all events and properties of the element through the Web Component.</p><p><span style="letter-spacing: 0.05px;">To view API details for the omnibar search component see </span><a style="letter-spacing: 0.05px;" href="https://static-forge.netlify.com/development/components/omnibar-search/">here</a><span style="letter-spacing: 0.05px;">.</span></p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section></div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-304657d elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="304657d" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-48d2391 elementor-column elementor-col-100 elementor-top-column" data-id="48d2391" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-e8fbc72 elementor-widget elementor-widget-global elementor-global-3270 elementor-widget-html" data-id="e8fbc72" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<tcw-divider></tcw-divider></div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-808048e elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="808048e" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-4037240 elementor-column elementor-col-100 elementor-top-column" data-id="4037240" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-232d33c elementor-widget elementor-widget-heading" data-id="232d33c" data-element_type="widget" toc-subitem="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h6 class="elementor-heading-title elementor-size-default">App launcher button</h6>		</div>
+				</div>
+				<div class="elementor-element elementor-element-7dac42c elementor-widget elementor-widget-text-editor" data-id="7dac42c" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>The app launcher button is also a simple component that provides a consistent icon button, while providing access to the internal <code>app-launcher</code> component. The app launcher component is responsible for rendering intents for applications that are registered. This component should be placed in the <code>action</code> slot.</p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-f4c90b6 elementor-widget elementor-widget-html" data-id="f4c90b6" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<tcw-omnibar title-text="Title text"><tcw-omnibar-app-launcher-button slot="action" id="app-launcher-1"></tcw-omnibar-app-launcher-button></tcw-omnibar><script>
+    (function() {
+        const appLauncher1 = document.querySelector('#app-launcher-1');
+        appLauncher1.optionsCallback = window.AppLauncherOptionsCallback;
+    })();
+</script></div>
+				</div>
+				<div class="elementor-element elementor-element-0105555 elementor-widget elementor-widget-wp-widget-wpb_widget" data-id="0105555" data-element_type="widget" data-widget_type="wp-widget-wpb_widget.default">
+				<div class="elementor-widget-container">
+			<pre><code><span class="hljs-tag"><<span class="hljs-name">tcw-omnibar</span> <span class="hljs-attr">title-text</span>=<span class="hljs-string">"Title text"</span>></span>
+  <span class="hljs-tag"><<span class="hljs-name">tcw-omnibar-app-launcher-button</span> <span class="hljs-attr">slot</span>=<span class="hljs-string">"action"</span>></span><span class="hljs-tag"></<span class="hljs-name">tcw-omnibar-app-launcher-button</span>></span>
+<span class="hljs-tag"></<span class="hljs-name">tcw-omnibar</span>></span></code></pre>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-13a979d4 elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="13a979d4" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-7d351070 elementor-column elementor-col-100 elementor-top-column" data-id="7d351070" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<section class="elementor-element elementor-element-7bdb8087 elementor-section-full_width elementor-section-height-min-height elementor-section-height-default elementor-section elementor-inner-section" data-id="7bdb8087" data-element_type="section" data-settings='{"background_background":"classic"}'><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-7a3e4194 elementor-column elementor-col-100 elementor-inner-column" data-id="7a3e4194" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-4919f579 elementor-widget elementor-widget-text-editor" data-id="4919f579" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>To view API details for the app launcher button see <a href="https://static-forge.netlify.com/development/components/app-launcher/">here</a>.</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section></div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-8a3231d elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="8a3231d" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-9872d66 elementor-column elementor-col-100 elementor-top-column" data-id="9872d66" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-486a585 elementor-widget elementor-widget-global elementor-global-3270 elementor-widget-html" data-id="486a585" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<tcw-divider></tcw-divider></div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-5b64969 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="5b64969" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-35d2185 elementor-column elementor-col-100 elementor-top-column" data-id="35d2185" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-5a3dc46 elementor-widget elementor-widget-heading" data-id="5a3dc46" data-element_type="widget" toc-subitem="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h6 class="elementor-heading-title elementor-size-default">Profile button</h6>		</div>
+				</div>
+				<div class="elementor-element elementor-element-e75f1ab elementor-widget elementor-widget-text-editor" data-id="e75f1ab" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>The profile button offers a common user avatar, and profile card within a popup. The intention of this component is to display the logged-in user information, as well as provide them the ability to (optionally) sign out. This component should be placed in the <code>profile</code> slot.</p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-c0ae708 elementor-widget elementor-widget-html" data-id="c0ae708" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<tcw-omnibar title-text="Title text"><tcw-omnibar-profile-button slot="profile" avatar-text="First Last" full-name="First Last" email="first.last@tylertech.com"></tcw-omnibar-profile-button></tcw-omnibar></div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-e9e68fc elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="e9e68fc" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-3f8ae12 elementor-column elementor-col-100 elementor-top-column" data-id="3f8ae12" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-c1d433b elementor-widget elementor-widget-wp-widget-wpb_widget" data-id="c1d433b" data-element_type="widget" data-widget_type="wp-widget-wpb_widget.default">
+				<div class="elementor-widget-container">
+			<pre><code><span class="hljs-tag"><<span class="hljs-name">tcw-omnibar</span> <span class="hljs-attr">title-text</span>=<span class="hljs-string">"Title text"</span>></span>
+  <span class="hljs-tag"><<span class="hljs-name">tcw-omnibar-profile-button</span> <span class="hljs-attr">slot</span>=<span class="hljs-string">"profile"</span> <span class="hljs-attr">avatar-text</span>=<span class="hljs-string">"First Last"</span> <span class="hljs-attr">full-name</span>=<span class="hljs-string">"First Last"</span> <span class="hljs-attr">email</span>=<span class="hljs-string">"first.last@tylertech.com"</span>></span><span class="hljs-tag"></<span class="hljs-name">tcw-omnibar-profile-button</span>></span>
+<span class="hljs-tag"></<span class="hljs-name">tcw-omnibar</span>></span></code></pre>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-1aa1f4f elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="1aa1f4f" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-17b3410 elementor-column elementor-col-100 elementor-top-column" data-id="17b3410" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<section class="elementor-element elementor-element-8feab50 elementor-section-full_width elementor-section-height-min-height elementor-section-height-default elementor-section elementor-inner-section" data-id="8feab50" data-element_type="section" data-settings='{"background_background":"classic"}'><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-3432195 elementor-column elementor-col-100 elementor-inner-column" data-id="3432195" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-ea0fbaa elementor-widget elementor-widget-text-editor" data-id="ea0fbaa" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>To view API details for the profile button see <a href="https://static-forge.netlify.com/development/components/omnibar-profile/">here</a>.</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section></div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-6c58e55 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="6c58e55" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-e8f2ecf elementor-column elementor-col-100 elementor-top-column" data-id="e8f2ecf" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-ed4d4ad elementor-widget elementor-widget-global elementor-global-3270 elementor-widget-html" data-id="ed4d4ad" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<tcw-divider></tcw-divider></div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-837ec83 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="837ec83" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-15faefe elementor-column elementor-col-100 elementor-top-column" data-id="15faefe" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-a7331c6 elementor-widget elementor-widget-heading" data-id="a7331c6" data-element_type="widget" toc-subitem="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h6 class="elementor-heading-title elementor-size-default">Help button</h6>		</div>
+				</div>
+				<div class="elementor-element elementor-element-e8e1607 elementor-widget elementor-widget-text-editor" data-id="e8e1607" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>The help button component just provides a consistent icon button with access to populating options within the menu that is displayed when clicked.</p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-f9dce8c elementor-widget elementor-widget-html" data-id="f9dce8c" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<tcw-omnibar title-text="Title text"><tcw-omnibar-help-button slot="action" id="omnibar-help-button-1"></tcw-omnibar-help-button></tcw-omnibar><script>
+    (function() {
+        const helpButton = document.querySelector('#omnibar-help-button-1');
+        helpButton.options = window.OmnibarHelpOptions;
+    })();
+</script></div>
+				</div>
+				<div class="elementor-element elementor-element-0d4bc60 elementor-widget elementor-widget-wp-widget-wpb_widget" data-id="0d4bc60" data-element_type="widget" data-widget_type="wp-widget-wpb_widget.default">
+				<div class="elementor-widget-container">
+			<pre><code><span class="hljs-tag"><<span class="hljs-name">tcw-omnibar</span> <span class="hljs-attr">title-text</span>=<span class="hljs-string">"Title text"</span>></span>
+  <span class="hljs-tag"><<span class="hljs-name">tcw-omnibar-help-button</span> <span class="hljs-attr">slot</span>=<span class="hljs-string">"action"</span>></span><span class="hljs-tag"></<span class="hljs-name">tcw-omnibar-help-button</span>></span>
+<span class="hljs-tag"></<span class="hljs-name">tcw-omnibar</span>></span></code></pre>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-03b00eb elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="03b00eb" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-8df8ddf elementor-column elementor-col-100 elementor-top-column" data-id="8df8ddf" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<section class="elementor-element elementor-element-6fbf9dc elementor-section-full_width elementor-section-height-min-height elementor-section-height-default elementor-section elementor-inner-section" data-id="6fbf9dc" data-element_type="section" data-settings='{"background_background":"classic"}'><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-a310428 elementor-column elementor-col-100 elementor-inner-column" data-id="a310428" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-4bcb2be elementor-widget elementor-widget-text-editor" data-id="4bcb2be" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>To view API details for the help button see <a href="https://static-forge.netlify.com/development/components/omnibar-help-button/">here</a>.</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section></div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-acb519a elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="acb519a" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-f12a416 elementor-column elementor-col-100 elementor-top-column" data-id="f12a416" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-1677709 elementor-widget elementor-widget-global elementor-global-3270 elementor-widget-html" data-id="1677709" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<tcw-divider></tcw-divider></div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-50fdcaa elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="50fdcaa" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-a0de9c3 elementor-column elementor-col-100 elementor-top-column" data-id="a0de9c3" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-c218d06 elementor-widget elementor-widget-heading" data-id="c218d06" data-element_type="widget" toc-subitem="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h6 class="elementor-heading-title elementor-size-default">Notification button</h6>		</div>
+				</div>
+				<div class="elementor-element elementor-element-6f839a3 elementor-widget elementor-widget-text-editor" data-id="6f839a3" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>The notification button currently just provides a consistent icon button, and facilities to show the notification count. Listen for the <code>click</code> event on the element to show your notifications if necessary.</p><p><b>Note:</b> The goal in the future is to provide a common notification popup with enhanced functionality, but the infrastructure to support this across Tyler does not exist yet…</p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-ef718d0 elementor-widget elementor-widget-html" data-id="ef718d0" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<tcw-omnibar title-text="Title text"><tcw-omnibar-notification-button slot="action"></tcw-omnibar-notification-button></tcw-omnibar></div>
+				</div>
+				<div class="elementor-element elementor-element-ee523e3 elementor-widget elementor-widget-wp-widget-wpb_widget" data-id="ee523e3" data-element_type="widget" data-widget_type="wp-widget-wpb_widget.default">
+				<div class="elementor-widget-container">
+			<pre><code><span class="hljs-tag"><<span class="hljs-name">tcw-omnibar</span> <span class="hljs-attr">title-text</span>=<span class="hljs-string">"Title text"</span>></span>
+  <span class="hljs-tag"><<span class="hljs-name">tcw-omnibar-notification-button</span> <span class="hljs-attr">slot</span>=<span class="hljs-string">"action"</span>></span><span class="hljs-tag"></<span class="hljs-name">tcw-omnibar-notification-button</span>></span>
+<span class="hljs-tag"></<span class="hljs-name">tcw-omnibar</span>></span></code></pre>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-4d08c0f elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="4d08c0f" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-4edc97e elementor-column elementor-col-100 elementor-top-column" data-id="4edc97e" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<section class="elementor-element elementor-element-58d7b8b elementor-section-full_width elementor-section-height-min-height elementor-section-height-default elementor-section elementor-inner-section" data-id="58d7b8b" data-element_type="section" data-settings='{"background_background":"classic"}'><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-77f890c elementor-column elementor-col-100 elementor-inner-column" data-id="77f890c" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-42ac48d elementor-widget elementor-widget-text-editor" data-id="42ac48d" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>To view API details for the notification button see <a href="https://static-forge.netlify.com/development/components/omnibar-notification-button/">here</a>.</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section></div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-168605d elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="168605d" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-76bf11b elementor-column elementor-col-100 elementor-top-column" data-id="76bf11b" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-3f7a9ab elementor-widget elementor-widget-global elementor-global-3270 elementor-widget-html" data-id="3f7a9ab" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<tcw-divider></tcw-divider></div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-5e45d803 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="5e45d803" data-element_type="section" id="guidance"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-2802518e elementor-column elementor-col-100 elementor-top-column" data-id="2802518e" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-32ba53ea elementor-widget elementor-widget-heading" data-id="32ba53ea" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Implementation</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-21faa925 elementor-widget elementor-widget-text-editor" data-id="21faa925" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>The following sections will discuss the implementation details regarding each of the omnibar components noted above by providing code snippets, best practices, and expectations for each in multiple technologies.</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-44d5dc5 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="44d5dc5" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-b435ce5 elementor-column elementor-col-100 elementor-top-column" data-id="b435ce5" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-9ba3b2d elementor-widget elementor-widget-heading" data-id="9ba3b2d" data-element_type="widget" toc-subitem="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h6 class="elementor-heading-title elementor-size-default">Angular</h6>		</div>
+				</div>
+				<div class="elementor-element elementor-element-882a8b4 elementor-widget elementor-widget-text-editor" data-id="882a8b4" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Each of the omnibar components integrates seamlessly with Angular. Below you will find some common usage examples for these components in Angular:</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-6a47299e elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="6a47299e" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-27efe424 elementor-column elementor-col-100 elementor-top-column" data-id="27efe424" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<section class="elementor-element elementor-element-646779ee elementor-section-full_width elementor-section-height-min-height elementor-section-height-default elementor-section elementor-inner-section" data-id="646779ee" data-element_type="section" data-settings='{"background_background":"classic"}'><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-52ebbe37 elementor-column elementor-col-100 elementor-inner-column" data-id="52ebbe37" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-4c34d85f elementor-widget elementor-widget-text-editor" data-id="4c34d85f" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><b>Disclaimer:</b> The following examples are overly-simplified on purpose to condense the content and convey the purpose and usage of each component. It is expected that the actual data would come from configuration and/or asynchronous services at runtime.</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section></div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-5e31487 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="5e31487" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-1e4ba30 elementor-column elementor-col-100 elementor-top-column" data-id="1e4ba30" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-56dcc22 elementor-widget elementor-widget-heading" data-id="56dcc22" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h6 class="elementor-heading-title elementor-size-default">Example template</h6>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-5cbaaff elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="5cbaaff" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-5c1bbd2 elementor-column elementor-col-100 elementor-top-column" data-id="5c1bbd2" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-da1ae3b elementor-widget elementor-widget-wp-widget-wpb_widget" data-id="da1ae3b" data-element_type="widget" data-widget_type="wp-widget-wpb_widget.default">
+				<div class="elementor-widget-container">
+			<pre><code><span class="hljs-tag"><<span class="hljs-name">tcw-omnibar</span> [<span class="hljs-attr">titleText</span>]=<span class="hljs-string">"title"</span>></span>
+  <span class="hljs-comment"><!-- Listen for the native click event (maybe toggle the drawer?) --></span>
+  <span class="hljs-tag"><<span class="hljs-name">tcw-omnibar-menu-button</span> <span class="hljs-attr">slot</span>=<span class="hljs-string">"menu"</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">"isDrawerOpen = !isDrawerOpen"</span>></span><span class="hljs-tag"></<span class="hljs-name">tcw-omnibar-menu-button</span>></span>
+
+  <span class="hljs-comment"><!-- Listen for the search event to handle searching (the event.detail property contains the search text) --></span>
+  <span class="hljs-tag"><<span class="hljs-name">tcw-omnibar-search</span> <span class="hljs-attr">slot</span>=<span class="hljs-string">"center"</span> (<span class="hljs-attr">tcw-omnibar-search-search</span>)=<span class="hljs-string">"onSearch($event)"</span>></span>
+      <span class="hljs-tag"><<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Search..."</span> /></span>
+  <span class="hljs-tag"></<span class="hljs-name">tcw-omnibar-search</span>></span>
+  
+  <span class="hljs-comment"><!-- Bind your options array --></span>
+  <span class="hljs-tag"><<span class="hljs-name">tcw-omnibar-help-button</span> <span class="hljs-attr">slot</span>=<span class="hljs-string">"action"</span> [<span class="hljs-attr">options</span>]=<span class="hljs-string">"helpOptions"</span> (<span class="hljs-attr">tcw-menu-select</span>)=<span class="hljs-string">"onHelpSelected($event)"</span>></span><span class="hljs-tag"></<span class="hljs-name">tcw-omnibar-help-button</span>></span>
+
+  <span class="hljs-comment"><!-- Bind your notification count --></span>
+  <span class="hljs-tag"><<span class="hljs-name">tcw-omnibar-notification-button</span> <span class="hljs-attr">slot</span>=<span class="hljs-string">"action"</span> [<span class="hljs-attr">count</span>]=<span class="hljs-string">"notificationCount"</span> [<span class="hljs-attr">dot</span>]=<span class="hljs-string">"useNotificationDot"</span>></span><span class="hljs-tag"></<span class="hljs-name">tcw-omnibar-notification-button</span>></span>
+
+  <span class="hljs-comment"><!-- Bind your optionsCallback --></span>
+  <span class="hljs-tag"><<span class="hljs-name">tcw-omnibar-app-launcher-button</span> <span class="hljs-attr">slot</span>=<span class="hljs-string">"action"</span> [<span class="hljs-attr">optionsCallback</span>]=<span class="hljs-string">"appLauncherOptionsListener"</span>></span><span class="hljs-tag"></<span class="hljs-name">tcw-omnibar-app-launcher-button</span>></span>
+
+  <span class="hljs-comment"><!-- 
+    Listen for multiple events and bind profile data.
+    Use the profile-button attribute if your application supports user profiles.
+  --></span>
+  <span class="hljs-tag"><<span class="hljs-name">tcw-omnibar-profile-button</span> 
+    *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">"isSignedIn"</span>
+    <span class="hljs-attr">slot</span>=<span class="hljs-string">"profile"</span>
+    [<span class="hljs-attr">avatarText</span>]=<span class="hljs-string">"user.username"</span>
+    [<span class="hljs-attr">fullName</span>]=<span class="hljs-string">"user.username"</span>
+    [<span class="hljs-attr">email</span>]=<span class="hljs-string">"user.email"</span>
+    <span class="hljs-attr">profile-button</span>
+    (<span class="hljs-attr">tcw-profile-card-profile</span>)=<span class="hljs-string">"onProfileClicked()"</span>
+    (<span class="hljs-attr">tcw-profile-card-sign-out</span>)=<span class="hljs-string">"onSignOutClicked()"</span>></span>
+  <span class="hljs-tag"></<span class="hljs-name">tcw-omnibar-profile-button</span>></span>
+
+  <span class="hljs-comment"><!-- Show a sign in button if the user is not signed in --></span>
+  <span class="hljs-tag"><<span class="hljs-name">tcw-button</span> <span class="hljs-attr">slot</span>=<span class="hljs-string">"profile"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"unelevated"</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">"!isSignedIn"</span> (<span class="hljs-attr">click</span>)=<span class="hljs-string">"onSignInClicked()"</span>></span>
+    <span class="hljs-tag"><<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>></span>Sign in<span class="hljs-tag"></<span class="hljs-name">button</span>></span>
+  <span class="hljs-tag"></<span class="hljs-name">tcw-button</span>></span>
+<span class="hljs-tag"></<span class="hljs-name">tcw-omnibar</span>></span>
+</code></pre>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-2da4b1b elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="2da4b1b" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-0224111 elementor-column elementor-col-100 elementor-top-column" data-id="0224111" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-fb6141a elementor-widget elementor-widget-heading" data-id="fb6141a" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h6 class="elementor-heading-title elementor-size-default">Example component class</h6>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-80a2091 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="80a2091" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-69e6f5e elementor-column elementor-col-100 elementor-top-column" data-id="69e6f5e" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-ce4a584 elementor-widget elementor-widget-wp-widget-wpb_widget" data-id="ce4a584" data-element_type="widget" data-widget_type="wp-widget-wpb_widget.default">
+				<div class="elementor-widget-container">
+			<pre><code><span class="hljs-keyword">import</span> { Component, OnInit } <span class="hljs-keyword">from</span> <span class="hljs-string">'@angular/core'</span>;
+<span class="hljs-keyword">import</span> { 
+  IAppLauncherOptionsCallback,
+  IAppLauncherOptionsResult,
+  IOmnibarSearchEventData,
+  IMenuOption
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'@tylertech/tyler-components-web'</span>;
+
+<span class="hljs-meta">@Component</span>({
+  selector: <span class="hljs-string">'omnibar-example'</span>,
+  templateUrl: <span class="hljs-string">'./omnibar-example.html'</span>
+})
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">class</span> OmnibarExample <span class="hljs-keyword">implements</span> OnInit {
+  <span class="hljs-keyword">public</span> isDrawerOpen = <span class="hljs-literal">true</span>; <span class="hljs-comment">// Bind this to your <tcw-drawer [open]="isDrawerOpen"></span>
+  <span class="hljs-keyword">public</span> appLauncherOptionsListener: IAppLauncherOptionsCallback;
+  <span class="hljs-keyword">public</span> helpOptions: IMenuOption[] = [];
+  <span class="hljs-keyword">public</span> notificationCount: <span class="hljs-built_in">number</span>;
+  <span class="hljs-keyword">public</span> useNotificationDot = <span class="hljs-literal">false</span>; <span class="hljs-comment">// Use this to control the visibility of the count text in the notification badge</span>
+  <span class="hljs-keyword">public</span> isSignedIn = <span class="hljs-literal">false</span>;
+  <span class="hljs-keyword">public</span> user: IUser; <span class="hljs-comment">// Contains the current user information</span>
+
+  <span class="hljs-keyword">public</span> ngOnInit(): <span class="hljs-built_in">void</span> {
+    <span class="hljs-comment">// Set up our app-launcher options callback</span>
+    <span class="hljs-keyword">this</span>.appLauncherOptionsListener = <span class="hljs-function"><span class="hljs-params">()</span> =></span> <span class="hljs-keyword">this</span>._getAppLauncherOptions();
+
+    <span class="hljs-comment">// Initialize the options for the help menu</span>
+    <span class="hljs-keyword">this</span>.helpOptions = [
+      { label: <span class="hljs-string">'Help'</span>, value: <span class="hljs-string">'help'</span> },
+      { label: <span class="hljs-string">'Tyler Community'</span>, value: <span class="hljs-string">'community'</span> },
+      { label: <span class="hljs-string">'Tyler Support'</span>, value: <span class="hljs-string">'support'</span> },
+      { label: <span class="hljs-string">'About'</span>, value: <span class="hljs-string">'about'</span> },
+    ];
+
+    <span class="hljs-comment">// Go get your notification status (hard coding for simplicity)</span>
+    <span class="hljs-keyword">this</span>.notificationCount = <span class="hljs-number">3</span>;
+  }
+
+  <span class="hljs-comment">/** Called when the user hits enter in the search input. */</span>
+  <span class="hljs-keyword">public</span> onSearch(evt: CustomEvent): <span class="hljs-built_in">void</span> {
+    <span class="hljs-keyword">const</span> data = evt.detail <span class="hljs-keyword">as</span> IOmnibarSearchEventData;
+    <span class="hljs-keyword">const</span> searchText = data.value;
+    <span class="hljs-keyword">const</span> isCombined = data.combined;
+    <span class="hljs-keyword">const</span> searchContext = data.context;
+
+    <span class="hljs-comment">// <span class="hljs-doctag">TODO:</span> Execute your search...</span>
+  }
+
+  <span class="hljs-comment">/** Called when selecting an item from the help menu. */</span>
+  <span class="hljs-keyword">public</span> onHelpSelected(evt: CustomEvent): <span class="hljs-built_in">void</span> {
+    <span class="hljs-keyword">const</span> index = evt.detail.index <span class="hljs-keyword">as</span> <span class="hljs-built_in">number</span>;
+    <span class="hljs-keyword">const</span> value = evt.detail.value <span class="hljs-keyword">as</span> <span class="hljs-built_in">string</span>;
+    <span class="hljs-keyword">const</span> helpOption = <span class="hljs-keyword">this</span>.helpOptions[index];
+
+    <span class="hljs-comment">// <span class="hljs-doctag">TODO:</span> Handle the selected help option appropriately</span>
+  }
+
+  <span class="hljs-keyword">public</span> onProfileClicked(): <span class="hljs-built_in">void</span> {
+    <span class="hljs-comment">// <span class="hljs-doctag">TODO:</span> Handle clicking the profile button</span>
+  }
+
+  <span class="hljs-keyword">public</span> onSignOutClicked(): <span class="hljs-built_in">void</span> {
+    <span class="hljs-comment">// <span class="hljs-doctag">TODO:</span> Handle clicking the sign out button</span>
+  }
+
+  <span class="hljs-keyword">public</span> onSignInClicked(): <span class="hljs-built_in">void</span> {
+    <span class="hljs-comment">// <span class="hljs-doctag">TODO:</span> Handle clicking the sign in button</span>
+  }
+
+  <span class="hljs-keyword">private</span> _getAppLauncherOptions(): <span class="hljs-built_in">Promise</span><IAppLauncherOptionsResult> {
+    <span class="hljs-comment">// In a real world application you would make an HTTP request here, and map the result</span>
+    <span class="hljs-comment">// into an IAppLauncherOptionsResult type (structure shown below)</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span><IAppLauncherOptionsResult>(<span class="hljs-function"><span class="hljs-params">resolve</span> =></span> {
+      resolve({ 
+        options: [
+          <span class="hljs-comment">// This array contains objects of type IAppLauncherOption (should match the default intent type from your intents service)</span>
+        ]
+      });
+    });
+  }
+}
+</code></pre>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section></div>
+			</div>
+		</div>
+		 
+                        </tcw-card><div class="tyl-typography--caption" style="margin-bottom: 8px;">Last modified on January 15, 2020 by: Kieran Nichols</div>
+          </div>
+
+            <div class="right-content" id="toc-right-container" style="position: relative; width: 300px;"> 
+                                <div><div class="textwidget custom-html-widget"><div class="toc" style="position: fixed;">
+                    <div class="toc-container">
+                      <div class="left-line" id="toc-left-line"></div>
+                      <div class="toc-items-container" id="toc-items">
+                        <h6 style="margin-top: 0px; margin-bottom: 16px;">Table of contents</h6>
+                      </div>
+                    </div>
+                  </div>
+
+<div id="back-to-top-button" class="tyl-back-to-top">
+            <tcw-fab extended="true"><button aria-label="Extended FAB with just text" onclick="scrollTo()">
+                <i class="material-icons" aria-hidden="true">arrow_upward</i>
+                <span>Back to top</span>
+              </button>
+            </tcw-fab></div></div></div>                            </div>
+
+        </div>
+       </div>
+      </div>
+    </tcw-scaffold><script type="text/javascript" src="scripts/custom-elements-es5-adapter.js"></script><script type="text/javascript" src="scripts/webcomponents-bundle.js"></script><script type="text/javascript" src="scripts/tyler-components-web-lib.min.js"></script><script type="text/javascript" src="scripts/tyler-components-web-forge-lib.min.js"></script><script>
+  window.addEventListener('WebComponentsReady', function() {
+    window.TylerComponentsWeb.lib.defineComponents();
+    window.TylerComponentsWeb.Forge.lib.defineComponents();
+  });
+</script><script type="text/javascript" src="scripts/menu-expander.js"></script><script type="text/javascript" src="scripts/drawer.js"></script><script type="text/javascript" src="scripts/navHeader.js"></script><script type="text/javascript" src="scripts/search.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-136930168-1"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-136930168-1');
+</script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/material-design-for-contact-form-7/assets/js/lib/autosize.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/material-design-for-contact-form-7/assets/js/cf7-material-design-bundle.js"></script><script type="text/javascript">
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"https:\/\/static-forge.netlify.com\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"}};
+/* ]]> */
+</script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/contact-form-7/includes/js/scripts.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/js/frontend-modules.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor-pro/assets/lib/sticky/jquery.sticky.min.js"></script><script type="text/javascript">
+var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/static-forge.netlify.com\/wp-admin\/admin-ajax.php","nonce":"a52c73ecd1","shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"google":{"title":"Google+","has_counter":true},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"delicious":{"title":"Delicious"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"}},"facebook_sdk":{"lang":"en_US","app_id":""}};
+</script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor-pro/assets/js/frontend.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-includes/js/jquery/ui/position.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/swiper/swiper.min.js"></script><script type="text/javascript">
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"version":"2.8.3","urls":{"assets":"https:\/\/static-forge.netlify.com\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"general":{"elementor_global_image_lightbox":"yes"},"editorPreferences":[]},"post":{"id":39047,"title":"Omnibar implementation","excerpt":""}};
+</script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/js/frontend.min.js"></script><script type="text/javascript" src="scripts/table-of-contents.js?x-version=1"></script></body></html>

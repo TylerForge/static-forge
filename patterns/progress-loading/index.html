@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html lang="en-US"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="shortcut icon" href="favicon.ico" sizes="16x16" type="image/x-icon"><title>Progress & loading – Tyler Forge</title><link rel="dns-prefetch" href="//fonts.googleapis.com"><link rel="dns-prefetch" href="//s.w.org"><link rel="stylesheet" id="cf7md_roboto-css" href="//fonts.googleapis.com/css?family=Roboto:400,500" type="text/css" media="all"><link rel="stylesheet" id="cf7-material-design-css" href="https://static-forge.netlify.com/wp-content/plugins/material-design-for-contact-form-7/assets/css/cf7-material-design.css" type="text/css" media="all"><link rel="stylesheet" id="contact-form-7-css" href="https://static-forge.netlify.com/wp-content/plugins/contact-form-7/includes/css/styles.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-icons-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-animations-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/animations/animations.min.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-frontend-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/css/frontend.min.css" type="text/css" media="all"><link rel="stylesheet" id="lae-animate-styles-css" href="https://static-forge.netlify.com/wp-content/plugins/addons-for-elementor/assets/css/animate.css" type="text/css" media="all"><link rel="stylesheet" id="lae-sliders-styles-css" href="https://static-forge.netlify.com/wp-content/plugins/addons-for-elementor/assets/css/sliders.css" type="text/css" media="all"><link rel="stylesheet" id="lae-icomoon-styles-css" href="https://static-forge.netlify.com/wp-content/plugins/addons-for-elementor/assets/css/icomoon.css" type="text/css" media="all"><link rel="stylesheet" id="lae-frontend-styles-css" href="https://static-forge.netlify.com/wp-content/plugins/addons-for-elementor/assets/css/lae-frontend.css" type="text/css" media="all"><link rel="stylesheet" id="lae-widgets-styles-css" href="https://static-forge.netlify.com/wp-content/plugins/addons-for-elementor/assets/css/lae-widgets.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-pro-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor-pro/assets/css/frontend.min.css" type="text/css" media="all"><link rel="stylesheet" id="font-awesome-5-all-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/all.min.css" type="text/css" media="all"><link rel="stylesheet" id="font-awesome-4-shim-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/v4-shims.min.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-global-css" href="https://static-forge.netlify.com/wp-content/uploads/elementor/css/global.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-post-35033-css" href="https://static-forge.netlify.com/wp-content/uploads/elementor/css/post-35033.css" type="text/css" media="all"><link rel="stylesheet" id="custom-frontend-style-css" href="https://static-forge.netlify.com/wp-content/plugins/ideapush/inc/css/frontendstyle.css" type="text/css" media="all"><style id="custom-frontend-style-inline-css" type="text/css">
+.ideapush-idea-filter{display: none;}
+</style><script type="text/javascript" src="https://static-forge.netlify.com/wp-includes/js/jquery/jquery.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-includes/js/jquery/jquery-migrate.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min.js"></script><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NB3CZPX');</script><script type="text/javascript">
+            (function () {
+                window.lae_fs = {can_use_premium_code: false};
+            })();
+        </script><style type="text/css" id="wp-custom-css">
+			.hljs {
+	background: none;
+}		</style><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono"><link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700"><link href="https://cdn.forge.tylertech.com/v1/libs/tcw/latest/tcw-material-design.css" rel="stylesheet"><link rel="stylesheet" href="styles/tyler-forge.css"><link rel="stylesheet" href="styles/hljs-theme.css"><link rel="stylesheet" href="styles/component.css"></head><body class="tyl-typography">
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NB3CZPX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+
+
+    <tcw-scaffold class="tyl-docs"><tcw-omnibar id="tyl-forge-omnibar" title-text="Tyler Forge" slot="header"><div slot="logo" style="width: 24px; height: 20px; margin-left: 8px;">
+    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 480.5 423.03"><title>forge-icon-only</title><g id="logo"><path d="M463.68,39H283.49A26,26,0,0,0,261,52l-39.38,68.2a26,26,0,0,0,22.55,39.05H424.3a26,26,0,0,0,22.55-13L486.22,78A26,26,0,0,0,463.68,39Z" transform="translate(-9.25 -38.98)" fill="#fff"></path><path d="M377,189.18H196.77a26,26,0,0,0-22.54,13l-37.37,64.72a26,26,0,0,0,0,26L227,449A26,26,0,0,0,272,449L399.51,228.23A26,26,0,0,0,377,189.18Z" transform="translate(-9.25 -38.98)" fill="#fff"></path><path d="M211.35,78A26,26,0,0,0,188.81,39H35.32A26,26,0,0,0,12.78,78L77,189.18,89.52,211a26,26,0,0,0,45.09,0Z" transform="translate(-9.25 -38.98)" fill="#fff"></path></g></svg></div>
+  <tcw-omnibar-search slot="center"><input type="text" placeholder="Search..."></tcw-omnibar-search><tcw-omnibar-menu-button slot="menu" id="tyl-forge-omnibar-menu"></tcw-omnibar-menu-button><div slot="action" style="display: flex; justify-content: space-around;">
+    <ul class="header-nav"><li class="header__nav-item" id="design-nav-indicator">
+        <a href="/getting-started-with-forge/" class="header__nav-link">
+          Design <span class="header__nav-indicator" id="design-link-indicator"></span>
+        </a>
+      </li>
+      <li class="header__nav-item" id="development-nav-indicator">
+        <a href="/development/" class="header__nav-link">
+          Development <span class="header__nav-indicator" id="development-link-indicator"></span>
+        </a>
+      </li>
+      <li class="header__nav-item" id="development-nav-indicator">
+        <a href="/give-feedback/" class="header__nav-link">
+          Feedback <span class="header__nav-indicator" id="feedback-link-indicator"></span>
+        </a>
+      </li>
+    </ul></div>
+</tcw-omnibar><div slot="body-left">
+  <tcw-drawer id="tyl-forge-sidenav" type="dismissible" open="true" style="--tyl-drawer-width: 320px;"><tcw-list class="nav navbar-nav"><a href="https://static-forge.netlify.com/" id="home-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">home</i>Home</tcw-list-item></a><tcw-expansion-panel id="get started-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">forward</i>
+			  Get started
+			  <tcw-open-icon slot="trailing" style="line-height: 0.5;"></tcw-open-icon></tcw-list-item><tcw-list><a href="https://static-forge.netlify.com/getting-started-as-a-designer/"><tcw-list-item slot="header" class="nav_subitem">As a designer</tcw-list-item></a><a href="https://static-forge.netlify.com/design-to-dev-handoff/"><tcw-list-item slot="header" class="nav_subitem">Design to Dev Handoff</tcw-list-item></a></tcw-list></tcw-expansion-panel><tcw-expansion-panel id="foundation-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">border_outer</i>
+			  Foundation
+			  <tcw-open-icon slot="trailing" style="line-height: 0.5;"></tcw-open-icon></tcw-list-item><tcw-list><a href="https://static-forge.netlify.com/foundation/overview/"><tcw-list-item slot="header" class="nav_subitem">Overview</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/intro-to-accessibility/"><tcw-list-item slot="header" class="nav_subitem">Accessibility</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/tyler-branding/"><tcw-list-item slot="header" class="nav_subitem">Branding</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/color/"><tcw-list-item slot="header" class="nav_subitem">Color</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/data-formats/"><tcw-list-item slot="header" class="nav_subitem">Data formats</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/tyler-icons-full/"><tcw-list-item slot="header" class="nav_subitem">Iconography</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/illustrations-usage/"><tcw-list-item slot="header" class="nav_subitem">Illustration: Usage</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/illustration-library/"><tcw-list-item slot="header" class="nav_subitem">Illustration: Library</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/theming/"><tcw-list-item slot="header" class="nav_subitem">Theming</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/layout-intro/"><tcw-list-item slot="header" class="nav_subitem">Layout: Intro</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/layout-grid/"><tcw-list-item slot="header" class="nav_subitem">Layout: Grid</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/layout-spacing/"><tcw-list-item slot="header" class="nav_subitem">Layout: Spacing</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/layout-page-layouts/"><tcw-list-item slot="header" class="nav_subitem">Layout: Page layouts</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/typography/"><tcw-list-item slot="header" class="nav_subitem">Typography</tcw-list-item></a><a href="https://static-forge.netlify.com/product-analytics/"><tcw-list-item slot="header" class="nav_subitem">Product analytics - coming soon</tcw-list-item></a></tcw-list></tcw-expansion-panel><tcw-expansion-panel id="patterns-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">ac_unit</i>
+			  Patterns
+			  <tcw-open-icon slot="trailing" style="line-height: 0.5;"></tcw-open-icon></tcw-list-item><tcw-list><a href="https://static-forge.netlify.com/patterns/data-visualization/"><tcw-list-item slot="header" class="nav_subitem">Data visualization: Intro</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/data-visualization-2/"><tcw-list-item slot="header" class="nav_subitem">Data visualization: Charts</tcw-list-item></a><a href="https://static-forge.netlify.com/colors-data-visualization/"><tcw-list-item slot="header" class="nav_subitem">Data visualization: Colors</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/drag-and-drop/"><tcw-list-item slot="header" class="nav_subitem">Drag and drop</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/empty-state/"><tcw-list-item slot="header" class="nav_subitem">Empty state</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/errors/"><tcw-list-item slot="header" class="nav_subitem">Errors</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/faceted-search/"><tcw-list-item slot="header" class="nav_subitem">Faceted filtering</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/forms/"><tcw-list-item slot="header" class="nav_subitem">Forms</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/login/"><tcw-list-item slot="header" class="nav_subitem">Login</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/mapping-gis/"><tcw-list-item slot="header" class="nav_subitem">Mapping & GIS</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/navigation/"><tcw-list-item slot="header" class="nav_subitem">Navigation</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/onboarding/"><tcw-list-item slot="header" class="nav_subitem">Onboarding - in progress</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/profile/"><tcw-list-item slot="header" class="nav_subitem">Profile - in progress</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/progress-loading/"><tcw-list-item slot="header" class="nav_subitem">Progress & loading</tcw-list-item></a></tcw-list></tcw-expansion-panel><tcw-expansion-panel id="components-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">settings_input_component</i>
+			  Components
+			  <tcw-open-icon slot="trailing" style="line-height: 0.5;"></tcw-open-icon></tcw-list-item><tcw-list><a href="https://static-forge.netlify.com/components/accordion/"><tcw-list-item slot="header" class="nav_subitem">Accordion</tcw-list-item></a><a href="https://static-forge.netlify.com/components/app-launcher/"><tcw-list-item slot="header" class="nav_subitem">App launcher</tcw-list-item></a><a href="https://static-forge.netlify.com/components/avatar/"><tcw-list-item slot="header" class="nav_subitem">Avatar</tcw-list-item></a><a href="https://static-forge.netlify.com/components/badge/"><tcw-list-item slot="header" class="nav_subitem">Badge - Coming soon</tcw-list-item></a><a href="https://static-forge.netlify.com/components/buttons/"><tcw-list-item slot="header" class="nav_subitem">Buttons</tcw-list-item></a><a href="https://static-forge.netlify.com/components/card/"><tcw-list-item slot="header" class="nav_subitem">Card</tcw-list-item></a><a href="https://static-forge.netlify.com/components/chips/"><tcw-list-item slot="header" class="nav_subitem">Chips</tcw-list-item></a><a href="https://static-forge.netlify.com/components/date-picker/"><tcw-list-item slot="header" class="nav_subitem">Date picker - coming soon</tcw-list-item></a><a href="https://static-forge.netlify.com/components/dialog/"><tcw-list-item slot="header" class="nav_subitem">Dialog</tcw-list-item></a><a href="https://static-forge.netlify.com/components/expansion-panel/"><tcw-list-item slot="header" class="nav_subitem">Expansion panel</tcw-list-item></a><a href="https://static-forge.netlify.com/components/floating-action-button/"><tcw-list-item slot="header" class="nav_subitem">Floating Action Button</tcw-list-item></a><a href="https://static-forge.netlify.com/components/list/"><tcw-list-item slot="header" class="nav_subitem">List</tcw-list-item></a><a href="https://static-forge.netlify.com/components/navigation-drawer/"><tcw-list-item slot="header" class="nav_subitem">Navigation drawer</tcw-list-item></a><a href="https://static-forge.netlify.com/components/omnibar/"><tcw-list-item slot="header" class="nav_subitem">Omnibar</tcw-list-item></a><a href="https://static-forge.netlify.com/components/progress-indicators/"><tcw-list-item slot="header" class="nav_subitem">Progress indicators</tcw-list-item></a><a href="https://static-forge.netlify.com/components/selection-controls/"><tcw-list-item slot="header" class="nav_subitem">Selection controls</tcw-list-item></a><a href="https://static-forge.netlify.com/components/sliders/"><tcw-list-item slot="header" class="nav_subitem">Sliders</tcw-list-item></a><a href="https://static-forge.netlify.com/components/stepper/"><tcw-list-item slot="header" class="nav_subitem">Stepper - coming soon</tcw-list-item></a><a href="https://static-forge.netlify.com/components/table/"><tcw-list-item slot="header" class="nav_subitem">Table</tcw-list-item></a><a href="https://static-forge.netlify.com/components/tabs/"><tcw-list-item slot="header" class="nav_subitem">Tabs</tcw-list-item></a><a href="https://static-forge.netlify.com/components/toast/"><tcw-list-item slot="header" class="nav_subitem">Toast</tcw-list-item></a><a href="https://static-forge.netlify.com/components/toolbar/"><tcw-list-item slot="header" class="nav_subitem">Toolbar - coming soon</tcw-list-item></a><a href="https://static-forge.netlify.com/components/tooltip/"><tcw-list-item slot="header" class="nav_subitem">Tooltip</tcw-list-item></a></tcw-list></tcw-expansion-panel><tcw-expansion-panel id="native mobile-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">phone_iphone</i>
+			  Native mobile
+			  <tcw-open-icon slot="trailing" style="line-height: 0.5;"></tcw-open-icon></tcw-list-item><tcw-list><a href="https://static-forge.netlify.com/native-mobile/basic-requirements/"><tcw-list-item slot="header" class="nav_subitem">Basic requirements</tcw-list-item></a><a href="https://static-forge.netlify.com/native-mobile/frameworks/"><tcw-list-item slot="header" class="nav_subitem">Frameworks</tcw-list-item></a><a href="https://static-forge.netlify.com/native-mobile/design-patterns/"><tcw-list-item slot="header" class="nav_subitem">Design patterns</tcw-list-item></a></tcw-list></tcw-expansion-panel><a href="https://static-forge.netlify.com/feedback-support/" id="feedback & support-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">pan_tool</i>Feedback & support</tcw-list-item></a><a href="https://static-forge.netlify.com/status/" id="status-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">trending_up</i>Status</tcw-list-item></a><a href="https://static-forge.netlify.com/faqs/" id="faqs-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">help</i>FAQs</tcw-list-item></a>    </tcw-list></tcw-drawer></div>
+      <div class="tyl-docs-content" slot="body" style="position: relative;" id="top-of-page">
+        <div id="tyl-docs-content" class="tyl-docs-content__container" style="padding: 16px; max-width: 1264px;">
+        <div class="flex-container" style="display: flex;">
+        <div class="left-content" style="max-width: 956px; width: 100%;">
+          <tcw-card has-padding="false"><div data-elementor-type="wp-page" data-elementor-id="35033" class="elementor elementor-35033" data-elementor-settings="[]">
+			<div class="elementor-inner">
+				<div class="elementor-section-wrap">
+							<section class="elementor-element elementor-element-75e28020 elementor-section-height-min-height elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-items-middle elementor-section elementor-top-section" data-id="75e28020" data-element_type="section" id="overview" data-settings='{"background_background":"classic"}'><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-228feb26 elementor-column elementor-col-50 elementor-top-column" data-id="228feb26" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-62900fa8 elementor-widget elementor-widget-divider" data-id="62900fa8" data-element_type="widget" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-12745a64 elementor-widget elementor-widget-heading" data-id="12745a64" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Progress & loading</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-6055097d elementor-widget elementor-widget-text-editor" data-id="6055097d" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix">Progress indicators express an unspecified wait time or display the length of a process.</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-173ce517 elementor-column elementor-col-50 elementor-top-column" data-id="173ce517" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-22eecef0 elementor-widget elementor-widget-html" data-id="22eecef0" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="display: flex; justify-content: flex-end;">
+    <a href="/development/components/button/">
+<tcw-button><button type="button">
+      <i class="material-icons">code</i>
+      <span>Developer Guidelines</span>
+    </button>
+</tcw-button></a>
+</div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-389fea20 elementor-widget elementor-widget-image" data-id="389fea20" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img src="https://static-forge.netlify.com/wp-content/uploads/elementor/thumbs/data-colors-spot-hero-o9631i8e8msjqaqso9z1a35rn7b52ummoayn0u7r54.png" title="data colors-spot hero" alt="data colors-spot hero"></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-1d04c8d6 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="1d04c8d6" data-element_type="section" id="guidance"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-3681a1f elementor-column elementor-col-100 elementor-top-column" data-id="3681a1f" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-fc0ded3 elementor-widget elementor-widget-spacer" data-id="fc0ded3" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-1f42a590 elementor-widget elementor-widget-heading" data-id="1f42a590" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Guidance</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-471cccb2 elementor-widget elementor-widget-text-editor" data-id="471cccb2" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Progress indicators inform users about the status of ongoing processes, such as loading an app, submitting a form, or saving updates. They communicate an app’s state and indicate available actions, such as whether users can navigate away from the current screen. <b>Use a progress indicator for operations that take more than 1 second.</b></p><p>Progress indicators are used to:</p><ul><li>Assure the user that the system is working.</li><li>Provide operational transparency.</li><li>Communicate progress made vs progress pending.</li><li>Reduce users perception of time elapsed.</li></ul></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-460ad7d elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="460ad7d" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-3c05b6c elementor-column elementor-col-100 elementor-top-column" data-id="3c05b6c" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-618a5a3 elementor-widget elementor-widget-spacer" data-id="618a5a3" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-cfbadf2 elementor-widget elementor-widget-heading" data-id="cfbadf2" data-element_type="widget" toc-subitem="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Client-facing terminology</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-cc485cc elementor-widget elementor-widget-text-editor" data-id="cc485cc" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><span style="letter-spacing: 0.05px;">Progress indicator is an acceptable term in client-facing contexts.</span><br style="letter-spacing: 0.05px;"><span style="letter-spacing: 0.05px;">Example: The progress indicator notifies you that records are updating.</span></p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-5bbb689 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="5bbb689" data-element_type="section" id="guidance"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-deba6af elementor-column elementor-col-100 elementor-top-column" data-id="deba6af" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-597321b elementor-widget elementor-widget-spacer" data-id="597321b" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-935afc2 elementor-widget elementor-widget-heading" data-id="935afc2" data-element_type="widget" toc-subitem="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">When to use</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-9c23daa elementor-widget elementor-widget-html" data-id="9c23daa" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<table class="s-tag-table"><tbody><tr><td colspan="1" rowspan="1"><strong>Context</strong></td>
+<td colspan="1" rowspan="1"><strong>Component</strong></td>
+<td colspan="1" rowspan="1"><strong>Guidance </strong></td>
+
+</tr><tr><td colspan="1" rowspan="1">Initial page load</td>
+<td colspan="1" rowspan="1">Skeleton + progressive loading</td>
+<td colspan="1" rowspan="1">Preferred method; use when content size/shape is known. Load skeleton components, then fade in components as they become available.
+</td>
+</tr><tr><td colspan="1" rowspan="1">Initial page load</td>
+<td colspan="1" rowspan="1">Linear page progress</td>
+<td colspan="1" rowspan="1">Use when the content to be loaded is of unknown or variable size or quantity. Display a description of the process with a linear progress bar (see pattern below).
+</td>
+</tr><tr><td colspan="1" rowspan="1">Full page load or change</td>
+<td colspan="1" rowspan="1">Full page busy indicator</td>
+<td colspan="1" rowspan="1">Use an overlay to prevent users from interacting with content on a page due to a change, server error, or form submission.</td>
+</tr><tr><td colspan="1" rowspan="1">Multiple components</td>
+<td colspan="1" rowspan="1">Skeleton + progressive loading</td>
+<td colspan="1" rowspan="1">Load skeleton components, then fade in components as they become available.</td>
+</tr><tr><td colspan="1" rowspan="1">Single component within a page </td>
+<td colspan="1" rowspan="1">Inline circular progress indicator</td>
+<td colspan="1" rowspan="1">Use a contextual circular progress indicator to communicate that either a component's state or data is changing. </td>
+</tr></tbody></table><style>
+.s-tag-table tr:first-child {
+    background-color: #fafafa;
+    font-weight: 500;
+}
+.s-tag-table tr td:first-child {
+    border-left: 1px solid #e5e5e5;
+}
+.s-tag-table td {
+    border: 1px solid #eee;
+    color: #000;
+    padding: .75em;
+    vertical-align: top;
+}
+
+.s-tag-table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    table-layout: auto;
+}
+    
+</style></div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-356672dd elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="356672dd" data-element_type="section" id="guidance"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-1745116b elementor-column elementor-col-100 elementor-top-column" data-id="1745116b" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-4e9e0dfc elementor-widget elementor-widget-spacer" data-id="4e9e0dfc" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-553ce123 elementor-widget elementor-widget-heading" data-id="553ce123" data-element_type="widget" toc-subitem="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Perceptions of waiting</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-aa08c64 elementor-widget elementor-widget-text-editor" data-id="aa08c64" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Uncertain waits are perceived as longer than finite waits. Even if we can’t always make actual wait times shorter, we can make the wait more enjoyable. User satisfaction directly correlates to <strong>expectations </strong>(how long do I expect this to take? ) and <strong>perception </strong>(how long did I perceive this to take?). We can manage user expectations through indicators and operational transparency. When possible, provide users with <b>a time estimate</b> and <b>a description of what is happening.</b></p><p><strong>Indicators</strong> are animated visual representations which provide feedback that progress is being made. Indicators communicate to the user that their action has been acknowledged by the system, and the system is working on the response. Types of indicators:</p><ul><li>Progress bars</li><li>Spinners</li><li>Skeleton pages</li></ul><p>The representation of the indicator can be animated to suggest a <strong>determinate</strong>, or an <strong>indeterminate</strong> amount of time. <strong>Determinate </strong>indicates how long an operation will take by including percentages or time estimates and the indicator’s animation typically loads once. <strong>Indeterminate</strong> provides no indication of the estimated load time and the animation typically loads faster and repeats. Determinate progress indicators should be used whenever possible. This increases the operational transparency and helps reduce the users perception of time spent waiting.</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-2150277 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="2150277" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-f197971 elementor-column elementor-col-100 elementor-top-column" data-id="f197971" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-94e7388 elementor-widget elementor-widget-spacer" data-id="94e7388" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-9716d5e elementor-widget elementor-widget-heading" data-id="9716d5e" data-element_type="widget" toc-subitem="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Progressive loading</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-1e4db23 elementor-widget elementor-widget-text-editor" data-id="1e4db23" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>“It’s important to deliver something meaningful to the user as soon as possible” (<a href="https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Loading">MDN</a>). Instead of waiting to display a screen until everything has loaded, <strong>progressive loading</strong> displays a basic view of a page with placeholders where more content will eventually appear. Then, content loads as it is ready. This creates expectations and reduces perceived load times. Progressive loading is “all about deferring loading of as many resources as possible (HTML, CSS, JavaScript), and only loading those immediately that are really needed for the very first experience” (Read more about the technical implementation: <a href="https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Loading">MDN: Progressive Loading</a>).</p><p>Progressive loading should be used in conjunction with skeleton patterns in order to load a full page. The process looks like this: Display skeleton screen → fade in individual components once they’re loaded.</p><p>The concept of progressive loading can also be applied to loading parts of a page. Use skeleton components to load in specific components that may change or take longer to load, while still allowing users to interact with the parts of a page that have loaded.</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-27b9ea7 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="27b9ea7" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-18fd5fd elementor-column elementor-col-100 elementor-top-column" data-id="18fd5fd" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-2263163 elementor-widget elementor-widget-spacer" data-id="2263163" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-1529785 elementor-widget elementor-widget-heading" data-id="1529785" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Behavior</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-9e523b5 elementor-widget elementor-widget-heading" data-id="9e523b5" data-element_type="widget" toc-subitem="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Initially loading a page</h4>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-45c30a3 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="45c30a3" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-1a94374 elementor-column elementor-col-100 elementor-top-column" data-id="1a94374" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-3156b6d elementor-widget elementor-widget-spacer" data-id="3156b6d" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-d12dbbf elementor-widget elementor-widget-heading" data-id="d12dbbf" data-element_type="widget" toc-item="false" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h5 class="elementor-heading-title elementor-size-default">Skeleton loading</h5>		</div>
+				</div>
+				<div class="elementor-element elementor-element-0975c9d elementor-widget elementor-widget-text-editor" data-id="0975c9d" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>A skeleton screen is a low fidelity UI into which information is gradually loaded. It gives users a visual cue that the content is being loaded into each UI element and can create perceptions of faster load times (check out a sample UX <a href="https://uxdesign.cc/what-you-should-know-about-skeleton-screens-a820c45a571a">study</a>). Because of this, it is Forge’s recommended method for loading in new content.<span style="color: var(--mdc-theme-text-primary-on-background,rgba(0,0,0,0.87)); letter-spacing: 0.05px;"> </span><b style="color: var(--mdc-theme-text-primary-on-background,rgba(0,0,0,0.87)); letter-spacing: 0.05px;">Use when content size/shape is known.</b></p><p><span style="color: var(--mdc-theme-text-primary-on-background,rgba(0,0,0,0.87)); letter-spacing: 0.05px;">Skeleton patterns can be used to load a page initially or to load specific components after an initial load while still allowing users to interact with the rest of the page. </span></p><p><span style="color: var(--mdc-theme-text-primary-on-background,rgba(0,0,0,0.87)); letter-spacing: 0.05px;">Benefits of skeleton loading:</span></p><ul><li>Puts the focus on progress, rather than wait time.</li><li>Is associated with faster perceived loads times</li><li>Eliminates surprise.</li><li>Provides a clear indication of progress.</li></ul></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-b30fafb elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="b30fafb" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-d675383 elementor-column elementor-col-100 elementor-top-column" data-id="d675383" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-ca0a875 elementor-widget elementor-widget-html" data-id="ca0a875" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="height: 450px;">
+  <tcw-scaffold stretch><tcw-omnibar slot="header" title-text="Skeleton"></tcw-omnibar><tcw-drawer slot="body-left" style="padding-top: 8px;"><div>
+        <tcw-skeleton list-item></tcw-skeleton><tcw-skeleton list-item></tcw-skeleton><tcw-skeleton list-item></tcw-skeleton></div>
+    </tcw-drawer><div slot="body" style="padding: 16px; background-color: var(--mdc-theme-background);">
+      <tcw-card><tcw-skeleton avatar></tcw-skeleton><tcw-skeleton text></tcw-skeleton><tcw-skeleton text></tcw-skeleton><tcw-skeleton text style="width: 75%;"></tcw-skeleton></tcw-card><tcw-card><tcw-skeleton text></tcw-skeleton><tcw-skeleton text></tcw-skeleton><tcw-skeleton text style="width: 75%;"></tcw-skeleton></tcw-card><tcw-card><tcw-skeleton text></tcw-skeleton><tcw-skeleton text></tcw-skeleton><tcw-skeleton text style="width: 75%;"></tcw-skeleton></tcw-card></div>
+  </tcw-scaffold></div>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-29150dc elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="29150dc" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-c300c8b elementor-column elementor-col-100 elementor-top-column" data-id="c300c8b" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-37613db elementor-widget elementor-widget-spacer" data-id="37613db" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-4e67677 elementor-widget elementor-widget-heading" data-id="4e67677" data-element_type="widget" toc-item="false" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h5 class="elementor-heading-title elementor-size-default">Linear page progress</h5>		</div>
+				</div>
+				<div class="elementor-element elementor-element-3233f89 elementor-widget elementor-widget-text-editor" data-id="3233f89" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Use a linear progress bar with text when the content to be loaded <b>is of unknown or variable size or quantity. </b>For example, if your app is pulling in dynamic content or content that’s been configured by a user or client.</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-f3c57bd elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="f3c57bd" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-8d70316 elementor-column elementor-col-100 elementor-top-column" data-id="8d70316" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-b46b1b9 elementor-widget elementor-widget-html" data-id="b46b1b9" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="height: 350px;">
+  <tcw-scaffold stretch><tcw-omnibar slot="header" title-text="Linear page progress"></tcw-omnibar><div slot="body" style="padding: 16px; background-color: var(--mdc-theme-background);">
+        <div style="display: flex; justify-content: center; ">
+            <div style="width: 200px">
+                <h1 class="tyl-typography--title" style="color: var(--mdc-theme-text-secondary-on-background); text-align: center; margin-top: 112px;">Loading your content</h1>
+                <tcw-linear-progress></tcw-linear-progress></div>
+        </div>
+    </div>
+  </tcw-scaffold></div>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-c2bc8ee elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="c2bc8ee" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-82ce6d0 elementor-column elementor-col-100 elementor-top-column" data-id="82ce6d0" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-19e09ab elementor-widget elementor-widget-spacer" data-id="19e09ab" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-77e1c7d elementor-widget elementor-widget-heading" data-id="77e1c7d" data-element_type="widget" toc-subitem="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Loading or changing an entire page</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-8894abc elementor-widget elementor-widget-text-editor" data-id="8894abc" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Use this pattern when the entire page is loading or changing and users should be prevented from interacting with any content on the page. </p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-22aa19b elementor-widget elementor-widget-html" data-id="22aa19b" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<a href="wp-content/uploads/image-exports/page%20busy%20indicator.png" data-elementor-open-lightbox="yes">
+	<img src="wp-content/uploads/image-exports/page%20busy%20indicator.png" class="attachment-full size-full" alt=""></a>		</div>
+				</div>
+				<div class="elementor-element elementor-element-6e0af78 elementor-widget elementor-widget-text-editor" data-id="6e0af78" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Busy indicator text may use the following formats.</p><p><code>[Object]</code> is being <code>[operation name]</code>, or<br><code>[Object]</code> is being <code>[operation name]</code> to <code>[destination name]</code> or<br><code>[Object]</code> is being <code>[operation name]</code> from <code></code> to <code>[destination name]</code></p><p>Real-world examples include copying files to a storage location, saving edits to a file, and more.</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-122a3c5f elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="122a3c5f" data-element_type="section" id="guidance"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-77058bbd elementor-column elementor-col-100 elementor-top-column" data-id="77058bbd" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-c9e007f elementor-widget elementor-widget-spacer" data-id="c9e007f" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-3c888305 elementor-widget elementor-widget-heading" data-id="3c888305" data-element_type="widget" toc-subitem="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Loading components within a page</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-479bdb2 elementor-widget elementor-widget-text-editor" data-id="479bdb2" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Use <b>circular progress indicators</b> to identify when a specific area of the page is loading (ie, content within a card). In general, place loading animations close to the content that is being loaded or is changing. If only a portion of the interface is displaying new content or being updated, place the loading animation in that specific part of the interface.</p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-2e1b28f elementor-widget elementor-widget-heading" data-id="2e1b28f" data-element_type="widget" toc-item="false" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h5 class="elementor-heading-title elementor-size-default">Buttons</h5>		</div>
+				</div>
+				<div class="elementor-element elementor-element-44f1a3 elementor-widget elementor-widget-text-editor" data-id="44f1a3" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>When buttons trigger an event, use a 24px circular progress indicator inside of the button to indicate change. </p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-8151329 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="8151329" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-6360163 elementor-column elementor-col-50 elementor-top-column" data-id="6360163" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-37b539a elementor-widget elementor-widget-html" data-id="37b539a" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="background: #E5E5E5; padding: 56px; display:flex; justify-content: center">
+    <tcw-button type="raised"><button type="button" onclick="showSpinner()" style="width: 100px" id="button">  
+  <span id="button-text"> Click me</span>
+<tcw-progress-spinner id="progress-spinner" style="margin-top: 6px" diameter="24" class="hide"></tcw-progress-spinner></button>
+</tcw-button></div>
+
+<style>
+    .hide {
+        display: none;
+    }
+</style><script>
+ function showSpinner() {
+  document.getElementById("progress-spinner").classList.remove("hide");
+    document.getElementById("button-text").classList.add("hide");
+    document.getElementById("button").setAttribute("disabled", true);
+ }
+    
+</script></div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-18bf209 elementor-column elementor-col-50 elementor-top-column" data-id="18bf209" data-element_type="column">
+			<div class="elementor-column-wrap">
+					<div class="elementor-widget-wrap">
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-58ae6fa3 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="58ae6fa3" data-element_type="section" id="guidance"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-27ee9e35 elementor-column elementor-col-100 elementor-top-column" data-id="27ee9e35" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-6712854f elementor-widget elementor-widget-spacer" data-id="6712854f" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-22bbcb77 elementor-widget elementor-widget-heading" data-id="22bbcb77" data-element_type="widget" toc-item="false" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h5 class="elementor-heading-title elementor-size-default">Input elements</h5>		</div>
+				</div>
+				<div class="elementor-element elementor-element-def3d6e elementor-widget elementor-widget-text-editor" data-id="def3d6e" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>When data loads inside an input field, place a 24px circular progress indicator inside the element. Loading may be needed in cases of validation or Ajax data calls. </p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-5bcc206 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="5bcc206" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-65bb06a elementor-column elementor-col-50 elementor-top-column" data-id="65bb06a" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-4f08bce elementor-widget elementor-widget-html" data-id="4f08bce" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="background: #E5E5E5; padding: 16px;">
+    <span class="tyl-typography--caption">Text field or autocomplete</span>
+    <div style="display:flex; justify-content: center; padding: 40px">
+    <div style="background: white; padding: 8px; border-radius: 4px;">
+        <tcw-text-field style="background:"><input type="text" id="input-text-01"><label for="input-text-01" slot="label">Text field</label>
+              <tcw-progress-spinner id="progress-spinner" style="margin-top: 8px; margin-right: 8px" diameter="24"></tcw-progress-spinner></tcw-text-field></div>
+</div>
+</div>
+
+<style>
+    .hide {
+        display: none;
+    }
+</style><script>
+    
+</script></div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-b0e7af3 elementor-column elementor-col-50 elementor-top-column" data-id="b0e7af3" data-element_type="column">
+			<div class="elementor-column-wrap">
+					<div class="elementor-widget-wrap">
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-4b83bcd elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="4b83bcd" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-772dd61 elementor-column elementor-col-100 elementor-top-column" data-id="772dd61" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-6717c4b elementor-widget elementor-widget-spacer" data-id="6717c4b" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-3f91b45 elementor-widget elementor-widget-heading" data-id="3f91b45" data-element_type="widget" toc-item="false" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h5 class="elementor-heading-title elementor-size-default">List elements</h5>		</div>
+				</div>
+				<div class="elementor-element elementor-element-b18c9dd elementor-widget elementor-widget-text-editor" data-id="b18c9dd" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Place a 24px circular progress indicator next to elements in a list or table to indicate change or loading when a single element is changing or loading.  </p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-38e1553 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="38e1553" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-1e57de4 elementor-column elementor-col-50 elementor-top-column" data-id="1e57de4" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-09513e5 elementor-widget elementor-widget-html" data-id="09513e5" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="background: #E5E5E5; padding: 16px;">
+    <span class="tyl-typography--caption">List with trailing spinner</span>
+    <div style="display:flex; justify-content: center; padding: 40px">
+    <div style="background: white; padding: 8px; border-radius: 4px;">
+        <tcw-list style="width: 300px"><tcw-list-item><span class="tyl-list-item__text">List Item</span>
+            <i class="material-icons" slot="trailing">info</i>
+          </tcw-list-item><tcw-list-item><span class="tyl-list-item__text" style="color: var(--mdc-theme-text-secondary-on-background">List Item</span>
+                <tcw-progress-spinner diameter="24" slot="trailing"></tcw-progress-spinner></tcw-list-item><tcw-list-item><span class="tyl-list-item__text">List Item</span>
+            <i class="material-icons" slot="trailing">info</i>
+          </tcw-list-item></tcw-list></div>
+</div>
+</div>
+
+<style>
+    .hide {
+        display: none;
+    }
+</style><script>
+    
+</script></div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-9c6d8f1 elementor-column elementor-col-50 elementor-top-column" data-id="9c6d8f1" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-2ad8e70 elementor-widget elementor-widget-html" data-id="2ad8e70" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="background: #E5E5E5; padding: 16px;">
+    <span class="tyl-typography--caption">List with leading spinner</span>
+    <div style="display:flex; justify-content: center; padding: 40px">
+    <div style="background: white; padding: 8px; border-radius: 4px;">
+        <tcw-list style="width: 300px"><tcw-list-item><i class="material-icons" slot="leading">wifi</i>
+                <span class="tyl-list-item__text">List Item</span>
+              </tcw-list-item><tcw-list-item><i class="material-icons" slot="leading">bluetooth</i>
+                <span class="tyl-list-item__text">List Item</span>
+              </tcw-list-item><tcw-list-item><tcw-progress-spinner diameter="24" slot="leading"></tcw-progress-spinner><span class="tyl-list-item__text" style="color: var(--mdc-theme-text-secondary-on-background">List Item</span>
+              </tcw-list-item></tcw-list></div>
+</div>
+</div>
+
+<style>
+    .hide {
+        display: none;
+    }
+</style><script>
+    
+</script></div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-2926720 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="2926720" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-548fe62 elementor-column elementor-col-100 elementor-top-column" data-id="548fe62" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-539f985 elementor-widget elementor-widget-spacer" data-id="539f985" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-a38e474 elementor-widget elementor-widget-heading" data-id="a38e474" data-element_type="widget" toc-item="false" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h5 class="elementor-heading-title elementor-size-default">Components</h5>		</div>
+				</div>
+				<div class="elementor-element elementor-element-bf4b6a9 elementor-widget elementor-widget-text-editor" data-id="bf4b6a9" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>When a single component, such as a card, is loading, use a spinner with descriptive text to inform the user.</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-0345f19 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="0345f19" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-8f7fe98 elementor-column elementor-col-50 elementor-top-column" data-id="8f7fe98" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-e7902bd elementor-widget elementor-widget-html" data-id="e7902bd" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="background: #E5E5E5; padding: 16px;">
+    <span class="tyl-typography--caption">Loading additional content into a list</span>
+    <div style="display:flex; justify-content: center; padding: 40px">
+    <div style="background: white; padding: 8px; border-radius: 4px;">
+        <tcw-list style="width: 300px"><tcw-list-item><i class="material-icons" slot="leading">wifi</i>
+                <span class="tyl-list-item__text">List Item</span>
+              </tcw-list-item><tcw-list-item><i class="material-icons" slot="leading">bluetooth</i>
+                <span class="tyl-list-item__text">List Item</span>
+              </tcw-list-item><tcw-list-item><i class="material-icons" slot="leading">data_usage</i>
+                <span class="tyl-list-item__text">List Item</span>
+              </tcw-list-item></tcw-list><div style="display:flex; justify-content: center;">
+            <tcw-progress-spinner diameter="24" slot="leading"></tcw-progress-spinner></div>
+    </div>
+</div>
+</div>
+
+<style>
+    .hide {
+        display: none;
+    }
+</style><script>
+    
+</script></div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-2cb6db1 elementor-column elementor-col-50 elementor-top-column" data-id="2cb6db1" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-2f76594 elementor-widget elementor-widget-html" data-id="2f76594" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="background: #E5E5E5; padding: 16px;">
+    <span class="tyl-typography--caption">Loading a single card</span>
+    <div style="padding: 40px">
+    <tcw-card><div slot="header"></div>
+      <div style="display: flex; justify-content: center; padding: 24px 0px;">
+        <tcw-progress-spinner diameter="48" slot="trailing"></tcw-progress-spinner></div>
+      <div slot="footer" style="display: flex; justify-content: center">
+         <span class="tyl-typography--body1" style="color: var(--mdc-theme-text-secondary-on-background); padding-bottom: 24px"> Loading content</span>
+      </div>
+    </tcw-card></div>
+</div>
+
+<style>
+    .hide {
+        display: none;
+    }
+</style><script>
+    
+</script></div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-6169125 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="6169125" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-38acd46 elementor-column elementor-col-100 elementor-top-column" data-id="38acd46" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-72132a5 elementor-widget elementor-widget-spacer" data-id="72132a5" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-7463567 elementor-widget elementor-widget-heading" data-id="7463567" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Types of in-page progress indicators </h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-c485db8 elementor-widget elementor-widget-heading" data-id="c485db8" data-element_type="widget" toc-subitem="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h5 class="elementor-heading-title elementor-size-default">Linear and circular</h5>		</div>
+				</div>
+				<div class="elementor-element elementor-element-509629c elementor-widget elementor-widget-text-editor" data-id="509629c" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Forge offers two visually distinct types of progress indicators: linear and circular progress indicators. Only one type should represent each kind of activity in an app. For example, if a refresh action displays a circular indicator on one screen, that same action shouldn’t use a linear indicator elsewhere in the app.</p><p style="letter-spacing: 0.05px;">Researchers Gronier and Lallemend conducted an experiment to determine what the best metaphor to display during waiting time is. They measured a number of components (progress bar, countdown, text, etc) against perceived waiting time and satisfaction. They found that while a countdown yields the highest satisfaction level because it informs the user exactly how long they have to wait,<b> linear progress bars </b>were actually associated with the shortest perceived waiting time and a high satisfaction score (5.8 out of 7). <a href="http://www.guillaumegronier.com/cv/resources/Articles/2013_WorkshopHCI_Gronier.pdf">Read more.</a> <span style="letter-spacing: 0.05px; color: var(--mdc-theme-text-primary-on-background,rgba(0,0,0,0.87));">For this reason, we recommend <b>a heavier use of </b></span><span style="letter-spacing: 0.05px; color: var(--mdc-theme-text-primary-on-background,rgba(0,0,0,0.87)); font-weight: bold;">linear progress indicators. </span></p><p><span style="letter-spacing: 0.05px; color: var(--mdc-theme-text-primary-on-background,rgba(0,0,0,0.87));">Because<b> circular progress indicators</b> fit better inside components, use them to </span>communicate the state of a component or its data is changing.<span style="letter-spacing: 0.05px; color: var(--mdc-theme-text-primary-on-background,rgba(0,0,0,0.87));"> Use circular progress indicators for inline components; use linear progress indicators for other scenarios.</span></p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-2eb1f5b elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="2eb1f5b" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-141b19a elementor-column elementor-col-100 elementor-top-column" data-id="141b19a" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-2f83d82 elementor-widget elementor-widget-spacer" data-id="2f83d82" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-b4ca731 elementor-widget elementor-widget-heading" data-id="b4ca731" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Best practices</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-1ff8b17 elementor-widget elementor-widget-text-editor" data-id="1ff8b17" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><ul><li>Only show a spinner if the expected wait time is more than a second; for example, whenever making a request to the server.</li><li>Use animations to soften transitions between states. Motion focuses attention on what’s important without creating unnecessary distraction. Check out the Material <a href="https://material.io/design/motion/understanding-motion.html#">guidance on motion.</a></li></ul></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-4c1ba479 elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="4c1ba479" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-1295b807 elementor-column elementor-col-100 elementor-top-column" data-id="1295b807" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<section class="elementor-element elementor-element-6e3617d1 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="6e3617d1" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-6705790b elementor-column elementor-col-50 elementor-inner-column" data-id="6705790b" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-1abfdbb elementor-widget elementor-widget-html" data-id="1abfdbb" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<a href="wp-content/uploads/image-exports/single%20element%20load.png" data-elementor-open-lightbox="yes">
+	<img src="wp-content/uploads/image-exports/single%20element%20load.png" class="attachment-full size-full" alt=""></a>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-1dbad7c4 elementor-column elementor-col-50 elementor-inner-column" data-id="1dbad7c4" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-ebd2679 elementor-widget elementor-widget-html" data-id="ebd2679" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="background: #E5E5E5; padding: 16px;">
+    <div style="display:flex; justify-content: center; padding: 40px">
+    <div style="background: white; padding: 8px; border-radius: 4px;">
+        <tcw-list style="width: 300px"><tcw-list-item><tcw-progress-spinner diameter="24" slot="leading"></tcw-progress-spinner><span class="tyl-list-item__text" style="color: var(--mdc-theme-text-secondary-on-background)">List Item</span>
+              </tcw-list-item><tcw-list-item><tcw-progress-spinner diameter="24" slot="leading"></tcw-progress-spinner><span class="tyl-list-item__text" style="color: var(--mdc-theme-text-secondary-on-background)">List Item</span>
+              </tcw-list-item><tcw-list-item><tcw-progress-spinner diameter="24" slot="leading"></tcw-progress-spinner><span class="tyl-list-item__text" style="color: var(--mdc-theme-text-secondary-on-background)">List Item</span>
+              </tcw-list-item></tcw-list></div>
+</div>
+</div>
+
+<style>
+    .hide {
+        display: none;
+    }
+</style><script>
+    
+</script></div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-4ba58feb elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="4ba58feb" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-5b80484c elementor-column elementor-col-50 elementor-inner-column" data-id="5b80484c" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-79077aec tyl-background-success elementor-widget elementor-widget-spacer" data-id="79077aec" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-54c882e5 elementor-column elementor-col-50 elementor-inner-column" data-id="54c882e5" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-19d35cab tyl-background-danger elementor-widget elementor-widget-spacer" data-id="19d35cab" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-620f812a elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="620f812a" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-412b552 elementor-column elementor-col-50 elementor-inner-column" data-id="412b552" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-1ea0f680 elementor-widget elementor-widget-text-editor" data-id="1ea0f680" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><span class="tyl-color-success"><strong>Do.</strong></span></p><p>If only a portion of a page is displaying new content or being updated, place the spinner in that part of the page. If you are unsure where to place the spinner, place it where you want the user’s attention to be when loading is finished.</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-3851294c elementor-column elementor-col-50 elementor-inner-column" data-id="3851294c" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-4159ceb4 tyl-color-info elementor-widget elementor-widget-text-editor" data-id="4159ceb4" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><span class="tyl-color-danger"><strong>Don’t.</strong></span></p><p>Don’t use multiple spinners on a single page. Consider using a busy page state or placing a progress indicator on the parent component instead. </p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section></div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-1d441c2c elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="1d441c2c" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-1c06edc5 elementor-column elementor-col-50 elementor-top-column" data-id="1c06edc5" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-72c3c3b3 elementor-widget elementor-widget-html" data-id="72c3c3b3" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="background: #E5E5E5; padding: 56px; display:flex; justify-content: center; align-items: center; min-height: 195px">
+<tcw-linear-progress style="width: 400px"></tcw-linear-progress></div>
+		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-15b989d5 elementor-column elementor-col-50 elementor-top-column" data-id="15b989d5" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-3dc7a13c elementor-widget elementor-widget-html" data-id="3dc7a13c" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="background: #E5E5E5; padding: 56px; display:flex; justify-content: center">
+    <tcw-progress-spinner></tcw-progress-spinner></div>
+		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-1cb126f3 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="1cb126f3" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-6793fb6d elementor-column elementor-col-50 elementor-top-column" data-id="6793fb6d" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-75f35c14 elementor-widget elementor-widget-text-editor" data-id="75f35c14" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><span class="tyl-typography--caption">Linear progress indicator</span></p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-6341b51 elementor-column elementor-col-50 elementor-top-column" data-id="6341b51" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-7f696ad2 elementor-widget elementor-widget-text-editor" data-id="7f696ad2" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><span class="tyl-typography--caption">Circular progress indicator</span></p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-7e8ba7ae elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="7e8ba7ae" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-6de2f28c elementor-column elementor-col-100 elementor-top-column" data-id="6de2f28c" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-776a642 elementor-widget elementor-widget-spacer" data-id="776a642" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-3907686e elementor-widget elementor-widget-heading" data-id="3907686e" data-element_type="widget" toc-subitem="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h5 class="elementor-heading-title elementor-size-default">Determinate and indeterminate</h5>		</div>
+				</div>
+				<div class="elementor-element elementor-element-9dadce elementor-widget elementor-widget-text-editor" data-id="9dadce" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix">Progress indicators may be determinate or indeterminate:</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-559d98a4 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="559d98a4" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-14f1de20 elementor-column elementor-col-50 elementor-top-column" data-id="14f1de20" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-7117c3fb elementor-widget elementor-widget-text-editor" data-id="7117c3fb" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><h6 style="margin-top: 12px; margin-bottom: 8px;">Determinate indicators</h6>
+<strong>Determinate indicators</strong> display how long a process will take. They should be used when the process completion rate can be detected.</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-7cddb41b elementor-column elementor-col-50 elementor-top-column" data-id="7cddb41b" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-8449f50 elementor-widget elementor-widget-text-editor" data-id="8449f50" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><h6 style="margin-top: 12px; margin-bottom: 8px;">Indeterminate indicators</h6>
+<strong>Indeterminate indicators</strong> express an unspecified amount of wait time. They should be used when progress isn’t detectable, or if it’s not necessary to indicate how long an activity will take.</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-6cb885cf elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="6cb885cf" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-65775ccb elementor-column elementor-col-50 elementor-top-column" data-id="65775ccb" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-6f73f0ff elementor-widget elementor-widget-html" data-id="6f73f0ff" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="background: #E5E5E5; padding: 56px; display:flex; justify-content: center">
+<tcw-linear-progress determinate="true" progress="0.5" buffer="1" style="width: 400px"></tcw-linear-progress></div>
+		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-5b4023f1 elementor-column elementor-col-50 elementor-top-column" data-id="5b4023f1" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-6c7a07a1 elementor-widget elementor-widget-html" data-id="6c7a07a1" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="background: #E5E5E5; padding: 56px; display:flex; justify-content: center; align-items: center;">
+<tcw-linear-progress style="width: 400px"></tcw-linear-progress></div>
+		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-39f2c1a7 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="39f2c1a7" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-74554668 elementor-column elementor-col-50 elementor-top-column" data-id="74554668" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-692afa17 elementor-widget elementor-widget-text-editor" data-id="692afa17" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><span class="tyl-typography--caption">Determinate progress indicators fill from 0 to 100%.
+</span></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-30c2066b elementor-column elementor-col-50 elementor-top-column" data-id="30c2066b" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-45aa3f1d elementor-widget elementor-widget-text-editor" data-id="45aa3f1d" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><span class="tyl-typography--caption">Indeterminate progress indicators move along a fixed track, growing and shrinking in size.
+</span></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-650c4344 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="650c4344" data-element_type="section" id="guidance"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-56027c4f elementor-column elementor-col-100 elementor-top-column" data-id="56027c4f" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-7b85743a elementor-widget elementor-widget-spacer" data-id="7b85743a" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-58bcb334 elementor-widget elementor-widget-heading" data-id="58bcb334" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Resources</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-1fd2f5db elementor-widget elementor-widget-text-editor" data-id="1fd2f5db" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Don’t just take our word for the best practices we’ve laid out. These are the resources that helped shape our guidance.</p><p><a href="https://99percentinvisible.org/episode/wait-wait-tell-me/transcript/" target="_blank" rel="noopener">Wait Wait… Tell Me!</a> (99% Invisible)</p><p><a class="c-link c-message_attachment__title_link" href="https://uxdesign.cc/what-you-should-know-about-skeleton-screens-a820c45a571a" target="_blank" rel="noreferrer noopener" data-qa="message_attachment_title_link"><span dir="auto">Everything you need to know about skeleton screens</span></a> (Medium)</p><p><a href="https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Loading" target="_blank" rel="noopener">Progressive Loading</a> (MDN Web Docs)</p><p><a href="https://usersnap.com/blog/progress-indicators/" target="_blank" rel="noopener">Improving the UX of Progress Indicators and Feedback Notifications</a> (Usersnap)</p><p><a href="https://www.lukew.com/ff/entry.asp?1797" target="_blank" rel="noopener">Mobile Design Details: Avoid The Spinner</a> (LukeW)</p><p><a href="http://www.guillaumegronier.com/cv/resources/Articles/2013_WorkshopHCI_Gronier.pdf" target="_blank" rel="noopener">How to Improve Perceived Waiting Time in HCI: A Psychological Approach</a> (Study)</p><p><a href="http://www.chrisharrison.net/projects/progressbars2/ProgressBarsHarrison.pdf" target="_blank" rel="noopener">Faster Progress Bars: Manipulating Perceived Duration with Visual Augmentations</a> (Study)</p><p><a href="https://medium.com/swlh/the-illusion-of-time-8f321fa2f191" target="_blank" rel="noopener">The Illusion of Time</a> (Medium)</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-a7e0377 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="a7e0377" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-6b7599e elementor-column elementor-col-100 elementor-top-column" data-id="6b7599e" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-43ca711 elementor-widget elementor-widget-spacer" data-id="43ca711" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-3c39722 elementor-widget elementor-widget-heading" data-id="3c39722" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Future research</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-bb6fd58 elementor-widget elementor-widget-text-editor" data-id="bb6fd58" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Progress indicators: should they be slower at the beginning or at the end? Should they change speed at all? The jury’s still out.</p><p><b>Help us find out!</b> If you’d like to do some usability testing with your product around progress and loading, reach out to <a href="mailto:tylerforge@tylertech.com">tylerforge@tylertech.com</a>. We’ll help you design a study, recruit participants, and analyze your results. </p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-8d807a8 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="8d807a8" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-d6150f4 elementor-column elementor-col-100 elementor-top-column" data-id="d6150f4" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-71d1705 elementor-widget elementor-widget-spacer" data-id="71d1705" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section></div>
+			</div>
+		</div>
+		 
+                        </tcw-card><div class="tyl-typography--caption" style="margin-bottom: 8px;">Last modified on December 23, 2019 by: emily.roller</div>
+          </div>
+
+            <div class="right-content" id="toc-right-container" style="position: relative; width: 300px;"> 
+                                <div><div class="textwidget custom-html-widget"><div class="toc" style="position: fixed;">
+                    <div class="toc-container">
+                      <div class="left-line" id="toc-left-line"></div>
+                      <div class="toc-items-container" id="toc-items">
+                        <h6 style="margin-top: 0px; margin-bottom: 16px;">Table of contents</h6>
+                      </div>
+                    </div>
+                  </div>
+
+<div id="back-to-top-button" class="tyl-back-to-top">
+            <tcw-fab extended="true"><button aria-label="Extended FAB with just text" onclick="scrollTo()">
+                <i class="material-icons" aria-hidden="true">arrow_upward</i>
+                <span>Back to top</span>
+              </button>
+            </tcw-fab></div></div></div>                            </div>
+
+        </div>
+       </div>
+      </div>
+    </tcw-scaffold><script type="text/javascript" src="scripts/custom-elements-es5-adapter.js"></script><script type="text/javascript" src="scripts/webcomponents-bundle.js"></script><script type="text/javascript" src="scripts/tyler-components-web-lib.min.js"></script><script type="text/javascript" src="scripts/tyler-components-web-forge-lib.min.js"></script><script>
+  window.addEventListener('WebComponentsReady', function() {
+    window.TylerComponentsWeb.lib.defineComponents();
+    window.TylerComponentsWeb.Forge.lib.defineComponents();
+  });
+</script><script type="text/javascript" src="scripts/menu-expander.js"></script><script type="text/javascript" src="scripts/drawer.js"></script><script type="text/javascript" src="scripts/navHeader.js"></script><script type="text/javascript" src="scripts/search.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-136930168-1"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-136930168-1');
+</script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/material-design-for-contact-form-7/assets/js/lib/autosize.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/material-design-for-contact-form-7/assets/js/cf7-material-design-bundle.js"></script><script type="text/javascript">
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"https:\/\/static-forge.netlify.com\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"}};
+/* ]]> */
+</script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/contact-form-7/includes/js/scripts.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/js/frontend-modules.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor-pro/assets/lib/sticky/jquery.sticky.min.js"></script><script type="text/javascript">
+var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/static-forge.netlify.com\/wp-admin\/admin-ajax.php","nonce":"a52c73ecd1","shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"google":{"title":"Google+","has_counter":true},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"delicious":{"title":"Delicious"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"}},"facebook_sdk":{"lang":"en_US","app_id":""}};
+</script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor-pro/assets/js/frontend.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-includes/js/jquery/ui/position.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/swiper/swiper.min.js"></script><script type="text/javascript">
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"version":"2.8.3","urls":{"assets":"https:\/\/static-forge.netlify.com\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"general":{"elementor_global_image_lightbox":"yes"},"editorPreferences":[]},"post":{"id":35033,"title":"Progress & loading","excerpt":""}};
+</script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/js/frontend.min.js"></script><script type="text/javascript" src="scripts/table-of-contents.js?x-version=1"></script></body></html>

@@ -1,0 +1,1984 @@
+<!DOCTYPE html>
+<html lang="en-US"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="shortcut icon" href="favicon.ico" sizes="16x16" type="image/x-icon"><title>Data Viz: Colors – Tyler Forge</title><link rel="dns-prefetch" href="//fonts.googleapis.com"><link rel="dns-prefetch" href="//s.w.org"><link rel="stylesheet" id="cf7md_roboto-css" href="//fonts.googleapis.com/css?family=Roboto:400,500" type="text/css" media="all"><link rel="stylesheet" id="cf7-material-design-css" href="https://static-forge.netlify.com/wp-content/plugins/material-design-for-contact-form-7/assets/css/cf7-material-design.css" type="text/css" media="all"><link rel="stylesheet" id="contact-form-7-css" href="https://static-forge.netlify.com/wp-content/plugins/contact-form-7/includes/css/styles.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-icons-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-animations-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/animations/animations.min.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-frontend-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/css/frontend.min.css" type="text/css" media="all"><link rel="stylesheet" id="lae-animate-styles-css" href="https://static-forge.netlify.com/wp-content/plugins/addons-for-elementor/assets/css/animate.css" type="text/css" media="all"><link rel="stylesheet" id="lae-sliders-styles-css" href="https://static-forge.netlify.com/wp-content/plugins/addons-for-elementor/assets/css/sliders.css" type="text/css" media="all"><link rel="stylesheet" id="lae-icomoon-styles-css" href="https://static-forge.netlify.com/wp-content/plugins/addons-for-elementor/assets/css/icomoon.css" type="text/css" media="all"><link rel="stylesheet" id="lae-frontend-styles-css" href="https://static-forge.netlify.com/wp-content/plugins/addons-for-elementor/assets/css/lae-frontend.css" type="text/css" media="all"><link rel="stylesheet" id="lae-widgets-styles-css" href="https://static-forge.netlify.com/wp-content/plugins/addons-for-elementor/assets/css/lae-widgets.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-pro-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor-pro/assets/css/frontend.min.css" type="text/css" media="all"><link rel="stylesheet" id="font-awesome-5-all-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/all.min.css" type="text/css" media="all"><link rel="stylesheet" id="font-awesome-4-shim-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/v4-shims.min.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-global-css" href="https://static-forge.netlify.com/wp-content/uploads/elementor/css/global.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-post-5384-css" href="https://static-forge.netlify.com/wp-content/uploads/elementor/css/post-5384.css" type="text/css" media="all"><link rel="stylesheet" id="custom-frontend-style-css" href="https://static-forge.netlify.com/wp-content/plugins/ideapush/inc/css/frontendstyle.css" type="text/css" media="all"><style id="custom-frontend-style-inline-css" type="text/css">
+.ideapush-idea-filter{display: none;}
+</style><link rel="stylesheet" id="elementor-icons-shared-0-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css" type="text/css" media="all"><link rel="stylesheet" id="elementor-icons-fa-solid-css" href="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css" type="text/css" media="all"><script type="text/javascript" src="https://static-forge.netlify.com/wp-includes/js/jquery/jquery.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-includes/js/jquery/jquery-migrate.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min.js"></script><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NB3CZPX');</script><script type="text/javascript">
+            (function () {
+                window.lae_fs = {can_use_premium_code: false};
+            })();
+        </script><style type="text/css" id="wp-custom-css">
+			.hljs {
+	background: none;
+}		</style><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono"><link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700"><link href="https://cdn.forge.tylertech.com/v1/libs/tcw/latest/tcw-material-design.css" rel="stylesheet"><link rel="stylesheet" href="styles/tyler-forge.css"><link rel="stylesheet" href="styles/hljs-theme.css"><link rel="stylesheet" href="styles/component.css"></head><body class="tyl-typography">
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NB3CZPX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+
+
+    <tcw-scaffold class="tyl-docs"><tcw-omnibar id="tyl-forge-omnibar" title-text="Tyler Forge" slot="header"><div slot="logo" style="width: 24px; height: 20px; margin-left: 8px;">
+    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 480.5 423.03"><title>forge-icon-only</title><g id="logo"><path d="M463.68,39H283.49A26,26,0,0,0,261,52l-39.38,68.2a26,26,0,0,0,22.55,39.05H424.3a26,26,0,0,0,22.55-13L486.22,78A26,26,0,0,0,463.68,39Z" transform="translate(-9.25 -38.98)" fill="#fff"></path><path d="M377,189.18H196.77a26,26,0,0,0-22.54,13l-37.37,64.72a26,26,0,0,0,0,26L227,449A26,26,0,0,0,272,449L399.51,228.23A26,26,0,0,0,377,189.18Z" transform="translate(-9.25 -38.98)" fill="#fff"></path><path d="M211.35,78A26,26,0,0,0,188.81,39H35.32A26,26,0,0,0,12.78,78L77,189.18,89.52,211a26,26,0,0,0,45.09,0Z" transform="translate(-9.25 -38.98)" fill="#fff"></path></g></svg></div>
+  <tcw-omnibar-search slot="center"><input type="text" placeholder="Search..."></tcw-omnibar-search><tcw-omnibar-menu-button slot="menu" id="tyl-forge-omnibar-menu"></tcw-omnibar-menu-button><div slot="action" style="display: flex; justify-content: space-around;">
+    <ul class="header-nav"><li class="header__nav-item" id="design-nav-indicator">
+        <a href="/getting-started-with-forge/" class="header__nav-link">
+          Design <span class="header__nav-indicator" id="design-link-indicator"></span>
+        </a>
+      </li>
+      <li class="header__nav-item" id="development-nav-indicator">
+        <a href="/development/" class="header__nav-link">
+          Development <span class="header__nav-indicator" id="development-link-indicator"></span>
+        </a>
+      </li>
+      <li class="header__nav-item" id="development-nav-indicator">
+        <a href="/give-feedback/" class="header__nav-link">
+          Feedback <span class="header__nav-indicator" id="feedback-link-indicator"></span>
+        </a>
+      </li>
+    </ul></div>
+</tcw-omnibar><div slot="body-left">
+  <tcw-drawer id="tyl-forge-sidenav" type="dismissible" open="true" style="--tyl-drawer-width: 320px;"><tcw-list class="nav navbar-nav"><a href="https://static-forge.netlify.com/" id="home-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">home</i>Home</tcw-list-item></a><tcw-expansion-panel id="get started-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">forward</i>
+			  Get started
+			  <tcw-open-icon slot="trailing" style="line-height: 0.5;"></tcw-open-icon></tcw-list-item><tcw-list><a href="https://static-forge.netlify.com/getting-started-as-a-designer/"><tcw-list-item slot="header" class="nav_subitem">As a designer</tcw-list-item></a><a href="https://static-forge.netlify.com/design-to-dev-handoff/"><tcw-list-item slot="header" class="nav_subitem">Design to Dev Handoff</tcw-list-item></a></tcw-list></tcw-expansion-panel><tcw-expansion-panel id="foundation-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">border_outer</i>
+			  Foundation
+			  <tcw-open-icon slot="trailing" style="line-height: 0.5;"></tcw-open-icon></tcw-list-item><tcw-list><a href="https://static-forge.netlify.com/foundation/overview/"><tcw-list-item slot="header" class="nav_subitem">Overview</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/intro-to-accessibility/"><tcw-list-item slot="header" class="nav_subitem">Accessibility</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/tyler-branding/"><tcw-list-item slot="header" class="nav_subitem">Branding</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/color/"><tcw-list-item slot="header" class="nav_subitem">Color</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/data-formats/"><tcw-list-item slot="header" class="nav_subitem">Data formats</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/tyler-icons-full/"><tcw-list-item slot="header" class="nav_subitem">Iconography</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/illustrations-usage/"><tcw-list-item slot="header" class="nav_subitem">Illustration: Usage</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/illustration-library/"><tcw-list-item slot="header" class="nav_subitem">Illustration: Library</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/theming/"><tcw-list-item slot="header" class="nav_subitem">Theming</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/layout-intro/"><tcw-list-item slot="header" class="nav_subitem">Layout: Intro</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/layout-grid/"><tcw-list-item slot="header" class="nav_subitem">Layout: Grid</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/layout-spacing/"><tcw-list-item slot="header" class="nav_subitem">Layout: Spacing</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/layout-page-layouts/"><tcw-list-item slot="header" class="nav_subitem">Layout: Page layouts</tcw-list-item></a><a href="https://static-forge.netlify.com/foundation/typography/"><tcw-list-item slot="header" class="nav_subitem">Typography</tcw-list-item></a><a href="https://static-forge.netlify.com/product-analytics/"><tcw-list-item slot="header" class="nav_subitem">Product analytics - coming soon</tcw-list-item></a></tcw-list></tcw-expansion-panel><tcw-expansion-panel id="patterns-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">ac_unit</i>
+			  Patterns
+			  <tcw-open-icon slot="trailing" style="line-height: 0.5;"></tcw-open-icon></tcw-list-item><tcw-list><a href="https://static-forge.netlify.com/patterns/data-visualization/"><tcw-list-item slot="header" class="nav_subitem">Data visualization: Intro</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/data-visualization-2/"><tcw-list-item slot="header" class="nav_subitem">Data visualization: Charts</tcw-list-item></a><a href="https://static-forge.netlify.com/colors-data-visualization/"><tcw-list-item slot="header" class="nav_subitem">Data visualization: Colors</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/drag-and-drop/"><tcw-list-item slot="header" class="nav_subitem">Drag and drop</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/empty-state/"><tcw-list-item slot="header" class="nav_subitem">Empty state</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/errors/"><tcw-list-item slot="header" class="nav_subitem">Errors</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/faceted-search/"><tcw-list-item slot="header" class="nav_subitem">Faceted filtering</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/forms/"><tcw-list-item slot="header" class="nav_subitem">Forms</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/login/"><tcw-list-item slot="header" class="nav_subitem">Login</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/mapping-gis/"><tcw-list-item slot="header" class="nav_subitem">Mapping & GIS</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/navigation/"><tcw-list-item slot="header" class="nav_subitem">Navigation</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/onboarding/"><tcw-list-item slot="header" class="nav_subitem">Onboarding - in progress</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/profile/"><tcw-list-item slot="header" class="nav_subitem">Profile - in progress</tcw-list-item></a><a href="https://static-forge.netlify.com/patterns/progress-loading/"><tcw-list-item slot="header" class="nav_subitem">Progress & loading</tcw-list-item></a></tcw-list></tcw-expansion-panel><tcw-expansion-panel id="components-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">settings_input_component</i>
+			  Components
+			  <tcw-open-icon slot="trailing" style="line-height: 0.5;"></tcw-open-icon></tcw-list-item><tcw-list><a href="https://static-forge.netlify.com/components/accordion/"><tcw-list-item slot="header" class="nav_subitem">Accordion</tcw-list-item></a><a href="https://static-forge.netlify.com/components/app-launcher/"><tcw-list-item slot="header" class="nav_subitem">App launcher</tcw-list-item></a><a href="https://static-forge.netlify.com/components/avatar/"><tcw-list-item slot="header" class="nav_subitem">Avatar</tcw-list-item></a><a href="https://static-forge.netlify.com/components/badge/"><tcw-list-item slot="header" class="nav_subitem">Badge - Coming soon</tcw-list-item></a><a href="https://static-forge.netlify.com/components/buttons/"><tcw-list-item slot="header" class="nav_subitem">Buttons</tcw-list-item></a><a href="https://static-forge.netlify.com/components/card/"><tcw-list-item slot="header" class="nav_subitem">Card</tcw-list-item></a><a href="https://static-forge.netlify.com/components/chips/"><tcw-list-item slot="header" class="nav_subitem">Chips</tcw-list-item></a><a href="https://static-forge.netlify.com/components/date-picker/"><tcw-list-item slot="header" class="nav_subitem">Date picker - coming soon</tcw-list-item></a><a href="https://static-forge.netlify.com/components/dialog/"><tcw-list-item slot="header" class="nav_subitem">Dialog</tcw-list-item></a><a href="https://static-forge.netlify.com/components/expansion-panel/"><tcw-list-item slot="header" class="nav_subitem">Expansion panel</tcw-list-item></a><a href="https://static-forge.netlify.com/components/floating-action-button/"><tcw-list-item slot="header" class="nav_subitem">Floating Action Button</tcw-list-item></a><a href="https://static-forge.netlify.com/components/list/"><tcw-list-item slot="header" class="nav_subitem">List</tcw-list-item></a><a href="https://static-forge.netlify.com/components/navigation-drawer/"><tcw-list-item slot="header" class="nav_subitem">Navigation drawer</tcw-list-item></a><a href="https://static-forge.netlify.com/components/omnibar/"><tcw-list-item slot="header" class="nav_subitem">Omnibar</tcw-list-item></a><a href="https://static-forge.netlify.com/components/progress-indicators/"><tcw-list-item slot="header" class="nav_subitem">Progress indicators</tcw-list-item></a><a href="https://static-forge.netlify.com/components/selection-controls/"><tcw-list-item slot="header" class="nav_subitem">Selection controls</tcw-list-item></a><a href="https://static-forge.netlify.com/components/sliders/"><tcw-list-item slot="header" class="nav_subitem">Sliders</tcw-list-item></a><a href="https://static-forge.netlify.com/components/stepper/"><tcw-list-item slot="header" class="nav_subitem">Stepper - coming soon</tcw-list-item></a><a href="https://static-forge.netlify.com/components/table/"><tcw-list-item slot="header" class="nav_subitem">Table</tcw-list-item></a><a href="https://static-forge.netlify.com/components/tabs/"><tcw-list-item slot="header" class="nav_subitem">Tabs</tcw-list-item></a><a href="https://static-forge.netlify.com/components/toast/"><tcw-list-item slot="header" class="nav_subitem">Toast</tcw-list-item></a><a href="https://static-forge.netlify.com/components/toolbar/"><tcw-list-item slot="header" class="nav_subitem">Toolbar - coming soon</tcw-list-item></a><a href="https://static-forge.netlify.com/components/tooltip/"><tcw-list-item slot="header" class="nav_subitem">Tooltip</tcw-list-item></a></tcw-list></tcw-expansion-panel><tcw-expansion-panel id="native mobile-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">phone_iphone</i>
+			  Native mobile
+			  <tcw-open-icon slot="trailing" style="line-height: 0.5;"></tcw-open-icon></tcw-list-item><tcw-list><a href="https://static-forge.netlify.com/native-mobile/basic-requirements/"><tcw-list-item slot="header" class="nav_subitem">Basic requirements</tcw-list-item></a><a href="https://static-forge.netlify.com/native-mobile/frameworks/"><tcw-list-item slot="header" class="nav_subitem">Frameworks</tcw-list-item></a><a href="https://static-forge.netlify.com/native-mobile/design-patterns/"><tcw-list-item slot="header" class="nav_subitem">Design patterns</tcw-list-item></a></tcw-list></tcw-expansion-panel><a href="https://static-forge.netlify.com/feedback-support/" id="feedback & support-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">pan_tool</i>Feedback & support</tcw-list-item></a><a href="https://static-forge.netlify.com/status/" id="status-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">trending_up</i>Status</tcw-list-item></a><a href="https://static-forge.netlify.com/faqs/" id="faqs-menu"><tcw-list-item slot="header"><i class="material-icons" slot="leading">help</i>FAQs</tcw-list-item></a>    </tcw-list></tcw-drawer></div>
+      <div class="tyl-docs-content" slot="body" style="position: relative;" id="top-of-page">
+        <div id="tyl-docs-content" class="tyl-docs-content__container" style="padding: 16px; max-width: 1264px;">
+        <div class="flex-container" style="display: flex;">
+        <div class="left-content" style="max-width: 956px; width: 100%;">
+          <tcw-card has-padding="false"><div data-elementor-type="wp-page" data-elementor-id="5384" class="elementor elementor-5384" data-elementor-settings="[]">
+			<div class="elementor-inner">
+				<div class="elementor-section-wrap">
+							<section class="elementor-element elementor-element-78058cc9 elementor-section-height-min-height elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-items-middle elementor-section elementor-top-section" data-id="78058cc9" data-element_type="section" id="overview" data-settings='{"background_background":"classic"}'><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-8e90264 elementor-column elementor-col-50 elementor-top-column" data-id="8e90264" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-665b8154 elementor-widget elementor-widget-divider" data-id="665b8154" data-element_type="widget" data-widget_type="divider.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-6742b9af elementor-widget elementor-widget-heading" data-id="6742b9af" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Data Viz: Colors</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-4669c171 elementor-widget elementor-widget-text-editor" data-id="4669c171" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Color is a key component to data visualization. Ensure your colors communicate what they should and are ADA compliant as appropriate with the following palettes.  </p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-2ccf4038 elementor-column elementor-col-50 elementor-top-column" data-id="2ccf4038" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-2ca4f06c elementor-widget elementor-widget-image" data-id="2ca4f06c" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img src="https://static-forge.netlify.com/wp-content/uploads/2019/07/data-colors-spot-hero.svg" title="data colors-spot hero" alt="data colors-spot hero"></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-15382443 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="15382443" data-element_type="section" id="guidance"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-344f9719 elementor-column elementor-col-100 elementor-top-column" data-id="344f9719" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-4668a6de elementor-widget elementor-widget-spacer" data-id="4668a6de" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-55087676 elementor-widget elementor-widget-heading" data-id="55087676" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Single hue palettes</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-681b85a2 elementor-widget elementor-widget-text-editor" data-id="681b85a2" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><strong>You will use these palettes most of the time.</strong><br>For situations where your data is not categorically different, and/or the chart should have less visual emphasis. These palettes emphasize a difference in hue and brightness to maximize the experience for visually impaired users as well as our non-visually impaired users.</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-92fa165 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="92fa165" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-b370296 elementor-column elementor-col-100 elementor-top-column" data-id="b370296" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-1694de7 elementor-widget elementor-widget-spacer" data-id="1694de7" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-23125a8 elementor-widget elementor-widget-heading" data-id="23125a8" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Grey (Low emphasis)</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-0ffbd9a elementor-widget elementor-widget-spacer" data-id="0ffbd9a" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-d2b2661 elementor-section-height-min-height elementor-section-items-top elementor-section-boxed elementor-section-height-default elementor-section elementor-top-section" data-id="d2b2661" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-bc79515 elementor-column elementor-col-16 elementor-top-column" data-id="bc79515" data-element_type="column" data-settings='{"background_background":"classic"}'>
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-b223e6b elementor-widget elementor-widget-html" data-id="b223e6b" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="display: flex; justify-content: center;">
+<div style="width: 76px; height: 76px; background-color: #212121;"> </div>
+</div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-1e2f23e elementor-widget elementor-widget-text-editor" data-id="1e2f23e" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><strong>Grey 900</strong></p><p>#212121</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-1b872e7 elementor-column elementor-col-16 elementor-top-column" data-id="1b872e7" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-840a658 elementor-widget elementor-widget-html" data-id="840a658" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="display: flex; justify-content: center;">
+<div style="width: 76px; height: 76px; background-color: #424242;"> </div>
+</div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-059c807 elementor-widget elementor-widget-text-editor" data-id="059c807" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><strong>Grey 800</strong></p><div class="color-page" data-v-4078cefb=""><div class="color-groups" data-v-4078cefb=""><div class="color-group" data-v-4078cefb=""><div class="color" data-v-4078cefb=""><div class="hex" data-v-4078cefb=""><div class="color" data-v-4078cefb=""><div class="hex" data-v-4078cefb="">#424242</div></div></div></div></div></div></div></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-81e6fc4 elementor-column elementor-col-16 elementor-top-column" data-id="81e6fc4" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-756ad70 elementor-widget elementor-widget-html" data-id="756ad70" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="display: flex; justify-content: center;">
+<div style="width: 76px; height: 76px; background-color: #616161;"> </div>
+</div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-131c2e5 elementor-widget elementor-widget-text-editor" data-id="131c2e5" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><strong>Grey 700</strong></p><div class="color-page" data-v-4078cefb=""><div class="color-groups" data-v-4078cefb=""><div class="color-group" data-v-4078cefb=""><div class="color" data-v-4078cefb=""><div class="hex" data-v-4078cefb=""><div class="color" data-v-4078cefb=""><div class="hex" data-v-4078cefb=""><div class="color" data-v-4078cefb=""><div class="hex" data-v-4078cefb="">#616161<span style="letter-spacing: 0.05px;"> </span></div></div></div></div></div></div></div></div></div></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-7ebc81c elementor-column elementor-col-16 elementor-top-column" data-id="7ebc81c" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-33baf85 elementor-widget elementor-widget-html" data-id="33baf85" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="display: flex; justify-content: center;">
+<div style="width: 76px; height: 76px; background-color: #757575;"> </div>
+</div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-e430811 elementor-widget elementor-widget-text-editor" data-id="e430811" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><strong>Grey 600</strong></p><div class="color-page" data-v-4078cefb=""><div class="color-groups" data-v-4078cefb=""><div class="color-group" data-v-4078cefb=""><div class="color" data-v-4078cefb=""><div class="hex" data-v-4078cefb=""><div class="color" data-v-4078cefb=""><div class="hex" data-v-4078cefb=""><div class="color" data-v-4078cefb=""><div class="hex" data-v-4078cefb="">#757575</div></div></div></div></div></div></div></div></div></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-217bd1b elementor-column elementor-col-16 elementor-top-column" data-id="217bd1b" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-db09165 elementor-widget elementor-widget-html" data-id="db09165" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="display: flex; justify-content: center;">
+<div style="width: 76px; height: 76px; background-color: #9E9E9E;"> </div>
+</div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-fe8d867 elementor-widget elementor-widget-text-editor" data-id="fe8d867" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><strong>Grey 500</strong></p><div class="color-page" data-v-4078cefb=""><div class="color-groups" data-v-4078cefb=""><div class="color-group" data-v-4078cefb=""><div class="color" data-v-4078cefb=""><div class="hex" data-v-4078cefb=""><div class="color" data-v-4078cefb=""><div class="hex" data-v-4078cefb=""><div class="color" data-v-4078cefb=""><div class="hex" data-v-4078cefb=""><div class="color" data-v-4078cefb=""><div class="hex" data-v-4078cefb="">#9E9E9E</div></div></div></div></div></div></div></div></div></div></div></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-f9762f4 elementor-column elementor-col-16 elementor-top-column" data-id="f9762f4" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-39199ad elementor-widget elementor-widget-html" data-id="39199ad" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="display: flex; justify-content: center;">
+<div style="width: 76px; height: 76px; background-color: #BDBDBD;"> </div>
+</div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-b759985 elementor-widget elementor-widget-text-editor" data-id="b759985" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><strong>Grey 500 </strong><br>#BDBDBD</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-95f34dc elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="95f34dc" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-6ddfae3 elementor-column elementor-col-100 elementor-top-column" data-id="6ddfae3" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-4b257a3 elementor-widget elementor-widget-toggle" data-id="4b257a3" data-element_type="widget" data-widget_type="toggle.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-toggle" role="tablist">
+							<div class="elementor-toggle-item">
+					<div id="elementor-tab-title-7871" class="elementor-tab-title" data-tab="1" role="tab" aria-controls="elementor-tab-content-7871">
+												<span class="elementor-toggle-icon elementor-toggle-icon-left" aria-hidden="true">
+															<span class="elementor-toggle-icon-closed"><i class="fas fa-caret-right"></i></span>
+								<span class="elementor-toggle-icon-opened"><i class="elementor-toggle-icon-opened fas fa-caret-up"></i></span>
+													</span>
+												<a href="">View example chart</a>
+					</div>
+					<div id="elementor-tab-content-7871" class="elementor-tab-content elementor-clearfix" data-tab="1" role="tabpanel" aria-labelledby="elementor-tab-title-7871"><img class="alignnone size-full wp-image-5389" src="http://PLACEHOLDER.wpsho/wp-content/uploads/2019/06/Group-3-Copyr-300x148.png" alt="" width="600" height="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/06/Group-3-Copyr-300x148.png 300w,https://static-forge.netlify.com/wp-content/uploads/2019/06/Group-3-Copyr.png 597w" sizes="(max-width: 300px) 100vw, 300px"></div>
+				</div>
+					</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-249449d elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="249449d" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-02d4518 elementor-column elementor-col-100 elementor-top-column" data-id="02d4518" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-568ad8e elementor-widget elementor-widget-spacer" data-id="568ad8e" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-e7b7a01 elementor-widget elementor-widget-heading" data-id="e7b7a01" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Blue (Medium Emphasis)</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-bb3ca24 elementor-widget elementor-widget-spacer" data-id="bb3ca24" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-f8986a3 elementor-section-height-min-height elementor-section-items-top elementor-section-boxed elementor-section-height-default elementor-section elementor-top-section" data-id="f8986a3" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-dbdb045 elementor-column elementor-col-16 elementor-top-column" data-id="dbdb045" data-element_type="column" data-settings='{"background_background":"classic"}'>
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-0ebffa5 elementor-widget elementor-widget-html" data-id="0ebffa5" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="display: flex; justify-content: center;">
+<div style="width: 76px; height: 76px; background-color: #1A237E;"> </div>
+</div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-8af866b elementor-widget elementor-widget-text-editor" data-id="8af866b" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><strong>Indigo 900</strong></p><p>#1A237E</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-feb3dcf elementor-column elementor-col-16 elementor-top-column" data-id="feb3dcf" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-8c705ff elementor-widget elementor-widget-html" data-id="8c705ff" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="display: flex; justify-content: center;">
+<div style="width: 76px; height: 76px; background-color: #0D47A1;"> </div>
+</div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-9de3fdd elementor-widget elementor-widget-text-editor" data-id="9de3fdd" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><strong>Blue 900</strong></p><p>#0D47A1</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-a3857d6 elementor-column elementor-col-16 elementor-top-column" data-id="a3857d6" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-1e64c84 elementor-widget elementor-widget-html" data-id="1e64c84" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="display: flex; justify-content: center;">
+<div style="width: 76px; height: 76px; background-color: #0277BD;"> </div>
+</div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-9a40064 elementor-widget elementor-widget-text-editor" data-id="9a40064" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><strong>Light Blue 800</strong></p><p>#0277BD</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-b1d5b86 elementor-column elementor-col-16 elementor-top-column" data-id="b1d5b86" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-ea36358 elementor-widget elementor-widget-html" data-id="ea36358" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="display: flex; justify-content: center;">
+<div style="width: 76px; height: 76px; background-color: #2196F3;"> </div>
+</div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-65a8047 elementor-widget elementor-widget-text-editor" data-id="65a8047" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><strong>Blue 500</strong></p><p>#2196F3</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-e3af46d elementor-column elementor-col-16 elementor-top-column" data-id="e3af46d" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-80ce9a0 elementor-widget elementor-widget-html" data-id="80ce9a0" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="display: flex; justify-content: center;">
+<div style="width: 76px; height: 76px; background-color: #40C4FF;"> </div>
+</div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-765f842 elementor-widget elementor-widget-text-editor" data-id="765f842" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><strong>Light Blue A200</strong></p><p>#40C4FF</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-2a1e856 elementor-column elementor-col-16 elementor-top-column" data-id="2a1e856" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-c43575a elementor-widget elementor-widget-html" data-id="c43575a" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="display: flex; justify-content: center;">
+<div style="width: 76px; height: 76px; background-color: #BBDEFB;"> </div>
+</div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-bc8a6ea elementor-widget elementor-widget-text-editor" data-id="bc8a6ea" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><strong>Blue 100 </strong></p><p>#BBDEFB</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-47048c2 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="47048c2" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-e00e5a5 elementor-column elementor-col-100 elementor-top-column" data-id="e00e5a5" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-0a3c995 elementor-widget elementor-widget-toggle" data-id="0a3c995" data-element_type="widget" data-widget_type="toggle.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-toggle" role="tablist">
+							<div class="elementor-toggle-item">
+					<div id="elementor-tab-title-1071" class="elementor-tab-title" data-tab="1" role="tab" aria-controls="elementor-tab-content-1071">
+												<span class="elementor-toggle-icon elementor-toggle-icon-left" aria-hidden="true">
+															<span class="elementor-toggle-icon-closed"><i class="fas fa-caret-right"></i></span>
+								<span class="elementor-toggle-icon-opened"><i class="elementor-toggle-icon-opened fas fa-caret-up"></i></span>
+													</span>
+												<a href="">View example chart</a>
+					</div>
+					<div id="elementor-tab-content-1071" class="elementor-tab-content elementor-clearfix" data-tab="1" role="tabpanel" aria-labelledby="elementor-tab-title-1071"><img class="alignnone size-full wp-image-5400" src="http://PLACEHOLDER.wpsho/wp-content/uploads/2019/06/blue-palette-300x148.png" alt="" width="600" height="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/06/blue-palette-300x148.png 300w,https://static-forge.netlify.com/wp-content/uploads/2019/06/blue-palette.png 597w" sizes="(max-width: 300px) 100vw, 300px"></div>
+				</div>
+					</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-991aca6 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="991aca6" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-4211dca elementor-column elementor-col-100 elementor-top-column" data-id="4211dca" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-c9080e2 elementor-widget elementor-widget-spacer" data-id="c9080e2" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-a595325 elementor-widget elementor-widget-heading" data-id="a595325" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Blue/Cyan (Medium-High Emphasis)</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-96ee3bf elementor-widget elementor-widget-spacer" data-id="96ee3bf" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-b349d19 elementor-section-height-min-height elementor-section-items-top elementor-section-boxed elementor-section-height-default elementor-section elementor-top-section" data-id="b349d19" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-fff6bb4 elementor-column elementor-col-16 elementor-top-column" data-id="fff6bb4" data-element_type="column" data-settings='{"background_background":"classic"}'>
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-d6e9a53 elementor-widget elementor-widget-html" data-id="d6e9a53" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="display: flex; justify-content: center;">
+<div style="width: 76px; height: 76px; background-color: #01579B;"> </div>
+</div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-513feef elementor-widget elementor-widget-text-editor" data-id="513feef" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><strong>Light Blue 900</strong></p><p>#01579B</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-dfbe76b elementor-column elementor-col-16 elementor-top-column" data-id="dfbe76b" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-d4fa06b elementor-widget elementor-widget-html" data-id="d4fa06b" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="display: flex; justify-content: center;">
+<div style="width: 76px; height: 76px; background-color: #00838F;"> </div>
+</div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-49f2b68 elementor-widget elementor-widget-text-editor" data-id="49f2b68" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><strong>Cyan 800</strong></p><p>#00838F</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-1f3f9b0 elementor-column elementor-col-16 elementor-top-column" data-id="1f3f9b0" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-c58bab2 elementor-widget elementor-widget-html" data-id="c58bab2" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="display: flex; justify-content: center;">
+<div style="width: 76px; height: 76px; background-color: #00ACC1;"> </div>
+</div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-cb6a722 elementor-widget elementor-widget-text-editor" data-id="cb6a722" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><strong>Cyan 600</strong></p><p>#00ACC1</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-b9a7836 elementor-column elementor-col-16 elementor-top-column" data-id="b9a7836" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-d0968b4 elementor-widget elementor-widget-html" data-id="d0968b4" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="display: flex; justify-content: center;">
+<div style="width: 76px; height: 76px; background-color: #4DD0E1;"> </div>
+</div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-7a40d22 elementor-widget elementor-widget-text-editor" data-id="7a40d22" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><strong>Cyan 300</strong></p><p>#4DD0E1</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-8b81fe4 elementor-column elementor-col-16 elementor-top-column" data-id="8b81fe4" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-fcad5e1 elementor-widget elementor-widget-html" data-id="fcad5e1" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="display: flex; justify-content: center;">
+<div style="width: 76px; height: 76px; background-color: #84FFFF;"> </div>
+</div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-38fb349 elementor-widget elementor-widget-text-editor" data-id="38fb349" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><strong>Cyan A100</strong></p><p>#84FFFF</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-3d00e3f elementor-column elementor-col-16 elementor-top-column" data-id="3d00e3f" data-element_type="column">
+			<div class="elementor-column-wrap">
+					<div class="elementor-widget-wrap">
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-d7b1e5e elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="d7b1e5e" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-26b9ddd elementor-column elementor-col-100 elementor-top-column" data-id="26b9ddd" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-8d111ef elementor-widget elementor-widget-toggle" data-id="8d111ef" data-element_type="widget" data-widget_type="toggle.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-toggle" role="tablist">
+							<div class="elementor-toggle-item">
+					<div id="elementor-tab-title-1471" class="elementor-tab-title" data-tab="1" role="tab" aria-controls="elementor-tab-content-1471">
+												<span class="elementor-toggle-icon elementor-toggle-icon-left" aria-hidden="true">
+															<span class="elementor-toggle-icon-closed"><i class="fas fa-caret-right"></i></span>
+								<span class="elementor-toggle-icon-opened"><i class="elementor-toggle-icon-opened fas fa-caret-up"></i></span>
+													</span>
+												<a href="">View example chart</a>
+					</div>
+					<div id="elementor-tab-content-1471" class="elementor-tab-content elementor-clearfix" data-tab="1" role="tabpanel" aria-labelledby="elementor-tab-title-1471"><img class="alignnone size-full wp-image-5406" src="http://PLACEHOLDER.wpsho/wp-content/uploads/2019/06/cyan-blue-palette-300x148.png" alt="" width="600" height="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/06/cyan-blue-palette-300x148.png 300w,https://static-forge.netlify.com/wp-content/uploads/2019/06/cyan-blue-palette.png 597w" sizes="(max-width: 300px) 100vw, 300px"></div>
+				</div>
+					</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-235b364 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="235b364" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-44eb39d elementor-column elementor-col-100 elementor-top-column" data-id="44eb39d" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-799b243 elementor-widget elementor-widget-spacer" data-id="799b243" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-85f3dde elementor-widget elementor-widget-heading" data-id="85f3dde" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Pink (High Emphasis)</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-ecdc153 elementor-widget elementor-widget-spacer" data-id="ecdc153" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-8e8252a elementor-section-height-min-height elementor-section-items-top elementor-section-boxed elementor-section-height-default elementor-section elementor-top-section" data-id="8e8252a" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-ff5c6c2 elementor-column elementor-col-16 elementor-top-column" data-id="ff5c6c2" data-element_type="column" data-settings='{"background_background":"classic"}'>
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-a87545b elementor-widget elementor-widget-html" data-id="a87545b" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="display: flex; justify-content: center;">
+<div style="width: 76px; height: 76px; background-color: #880E4F;"> </div>
+</div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-cdca113 elementor-widget elementor-widget-text-editor" data-id="cdca113" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><strong>Pink 900</strong></p><p>#880E4F</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-75ac2e2 elementor-column elementor-col-16 elementor-top-column" data-id="75ac2e2" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-1b94334 elementor-widget elementor-widget-html" data-id="1b94334" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="display: flex; justify-content: center;">
+<div style="width: 76px; height: 76px; background-color: #C2185B;"> </div>
+</div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-d98bab6 elementor-widget elementor-widget-text-editor" data-id="d98bab6" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><strong>Pink 700</strong></p><p>#C2185B</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-68da995 elementor-column elementor-col-16 elementor-top-column" data-id="68da995" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-c69bfae elementor-widget elementor-widget-html" data-id="c69bfae" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="display: flex; justify-content: center;">
+<div style="width: 76px; height: 76px; background-color: #F50057;"> </div>
+</div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-20f6911 elementor-widget elementor-widget-text-editor" data-id="20f6911" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><strong>Pink A400</strong></p><p>#F50057</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-f0308c2 elementor-column elementor-col-16 elementor-top-column" data-id="f0308c2" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-d27c0e0 elementor-widget elementor-widget-html" data-id="d27c0e0" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="display: flex; justify-content: center;">
+<div style="width: 76px; height: 76px; background-color: #EC407A;"> </div>
+</div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-f90c33b elementor-widget elementor-widget-text-editor" data-id="f90c33b" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><strong>Pink 400</strong></p><p>#EC407A</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-4d9a78c elementor-column elementor-col-16 elementor-top-column" data-id="4d9a78c" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-a2967b4 elementor-widget elementor-widget-html" data-id="a2967b4" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="display: flex; justify-content: center;">
+<div style="width: 76px; height: 76px; background-color: #F06292;"> </div>
+</div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-491fab2 elementor-widget elementor-widget-text-editor" data-id="491fab2" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><strong>Pink 300</strong></p><p>#F06292</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-781f19e elementor-column elementor-col-16 elementor-top-column" data-id="781f19e" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-757d9f5 elementor-widget elementor-widget-html" data-id="757d9f5" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="display: flex; justify-content: center;">
+<div style="width: 76px; height: 76px; background-color: #F48FB1;"> </div>
+</div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-757ca7e elementor-widget elementor-widget-text-editor" data-id="757ca7e" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><strong>Pink 200</strong></p><p>#F48FB1</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-ca3af55 elementor-section-height-min-height elementor-section-items-top elementor-section-boxed elementor-section-height-default elementor-section elementor-top-section" data-id="ca3af55" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-7352c20 elementor-column elementor-col-16 elementor-top-column" data-id="7352c20" data-element_type="column" data-settings='{"background_background":"classic"}'>
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-e64a04b elementor-widget elementor-widget-html" data-id="e64a04b" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="display: flex; justify-content: center;">
+<div style="width: 76px; height: 76px; background-color: #F8BBD0;"> </div>
+</div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-fceaead elementor-widget elementor-widget-text-editor" data-id="fceaead" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><strong>Pink 100</strong></p><p>#F8BBD0</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-a058777 elementor-column elementor-col-16 elementor-top-column" data-id="a058777" data-element_type="column">
+			<div class="elementor-column-wrap">
+					<div class="elementor-widget-wrap">
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-b46de62 elementor-column elementor-col-16 elementor-top-column" data-id="b46de62" data-element_type="column">
+			<div class="elementor-column-wrap">
+					<div class="elementor-widget-wrap">
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-e2093eb elementor-column elementor-col-16 elementor-top-column" data-id="e2093eb" data-element_type="column">
+			<div class="elementor-column-wrap">
+					<div class="elementor-widget-wrap">
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-4bb1aa5 elementor-column elementor-col-16 elementor-top-column" data-id="4bb1aa5" data-element_type="column">
+			<div class="elementor-column-wrap">
+					<div class="elementor-widget-wrap">
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-f345537 elementor-column elementor-col-16 elementor-top-column" data-id="f345537" data-element_type="column">
+			<div class="elementor-column-wrap">
+					<div class="elementor-widget-wrap">
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-d4c94df elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="d4c94df" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-086cbc1 elementor-column elementor-col-100 elementor-top-column" data-id="086cbc1" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-0db00da elementor-widget elementor-widget-toggle" data-id="0db00da" data-element_type="widget" data-widget_type="toggle.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-toggle" role="tablist">
+							<div class="elementor-toggle-item">
+					<div id="elementor-tab-title-1431" class="elementor-tab-title" data-tab="1" role="tab" aria-controls="elementor-tab-content-1431">
+												<span class="elementor-toggle-icon elementor-toggle-icon-left" aria-hidden="true">
+															<span class="elementor-toggle-icon-closed"><i class="fas fa-caret-right"></i></span>
+								<span class="elementor-toggle-icon-opened"><i class="elementor-toggle-icon-opened fas fa-caret-up"></i></span>
+													</span>
+												<a href="">View example chart</a>
+					</div>
+					<div id="elementor-tab-content-1431" class="elementor-tab-content elementor-clearfix" data-tab="1" role="tabpanel" aria-labelledby="elementor-tab-title-1431"><img src="http://PLACEHOLDER.wpsho/wp-content/uploads/2019/06/red-pink-palette-300x137.png" alt="" width="600" height="" class="alignnone size-full wp-image-5413" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/06/red-pink-palette-300x137.png 300w,https://static-forge.netlify.com/wp-content/uploads/2019/06/red-pink-palette.png 672w" sizes="(max-width: 300px) 100vw, 300px"></div>
+				</div>
+					</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-0783c7e elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="0783c7e" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-3685248 elementor-column elementor-col-100 elementor-top-column" data-id="3685248" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-5c4bfad elementor-widget elementor-widget-spacer" data-id="5c4bfad" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-909c71f elementor-widget elementor-widget-heading" data-id="909c71f" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Pink/Red (Highest Emphasis)</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-79eefbd elementor-widget elementor-widget-text-editor" data-id="79eefbd" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix">I would encourage use of this palette in rare circumstances: when you are calling direct attention to multiple pieces of data that needs to be attended to. The use of red indicates “emergency” and “warning” so use it wisely. This can also cause more issues with colorblindness for protanopia.</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-a9bce0c elementor-widget elementor-widget-spacer" data-id="a9bce0c" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-6a3dc52 elementor-section-height-min-height elementor-section-items-top elementor-section-boxed elementor-section-height-default elementor-section elementor-top-section" data-id="6a3dc52" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-cd022f7 elementor-column elementor-col-16 elementor-top-column" data-id="cd022f7" data-element_type="column" data-settings='{"background_background":"classic"}'>
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-217d790 elementor-widget elementor-widget-html" data-id="217d790" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="display: flex; justify-content: center;">
+<div style="width: 76px; height: 76px; background-color: #B71C1C;"> </div>
+</div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-a0a3f89 elementor-widget elementor-widget-text-editor" data-id="a0a3f89" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><strong>Red 900</strong></p><p>#B71C1C</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-fea0b2f elementor-column elementor-col-16 elementor-top-column" data-id="fea0b2f" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-4b060e2 elementor-widget elementor-widget-html" data-id="4b060e2" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="display: flex; justify-content: center;">
+<div style="width: 76px; height: 76px; background-color: #E64A19;"> </div>
+</div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-9addfa5 elementor-widget elementor-widget-text-editor" data-id="9addfa5" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><strong>Dark Orange 700</strong></p><p>#E64A19</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-473c3b2 elementor-column elementor-col-16 elementor-top-column" data-id="473c3b2" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-0ee7b7a elementor-widget elementor-widget-html" data-id="0ee7b7a" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="display: flex; justify-content: center;">
+<div style="width: 76px; height: 76px; background-color: #EF5350;"> </div>
+</div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-678bb85 elementor-widget elementor-widget-text-editor" data-id="678bb85" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><strong>Red 400</strong></p><p>#EF5350</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-eaf4910 elementor-column elementor-col-16 elementor-top-column" data-id="eaf4910" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-9480303 elementor-widget elementor-widget-html" data-id="9480303" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="display: flex; justify-content: center;">
+<div style="width: 76px; height: 76px; background-color: #FF8A80
+;"> </div>
+</div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-c306e77 elementor-widget elementor-widget-text-editor" data-id="c306e77" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><strong>Red A100</strong></p><p>#FF8A80</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-77dfe84 elementor-column elementor-col-16 elementor-top-column" data-id="77dfe84" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-218ed72 elementor-widget elementor-widget-html" data-id="218ed72" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="display: flex; justify-content: center;">
+<div style="width: 76px; height: 76px; background-color: #EF9A9A;"> </div>
+</div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-12cf8a8 elementor-widget elementor-widget-text-editor" data-id="12cf8a8" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><strong>Red 200</strong></p><p>#EF9A9A</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-395ee81 elementor-column elementor-col-16 elementor-top-column" data-id="395ee81" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-12d14e7 elementor-widget elementor-widget-html" data-id="12d14e7" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="display: flex; justify-content: center;">
+<div style="width: 76px; height: 76px; background-color: #FFCDD2;"> </div>
+</div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-3972e62 elementor-widget elementor-widget-text-editor" data-id="3972e62" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><strong>Red 100</strong></p><p>#FFCDD2</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-73ca978 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="73ca978" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-1695343 elementor-column elementor-col-100 elementor-top-column" data-id="1695343" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-8641c75 elementor-widget elementor-widget-toggle" data-id="8641c75" data-element_type="widget" data-widget_type="toggle.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-toggle" role="tablist">
+							<div class="elementor-toggle-item">
+					<div id="elementor-tab-title-1401" class="elementor-tab-title" data-tab="1" role="tab" aria-controls="elementor-tab-content-1401">
+												<span class="elementor-toggle-icon elementor-toggle-icon-left" aria-hidden="true">
+															<span class="elementor-toggle-icon-closed"><i class="fas fa-caret-right"></i></span>
+								<span class="elementor-toggle-icon-opened"><i class="elementor-toggle-icon-opened fas fa-caret-up"></i></span>
+													</span>
+												<a href="">View example chart</a>
+					</div>
+					<div id="elementor-tab-content-1401" class="elementor-tab-content elementor-clearfix" data-tab="1" role="tabpanel" aria-labelledby="elementor-tab-title-1401"><img class="alignnone size-full wp-image-5422" src="http://PLACEHOLDER.wpsho/wp-content/uploads/2019/06/red-charts--300x154.png" alt="" width="600" height="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/06/red-charts--300x154.png 300w,https://static-forge.netlify.com/wp-content/uploads/2019/06/red-charts-.png 597w" sizes="(max-width: 300px) 100vw, 300px"></div>
+				</div>
+					</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-7f77b4cc elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="7f77b4cc" data-element_type="section" id="guidance"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-7ce669a8 elementor-column elementor-col-100 elementor-top-column" data-id="7ce669a8" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-4b49261e elementor-widget elementor-widget-spacer" data-id="4b49261e" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-7319af49 elementor-widget elementor-widget-heading" data-id="7319af49" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Categorical palettes </h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-19914848 elementor-widget elementor-widget-text-editor" data-id="19914848" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Use Categorical Palettes to represent data that fall into natural categories. </p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-4488755 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="4488755" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-8e0ae8a elementor-column elementor-col-100 elementor-top-column" data-id="8e0ae8a" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-6206fb5 elementor-widget elementor-widget-spacer" data-id="6206fb5" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-17a83df elementor-widget elementor-widget-heading" data-id="17a83df" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Colorblind friendly</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-139bd5c elementor-widget elementor-widget-spacer" data-id="139bd5c" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-818c3bd elementor-section-height-min-height elementor-section-items-top elementor-section-boxed elementor-section-height-default elementor-section elementor-top-section" data-id="818c3bd" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-0652dfd elementor-column elementor-col-16 elementor-top-column" data-id="0652dfd" data-element_type="column" data-settings='{"background_background":"classic"}'>
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-addbba5 elementor-widget elementor-widget-html" data-id="addbba5" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="display: flex; justify-content: center;">
+<div style="width: 76px; height: 76px; background-color: #448AFF;"> </div>
+</div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-a811a80 elementor-widget elementor-widget-text-editor" data-id="a811a80" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><strong>Blue A200</strong></p><p>#448AFF</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-a7cf474 elementor-column elementor-col-16 elementor-top-column" data-id="a7cf474" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-505b6eb elementor-widget elementor-widget-html" data-id="505b6eb" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="display: flex; justify-content: center;">
+<div style="width: 76px; height: 76px; background-color: #7C4DFF;"> </div>
+</div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-5873e75 elementor-widget elementor-widget-text-editor" data-id="5873e75" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><strong>Deep Purple A200</strong></p><p>#7C4DFF</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-4414276 elementor-column elementor-col-16 elementor-top-column" data-id="4414276" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-660157e elementor-widget elementor-widget-html" data-id="660157e" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="display: flex; justify-content: center;">
+<div style="width: 76px; height: 76px; background-color: #C2185B;"> </div>
+</div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-2c66fa1 elementor-widget elementor-widget-text-editor" data-id="2c66fa1" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><strong>Pink 700</strong></p><p>#C2185B</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-a4a803d elementor-column elementor-col-16 elementor-top-column" data-id="a4a803d" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-dd978ea elementor-widget elementor-widget-html" data-id="dd978ea" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="display: flex; justify-content: center;">
+<div style="width: 76px; height: 76px; background-color: #E65100
+;"> </div>
+</div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-95cecfd elementor-widget elementor-widget-text-editor" data-id="95cecfd" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><strong>Orange 900</strong></p><p>#E65100</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-cb5b2f0 elementor-column elementor-col-16 elementor-top-column" data-id="cb5b2f0" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-ba83f7c elementor-widget elementor-widget-html" data-id="ba83f7c" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="display: flex; justify-content: center;">
+<div style="width: 76px; height: 76px; background-color: #FFB300;"> </div>
+</div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-9d92efd elementor-widget elementor-widget-text-editor" data-id="9d92efd" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><strong>Amber 600</strong></p><p>#FFB300</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-33de0e2 elementor-column elementor-col-16 elementor-top-column" data-id="33de0e2" data-element_type="column">
+			<div class="elementor-column-wrap">
+					<div class="elementor-widget-wrap">
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-3e02bb6 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="3e02bb6" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-da91b81 elementor-column elementor-col-100 elementor-top-column" data-id="da91b81" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-dfef5e7 elementor-widget elementor-widget-toggle" data-id="dfef5e7" data-element_type="widget" data-widget_type="toggle.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-toggle" role="tablist">
+							<div class="elementor-toggle-item">
+					<div id="elementor-tab-title-2341" class="elementor-tab-title" data-tab="1" role="tab" aria-controls="elementor-tab-content-2341">
+												<span class="elementor-toggle-icon elementor-toggle-icon-left" aria-hidden="true">
+															<span class="elementor-toggle-icon-closed"><i class="fas fa-caret-right"></i></span>
+								<span class="elementor-toggle-icon-opened"><i class="elementor-toggle-icon-opened fas fa-caret-up"></i></span>
+													</span>
+												<a href="">View example chart</a>
+					</div>
+					<div id="elementor-tab-content-2341" class="elementor-tab-content elementor-clearfix" data-tab="1" role="tabpanel" aria-labelledby="elementor-tab-title-2341"><p><img class="aligncenter wp-image-5433 size-full" src="http://PLACEHOLDER.wpsho/wp-content/uploads/2019/06/colorblind-friendly--300x183.png" alt="" width="600" height="183"></p></div>
+				</div>
+					</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-7693d88 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="7693d88" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-8bd3df2 elementor-column elementor-col-100 elementor-top-column" data-id="8bd3df2" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-0702bff elementor-widget elementor-widget-spacer" data-id="0702bff" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-7ade7be elementor-widget elementor-widget-heading" data-id="7ade7be" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Additional palettes</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-485538d elementor-widget elementor-widget-text-editor" data-id="485538d" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><strong>If the above (“colorblind friendly”) palette does not meet your needs, you may use the following “basic” palette (8 colors), and it’s “extended version” (12 colors) as well.</strong></p><p>However, if you use this palette note that you <strong>MUST label your data</strong> so that it is apparent what the takeaway from the chart is. We recommend this with ALL charts, but it is particularly important with these colors. You will see this reflected in these examples via the percentages at the top of each bar.</p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-9a6603c elementor-widget elementor-widget-spacer" data-id="9a6603c" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-1ae673a elementor-widget elementor-widget-heading" data-id="1ae673a" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h5 class="elementor-heading-title elementor-size-default">Starter palette</h5>		</div>
+				</div>
+				<div class="elementor-element elementor-element-959eba3 elementor-widget elementor-widget-spacer" data-id="959eba3" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-fd0e8d8 elementor-section-height-min-height elementor-section-items-top elementor-section-boxed elementor-section-height-default elementor-section elementor-top-section" data-id="fd0e8d8" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-9c0cd93 elementor-column elementor-col-16 elementor-top-column" data-id="9c0cd93" data-element_type="column" data-settings='{"background_background":"classic"}'>
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-d273756 elementor-widget elementor-widget-html" data-id="d273756" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="display: flex; justify-content: center;">
+<div style="width: 76px; height: 76px; background-color: #448AFF;"> </div>
+</div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-1025e6b elementor-widget elementor-widget-text-editor" data-id="1025e6b" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><strong>Blue A200</strong></p><p>#448AFF</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-3ec7cff elementor-column elementor-col-16 elementor-top-column" data-id="3ec7cff" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-d89859e elementor-widget elementor-widget-html" data-id="d89859e" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="display: flex; justify-content: center;">
+<div style="width: 76px; height: 76px; background-color: #80CBC4
+;"> </div>
+</div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-133137e elementor-widget elementor-widget-text-editor" data-id="133137e" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><strong>Teal 200</strong></p><p>#80CBC4</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-0aa4ad8 elementor-column elementor-col-16 elementor-top-column" data-id="0aa4ad8" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-dc261f8 elementor-widget elementor-widget-html" data-id="dc261f8" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="display: flex; justify-content: center;">
+<div style="width: 76px; height: 76px; background-color: #A5D6A7;"> </div>
+</div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-cd48ea3 elementor-widget elementor-widget-text-editor" data-id="cd48ea3" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><strong>Green 200</strong></p><p>#A5D6A7</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-0425542 elementor-column elementor-col-16 elementor-top-column" data-id="0425542" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-906bcb6 elementor-widget elementor-widget-html" data-id="906bcb6" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="display: flex; justify-content: center;">
+<div style="width: 76px; height: 76px; background-color: #9CCC65;"> </div>
+</div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-50dd230 elementor-widget elementor-widget-text-editor" data-id="50dd230" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><strong>Light Green 400</strong></p><p>#9CCC65</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-419f6d1 elementor-column elementor-col-16 elementor-top-column" data-id="419f6d1" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-af3340c elementor-widget elementor-widget-html" data-id="af3340c" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="display: flex; justify-content: center;">
+<div style="width: 76px; height: 76px; background-color: #FFB300
+;"> </div>
+</div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-66754b9 elementor-widget elementor-widget-text-editor" data-id="66754b9" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><strong>Amber 600</strong></p><p>#FFB300</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-7427776 elementor-column elementor-col-16 elementor-top-column" data-id="7427776" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-79e5f94 elementor-widget elementor-widget-html" data-id="79e5f94" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="display: flex; justify-content: center;">
+<div style="width: 76px; height: 76px; background-color: #FF9100
+
+;"> </div>
+</div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-5f61653 elementor-widget elementor-widget-text-editor" data-id="5f61653" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><strong>Orange A400</strong></p><p>#FF9100</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-fabdafe elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="fabdafe" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-dee7c3b elementor-column elementor-col-100 elementor-top-column" data-id="dee7c3b" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-1900647 elementor-widget elementor-widget-spacer" data-id="1900647" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-e156921 elementor-section-height-min-height elementor-section-items-top elementor-section-boxed elementor-section-height-default elementor-section elementor-top-section" data-id="e156921" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-24358f3 elementor-column elementor-col-16 elementor-top-column" data-id="24358f3" data-element_type="column" data-settings='{"background_background":"classic"}'>
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-112139a elementor-widget elementor-widget-html" data-id="112139a" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="display: flex; justify-content: center;">
+<div style="width: 76px; height: 76px; background-color: #F06292;"> </div>
+</div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-c0314fe elementor-widget elementor-widget-text-editor" data-id="c0314fe" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><strong>Pink 300</strong></p><p>#F06292</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-ebcbec7 elementor-column elementor-col-16 elementor-top-column" data-id="ebcbec7" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-70320cb elementor-widget elementor-widget-html" data-id="70320cb" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="display: flex; justify-content: center;">
+<div style="width: 76px; height: 76px; background-color: #9575CD
+;"> </div>
+</div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-ae312c6 elementor-widget elementor-widget-text-editor" data-id="ae312c6" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><strong>Deep Purple 300</strong></p><p>#9575CD</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-f583ec5 elementor-column elementor-col-16 elementor-top-column" data-id="f583ec5" data-element_type="column">
+			<div class="elementor-column-wrap">
+					<div class="elementor-widget-wrap">
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-fb9a866 elementor-column elementor-col-16 elementor-top-column" data-id="fb9a866" data-element_type="column">
+			<div class="elementor-column-wrap">
+					<div class="elementor-widget-wrap">
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-08143ab elementor-column elementor-col-16 elementor-top-column" data-id="08143ab" data-element_type="column">
+			<div class="elementor-column-wrap">
+					<div class="elementor-widget-wrap">
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-297b82b elementor-column elementor-col-16 elementor-top-column" data-id="297b82b" data-element_type="column">
+			<div class="elementor-column-wrap">
+					<div class="elementor-widget-wrap">
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-47485bb elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="47485bb" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-6459c2d elementor-column elementor-col-100 elementor-top-column" data-id="6459c2d" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-f7afcfa elementor-widget elementor-widget-toggle" data-id="f7afcfa" data-element_type="widget" data-widget_type="toggle.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-toggle" role="tablist">
+							<div class="elementor-toggle-item">
+					<div id="elementor-tab-title-2591" class="elementor-tab-title" data-tab="1" role="tab" aria-controls="elementor-tab-content-2591">
+												<span class="elementor-toggle-icon elementor-toggle-icon-left" aria-hidden="true">
+															<span class="elementor-toggle-icon-closed"><i class="fas fa-caret-right"></i></span>
+								<span class="elementor-toggle-icon-opened"><i class="elementor-toggle-icon-opened fas fa-caret-up"></i></span>
+													</span>
+												<a href="">View example chart</a>
+					</div>
+					<div id="elementor-tab-content-2591" class="elementor-tab-content elementor-clearfix" data-tab="1" role="tabpanel" aria-labelledby="elementor-tab-title-2591"><img class="aligncenter wp-image-5434 size-full" src="/wp-content/uploads/2019/06/categorical-color-palette.png" alt="" width="800" height="357"></div>
+				</div>
+					</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-4e2ca47 elementor-widget elementor-widget-spacer" data-id="4e2ca47" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-eafe2bb elementor-widget elementor-widget-heading" data-id="eafe2bb" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h5 class="elementor-heading-title elementor-size-default">Extended palette</h5>		</div>
+				</div>
+				<div class="elementor-element elementor-element-15e5f8c elementor-widget elementor-widget-text-editor" data-id="15e5f8c" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><strong>Start by using the basic palette, and then if you need additional colors, you may use this extended version.</strong><br>The addition of blue-gray, teal, yellow, dark pink, and amber should be all the categorical colors you need. If you find yourself in a situation where you need more than this, I would encourage you to think about the story you are telling with your data and whether the visual will effectively tell that story. Feel free to reach out to me (Kaila Manca) with questions and inquiries.</p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-fa22f38 elementor-widget elementor-widget-spacer" data-id="fa22f38" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-0ca5019 elementor-section-height-min-height elementor-section-items-top elementor-section-boxed elementor-section-height-default elementor-section elementor-top-section" data-id="0ca5019" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-18d82ae elementor-column elementor-col-16 elementor-top-column" data-id="18d82ae" data-element_type="column" data-settings='{"background_background":"classic"}'>
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-236a225 elementor-widget elementor-widget-html" data-id="236a225" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="display: flex; justify-content: center;">
+<div style="width: 76px; height: 76px; background-color: #546E7A;"> </div>
+</div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-399e2a4 elementor-widget elementor-widget-text-editor" data-id="399e2a4" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><strong>Blue Grey 600</strong></p><p>#448AFF</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-c2f75c7 elementor-column elementor-col-16 elementor-top-column" data-id="c2f75c7" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-efbae7f elementor-widget elementor-widget-html" data-id="efbae7f" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="display: flex; justify-content: center;">
+<div style="width: 76px; height: 76px; background-color: #448AFF;"> </div>
+</div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-17d7b7c elementor-widget elementor-widget-text-editor" data-id="17d7b7c" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><strong>Blue A200</strong></p><p>#448AFF</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-56effe8 elementor-column elementor-col-16 elementor-top-column" data-id="56effe8" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-8777a39 elementor-widget elementor-widget-html" data-id="8777a39" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="display: flex; justify-content: center;">
+<div style="width: 76px; height: 76px; background-color: #80CBC4
+;"> </div>
+</div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-f1da69c elementor-widget elementor-widget-text-editor" data-id="f1da69c" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><strong>Teal 200</strong></p><p>#80CBC4</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-6545dd5 elementor-column elementor-col-16 elementor-top-column" data-id="6545dd5" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-9fa7de9 elementor-widget elementor-widget-html" data-id="9fa7de9" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="display: flex; justify-content: center;">
+<div style="width: 76px; height: 76px; background-color: #00897B
+;"> </div>
+</div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-8bfea3a elementor-widget elementor-widget-text-editor" data-id="8bfea3a" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><strong>Teal 600</strong></p><p>#00897B</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-3dcd00a elementor-column elementor-col-16 elementor-top-column" data-id="3dcd00a" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-757a675 elementor-widget elementor-widget-html" data-id="757a675" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="display: flex; justify-content: center;">
+<div style="width: 76px; height: 76px; background-color: #4CAF50;"> </div>
+</div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-b8f3193 elementor-widget elementor-widget-text-editor" data-id="b8f3193" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><strong>Green 500</strong></p><p>#4CAF50</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-793993f elementor-column elementor-col-16 elementor-top-column" data-id="793993f" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-3414253 elementor-widget elementor-widget-html" data-id="3414253" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="display: flex; justify-content: center;">
+<div style="width: 76px; height: 76px; background-color: #9CCC65;"> </div>
+</div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-5c455b5 elementor-widget elementor-widget-text-editor" data-id="5c455b5" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><strong>Light Green 400</strong></p><p>#9CCC65</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-7f5c17d elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="7f5c17d" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-7c5c217 elementor-column elementor-col-100 elementor-top-column" data-id="7c5c217" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-73bf1ce elementor-widget elementor-widget-spacer" data-id="73bf1ce" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-b126cfc elementor-section-height-min-height elementor-section-items-top elementor-section-boxed elementor-section-height-default elementor-section elementor-top-section" data-id="b126cfc" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-19c1abe elementor-column elementor-col-16 elementor-top-column" data-id="19c1abe" data-element_type="column" data-settings='{"background_background":"classic"}'>
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-3f80485 elementor-widget elementor-widget-html" data-id="3f80485" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="display: flex; justify-content: center;">
+<div style="width: 76px; height: 76px; background-color: #FDD835;"> </div>
+</div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-13bc563 elementor-widget elementor-widget-text-editor" data-id="13bc563" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><strong>Yellow 600</strong></p><p>#FDD835</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-05a8f1f elementor-column elementor-col-16 elementor-top-column" data-id="05a8f1f" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-120895f elementor-widget elementor-widget-html" data-id="120895f" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="display: flex; justify-content: center;">
+<div style="width: 76px; height: 76px; background-color: #FFB300
+;"> </div>
+</div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-bce696a elementor-widget elementor-widget-text-editor" data-id="bce696a" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><strong>Amber 600</strong></p><p>#FFB300</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-dd8b0df elementor-column elementor-col-16 elementor-top-column" data-id="dd8b0df" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-527ee38 elementor-widget elementor-widget-html" data-id="527ee38" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="display: flex; justify-content: center;">
+<div style="width: 76px; height: 76px; background-color: #FF9100
+
+;"> </div>
+</div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-68877c2 elementor-widget elementor-widget-text-editor" data-id="68877c2" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><strong>Orange A400</strong></p><p>#FF9100</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-353baa5 elementor-column elementor-col-16 elementor-top-column" data-id="353baa5" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-9c75a06 elementor-widget elementor-widget-html" data-id="9c75a06" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="display: flex; justify-content: center;">
+<div style="width: 76px; height: 76px; background-color: #F06292;"> </div>
+</div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-62be09c elementor-widget elementor-widget-text-editor" data-id="62be09c" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><strong>Pink 300</strong></p><p>#F06292</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-fbff73a elementor-column elementor-col-16 elementor-top-column" data-id="fbff73a" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-3d9321e elementor-widget elementor-widget-html" data-id="3d9321e" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="display: flex; justify-content: center;">
+<div style="width: 76px; height: 76px; background-color: #C2185B;"> </div>
+</div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-211a778 elementor-widget elementor-widget-text-editor" data-id="211a778" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><strong>Pink 700</strong></p><p>#C2185B</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-2fc3070 elementor-column elementor-col-16 elementor-top-column" data-id="2fc3070" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-3150dea elementor-widget elementor-widget-html" data-id="3150dea" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<div style="display: flex; justify-content: center;">
+<div style="width: 76px; height: 76px; background-color: #9575CD
+;"> </div>
+</div>		</div>
+				</div>
+				<div class="elementor-element elementor-element-12db564 elementor-widget elementor-widget-text-editor" data-id="12db564" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><strong>Deep Purple 300</strong></p><p>#9575CD</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-2eed277 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="2eed277" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-1e180c4 elementor-column elementor-col-100 elementor-top-column" data-id="1e180c4" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-b957e31 elementor-widget elementor-widget-toggle" data-id="b957e31" data-element_type="widget" data-widget_type="toggle.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-toggle" role="tablist">
+							<div class="elementor-toggle-item">
+					<div id="elementor-tab-title-1941" class="elementor-tab-title" data-tab="1" role="tab" aria-controls="elementor-tab-content-1941">
+												<span class="elementor-toggle-icon elementor-toggle-icon-left" aria-hidden="true">
+															<span class="elementor-toggle-icon-closed"><i class="fas fa-caret-right"></i></span>
+								<span class="elementor-toggle-icon-opened"><i class="elementor-toggle-icon-opened fas fa-caret-up"></i></span>
+													</span>
+												<a href="">View example chart</a>
+					</div>
+					<div id="elementor-tab-content-1941" class="elementor-tab-content elementor-clearfix" data-tab="1" role="tabpanel" aria-labelledby="elementor-tab-title-1941"><img class="aligncenter wp-image-5437 size-full" src="/wp-content/uploads/2019/06/extended-palette.png" alt="" width="1188" height="349" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/06/extended-palette.png 1188w,https://static-forge.netlify.com/wp-content/uploads/2019/06/extended-palette-300x88.png 300w,https://static-forge.netlify.com/wp-content/uploads/2019/06/extended-palette-768x226.png 768w,https://static-forge.netlify.com/wp-content/uploads/2019/06/extended-palette-1024x301.png 1024w" sizes="(max-width: 1188px) 100vw, 1188px"></div>
+				</div>
+					</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-77d41816 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="77d41816" data-element_type="section" id="guidance"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-47ff23eb elementor-column elementor-col-100 elementor-top-column" data-id="47ff23eb" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-408de279 elementor-widget elementor-widget-spacer" data-id="408de279" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-3fc41396 elementor-widget elementor-widget-heading" data-id="3fc41396" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Focus/highlighted data palette</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-20fcd072 elementor-widget elementor-widget-text-editor" data-id="20fcd072" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Enter text here</p></div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-ea2be0e elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="ea2be0e" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-5813ceb elementor-column elementor-col-100 elementor-top-column" data-id="5813ceb" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-4206cbe elementor-widget elementor-widget-spacer" data-id="4206cbe" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-3669885 elementor-widget elementor-widget-heading" data-id="3669885" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Color blind friendly</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-b4a50bb elementor-widget elementor-widget-image" data-id="b4a50bb" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="851" height="780" src="https://static-forge.netlify.com/wp-content/uploads/2019/06/example4.png" class="attachment-full size-full" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/06/example4.png 851w,https://static-forge.netlify.com/wp-content/uploads/2019/06/example4-300x275.png 300w,https://static-forge.netlify.com/wp-content/uploads/2019/06/example4-768x704.png 768w" sizes="(max-width: 851px) 100vw, 851px"></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-1f4b5b3 elementor-widget elementor-widget-spacer" data-id="1f4b5b3" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-e532090 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="e532090" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-cc87793 elementor-column elementor-col-100 elementor-top-column" data-id="cc87793" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-7b84c0a elementor-widget elementor-widget-toggle" data-id="7b84c0a" data-element_type="widget" data-widget_type="toggle.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-toggle" role="tablist">
+							<div class="elementor-toggle-item">
+					<div id="elementor-tab-title-1291" class="elementor-tab-title" data-tab="1" role="tab" aria-controls="elementor-tab-content-1291">
+												<span class="elementor-toggle-icon elementor-toggle-icon-left" aria-hidden="true">
+															<span class="elementor-toggle-icon-closed"><i class="fas fa-caret-right"></i></span>
+								<span class="elementor-toggle-icon-opened"><i class="elementor-toggle-icon-opened fas fa-caret-up"></i></span>
+													</span>
+												<a href="">View example charts</a>
+					</div>
+					<div id="elementor-tab-content-1291" class="elementor-tab-content elementor-clearfix" data-tab="1" role="tabpanel" aria-labelledby="elementor-tab-title-1291"><img class="aligncenter wp-image-5441 size-full" src="/wp-content/uploads/2019/06/example-5.png" alt="" width="1169" height="710" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/06/example-5.png 1169w,https://static-forge.netlify.com/wp-content/uploads/2019/06/example-5-300x182.png 300w,https://static-forge.netlify.com/wp-content/uploads/2019/06/example-5-768x466.png 768w,https://static-forge.netlify.com/wp-content/uploads/2019/06/example-5-1024x622.png 1024w" sizes="(max-width: 1169px) 100vw, 1169px"></div>
+				</div>
+					</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-9aecfd4 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="9aecfd4" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-0e5e630 elementor-column elementor-col-100 elementor-top-column" data-id="0e5e630" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-dbcd809 elementor-widget elementor-widget-spacer" data-id="dbcd809" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-2bae65f elementor-widget elementor-widget-heading" data-id="2bae65f" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h4 class="elementor-heading-title elementor-size-default">Standard palette</h4>		</div>
+				</div>
+				<div class="elementor-element elementor-element-368476d elementor-widget elementor-widget-text-editor" data-id="368476d" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p><strong>If the above (“colorblind friendly”) palette does not meet your needs, you may use the following as well.<br></strong>However, if you use this palette note that you MUST label your data so that it is apparent what the takeaway from the chart is. We recommend this with ALL charts, but it is particularly important with these colors. You will see this reflected in these examples via the percentages at the top of each bar.</p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-3c0ebf9 elementor-widget elementor-widget-image" data-id="3c0ebf9" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+										<img width="851" height="624" src="https://static-forge.netlify.com/wp-content/uploads/2019/06/Group-7.png" class="attachment-full size-full" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/06/Group-7.png 851w,https://static-forge.netlify.com/wp-content/uploads/2019/06/Group-7-300x220.png 300w,https://static-forge.netlify.com/wp-content/uploads/2019/06/Group-7-768x563.png 768w" sizes="(max-width: 851px) 100vw, 851px"></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-605626e elementor-widget elementor-widget-spacer" data-id="605626e" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-ea7b554 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="ea7b554" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-a4c4116 elementor-column elementor-col-100 elementor-top-column" data-id="a4c4116" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-5139943 elementor-widget elementor-widget-toggle" data-id="5139943" data-element_type="widget" data-widget_type="toggle.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-toggle" role="tablist">
+							<div class="elementor-toggle-item">
+					<div id="elementor-tab-title-8511" class="elementor-tab-title" data-tab="1" role="tab" aria-controls="elementor-tab-content-8511">
+												<span class="elementor-toggle-icon elementor-toggle-icon-left" aria-hidden="true">
+															<span class="elementor-toggle-icon-closed"><i class="fas fa-caret-right"></i></span>
+								<span class="elementor-toggle-icon-opened"><i class="elementor-toggle-icon-opened fas fa-caret-up"></i></span>
+													</span>
+												<a href="">View example charts</a>
+					</div>
+					<div id="elementor-tab-content-8511" class="elementor-tab-content elementor-clearfix" data-tab="1" role="tabpanel" aria-labelledby="elementor-tab-title-8511"><img class="aligncenter wp-image-5446 size-full" src="/wp-content/uploads/2019/06/Group-8.png" alt="" width="1078" height="642" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/06/Group-8.png 1078w,https://static-forge.netlify.com/wp-content/uploads/2019/06/Group-8-300x179.png 300w,https://static-forge.netlify.com/wp-content/uploads/2019/06/Group-8-768x457.png 768w,https://static-forge.netlify.com/wp-content/uploads/2019/06/Group-8-1024x610.png 1024w" sizes="(max-width: 1078px) 100vw, 1078px"></div>
+				</div>
+					</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-64490a6 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="64490a6" data-element_type="section" id="guidance"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-2e618bfc elementor-column elementor-col-100 elementor-top-column" data-id="2e618bfc" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-1e5fb859 elementor-widget elementor-widget-spacer" data-id="1e5fb859" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-780cf45b elementor-widget elementor-widget-heading" data-id="780cf45b" data-element_type="widget" toc-item="true" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-default">Resources</h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-32bd8470 elementor-widget elementor-widget-text-editor" data-id="32bd8470" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-text-editor elementor-clearfix"><p>Download the Sketch guide for color swatches, examples, and more guidance. </p></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-7025602 elementor-widget elementor-widget-html" data-id="7025602" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+			<a href="http://10.81.12.49/wp-content/uploads/2019/04/Charts_2019.sketch-1.zip">
+    
+</a><tcw-button type="raised"><button type="button">Download Data Viz Library </button>
+</tcw-button></div>
+				</div>
+				<div class="elementor-element elementor-element-b92da1c elementor-widget elementor-widget-spacer" data-id="b92da1c" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section><section class="elementor-element elementor-element-252cdc5d elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="252cdc5d" data-element_type="section"><div class="elementor-container elementor-column-gap-default">
+				<div class="elementor-row">
+				<div class="elementor-element elementor-element-7a39cb4e elementor-column elementor-col-33 elementor-top-column" data-id="7a39cb4e" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-3ca4c6ee elementor-widget elementor-widget-image" data-id="3ca4c6ee" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+											<a data-elementor-open-lightbox="" href="http://PLACEHOLDER.wpsho/patterns/data-visualization/">
+							<img width="300" height="300" src="https://static-forge.netlify.com/wp-content/uploads/2019/06/heatmap.png" class="attachment-large size-large" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/06/heatmap.png 300w,https://static-forge.netlify.com/wp-content/uploads/2019/06/heatmap-150x150.png 150w" sizes="(max-width: 300px) 100vw, 300px"></a>
+											</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-5454cfe0 elementor-widget elementor-widget-heading" data-id="5454cfe0" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h6 class="elementor-heading-title elementor-size-default">Learn about the Data Viz process</h6>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-4e39622f elementor-column elementor-col-33 elementor-top-column" data-id="4e39622f" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-7278ba8f elementor-widget elementor-widget-image" data-id="7278ba8f" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+											<a data-elementor-open-lightbox="" href="http://10.81.12.49/wp-content/uploads/2019/04/Charts_2019.sketch-1.zip">
+							<img width="300" height="300" src="https://static-forge.netlify.com/wp-content/uploads/2019/06/pictogram-copy.png" class="attachment-large size-large" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/06/pictogram-copy.png 300w,https://static-forge.netlify.com/wp-content/uploads/2019/06/pictogram-copy-150x150.png 150w" sizes="(max-width: 300px) 100vw, 300px"></a>
+											</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-99933a1 elementor-widget elementor-widget-heading" data-id="99933a1" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h6 class="elementor-heading-title elementor-size-default">Download the Sketch library</h6>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+				<div class="elementor-element elementor-element-6f3ddd74 elementor-column elementor-col-33 elementor-top-column" data-id="6f3ddd74" data-element_type="column">
+			<div class="elementor-column-wrap  elementor-element-populated">
+					<div class="elementor-widget-wrap">
+				<div class="elementor-element elementor-element-7b05b31f elementor-widget elementor-widget-image" data-id="7b05b31f" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image">
+											<a data-elementor-open-lightbox="" href="http://PLACEHOLDER.wpsho/patterns/data-visualization-2/">
+							<img width="300" height="300" src="https://static-forge.netlify.com/wp-content/uploads/2019/06/stacked-bar-chart-1-1.png" class="attachment-large size-large" alt="" srcset="https://static-forge.netlify.com/wp-content/uploads/2019/06/stacked-bar-chart-1-1.png 300w,https://static-forge.netlify.com/wp-content/uploads/2019/06/stacked-bar-chart-1-1-150x150.png 150w" sizes="(max-width: 300px) 100vw, 300px"></a>
+											</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-71739704 elementor-widget elementor-widget-heading" data-id="71739704" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h6 class="elementor-heading-title elementor-size-default">Learn about charts</h6>		</div>
+				</div>
+						</div>
+			</div>
+		</div>
+						</div>
+			</div>
+		</section></div>
+			</div>
+		</div>
+		 
+                        </tcw-card><div class="tyl-typography--caption" style="margin-bottom: 8px;">Last modified on September 17, 2019 by: emily.roller</div>
+          </div>
+
+            <div class="right-content" id="toc-right-container" style="position: relative; width: 300px;"> 
+                                <div><div class="textwidget custom-html-widget"><div class="toc" style="position: fixed;">
+                    <div class="toc-container">
+                      <div class="left-line" id="toc-left-line"></div>
+                      <div class="toc-items-container" id="toc-items">
+                        <h6 style="margin-top: 0px; margin-bottom: 16px;">Table of contents</h6>
+                      </div>
+                    </div>
+                  </div>
+
+<div id="back-to-top-button" class="tyl-back-to-top">
+            <tcw-fab extended="true"><button aria-label="Extended FAB with just text" onclick="scrollTo()">
+                <i class="material-icons" aria-hidden="true">arrow_upward</i>
+                <span>Back to top</span>
+              </button>
+            </tcw-fab></div></div></div>                            </div>
+
+        </div>
+       </div>
+      </div>
+    </tcw-scaffold><script type="text/javascript" src="scripts/custom-elements-es5-adapter.js"></script><script type="text/javascript" src="scripts/webcomponents-bundle.js"></script><script type="text/javascript" src="scripts/tyler-components-web-lib.min.js"></script><script type="text/javascript" src="scripts/tyler-components-web-forge-lib.min.js"></script><script>
+  window.addEventListener('WebComponentsReady', function() {
+    window.TylerComponentsWeb.lib.defineComponents();
+    window.TylerComponentsWeb.Forge.lib.defineComponents();
+  });
+</script><script type="text/javascript" src="scripts/menu-expander.js"></script><script type="text/javascript" src="scripts/drawer.js"></script><script type="text/javascript" src="scripts/navHeader.js"></script><script type="text/javascript" src="scripts/search.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-136930168-1"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-136930168-1');
+</script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/material-design-for-contact-form-7/assets/js/lib/autosize.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/material-design-for-contact-form-7/assets/js/cf7-material-design-bundle.js"></script><script type="text/javascript">
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"https:\/\/static-forge.netlify.com\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"}};
+/* ]]> */
+</script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/contact-form-7/includes/js/scripts.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/js/frontend-modules.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor-pro/assets/lib/sticky/jquery.sticky.min.js"></script><script type="text/javascript">
+var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/static-forge.netlify.com\/wp-admin\/admin-ajax.php","nonce":"a52c73ecd1","shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"google":{"title":"Google+","has_counter":true},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"delicious":{"title":"Delicious"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"}},"facebook_sdk":{"lang":"en_US","app_id":""}};
+</script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor-pro/assets/js/frontend.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-includes/js/jquery/ui/position.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js"></script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/lib/swiper/swiper.min.js"></script><script type="text/javascript">
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"version":"2.8.3","urls":{"assets":"https:\/\/static-forge.netlify.com\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"general":{"elementor_global_image_lightbox":"yes"},"editorPreferences":[]},"post":{"id":5384,"title":"Data Viz: Colors","excerpt":""}};
+</script><script type="text/javascript" src="https://static-forge.netlify.com/wp-content/plugins/elementor/assets/js/frontend.min.js"></script><script type="text/javascript" src="scripts/table-of-contents.js?x-version=1"></script></body></html>

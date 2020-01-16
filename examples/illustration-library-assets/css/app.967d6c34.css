@@ -1,0 +1,22 @@
+.ic[data-v-603703b4] {width: 100%;padding: 4px 8px;text-align: center;}
+.overflow-ellipsis[data-v-603703b4] {text-overflow: ellipsis;}
+.filter-header[data-v-603703b4] {display: -webkit-box;display: -ms-flexbox;display: flex;margin-bottom: 24px;}
+.image-container[data-v-603703b4] {display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-pack: start;-ms-flex-pack: start;justify-content: start;-ms-flex-line-pack: center;align-content: center;-webkit-box-align: center;-ms-flex-align: center;align-items: center;-webkit-box-sizing: border-box;box-sizing: border-box;-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;padding: 8px;position: relative;}
+.grid-image[data-v-603703b4] {cursor: pointer;}
+.currently-active-image[data-v-603703b4] {-webkit-box-shadow: 0 1px 1px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23);box-shadow: 0 1px 1px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23);-webkit-transform: scale(1.2);transform: scale(1.2);}
+.tab-bar-container[data-v-603703b4] {border-bottom: 1px solid #e0e0e0;margin-bottom: 16px;}
+.tcw-tab-bar[data-v-603703b4] {max-width: 768px;}
+.slide-fade-enter-active[data-v-603703b4] {-webkit-transition: all .5s ease;transition: all .5s ease;}
+.slide-fade-leave-active[data-v-603703b4] {-webkit-transition: all .5s cubic-bezier(1,.5,.8,1);transition: all .5s cubic-bezier(1,.5,.8,1);}
+.slide-fade-enter[data-v-603703b4], .slide-fade-leave-to[data-v-603703b4] {opacity: 0;}
+tcw-view[data-v-603703b4] {padding-top: 16px;}
+.download-container[data-v-7c5b31a4] {display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;position: relative;}
+.close-button[data-v-7c5b31a4] {position: absolute;top: -18px;right: -18px;}
+.download-box[data-v-7c5b31a4] {position: fixed;bottom: 24px;max-height: 112px;width: auto;display: grid;-webkit-box-align: center;-ms-flex-align: center;align-items: center;grid-template-columns: 112px 1fr auto;}
+.download-box .thumbnail-container[data-v-7c5b31a4] {height: 112px;width: 112px;background-image: url("/transparent-tile-8x8.svg");}
+.download-box .thumbnail-container .thumbnail[data-v-7c5b31a4], .download-box .thumbnail-container[data-v-7c5b31a4] {display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;-webkit-box-align: center;-ms-flex-align: center;align-items: center;}
+.download-box .thumbnail-container .thumbnail[data-v-7c5b31a4] {height: 92px;width: 92px;}
+.download-box .illustration-info[data-v-7c5b31a4] {display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;-webkit-box-align: start;-ms-flex-align: start;align-items: flex-start;margin: 0 16px;}
+.download-box .illustration-info a[data-v-7c5b31a4] {font-size: 12px;}
+.download-box .download-buttons[data-v-7c5b31a4] {display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-pack: end;-ms-flex-pack: end;justify-content: flex-end;}
+.download-box .download-buttons tcw-button[data-v-7c5b31a4] {margin-right: 16px;}
