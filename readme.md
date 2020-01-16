@@ -1,0 +1,1 @@
+Static forge site
